@@ -1,13 +1,9 @@
 // colors
-$white: #ffffff;
-$black: #000000;
-$gray: #eceeef;
-$gray-darken: #C3CFD6;
-$gray-dark: #373a3c;
-$blue: #6dd5f3;
-$blue-dark: #72C2E0;
-$pink: #f522ff;
-$purple: #5e7af4;
+$white-color: #ffffff;
+$black-color: #000000;
+$primary-color: #FFDC00;
+$secondary-color: #2F2F2F;
+$font-color: #2E2E2E;
 
 //font
 $font-family: "Roboto", "Helvetica", "Arial", sans-serif;
@@ -40,22 +36,22 @@ $grid-breakpoints: (
 //
 // Define the maximum width of `.container` for different screen sizes.
 
-$container-max-widths: (
-  sm: 540px,
-  md: 720px,
-  lg: 960px,
-  xl: 1170px
-) !default;
-
-@include _assert-ascending($container-max-widths, "$container-max-widths");
-
-// Grid columns
+//$container-max-widths: (
+//  sm: 540px,
+//  md: 720px,
+//  lg: 960px,
+//  xl: 1170px
+//) !default;
 //
-// Set the number of columns and specify the width of the gutters.
-
-$grid-columns:                12 !default;
-$grid-gutter-width:           60px !default;
-$grid-row-columns:            6 !default;
+//@include _assert-ascending($container-max-widths, "$container-max-widths");
+//
+//// Grid columns
+////
+//// Set the number of columns and specify the width of the gutters.
+//
+//$grid-columns:                12 !default;
+//$grid-gutter-width:           60px !default;
+//$grid-row-columns:            6 !default;
 
 
 // Container padding
