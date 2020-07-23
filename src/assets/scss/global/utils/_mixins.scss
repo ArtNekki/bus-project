@@ -168,3 +168,11 @@
   flex-direction: column;
   flex-grow: 1;
 }
+
+
+@mixin container {
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  max-width: 1070px;
+}

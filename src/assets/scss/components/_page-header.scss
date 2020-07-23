@@ -1,0 +1,50 @@
+.page-header {
+
+  &__inner {
+    @include container();
+
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas:
+      "logo top"
+      "logo nav";
+  }
+
+  &__logo {
+    grid-area: logo;
+  }
+
+  &__top {
+    outline: 1px solid red;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    grid-column-gap: 20px;
+    grid-area: top;
+  }
+
+  &__contact {
+    padding: 15px 23px;
+    font-family: $font-family;
+    font-size: 15px;
+    color: $font-color;
+    box-shadow: 0px 10px 100px rgba($black-color, 0.1);
+    border-radius: 23px;
+
+    svg {
+      margin-right: 8px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    span {
+      vertical-align: middle;
+    }
+  }
+
+  &__nav {
+    grid-area: nav;
+  }
+}
