@@ -1,6 +1,11 @@
 .header-user {
+  position: relative;
   display: flex;
   align-items: center;
+
+  &__input {
+    display: none;
+  }
 
   &__icon {
     margin-right: 12px;
@@ -13,7 +18,38 @@
     }
   }
 
-  &__text {
+  &__label {
+    font-family: $font-family;
+    font-size: 15px;
+    line-height: 20px;
+  }
 
+  &__dropdown  {
+    position: absolute;
+    top: calc(100% + 5px);
+    right: 0;
+    z-index: 10;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    padding: 7px 19px;
+    display: none;
+    border-top: 3px solid $primary-color;
+    border-radius: 2px;
+    box-shadow: 0px 5px 40px rgba($black-color, 0.05);
+
+    .header-user__input[name="user-login"]:checked ~ & {
+      display: block;
+    }
+  }
+
+  &__link {
+    padding: 5px 0;
+    display: block;
+    font-family: $font-family;
+    font-size: 15px;
+    line-height: 18px;
+    color: $black-color;
+    text-decoration: none;
   }
 }
