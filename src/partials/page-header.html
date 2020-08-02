@@ -1,6 +1,10 @@
 <header class="page-header">
   <div class="page-header__inner">
-    <a href="#" class="page-header__logo">Logo</a>
+    <a href="#" class="page-header__logo">
+      <svg width="129" height="78">
+        <use xlink:href="{{root}}assets/img/symbol/sprite.svg#logo"></use>
+      </svg>
+    </a>
     <div class="page-header__top">
       {{> area-selector}}
       <div class="page-header__contact">
@@ -12,7 +16,7 @@
       {{> header-user}}
     </div>
     <nav class="page-header__nav">
-      nav
+      {{> main-nav}}
     </nav>
   </div>
 </header>
