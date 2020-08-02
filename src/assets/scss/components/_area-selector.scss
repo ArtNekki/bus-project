@@ -51,6 +51,7 @@
     grid-template-columns: repeat(2, auto);
     grid-column-gap: 30px;
     border-top: 3px solid $primary-color;
+    background-color: $white-color;
     border-radius: 2px;
     box-shadow: 0px 5px 40px rgba($black-color, 0.05);
 
@@ -97,6 +98,7 @@
     line-height: 22px;
     color: $gray-color;
     text-decoration: none;
+    white-space: nowrap;
 
     &--more {
       margin-left: 10px;
