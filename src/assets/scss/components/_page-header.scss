@@ -29,9 +29,17 @@
     grid-area: logo;
     background-color: $gray-light-color;
 
+    .page--mobile-open & {
+      opacity: 0;
+    }
+
     @include media-breakpoint-up(lg) {
       width: 128px;
       height: 78px;
+
+      .page--mobile-open & {
+        opacity: 1;
+      }
     }
   }
 
@@ -42,10 +50,17 @@
     grid-area: top;
     height: 40px;
 
+    .page--mobile-open & {
+      opacity: 0;
+    }
+
     @include media-breakpoint-up(lg) {
       height: auto;
-      //grid-column-gap: 20px;
       padding-bottom: 15px;
+
+      .page--mobile-open & {
+        opacity: 1;
+      }
     }
   }
 
