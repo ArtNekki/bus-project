@@ -19,13 +19,18 @@
 
     .header-user--logged-in & {
       margin-right: 0;
-      margin-left: 42px;
+      margin-left: 20px;
       order: 1;
+
+      @include media-breakpoint-up(lg) {
+        margin-left: 42px;
+      }
     }
   }
 
   &__label {
     position: relative;
+    display: none;
     font-family: $font-family;
     font-size: 15px;
     line-height: 20px;
@@ -38,10 +43,19 @@
       right: -18px;
       width: 4px;
       height: 4px;
+      display: none;
       border: 1px solid $gray-dark-color;
       border-top-color: transparent;
       border-left-color: transparent;
       transform: rotate3d(0, 0, 1, 45deg);
+
+      .header-user--logged-in & {
+        display: block;
+      }
+    }
+
+    @include media-breakpoint-up(lg) {
+      display: block;
     }
   }
 

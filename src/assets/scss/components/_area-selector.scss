@@ -37,9 +37,15 @@
     }
   }
 
-  &__toggle span {
-    margin-left: 8px;
+  &__toggle svg {
+    margin-right: 8px;
+    display: none;
+
+    @include media-breakpoint-up(lg) {
+      display: block;
+    }
   }
+
 
   &__dropdown {
     position: absolute;

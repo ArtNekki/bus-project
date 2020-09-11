@@ -1,9 +1,9 @@
 <header class="page-header">
   <div class="page-header__inner">
     <a href="#" class="page-header__logo">
-      <svg width="129" height="78">
-        <use xlink:href="{{root}}assets/img/symbol/sprite.svg#logo"></use>
-      </svg>
+<!--      <svg>-->
+<!--        <use xlink:href="{{root}}assets/img/symbol/sprite.svg#logo"></use>-->
+<!--      </svg>-->
     </a>
     <div class="page-header__top">
       {{> area-selector}}
@@ -14,9 +14,15 @@
         <span>8 800 222 22 68</span>
       </div>
       {{> header-user}}
+     <div class="page-header__open">
+       <button type="button">
+         <span></span>
+       </button>
+     </div>
     </div>
     <nav class="page-header__nav">
       {{> main-nav}}
     </nav>
+    {{> main-mobile-nav}}
   </div>
 </header>
