@@ -3,5 +3,56 @@ title: Main page
 layout: default
 ---
 
-{{> page-header}}
-{{> page-footer}}
+<div class="main-promo">
+  <div class="main-promo__inner">
+    <h1 class="main-promo__title">Срочная доставка
+      по Приморскому краю</h1>
+    <p class="main-promo__text"><span>от 2 до 24 часов</span> рейсовыми автобусами</p>
+    <ul class="main-promo__list">
+      <li>
+        <svg width="26" height="28">
+          <use xlink:href="{{root}}assets/img/symbol/sprite.svg#parcel"></use>
+        </svg>
+        <span>Посылки</span>
+      </li>
+      <li>
+        <svg width="28" height="28">
+          <use xlink:href="{{root}}assets/img/symbol/sprite.svg#docs"></use>
+        </svg>
+        <span>Документы</span>
+      </li>
+      <li>
+        <svg width="25" height="28">
+          <use xlink:href="{{root}}assets/img/symbol/sprite.svg#cargo"></use>
+        </svg>
+        <span>Грузы</span>
+      </li>
+    </ul>
+    <div class="main-promo__calc">
+      <form action="#" class="form">
+        <h2 class="form__title">Рассчитайте стоимость</h2>
+        <div class="form__field">
+          <label for="delivery-from" class="form__label">Откуда отправляем?</label>
+          <div class="select">
+            <select id="category" name="delivery-from" id="delivery-from" class="select__field">
+              <option value="">Выберите город</option>
+              <option value="">Находка</option>
+              <option value="">Арсеньев</option>
+            </select>
+          </div>
+        </div>
+        <div class="form__field">
+          <label for="delivery-to" class="form__label">Куда отправляем?</label>
+          <div class="select">
+            <select id="delivery-to" name="delivery-from"  class="select__field">
+              <option value="">Выберите город</option>
+              <option value="">Находка</option>
+              <option value="">Арсеньев</option>
+            </select>
+          </div>
+        </div>
+        <button type="submit" class="form__submit">Рассчитать</button>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,59 @@
+.main-promo {
+  font-family: $font-family;
+
+  &__inner {
+    @include container();
+  }
+
+  &__title {
+    font-size: 32px;
+    line-height: 35px;
+    color: $black-color;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 19px;
+    color: $black-color;
+  }
+
+  &__text span {
+    position: relative;
+    margin-right: 12px;
+    padding-left: 10px;
+    display: inline-block;
+    font-weight: 700;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -6px;
+      right: -10px;
+      bottom: -6px;
+      left: 0;
+      z-index: -1;
+      border-radius: $border-radius;
+      background-color: $primary-color;
+    }
+  }
+
+  &__list {
+    margin: 0;
+    margin-top: 30px;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    font-size: 14px;
+    line-height: 17px;
+    list-style: none;
+  }
+
+  &__list svg,
+  &__list span {
+    vertical-align: middle;
+  }
+
+  &__calc {
+    margin-top: 60px;
+  }
+}

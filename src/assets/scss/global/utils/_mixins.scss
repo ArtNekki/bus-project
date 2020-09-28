@@ -173,7 +173,7 @@
 @mixin container {
   margin-right: auto;
   margin-left: auto;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: $container-padding-x;
+  padding-left: $container-padding-x;
   max-width: 1170px;
 }
