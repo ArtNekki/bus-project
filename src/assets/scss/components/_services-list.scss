@@ -11,6 +11,7 @@
     grid-template-columns: 70px 1fr;
     grid-template-rows: repeat(3, auto);
     grid-column-gap: 25px;
+    //grid-row-gap: 10px;
   }
 
   &__icon {
@@ -36,5 +37,9 @@
     font-family: $font-family--secondary;
     font-size: 15px;
     line-height: 20px;
+  }
+
+  &__toggle {
+    margin-top: 10px;
   }
 }
