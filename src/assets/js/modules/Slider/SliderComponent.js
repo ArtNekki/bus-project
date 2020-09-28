@@ -26,6 +26,10 @@ export default class Slider {
         prevEl: target.parentNode.querySelector('.slider-btn--prev'),
         disabledClass: 'slider-btn--disabled',
         hiddenClass: 'slider-btn--hidden'
+      },
+      pagination: {
+        el: target.parentNode.querySelector('.swiper-pagination'),
+        clickable: true
       }
     }));
   }

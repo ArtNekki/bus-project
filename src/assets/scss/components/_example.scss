@@ -1,0 +1,17 @@
+.example {
+
+  &__img {
+    display: block;
+    width: 100%;
+    height: 175px;
+  }
+
+  &__title {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-family: $font-family--secondary;
+    font-size: 18px;
+    line-height: 23px;
+    color: $black-color;
+  }
+}

@@ -5,3 +5,4 @@ import './utils/polyfill';
 
 //modules
 import './modules/PageHeader';
+import './modules/Slider';
