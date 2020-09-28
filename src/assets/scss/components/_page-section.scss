@@ -21,5 +21,75 @@
     font-size: 15px;
     line-height: 18px;
     color: $font-color;
+
+    &--shadow {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 80px;
+        box-shadow: 0 -50px 10px rgba($white-color, 0.75) inset;
+      }
+    }
+  }
+
+  &__more {
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 32px;
+    grid-template-rows: 32px;
+    grid-column-gap: 10px;
+    align-items: center;
+    font-family: $font-family--secondary;
+    font-size: 16px;
+    line-height: 19px;
+    color: $font-color;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::before {
+      content: "";
+      grid-column: 2 / -1;
+      grid-row: 1 / -1;
+      width: 32px;
+      height: 32px;
+      border: 1px solid rgba($black-color, 0.1);
+      border-radius: 50%;
+    }
+
+    &::after {
+      content: "";
+      grid-column: 2 / -1;
+      grid-row: 1 / -1;
+      justify-self: center;
+      width: 4px;
+      height: 4px;
+      border: 1px solid $black-color;
+      border-top-color: transparent;
+      border-right-color: transparent;
+      transform: rotate3d(0, 0, 1, -45deg);
+    }
+  }
+
+  &__images {
+    margin-top: 30px;
+    padding-right: 35px;
+  }
+
+  &__img {
+    margin-bottom: 10px;
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
   }
 }
