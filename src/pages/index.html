@@ -34,7 +34,7 @@ layout: default
         <div class="form__field">
           <label for="delivery-from" class="form__label">Откуда отправляем?</label>
           <div class="select">
-            <select id="category" name="delivery-from" id="delivery-from" class="select__field">
+            <select  name="delivery-from" id="delivery-from" class="select__field">
               <option value="">Выберите город</option>
               <option value="">Находка</option>
               <option value="">Арсеньев</option>
@@ -147,5 +147,44 @@ layout: default
         <p class="services-list__text">Страховая защита груза и максимально быстрое возмещение ущерба.</p>
       </li>
     </ul>
+  </div>
+</section>
+<section class="page-section">
+  <div class="page-section__container">
+    <h2 class="page-section__title">Решаем нестандартные логистические задачи</h2>
+    <p class="page-section__text">Нужно организовать доставку нестандартного груза в очень сжатые сроки? Трудно найти исполнителя? Мы предложим индивидуальное решение вашей задачи!</p>
+    <form action="#" class="form">
+      <div class="form__field">
+        <label for="delivery-from-second" class="form__label">Откуда отправляем?</label>
+        <div class="select">
+          <select name="delivery-from" id="delivery-from-second" class="select__field">
+            <option value="">Выберите город</option>
+            <option value="">Находка</option>
+            <option value="">Арсеньев</option>
+          </select>
+        </div>
+      </div>
+      <div class="form__field">
+        <label for="delivery-to-second" class="form__label">Куда отправляем?</label>
+        <div class="select">
+          <select id="delivery-to-second" name="delivery-from"  class="select__field">
+            <option value="">Выберите город</option>
+            <option value="">Находка</option>
+            <option value="">Арсеньев</option>
+          </select>
+        </div>
+      </div>
+      <div class="form__field">
+        <label for="describe-task" class="form__label">Куда отправляем?</label>
+        <textarea name="describe-task" id="describe-task"  rows="5" class="text-area"></textarea>
+      </div>
+      <div class="form__field">
+        <label class="checkbox">
+          <input type="checkbox" class="checkbox__input">
+          <span class="checkbox__label">Нажимая кнопку «Отправить», я даю свое согласие на обработку моих персональных данных</span>
+        </label>
+      </div>
+      <button type="submit" class="form__submit">Отправить</button>
+    </form>
   </div>
 </section>
