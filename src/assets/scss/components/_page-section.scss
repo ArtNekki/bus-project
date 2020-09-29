@@ -83,6 +83,13 @@
   &__images {
     margin-top: 30px;
     padding-right: 35px;
+
+    @include media-breakpoint-up(md) {
+      padding-right: 0;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-column-gap: 10px;
+    }
   }
 
   &__img {

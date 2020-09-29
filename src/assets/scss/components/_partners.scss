@@ -5,6 +5,11 @@
     grid-column-gap: 15px;
     grid-row-gap: 20px;
 
+    @include media-breakpoint-up(md) {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 95px;
+    }
+
     &__item {
       display: flex;
       justify-content: center;
