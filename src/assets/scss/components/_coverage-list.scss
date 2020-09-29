@@ -3,12 +3,23 @@
   padding: 0;
   list-style: none;
 
+  @include media-breakpoint-up(md) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 10px;
+  }
+
   &__item {
     margin-bottom: 30px;
     display: grid;
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: 90px auto;
     grid-template-rows: repeat(3, auto);
-    grid-column-gap: 20px;
+    grid-column-gap: 22px;
+
+    @include media-breakpoint-up(md) {
+      display: flex;
+      flex-direction: column;
+    }
 
     &::before {
       content: attr(data-count);
@@ -40,6 +51,10 @@
     color: $font-color;
     grid-column: 2 / -1;
     grid-row: 1 / 1;
+
+    @include media-breakpoint-up(md) {
+      margin-top: 27px; //25
+    }
   }
 
   &__link {
@@ -47,5 +62,10 @@
     grid-column: 2 / -1;
     grid-row-start: 2;
     align-self: center;
+
+    @include media-breakpoint-up(md) {
+      margin-top: auto;
+      align-self: flex-start;
+    }
   }
 }
