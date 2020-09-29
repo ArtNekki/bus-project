@@ -42,6 +42,11 @@
 
   &__field {
     margin-bottom: 17px;
+
+
+    &--full {
+      grid-column: 1 / -1;
+    }
   }
 
   &__submit {
@@ -59,5 +64,11 @@
     &:focus {
       outline: none;
     }
+  }
+
+  &--send-cargo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 35px;
   }
 }

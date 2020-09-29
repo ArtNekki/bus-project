@@ -50,7 +50,20 @@
   font-size: 14px;
   line-height: 17px;
   text-decoration: none;
-  color: #999999;
+  color: $black-color;
+
+  &--sm {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  &--gray {
+    color: #999999;
+  }
+
+  &--blue {
+    border-bottom-color: $blue-color;
+  }
 
   &__text {
     position: relative;
@@ -62,7 +75,21 @@
       bottom: -1px;
       right: 0;
       left: 0;
-      border-bottom: 1px dotted #999999;
+      border-bottom-width: 1px;
+      border-bottom-style: dotted;
+      border-bottom-color: $black-color;
+
+      .link--dashed & {
+        border-bottom-style: dashed;
+      }
+
+      .link--gray & {
+        border-bottom-color: #999999;
+      }
+
+      .link--blue {
+        border-bottom-color: $blue-color;
+      }
     }
   }
 }
