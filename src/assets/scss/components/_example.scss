@@ -1,9 +1,18 @@
 .example {
 
+  @include media-breakpoint-up(md) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-column-gap: 40px;
+  }
+
   &__img {
     display: block;
     width: 100%;
     height: 175px;
+    object-fit: cover;
+    border-radius: 10px;
   }
 
   &__title {
@@ -13,5 +22,9 @@
     font-size: 18px;
     line-height: 23px;
     color: $black-color;
+
+    @include media-breakpoint-up(md) {
+      margin-top: 0;
+    }
   }
 }
