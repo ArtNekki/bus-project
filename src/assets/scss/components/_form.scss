@@ -3,11 +3,14 @@
 
   position: relative;
   padding: 45px 33px 60px 33px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   font-family: $font-family;
+  text-align: left;
   background-color: $primary-color;
   border-radius: $form-border-radius;
+  box-sizing: border-box;
 
   &::before {
     content: "";
@@ -63,6 +66,13 @@
 
     &:focus {
       outline: none;
+    }
+  }
+
+  &--promo {
+    @include media-breakpoint-up(lg) {
+      display: inline-flex;
+      max-width: 375px;
     }
   }
 

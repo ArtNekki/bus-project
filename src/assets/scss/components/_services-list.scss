@@ -11,6 +11,11 @@
     grid-template-rows: repeat(3, auto);
   }
 
+  @include media-breakpoint-up(lg) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+  }
+
   &__item {
     margin-bottom: 35px;
     display: grid;

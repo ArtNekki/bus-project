@@ -12,6 +12,11 @@
     font-size: 32px;
     line-height: 35px;
     color: $black-color;
+
+    @include media-breakpoint-up(lg) {
+      font-size: 42px;
+      line-height: 45px;
+    }
   }
 
   &__text {
@@ -21,6 +26,11 @@
     font-size: 15px;
     line-height: 18px;
     color: $font-color;
+
+    @include media-breakpoint-up(lg) {
+      font-size: 18px;
+      line-height: 24px;
+    }
 
     &--shadow {
       position: relative;

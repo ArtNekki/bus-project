@@ -3,38 +3,47 @@
 
   &__inner {
     @include container();
-    padding-top: 32px;
+    padding-top: 30px;
 
     @include media-breakpoint-up(md) {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: auto auto 195px 60px;
-      grid-template-areas:
-        "title form"
-        "text form"
-        "image form"
-        "list form";
-      grid-column-gap: 12px;
+       display: grid;
+       grid-template-columns: repeat(2, 1fr);
+       grid-template-rows: auto;
+       grid-column-gap: 12px;
+     }
+
+    @include media-breakpoint-up(lg) {
+      padding-top: 70px;
+      grid-column-gap: 0;
     }
   }
 
   &__title {
     margin: 0;
-    grid-area: title;
     font-size: 32px;
     line-height: 35px;
     color: $black-color;
+
+    @include media-breakpoint-up(lg) {
+      font-size: 55px;
+      line-height: 65px;
+    }
   }
 
   &__text {
     margin-top: 35px;
-    grid-area: text;
     font-size: 16px;
     line-height: 19px;
     color: $black-color;
 
     @include media-breakpoint-up(md) {
       margin-top: 12px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      margin-top: 32px;
+      font-size: 26px;
+      line-height: 31px;
     }
   }
 
@@ -68,10 +77,13 @@
     @include media-breakpoint-up(md) {
       display: block;
     }
+
+    @include media-breakpoint-up(lg) {
+      display: none;
+    }
   }
 
   &__list {
-    grid-area: list;
     margin: 0;
     margin-top: 30px;
     padding: 0;
@@ -86,6 +98,12 @@
       margin-bottom: 10px;
       margin-right: 15px;
     }
+
+    @include media-breakpoint-up(lg) {
+      margin-top: 90px;
+      font-size: 18px;
+      line-height: 22px;
+    }
   }
 
   &__list svg,
@@ -99,11 +117,30 @@
   }
 
   &__form {
-    grid-area: form;
+    position: relative;
     margin-top: 60px;
+
+    &::before {
+      @include media-breakpoint-up(lg) {
+        content: "";
+        position: absolute;
+        top: 30%;
+        right: -35%;
+        z-index: -1;
+        width: 810px;
+        height: 360px;
+        background: url("../img/content/index/bus-bg.png");
+        background-repeat: no-repeat;
+        background-position: 100% 0;
+      }
+    }
 
     @include media-breakpoint-up(md) {
       margin-top: 0;
+    }
+
+    @include media-breakpoint-up(lg) {
+      text-align: right;
     }
   }
 }
