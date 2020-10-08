@@ -68,9 +68,17 @@
     display: grid;
     grid-row-gap: 20px;
 
+    @include media-breakpoint-up(sm) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include media-breakpoint-up(md) {
+      grid-template-columns: 1fr;
+    }
+
     @include media-breakpoint-up(lg) {
       padding: 0 0 20px 0;
-      display: flex;
+      grid-template-columns: repeat(6, auto);
       align-items: center;
       justify-content: space-between;
       border-bottom: 1px solid rgba(#C4C4C4, 0.1);
@@ -113,13 +121,14 @@
     &--contacts {
       display: grid;
       grid-template-columns: repeat(2, auto);
+      //grid-column-gap: 15px;
+      grid-row-gap: 30px;
       justify-content: space-between;
       align-items: center;
 
-      //display: flex;
-      //flex-wrap: wrap;
-      //align-items: center;
-      //justify-content: space-between;
+      @include media-breakpoint-up(sm) {
+        grid-template-columns: repeat(3, auto);
+      }
 
       @include media-breakpoint-up(md) {
         display: block;
@@ -157,15 +166,23 @@
     }
 
     &--email {
-      margin-top: 30px;
-      margin-left: 28px;
       display: block;
       color: $primary-color;
+      text-align: right;
+
+      @include media-breakpoint-up(md) {
+        margin-top: 30px;
+        margin-left: 28px;
+        text-align: unset;
+      }
     }
 
     &--location {
       display: block;
-      margin-top: 30px;
+
+      @include media-breakpoint-up(md) {
+        margin-top: 30px;
+      }
     }
 
     &--sm {
