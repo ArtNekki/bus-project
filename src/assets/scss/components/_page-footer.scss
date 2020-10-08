@@ -257,5 +257,11 @@
       grid-template-columns: repeat(3, auto);
       justify-content: space-between;
     }
+
+    @include media-breakpoint-up(lg) {
+      grid-template-columns: 30% 1fr auto;
+      justify-content: flex-start;
+      grid-column-gap: 70px;
+    }
   }
 }
