@@ -87,7 +87,10 @@
 
     @include media-breakpoint-up(lg) {
       display: grid;
-      grid-template-columns: 2fr repeat(3, 1fr);
+      grid-template-columns: 30% repeat(3, auto);
+      justify-content: space-between;
+
+      //grid-template-columns: 2fr repeat(3, 1fr);
       grid-column-gap: 70px;
     }
   }
@@ -108,10 +111,15 @@
     }
 
     &--contacts {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
+      display: grid;
+      grid-template-columns: repeat(2, auto);
       justify-content: space-between;
+      align-items: center;
+
+      //display: flex;
+      //flex-wrap: wrap;
+      //align-items: center;
+      //justify-content: space-between;
 
       @include media-breakpoint-up(md) {
         display: block;
