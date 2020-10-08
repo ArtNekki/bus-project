@@ -151,46 +151,46 @@ layout: default
   <div class="page-section__container">
     <h2 class="page-section__title">Решаем нестандартные логистические задачи</h2>
     <p class="page-section__text">Нужно организовать доставку нестандартного груза в очень сжатые сроки? Трудно найти исполнителя? Мы предложим индивидуальное решение вашей задачи!</p>
-    <form action="#" class="form form--send-cargo">
-      <div class="form__field">
-        <label for="delivery-from-second" class="form__label">Откуда отправляем?</label>
-        <div class="select">
-          <select name="delivery-from" id="delivery-from-second" class="select__field">
-            <option value="">Выберите город</option>
-            <option value="">Находка</option>
-            <option value="">Арсеньев</option>
-          </select>
+    <div class="page-section__row">
+      <form action="#" class="form form--send-cargo">
+        <div class="form__field">
+          <label for="delivery-from-second" class="form__label">Откуда отправляем?</label>
+          <div class="select">
+            <select name="delivery-from" id="delivery-from-second" class="select__field">
+              <option value="">Выберите город</option>
+              <option value="">Находка</option>
+              <option value="">Арсеньев</option>
+            </select>
+          </div>
         </div>
-      </div>
-      <div class="form__field">
-        <label for="delivery-to-second" class="form__label">Куда отправляем?</label>
-        <div class="select">
-          <select id="delivery-to-second" name="delivery-from"  class="select__field">
-            <option value="">Выберите город</option>
-            <option value="">Находка</option>
-            <option value="">Арсеньев</option>
-          </select>
+        <div class="form__field">
+          <label for="delivery-to-second" class="form__label">Куда отправляем?</label>
+          <div class="select">
+            <select id="delivery-to-second" name="delivery-from"  class="select__field">
+              <option value="">Выберите город</option>
+              <option value="">Находка</option>
+              <option value="">Арсеньев</option>
+            </select>
+          </div>
         </div>
-      </div>
-      <div class="form__field form__field--full">
-        <label for="describe-task" class="form__label">Куда отправляем?</label>
-        <textarea name="describe-task" id="describe-task"  rows="5" class="text-area"></textarea>
-      </div>
-      <div class="form__field form__field--full">
-        <label class="checkbox">
-          <input type="checkbox" class="checkbox__input">
-          <span class="checkbox__label">Нажимая кнопку «Отправить», я даю свое согласие на</span>
-        </label>
-        <a href="#" class="link link--sm"><span class="link__text">обработку моих персональных данных</span></a>
-      </div>
-      <button type="submit" class="form__submit">Отправить</button>
-    </form>
-  </div>
-</section>
-<section class="page-section">
-  <div class="page-section__container">
-    <h2 class="page-section__title">Примеры</h2>
-    {{> example-slider}}
+        <div class="form__field form__field--full">
+          <label for="describe-task" class="form__label">Куда отправляем?</label>
+          <textarea name="describe-task" id="describe-task"  rows="5" class="text-area"></textarea>
+        </div>
+        <div class="form__field form__field--full">
+          <label class="checkbox">
+            <input type="checkbox" class="checkbox__input">
+            <span class="checkbox__label">Нажимая кнопку «Отправить», я даю свое согласие на</span>
+          </label>
+          <a href="#" class="link link--sm"><span class="link__text">обработку моих персональных данных</span></a>
+        </div>
+        <button type="submit" class="form__submit">Отправить</button>
+      </form>
+      <section class="page-section page-section--examples">
+        <h2 class="page-section__title">Примеры</h2>
+        {{> example-slider}}
+      </section>
+    </div>
   </div>
 </section>
 <section class="page-section">
@@ -224,18 +224,22 @@ layout: default
 <section class="page-section">
   <div class="page-section__container">
     <h2 class="page-section__title">Грузоперевозки по Приморскому краю</h2>
-    <p class="page-section__text page-section__text--shadow">Мы предлагаем приемлемые тарифы, высокую скорость доставки и ручаемся за каждый наш груз. Мы не работаем по принципу "наборных грузов", а доставляем вашу посылку в ближайшее время с момента оформления заказа...</p>
-    <button type="button" class="page-section__more">Читать подробнее</button>
-    <div class="page-section__images">
-      <img class="page-section__img"
-           src="{{root}}assets/img/content/index/article-photo-1.jpg"
-           srcset="{{root}}assets/img/content/index/article-photo-1@2x.jpg 2x, {{root}}assets/img/content/index/article-photo-1@3x.jpg 3x">
-      <img class="page-section__img"
-           src="{{root}}assets/img/content/index/article-photo-2.jpg"
-           srcset="{{root}}assets/img/content/index/article-photo-2@2x.jpg 2x, {{root}}assets/img/content/index/article-photo-2@3x.jpg 3x">
-      <img class="page-section__img"
-           src="{{root}}assets/img/content/index/article-photo-3.jpg"
-           srcset="{{root}}assets/img/content/index/article-photo-3@2x.jpg 2x, {{root}}assets/img/content/index/article-photo-3@3x.jpg 3x">
-    </div>
+   <div class="page-section__row">
+     <div>
+       <p class="page-section__text page-section__text--shadow">Мы предлагаем приемлемые тарифы, высокую скорость доставки и ручаемся за каждый наш груз. Мы не работаем по принципу "наборных грузов", а доставляем вашу посылку в ближайшее время с момента оформления заказа...</p>
+       <button type="button" class="page-section__more">Читать подробнее</button>
+     </div>
+     <div class="page-section__images">
+       <img class="page-section__img"
+            src="{{root}}assets/img/content/index/article-photo-1.jpg"
+            srcset="{{root}}assets/img/content/index/article-photo-1@2x.jpg 2x, {{root}}assets/img/content/index/article-photo-1@3x.jpg 3x">
+       <img class="page-section__img"
+            src="{{root}}assets/img/content/index/article-photo-2.jpg"
+            srcset="{{root}}assets/img/content/index/article-photo-2@2x.jpg 2x, {{root}}assets/img/content/index/article-photo-2@3x.jpg 3x">
+       <img class="page-section__img"
+            src="{{root}}assets/img/content/index/article-photo-3.jpg"
+            srcset="{{root}}assets/img/content/index/article-photo-3@2x.jpg 2x, {{root}}assets/img/content/index/article-photo-3@3x.jpg 3x">
+     </div>
+   </div>
   </div>
 </section>

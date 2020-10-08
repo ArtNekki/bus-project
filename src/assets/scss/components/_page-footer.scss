@@ -12,7 +12,6 @@
     display: block;
     width: 130px;
     height: 75px;
-    background: $gray-color;
   }
 
   &__top {
@@ -58,11 +57,23 @@
   }
 
   &__link {
-    display: block;
+    //display: block;
     font-size: 16px;
     line-height: 19px;
     color: $white-color;
     text-decoration: none;
+  }
+
+  &__link--email {
+    margin-top: 30px;
+    margin-left: 28px;
+    display: block;
+    color: $primary-color;
+  }
+
+  &__link--location {
+    display: block;
+    margin-top: 30px;
   }
 
   &__link--sm,
@@ -70,6 +81,49 @@
     font-size: 13px;
     line-height: 16px;
     color: $gray-dark-color;
+  }
+
+  &__link-text {
+    position: relative;
+    margin-left: 10px;
+    display: inline-block;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -1px;
+      right: 0;
+      left: 0;
+      border-bottom-width: 1px;
+      border-bottom-style: dashed;
+      border-bottom-color: $white-color;
+    }
+  }
+
+  &__contact {
+    padding: 15px 23px;
+    font-family: $font-family;
+    font-size: 15px;
+    color: $font-color;
+    background-color: $white-color;
+    text-decoration: none;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.015);
+    border-radius: 23px;
+    display: none;
+
+    @include media-breakpoint-up(md) {
+      display: block;
+    }
+
+    svg {
+      margin-right: 8px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    span {
+      vertical-align: middle;
+    }
   }
 
   &__bottom {

@@ -7,6 +7,10 @@
     grid-column-gap: 40px;
   }
 
+  @include media-breakpoint-up(lg) {
+    display: block;
+  }
+
   &__img {
     display: block;
     width: 100%;
@@ -23,7 +27,7 @@
     line-height: 23px;
     color: $black-color;
 
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-between(sm, lg) {
       margin-top: 0;
     }
   }
