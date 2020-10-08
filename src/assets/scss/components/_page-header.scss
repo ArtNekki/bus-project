@@ -22,24 +22,26 @@
   }
 
   &__logo {
-    display: block;
-    width: 68px;
-    height: 40px;
-    //height: 78px;
     grid-area: logo;
-    background-color: $gray-light-color;
 
     .page--mobile-open & {
       opacity: 0;
     }
 
     @include media-breakpoint-up(lg) {
-      width: 128px;
-      height: 78px;
-
       .page--mobile-open & {
         opacity: 1;
       }
+    }
+  }
+
+  &__logo svg {
+    width: 68px;
+    height: 40px;
+
+    @include media-breakpoint-up(lg) {
+      width: 128px;
+      height: 78px;
     }
   }
 

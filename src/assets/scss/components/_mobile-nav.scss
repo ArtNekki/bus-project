@@ -2,10 +2,18 @@
   $mobile-padding-left: 20px;
   $mobile-padding-right: 15px;
 
+  @mixin text {
+    display: block;
+    font-size: 13px;
+    line-height: 16px;
+    color: $gray-dark-color;
+  }
+
   position: fixed;
   top: 0;
   right: 0;
-  transform: translateX(320px);
+  z-index: 100;
+  //transform: translateX(320px);
   width: 320px;
   height: 100vh;
   display: flex;
@@ -39,7 +47,6 @@
   &__logo {
     width: 68px;
     height: 40px;
-    background-color: $gray-color;
   }
 
   &__contact {
@@ -169,6 +176,23 @@
   &__footer {
     margin-top: auto;
     padding: 30px $mobile-padding-right 45px $mobile-padding-left;
+  }
+
+  &__footer-link {
+    @include text();
+    text-decoration: none;
+
+    &--lg {
+      margin-bottom: 35px;
+      font-size: 16px;
+      line-height: 24px;
+      color: $black-color;
+    }
+  }
+
+  &__text {
+    @include text();
+    margin-top: 10px;
   }
 
 }
