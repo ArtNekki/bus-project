@@ -6,13 +6,33 @@
   &__container {
     @include container();
 
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
+
+    @include media-breakpoint-up(md) {
+      grid-template-columns: 1fr auto;
+    }
+
   }
 
   &__logo {
     //margin-bottom: 10px;
-    display: block;
+
+    &--mobile {
+      display: block;
+
+      @include media-breakpoint-up(md) {
+        display: none;
+      }
+    }
+
+    &--desktop {
+      display: none;
+
+      @include media-breakpoint-up(md) {
+        display: block;
+      }
+    }
   }
 
   &__logo svg {
@@ -27,11 +47,14 @@
 
   &__top {
 
-    @include media-breakpoint-up(lg) {
-      margin-bottom: 60px;
+    @include media-breakpoint-up(md) {
       display: grid;
       grid-template-columns: auto 1fr;
       grid-column-gap: 70px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 60px;
     }
   }
 
@@ -55,6 +78,10 @@
     order: -1;
 
     @include media-breakpoint-up(md) {
+      order: unset;
+    }
+
+    @include media-breakpoint-up(lg) {
       display: grid;
       grid-template-columns: 2fr repeat(3, 1fr);
       grid-column-gap: 70px;
@@ -81,6 +108,10 @@
       flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
+
+      @include media-breakpoint-up(md) {
+        display: block;
+      }
     }
   }
 
@@ -209,7 +240,9 @@
     }
 
     @include media-breakpoint-up(md) {
-      display: flex;
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: repeat(3, auto);
       justify-content: space-between;
     }
   }
