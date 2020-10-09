@@ -77,8 +77,10 @@
   }
 
   &--send-cargo {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 35px;
+    @include media-breakpoint-up(md) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 35px;
+    }
   }
 }

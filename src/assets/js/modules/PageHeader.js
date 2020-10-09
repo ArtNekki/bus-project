@@ -1,15 +1,9 @@
 
-document.addEventListener('DOMContentLoaded', function() {
-  const page = document.documentElement;
-  const mobileNavOpen = document.querySelector('#mobileNavOpen');
-  const mobileNavClose = document.querySelector('#mobileNavClose');
+document.addEventListener('click', function(e) {
 
-
-  mobileNavOpen.addEventListener('click', function() {
-    page.classList.add('page--mobile-open');
-  });
-
-  mobileNavClose.addEventListener('click', function() {
-    page.classList.remove('page--mobile-open');
-  });
+  if (e.target && e.target.id === 'mobileNavOpen') {
+    this.documentElement.classList.add('page--mobile-open');
+  } else if (e.target && e.target.id === 'mobileNavClose') {
+    this.documentElement.classList.remove('page--mobile-open');
+  }
 });
