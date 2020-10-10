@@ -3,6 +3,12 @@
   display: flex;
   align-items: center;
 
+  .page-header--sticky  &  {
+    @include media-breakpoint-up(lg) {
+      padding-bottom: $sticky-menu-bottom-space;
+    }
+  }
+
   &__input {
     display: none;
   }
@@ -24,6 +30,13 @@
 
       @include media-breakpoint-up(lg) {
         margin-left: 42px;
+      }
+    }
+
+    .page-header--sticky & {
+
+      @include media-breakpoint-up(lg) {
+        margin-left: 20px;
       }
     }
   }
@@ -56,6 +69,13 @@
 
     @include media-breakpoint-up(lg) {
       display: block;
+    }
+
+    .page-header--sticky & {
+
+      @include media-breakpoint-up(lg) {
+        display: none;
+      }
     }
   }
 

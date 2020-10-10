@@ -6,6 +6,12 @@
   justify-content: space-between;
   list-style: none;
 
+  .page-header--sticky &  {
+
+    @include media-breakpoint-up(lg) {
+      margin-right: 65px;
+    }
+  }
 
   &__input {
     display: none;
@@ -22,6 +28,13 @@
 
     &--dropdown {
       padding: 5px 0;
+    }
+
+    .page-header--sticky .main-nav > &  {
+
+      @include media-breakpoint-up(lg) {
+        padding-bottom: $sticky-menu-bottom-space;
+      }
     }
   }
 
@@ -41,6 +54,14 @@
     @include media-breakpoint-up(xl) {
       font-size: 17px;
       line-height: 24px;
+    }
+
+    .page-header--sticky &  {
+
+      @include media-breakpoint-up(lg) {
+       font-size: 14px;
+       line-height: 20px;
+      }
     }
 
     .main-nav__item--dropdown & {
@@ -81,6 +102,13 @@
 
       @include media-breakpoint-up(xl) {
         top: 8px;
+      }
+
+      .page-header--sticky &  {
+
+        @include media-breakpoint-up(lg) {
+          top: 6px;
+        }
       }
     }
   }

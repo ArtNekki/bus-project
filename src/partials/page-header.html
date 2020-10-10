@@ -15,15 +15,29 @@
         </svg>
         <span>8 800 222 22 68</span>
       </div>
-      {{> header-user}}
+      <div class="page-header__user">
+        {{> header-user}}
+      </div>
      <div class="page-header__open">
        <button id="mobileNavOpen" type="button">
          <span></span>
        </button>
      </div>
     </div>
+<!--    <div class="page-header__bottom">-->
+<!--      -->
+<!--    </div>-->
     <nav class="page-header__nav">
       {{> main-nav}}
+      <div class="page-header__contact page-header__contact--sticky">
+        <svg width="15" height="15">
+          <use xlink:href="{{root}}assets/img/symbol/sprite.svg#tel"></use>
+        </svg>
+        <span>8 800 222 22 68</span>
+      </div>
+      <div class="page-header__user page-header__user--sticky">
+        {{> header-user}}
+      </div>
     </nav>
     {{> main-mobile-nav}}
   </div>
