@@ -15,9 +15,13 @@
     grid-column-gap: 20px;
 
     @include media-breakpoint-up(lg) {
+      padding-bottom: 0;
       grid-template-columns: 130px 1fr;
+      grid-column-gap: 45px;
+    }
+
+    @include media-breakpoint-up(xl) {
       grid-column-gap: 95px;
-      padding-bottom: 40px;
     }
   }
 
@@ -50,6 +54,7 @@
     display: grid;
     grid-template-columns: 1fr repeat(3, auto);
     grid-area: top;
+    align-items: center;
     height: 40px;
 
     .page--mobile-open & {

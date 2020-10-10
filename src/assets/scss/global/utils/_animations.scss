@@ -3,3 +3,9 @@
     transform: rotateZ(360deg);
   }
 }
+
+@keyframes menu-hover {
+  100% {
+    opacity: 100%;
+  }
+}

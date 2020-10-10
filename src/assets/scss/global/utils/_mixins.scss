@@ -177,3 +177,10 @@
   padding-left: $container-padding-x;
   max-width: 1170px;
 }
+
+@mixin menu-hover {
+  animation-name: menu-hover;
+  animation-duration: 0.25s;
+  animation-delay: 0.2s;
+  animation-fill-mode: forwards;
+}

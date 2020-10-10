@@ -1,9 +1,11 @@
 .main-nav {
   margin: 0;
   padding: 0;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(6, auto);
   justify-content: space-between;
   list-style: none;
+
 
   &__input {
     display: none;
@@ -11,7 +13,12 @@
 
   &__item {
     position: relative;
-    //padding-bottom: 40px;
+
+    .main-nav > & {
+      @include media-breakpoint-up(lg) {
+        padding: 0 15px 40px 0;
+      }
+    }
 
     &--dropdown {
       padding: 5px 0;
@@ -26,16 +33,36 @@
     text-decoration: none;
     white-space: nowrap;
 
+    @include media-breakpoint-up(lg) {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      font-size: 17px;
+      line-height: 24px;
+    }
+
     .main-nav__item--dropdown & {
       font-size: 16px;
       line-height: 22px;
+
+      @include media-breakpoint-up(lg) {
+        font-size: 15px;
+        line-height: 20px;
+      }
+
+      @include media-breakpoint-up(xl) {
+        font-size: 16px;
+        line-height: 22px;
+      }
     }
   }
 
   &__link  span {
     position: relative;
     display: inline-block;
-    
+
     &::after {
       content: "";
       position: absolute;
@@ -47,25 +74,35 @@
       border-top-color: transparent;
       border-left-color: transparent;
       transform: rotate3d(0, 0, 1, 45deg);
+
+      @include media-breakpoint-up(lg) {
+        top: 6px;
+      }
+
+      @include media-breakpoint-up(xl) {
+        top: 8px;
+      }
     }
   }
 
   &__dropdown {
     position: absolute;
-    top: calc(100% + 40px);
+    top: 100%;
     left: 0;
     z-index: 10;
     margin: 0;
     padding: 13px 30px 20px 20px;
     list-style: none;
     display: none;
+    opacity: 0;
     background-color: $white-color;
     border-top: 3px solid $primary-color;
     border-radius: 2px;
     box-shadow: 0px 5px 40px rgba($black-color, 0.05);
 
-    .main-nav__input:checked ~ & {
+    .main-nav__item:hover > & {
       display: block;
+      @include menu-hover();
     }
   }
 }
