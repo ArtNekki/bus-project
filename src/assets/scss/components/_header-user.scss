@@ -3,10 +3,8 @@
   display: flex;
   align-items: center;
 
-  .page-header--sticky  &  {
-    @include media-breakpoint-up(lg) {
-      padding-bottom:  calc(#{$sticky-menu-bottom-space} + 10px);
-    }
+  @include header-sticky(lg) {
+    padding-bottom:  calc(#{$sticky-menu-bottom-space} + 10px);
   }
 
   &__input {
@@ -15,8 +13,6 @@
 
   &__icon {
     margin-right: 12px;
-    //padding: 12px;
-    //background-color: $primary-color;
     border-radius: 50%;
 
     svg {
@@ -33,11 +29,8 @@
       }
     }
 
-    .page-header--sticky & {
-
-      @include media-breakpoint-up(lg) {
-        margin-left: 20px;
-      }
+    @include header-sticky(lg) {
+      margin-left: 20px;
     }
   }
 
@@ -71,11 +64,8 @@
       display: block;
     }
 
-    .page-header--sticky & {
-
-      @include media-breakpoint-up(lg) {
-        display: none;
-      }
+    @include header-sticky(lg) {
+      display: none;
     }
   }
 

@@ -6,11 +6,8 @@
   justify-content: space-between;
   list-style: none;
 
-  .page-header--sticky &  {
-
-    @include media-breakpoint-up(lg) {
-      margin-right: 65px;
-    }
+  @include header-sticky(lg) {
+    margin-right: 65px;
   }
 
   &__input {
@@ -30,9 +27,10 @@
       padding: 5px 0;
     }
 
-    .page-header--sticky .main-nav > &  {
 
-      @include media-breakpoint-up(lg) {
+    .main-nav > &  {
+
+      @include header-sticky(lg) {
         padding-bottom: $sticky-menu-bottom-space * 2;
       }
     }
@@ -56,12 +54,9 @@
       line-height: 24px;
     }
 
-    .page-header--sticky &  {
-
-      @include media-breakpoint-up(lg) {
-       font-size: 14px;
-       line-height: 20px;
-      }
+    @include header-sticky(lg) {
+      font-size: 14px;
+      line-height: 20px;
     }
 
     .main-nav__item--dropdown & {
@@ -78,10 +73,8 @@
         line-height: 22px;
       }
 
-      .page-header--sticky  &  {
-        @include media-breakpoint-up(lg) {
-          font-size: 14px;
-        }
+      @include header-sticky(lg) {
+        font-size: 14px;
       }
     }
   }
@@ -110,11 +103,8 @@
         top: 8px;
       }
 
-      .page-header--sticky &  {
-
-        @include media-breakpoint-up(lg) {
-          top: 6px;
-        }
+      @include header-sticky(lg) {
+        top: 6px;
       }
     }
   }

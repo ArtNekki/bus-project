@@ -185,6 +185,10 @@
   animation-fill-mode: forwards;
 }
 
-@mixin header-sticky {
-
+@mixin header-sticky($bp) {
+  .page-header--sticky & {
+    @include media-breakpoint-up($bp) {
+      @content;
+    }
+  }
 }
