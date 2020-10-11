@@ -1,0 +1,36 @@
+.breadcrumb {
+  border-top: 1px solid $gray-light-color;
+
+  &__list {
+    margin: 0;
+    padding: 20px 0;
+    display: flex;
+    list-style: none;
+    @include container();
+  }
+
+  &__item {
+    padding-right: 10px;
+
+    &:not(:last-child)::after {
+      content: '\2022';
+      margin-left: 10px;
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 10px;
+      color: $gray-dark-color;
+    }
+  }
+
+  &__link {
+    font-family: $font-family--secondary;
+    font-size: 14px;
+    line-height: 20px;
+    color: $gray-dark-color;
+    text-decoration: none;
+
+    .breadcrumb__item--active & {
+      color: $gray-color;
+    }
+  }
+}
