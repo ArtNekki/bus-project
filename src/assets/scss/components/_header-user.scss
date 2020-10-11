@@ -94,6 +94,12 @@
       right: unset;
       left: 50%;
       transform: translateX(-50%);
+
+      @include header-sticky(lg) {
+        right: 0;
+        left: unset;
+        transform: none;
+      }
     }
   }
 
