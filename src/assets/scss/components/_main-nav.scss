@@ -19,11 +19,15 @@
 
     .main-nav > & {
       @include media-breakpoint-up(lg) {
-        padding: 0 15px 40px 0;
+        padding-bottom: 40px;
       }
     }
 
-    &--dropdown {
+    .main-nav > &--dropdown {
+      padding-right: 15px;
+    }
+
+    .main-nav__dropdown & {
       padding: 5px 0;
     }
 
@@ -59,7 +63,7 @@
       line-height: 20px;
     }
 
-    .main-nav__item--dropdown & {
+    .main-nav__dropdown & {
       font-size: 16px;
       line-height: 22px;
 

@@ -1,6 +1,10 @@
 .breadcrumb {
   border-top: 1px solid $gray-light-color;
 
+  @include header-sticky(xs) {
+    display: none;
+  }
+
   &__list {
     margin: 0;
     padding: 20px 0;

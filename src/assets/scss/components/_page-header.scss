@@ -28,7 +28,7 @@
     }
 
     @include media-breakpoint-up(xl) {
-      grid-column-gap: 95px;
+      grid-column-gap: 85px;
     }
 
     @include header-sticky(lg) {
