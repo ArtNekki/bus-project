@@ -33,7 +33,7 @@
     .page-header--sticky .main-nav > &  {
 
       @include media-breakpoint-up(lg) {
-        padding-bottom: $sticky-menu-bottom-space;
+        padding-bottom: $sticky-menu-bottom-space * 2;
       }
     }
   }

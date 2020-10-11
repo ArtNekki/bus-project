@@ -1,5 +1,12 @@
 .page-header {
+  width: 100%;
+  background-color: $white-color;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05);
+
+  &--sticky {
+    position: fixed;
+    z-index: 100;
+  }
 
   &__inner {
     @include container();
@@ -36,6 +43,7 @@
   }
 
   &__logo {
+    display: flex;
     grid-area: logo;
 
     .page--mobile-open & {
@@ -116,6 +124,14 @@
 
         @include media-breakpoint-up(lg) {
           display: block;
+          padding: 15px;
+        }
+      }
+
+      .page-header--sticky & {
+
+        @include media-breakpoint-up(lg) {
+          padding: 15px 23px;
         }
       }
     }
@@ -131,13 +147,27 @@
   }
 
   &__contact svg {
-    margin-right: 8px;
     display: inline-block;
     vertical-align: middle;
   }
 
   &__contact span {
+    margin-left: 8px;
     vertical-align: middle;
+
+    .page-header--sticky & {
+
+      @include media-breakpoint-up(lg) {
+        display: none;
+      }
+    }
+
+    .page-header--sticky & {
+
+      @include media-breakpoint-up(xl) {
+        display: inline-block;
+      }
+    }
   }
 
   &__user {
@@ -217,7 +247,7 @@
       @include media-breakpoint-up(lg) {
         display: grid;
         grid-template-columns: 1fr repeat(2, auto);
-        align-items: center;
+        align-items: end;
         justify-content: space-between;
       }
     }
