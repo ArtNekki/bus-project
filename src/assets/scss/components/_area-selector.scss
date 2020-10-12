@@ -29,33 +29,11 @@
       color: $black-color;
     }
 
-    &::after {
-      content: "";
-      position: absolute;
-      top: 8px;
-      right: -15px;
-      width: 4px;
-      height: 4px;
-      border: 1px solid $gray-dark-color;
-      border-top-color: transparent;
-      border-left-color: transparent;
-      transform: rotate3d(0, 0, 1, 45deg);
-      transition: $menu-item-transition;
-
-      @include hover {
-        border-bottom-color: $black-color;
-        border-right-color: $black-color;
-      }
-
-      @include active {
-        border-bottom-color: $black-color;
-        border-right-color: $black-color;
-      }
-    }
-
     @include focus {
       outline: none;
     }
+
+    @include caret(0.55em, -1em);
   }
 
   &__toggle svg {

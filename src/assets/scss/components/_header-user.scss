@@ -66,45 +66,22 @@
       color: $black-color;
     }
 
-    @include active {
-      color: $black-color;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 6px;
-      right: -18px;
-      width: 4px;
-      height: 4px;
-      display: none;
-      border: 1px solid $gray-dark-color;
-      border-top-color: transparent;
-      border-left-color: transparent;
-      transform: rotate3d(0, 0, 1, 45deg);
-      transition: $menu-item-transition;
-
-      .header-user--logged-in & {
-        display: block;
-      }
-
-      @include hover {
-        border-bottom-color: $black-color;
-        border-right-color: $black-color;
-      }
-
-      @include active {
-        border-bottom-color: $black-color;
-        border-right-color: $black-color;
-      }
-    }
-
     @include media-breakpoint-up(lg) {
       display: block;
     }
 
     @include header-sticky(lg) {
       display: none;
+    }
+
+    @include caret(0.4em, -1.25em);
+
+    &::after {
+      display: none;
+
+      .header-user--logged-in & {
+        display: block;
+      }
     }
   }
 

@@ -192,3 +192,35 @@
     }
   }
 }
+
+@mixin mobile-open($bp: null) {
+  .page--mobile-open & {
+    @if ($bp) {
+      @include media-breakpoint-up($bp) {
+        @content;
+      }
+    } @else {
+      @content;
+    }
+  }
+}
+
+@mixin caret($top, $right, $color: $gray-dark-color, $hoverColor: $black-color) {
+  &::after {
+    content: "";
+    position: absolute;
+    top: $top;
+    right: $right;
+    width: 4px;
+    height: 4px;
+    border: 1px solid $color;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    transform: rotate3d(0, 0, 1, 45deg);
+
+    @include hover {
+      border-bottom-color: $hoverColor;
+      border-right-color: $hoverColor;
+    }
+  }
+}
