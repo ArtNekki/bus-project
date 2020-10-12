@@ -43,10 +43,18 @@
   &__link {
     font-family: $font-family;
     font-size: 17px;
-    line-height: 24px;
-    color: $gray-dark-color;
+    line-height: 26px;
+    color: #666666;
     text-decoration: none;
     white-space: nowrap;
+
+    @include hover {
+      color: $black-color;
+    }
+
+    @include active {
+      color: $black-color;
+    }
 
     @include media-breakpoint-up(lg) {
       font-size: 16px;
@@ -99,6 +107,11 @@
       border-left-color: transparent;
       transform: rotate3d(0, 0, 1, 45deg);
 
+      @include hover {
+        border-bottom-color: $black-color;
+        border-right-color: $black-color;
+      }
+
       @include media-breakpoint-up(lg) {
         top: 6px;
       }
@@ -119,7 +132,7 @@
     left: 0;
     z-index: 10;
     margin: 0;
-    padding: 13px 30px 20px 20px;
+    padding: 15px 30px 20px 20px;
     list-style: none;
     display: none;
     opacity: 0;
