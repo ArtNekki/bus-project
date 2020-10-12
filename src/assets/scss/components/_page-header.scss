@@ -70,17 +70,18 @@
     //padding-top: 20px;
     display: grid;
     grid-template-columns: 1fr repeat(3, auto);
+    grid-template-rows: 46px; //temp
     grid-area: top;
-    align-items: end;
-    height: 40px;
+    align-items: center; //temp
 
     @include header-sticky(lg) {
       display: none;
     }
 
     @include media-breakpoint-up(lg) {
-      height: auto;
-      padding-bottom: 15px;
+      grid-template-rows: auto;
+      align-items: end; //temp
+      padding-bottom: 15px; //temp
 
       @include mobile-open {
         opacity: 1;

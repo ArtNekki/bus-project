@@ -4,8 +4,15 @@
   display: flex;
   align-items: center;
 
+  @include media-breakpoint-up(lg) { //temp
+    padding-bottom: 3px;
+  }
+
   &--logged-in {
-    padding-bottom: 8px;
+
+    @include media-breakpoint-up(lg) { //temp
+      padding-bottom: 8px;
+    }
   }
 
   @include header-sticky(lg) {
