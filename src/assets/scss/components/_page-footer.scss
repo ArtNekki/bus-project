@@ -157,6 +157,10 @@
     color: $white-color;
     text-decoration: none;
 
+    @include hover {
+      opacity: 0.8;
+    }
+
     .page-footer__nav & {
 
       @include media-breakpoint-down(md) {
@@ -224,7 +228,10 @@
     text-decoration: none;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.015);
     border-radius: 23px;
-    //display: none;
+
+    @include hover {
+      opacity: 0.8;
+    }
 
     @include media-breakpoint-up(md) {
       display: block;
