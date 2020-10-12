@@ -9,57 +9,76 @@
 
   &__toggle {
     position: relative;
+    padding-bottom: 10px;
     display: inline-flex;
     align-items: center;
     font-family: $font-family;
     font-size: 15px;
     line-height: 24px;
-    color: #808080;
+    color: #999999;
     background: none;
     border: none;
     cursor: pointer;
+    transition: $menu-item-transition;
 
-    //@include media-breakpoint-between(lg, xl) {
-    //  font-size: 13px;
-    //  line-height: 18px;
-    //}
+    @include hover {
+      color: $black-color;
+    }
+
+    @include active {
+      color: $black-color;
+    }
 
     &::after {
       content: "";
       position: absolute;
       top: 8px;
-      right: -12px;
+      right: -15px;
       width: 4px;
       height: 4px;
-      border: 1px solid #808080;
+      border: 1px solid $gray-dark-color;
       border-top-color: transparent;
       border-left-color: transparent;
       transform: rotate3d(0, 0, 1, 45deg);
+      transition: $menu-item-transition;
 
-      //@include media-breakpoint-between(lg, xl) {
-      //  top: 4px;
-      //}
+      @include hover {
+        border-bottom-color: $black-color;
+        border-right-color: $black-color;
+      }
+
+      @include active {
+        border-bottom-color: $black-color;
+        border-right-color: $black-color;
+      }
     }
 
-    &:focus {
+    @include focus {
       outline: none;
     }
   }
 
   &__toggle svg {
+    position: relative;
+    top: -2px;
     width: 15px;
     height: 15px;
-    margin-right: 8px;
+    margin-right: 10px;
     display: none;
+    stroke: rgba($black-color, 0.5);
+    transition: $menu-item-transition;
+
+    @include hover('.area-selector') {
+      stroke: $black-color;
+    }
+
+    @include active('.area-selector') {
+      stroke: $black-color;
+    }
 
     @include media-breakpoint-up(lg) {
       display: block;
     }
-
-    //@include media-breakpoint-between(lg, xl) {
-    //  width: 12px;
-    //  height: 12px;
-    //}
   }
 
 
@@ -72,7 +91,7 @@
     display: none;
     opacity: 0;
     grid-template-columns: repeat(2, auto);
-    grid-column-gap: 24px;
+    grid-column-gap: 25px;
     border-top: 3px solid $primary-color;
     background-color: $white-color;
     border-radius: 2px;
@@ -84,7 +103,7 @@
     }
 
     @include media-breakpoint-up(xl) {
-      padding: 35px 85px 20px 45px;
+      padding: 30px 90px 25px 45px;
       grid-column-gap: 30px;
     }
   }
@@ -100,18 +119,13 @@
   }
 
   &__title {
-    margin: 0 0 15px 0;
+    margin: 0 0 10px 0;
     font-family: $font-family;
     font-size: 18px;
     line-height: 26px;
-    color: rgba($gray-color, 0.4);
+    color: rgba($font-color, 0.4);
     font-weight: 500;
     white-space: nowrap;
-
-    //@include media-breakpoint-up(xl) {
-    //  font-size: 18px;
-    //  line-height: 26px;
-    //}
   }
 
   &__list {
@@ -124,7 +138,7 @@
     white-space: nowrap;
 
     &:not(:last-child) {
-      margin-bottom: 15px;
+      margin-bottom: 10px;
     }
   }
 
@@ -132,10 +146,14 @@
     position: relative;
     font-family: $font-family;
     font-size: 15px;
-    line-height: 19px;
-    color: $gray-color;
+    line-height: 21px;
+    color: $font-color;
     text-decoration: none;
     white-space: nowrap;
+
+    @include hover {
+      color: $black-color;
+    }
 
     @include media-breakpoint-up(xl) {
       font-size: 16px;
@@ -146,6 +164,11 @@
       margin-left: 10px;
       color: $blue-color;
 
+      @include hover {
+        color: $blue-light-color;
+      }
+
+
       &::before {
         content: "";
         position: absolute;
@@ -154,6 +177,10 @@
         height: 1px;
         width: 100%;
         border-top: 1px dashed $blue-color;
+
+        @include hover {
+          border-color: $blue-light-color;
+        }
       }
     }
   }
