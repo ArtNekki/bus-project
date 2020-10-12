@@ -105,10 +105,10 @@
     text-decoration: none;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.015);
     border-radius: 23px;
-    transition: $menu-item-transition;
 
     @include hover {
       color: $black-color;
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.075);
     }
 
     @include active {
@@ -124,7 +124,7 @@
 
       @include header-sticky(lg) {
         display: block;
-        padding: 0.85em;
+        padding: 0.85em 1em;
       }
 
       @include header-sticky(xl) {
