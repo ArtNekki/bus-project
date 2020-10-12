@@ -1,8 +1,12 @@
 .header-user {
   position: relative;
-  padding-bottom: 8px;
+  padding-bottom: 3px;
   display: flex;
   align-items: center;
+
+  &--logged-in {
+    padding-bottom: 8px;
+  }
 
   @include header-sticky(lg) {
     padding-bottom:  calc(#{$sticky-menu-bottom-space} + 10px);
