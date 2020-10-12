@@ -1,5 +1,5 @@
 .breadcrumb {
-  border-top: 1px solid $gray-light-color;
+  border-top: 1px solid lighten($gray-light-color, 5%);
 
   @include header-sticky(xs) {
     display: none;
@@ -30,11 +30,19 @@
     font-family: $font-family--secondary;
     font-size: 14px;
     line-height: 20px;
-    color: $gray-dark-color;
+    color: $font-color;
     text-decoration: none;
 
+    @include hover {
+      color: $black-color;
+    }
+
     .breadcrumb__item--active & {
-      color: $gray-color;
+      color: rgba($font-color, 0.5);
+
+      @include hover {
+        color: rgba($font-color, 0.5);
+      }
     }
   }
 }
