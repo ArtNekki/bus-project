@@ -1,0 +1,12 @@
+.page {
+
+  @include mobile-open {
+    overflow: hidden;
+  }
+}
+
+body {
+  @include mobile-open {
+    position: fixed;
+  }
+}

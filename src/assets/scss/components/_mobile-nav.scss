@@ -18,7 +18,7 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: #F7F7F7;
+  background-color: #fdfdfd;
   transition: transform 0.2s ease-in;
 
   @include mobile-open {
@@ -50,10 +50,14 @@
   }
 
   &__contact {
-    padding: 15px;
+    padding: 13px 15px;
     display: block;
     background-color: $white-color;
     border-radius: 50%;
+
+    @include active {
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    }
   }
 
   &__close {
@@ -69,6 +73,10 @@
     background-color: transparent;
     cursor: pointer;
 
+    @include focus {
+      outline: none;
+    }
+
     @include mobile-open {
       display: block;
     }
@@ -82,6 +90,10 @@
       height: 100%;
       width: 1px;
       background-color: #b3b3b3;
+
+      @include active {
+        background-color: $black-color;
+      }
     }
 
     &::before {
@@ -119,10 +131,10 @@
       top: 0;
       left: 0;
       z-index: -1;
-      padding-top: 15px;
-      padding-bottom: 15px;
+      padding-top: 20px;
+      padding-bottom: 20px;
       opacity: 0;
-      background-color:  #E9E9E9;
+      background-color:  #f7f7f7;
     }
   }
 
@@ -132,9 +144,13 @@
     border-bottom: 1px solid #e6e6e6;
     font-size: 18px;
     line-height: 22px;
-    color: $gray-dark-color;
+    color: $font-color;
     text-decoration: none;
     cursor: pointer;
+
+    @include hover {
+      color: $black-color;
+    }
 
     .mobile-nav__list--inner & {
       padding-top: 10px;
@@ -153,7 +169,7 @@
   &__link--toggle {
     position: relative;
 
-    @include caret(calc(50% - 5px), 15px);
+    @include caret(calc(50% - 5px), 15px, $font-color, $black-color);
 
     .mobile-nav__input:checked ~  &::after {
       top: 50%;
