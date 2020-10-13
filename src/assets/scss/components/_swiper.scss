@@ -1,6 +1,12 @@
 .swiper {
   position: relative;
 
+  $swiper-btn-size: 42px;
+
+  @include media-breakpoint-up(lg) {
+    width: 400px;
+  }
+
   &-pagination {
     margin-top: 25px;
     display: flex;
@@ -12,8 +18,57 @@
     //display: grid;
     //grid-template-columns: repeat(4, auto);
 
-    @include media-breakpoint-up(xl) {
+    @include media-breakpoint-up(lg) {
       display: none;
+    }
+  }
+
+  &-button {
+    position: absolute;
+    top: 80px;
+    z-index: 10;
+    padding: 0;
+    width: $swiper-btn-size;
+    height: $swiper-btn-size;
+    display: none;
+    border: none;
+    background-color: $primary-color;
+    border-radius: 50%;
+    cursor: pointer;
+
+    @include media-breakpoint-up(lg) {
+      display: block;
+    }
+
+    @include focus {
+      outline: none;
+    }
+
+    &-prev::before,
+    &-next::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      border: 7px solid transparent;
+    }
+
+    &-prev {
+      left: -$swiper-btn-size / 2;
+
+      &::before {
+        left: 10px;
+        border-right-color: $black-color;
+      }
+    }
+
+    &-next {
+      right: -$swiper-btn-size / 2;
+
+      &::before {
+        right: 8px;
+        border-left-color:$black-color;
+      }
     }
   }
 

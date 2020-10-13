@@ -22,10 +22,10 @@ export default class Slider {
 
     this._slider = new Swiper(target, Object.assign(this._settings, {
       navigation: {
-        nextEl: target.parentNode.querySelector('.slider-btn--next'),
-        prevEl: target.parentNode.querySelector('.slider-btn--prev'),
-        disabledClass: 'slider-btn--disabled',
-        hiddenClass: 'slider-btn--hidden'
+        nextEl: target.parentNode.querySelector('.swiper-button-prev'),
+        prevEl: target.parentNode.querySelector('.swiper-button-next'),
+        disabledClass: 'swiper-button-disabled',
+        hiddenClass: 'swiper-button-hidden'
       },
       pagination: {
         el: target.parentNode.querySelector('.swiper-pagination'),
