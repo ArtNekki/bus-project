@@ -12,6 +12,11 @@
   border-radius: $form-border-radius;
   box-sizing: border-box;
 
+  @include media-breakpoint-up(md) {
+    padding-right: 45px;
+    padding-left: 45px;
+  }
+
   &::before {
     content: "";
     position: absolute;
