@@ -3,7 +3,7 @@
 
   &__inner {
     @include container();
-    padding-top: 30px;
+    padding-top: 40px;
 
     @include media-breakpoint-up(md) {
        display: grid;
@@ -21,7 +21,7 @@
   &__title {
     margin: 0;
     font-size: 32px;
-    line-height: 35px;
+    line-height: 38px;
     color: $black-color;
 
     @include media-breakpoint-up(lg) {

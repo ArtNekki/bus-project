@@ -10,7 +10,7 @@
     margin-bottom: 15px;
     font-family: $font-family;
     font-size: 32px;
-    line-height: 35px;
+    line-height: 38px;
     color: $black-color;
 
     @include media-breakpoint-up(lg) {
@@ -65,8 +65,8 @@
   &__more {
     padding: 0;
     display: grid;
-    grid-template-columns: 1fr 32px;
-    grid-template-rows: 32px;
+    grid-template-columns: 1fr 30px;
+    grid-template-rows: 30px;
     grid-column-gap: 10px;
     align-items: center;
     font-family: $font-family--secondary;
@@ -85,8 +85,8 @@
       content: "";
       grid-column: 2 / -1;
       grid-row: 1 / -1;
-      width: 32px;
-      height: 32px;
+      width: 30px;
+      height: 30px;
       border: 1px solid rgba($black-color, 0.1);
       border-radius: 50%;
     }

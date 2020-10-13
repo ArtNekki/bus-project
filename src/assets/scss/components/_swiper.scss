@@ -2,7 +2,7 @@
   position: relative;
 
   &-pagination {
-    margin-top: 10px;
+    margin-top: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,7 +18,7 @@
   }
 
   &-pagination-bullet {
-    margin: 20px 12px 10px 12px;
+    margin:  0 12px 10px 12px;
     width: 6px;
     height: 6px;
     display: block;
