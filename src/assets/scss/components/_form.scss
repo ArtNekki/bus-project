@@ -12,7 +12,7 @@
   border-radius: $form-border-radius;
   box-sizing: border-box;
 
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-up(sm) {
     padding-right: 45px;
     padding-left: 45px;
   }
@@ -28,7 +28,7 @@
     background-color: $primary-color;
     border-radius: $form-border-radius;
 
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(sm) {
       display: none;
     }
   }

@@ -1,6 +1,10 @@
 .main-promo {
   font-family: $font-family;
 
+  @include media-breakpoint-up(lg) {
+    overflow: hidden;
+  }
+
   &__inner {
     @include container();
     padding-top: 40px;
@@ -17,6 +21,10 @@
       padding-top: 70px;
       grid-column-gap: 0;
     }
+
+    @include media-breakpoint-up(lg) {
+      padding-bottom: 65px;
+    }
   }
 
   &__title {
@@ -25,8 +33,18 @@
     line-height: 38px;
     color: $black-color;
 
+    @include media-breakpoint-only(sm) {
+      font-size: 44px;
+      line-height: 55px;
+    }
+
     @include media-breakpoint-up(lg) {
-      font-size: 55px;
+      font-size: 44px;
+      line-height: 55px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      font-size: 54px;
       line-height: 65px;
     }
   }
@@ -37,11 +55,23 @@
     line-height: 19px;
     color: $black-color;
 
+    @include media-breakpoint-only(sm) {
+      font-size: 22px;
+      line-height: 28px;
+    }
+
     @include media-breakpoint-up(md) {
+      //font-size: 16px;
+      //line-height: 26px;
       margin-top: 1.5em;
     }
 
     @include media-breakpoint-up(lg) {
+      font-size: 22px;
+      line-height: 28px;
+    }
+
+    @include media-breakpoint-up(xl) {
       margin-top: 32px;
       font-size: 26px;
       line-height: 31px;
@@ -91,9 +121,17 @@
     padding: 0;
     display: grid;
     grid-template-columns: repeat(3, auto);
+    justify-content: start;
+    grid-column-gap: 1.5em;
     font-size: 14px;
     line-height: 17px;
     list-style: none;
+
+    @include media-breakpoint-only(sm) {
+      margin-top: 50px;
+      font-size: 18px;
+      line-height: 22px;
+    }
 
     @include media-breakpoint-up(md) {
       margin-top: 2em;
@@ -123,17 +161,27 @@
     margin-top: 60px;
 
     &::before {
+
+
       @include media-breakpoint-up(lg) {
         content: "";
         position: absolute;
         top: 30%;
-        right: -35%;
+        right: -14%;
         z-index: -1;
-        width: 810px;
+        width: 60vw;
         height: 360px;
         background: url("../img/content/index/bus-bg.png");
         background-repeat: no-repeat;
+        background-size: contain;
         background-position: 100% 0;
+      }
+
+      @include media-breakpoint-up(xl) {
+        top: 30%;
+        right: -35%;
+        width: 810px;
+        background-size: cover;
       }
     }
 
