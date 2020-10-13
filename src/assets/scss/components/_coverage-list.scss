@@ -1,24 +1,51 @@
 .coverage-list {
-  margin: 0;
+  margin: 20px 0 0;
   padding: 0;
+  display: grid;
+  grid-row-gap: 25px;
   list-style: none;
 
-  @include media-breakpoint-between(md, lg) {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+  @include media-breakpoint-up(sm) {
+    margin-top: 40px;
+    grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 10px;
   }
 
+  @include media-breakpoint-between(md, lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include media-breakpoint-up(xl) {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: unset;
+    grid-row-gap: 50px;
+  }
+
   &__item {
-    margin-bottom: 25px;
     display: grid;
     grid-template-columns: 90px auto;
     grid-template-rows: repeat(3, auto);
     grid-column-gap: 22px;
 
-    @include media-breakpoint-between(md, lg) {
+    @include media-breakpoint-between(sm, lg) {
       display: flex;
       flex-direction: column;
+    }
+
+    @include media-breakpoint-only(sm) {
+      align-items: center;
+      text-align: center;
+
+      &:last-child {
+        grid-column: 1 / -1;
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      &:last-child {
+        display: flex;
+      }
     }
 
     @include media-breakpoint-up(lg) {
@@ -61,8 +88,8 @@
     grid-column: 2 / -1;
     grid-row: 1 / 1;
 
-    @include media-breakpoint-between(md, lg) {
-      margin-top: 27px; //25
+    @include media-breakpoint-between(sm, lg) {
+      margin-top: 25px;
     }
 
     @include media-breakpoint-up(lg) {
