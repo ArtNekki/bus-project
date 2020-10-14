@@ -42,8 +42,9 @@
       }
     }
 
-    @include media-breakpoint-up(md) {
-      &:last-child {
+    &:last-child {
+
+      @include media-breakpoint-only(md) {
         display: flex;
       }
     }
