@@ -44,6 +44,7 @@
     font-family: $font-family;
     font-size: 17px;
     line-height: 24px;
+    line-height: 1.45;
     color: #666666;
     text-decoration: none;
     white-space: nowrap;
@@ -58,31 +59,27 @@
 
     @include media-breakpoint-up(lg) {
       font-size: 16px;
-      //line-height: 20px;
     }
 
     @include media-breakpoint-up(xl) {
       font-size: 17px;
-      //line-height: 24px;
     }
 
     @include header-sticky(lg) {
       font-size: 14px;
-      //line-height: 20px;
     }
 
     .main-nav__dropdown & {
       font-size: 16px;
       line-height: 22px;
+      line-height: 1.4;
 
       @include media-breakpoint-up(lg) {
         font-size: 15px;
-        //line-height: 20px;
       }
 
       @include media-breakpoint-up(xl) {
         font-size: 16px;
-        //line-height: 22px;
       }
 
       @include header-sticky(lg) {
