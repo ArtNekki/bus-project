@@ -14,18 +14,15 @@
     margin-bottom: 15px;
     font-family: $font-family;
     font-size: 32px;
-    line-height: 38px;
-    line-height: 1.5;
+    line-height: 1.2;
     color: $black-color;
 
     @include media-breakpoint-up(lg) {
       font-size: 42px;
-      line-height: 45px;
     }
 
     @include media-breakpoint-up(xl) {
       margin-top: 110px;
-      line-height: 52px;
     }
 
     .page-section--examples & {
@@ -48,13 +45,13 @@
     margin-bottom: 20px;
     font-family: $font-family--secondary;
     font-size: 15px;
-    line-height: 18px;
+    line-height: 1.2;
     color: $font-color;
 
     @include media-breakpoint-up(lg) {
       margin-bottom: 35px;
       font-size: 18px;
-      line-height: 24px;
+      line-height: 1.4;
     }
   }
 
@@ -88,7 +85,6 @@
       display: grid;
       grid-template-columns: 50% 1fr;
       grid-column-gap: 55px;
-      //display: flex;
     }
 
     .page-section--article & {
@@ -103,7 +99,7 @@
     padding: 0;
     font-family: $font-family--secondary;
     font-size: 16px;
-    line-height: 19px;
+    line-height: 1.2;
     color: $font-color;
     border: none;
     background-color: transparent;
