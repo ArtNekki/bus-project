@@ -44,7 +44,7 @@
     display: block;
     font-family: $font-family--secondary;
     font-size: 14px;
-    line-height: 20px;
+    line-height: 1.5;
     color: rgba($black-color, 0.3);
   }
 
@@ -63,7 +63,7 @@
     display: block;
     font-family: $font-family--secondary;
     font-size: 18px;
-    line-height: 21px;
+    line-height: 1.2;
     color: $white-color;
     background-color: $black-color;
     border-radius: $border-radius;

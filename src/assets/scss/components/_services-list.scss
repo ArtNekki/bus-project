@@ -24,7 +24,6 @@
     grid-template-columns: 70px 1fr;
     grid-template-rows: repeat(3, auto);
     grid-column-gap: 25px;
-    //grid-row-gap: 10px;
 
     @include media-breakpoint-up(md) {
       grid-column-gap: 20px;
@@ -40,7 +39,7 @@
   &__title {
     margin: 0;
     font-size: 22px;
-    line-height: 27px;
+    line-height: 1.25;
     font-weight: 700;
     grid-column: 2 / -1;
     grid-row: 1 / 2;
@@ -54,6 +53,7 @@
     font-family: $font-family--secondary;
     font-size: 15px;
     line-height: 20px;
+    line-height: 1.35;
 
     @include media-breakpoint-up(md) {
       margin-right: 20px;

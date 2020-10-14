@@ -48,13 +48,12 @@
   grid-column-gap: 10px;
   font-family: $font-family--secondary;
   font-size: 14px;
-  line-height: 17px;
+  line-height: 1.3;
   text-decoration: none;
   color: $black-color;
 
   &--sm {
     font-size: 12px;
-    line-height: 16px;
   }
 
   &--gray {
