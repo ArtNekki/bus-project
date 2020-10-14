@@ -153,7 +153,7 @@
 
   &__link {
     font-size: 16px;
-    line-height: 19px;
+    line-height: 1.2;
     color: $white-color;
     text-decoration: none;
 
@@ -165,7 +165,6 @@
 
       @include media-breakpoint-down(md) {
         font-size: 18px;
-        line-height: 22px;
       }
     }
 
@@ -191,14 +190,13 @@
 
     &--sm {
       font-size: 13px;
-      line-height: 16px;
       color: $gray-dark-color;
     }
   }
 
   &__text {
     font-size: 13px;
-    line-height: 16px;
+    line-height: 1.2;
     color: $gray-dark-color;
   }
 
@@ -223,6 +221,7 @@
     padding: 15px 23px;
     font-family: $font-family;
     font-size: 15px;
+    line-height: 1.2;
     color: $font-color;
     background-color: $white-color;
     text-decoration: none;
