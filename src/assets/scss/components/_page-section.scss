@@ -1,5 +1,9 @@
 .page-section {
 
+  &--article {
+    margin-top: 90px;
+  }
+
   &__container {
     @include container();
   }
@@ -18,11 +22,22 @@
       line-height: 45px;
     }
 
+    @include media-breakpoint-up(xl) {
+      margin-top: 120px;
+      line-height: 52px;
+    }
+
     .page-section--examples & {
       font-size: 28px;
 
       @include media-breakpoint-up(lg) {
         margin-top: 10px;
+      }
+    }
+
+    .page-section--article & {
+      @include media-breakpoint-up(lg) {
+        margin-top: 30px;
       }
     }
   }
@@ -40,19 +55,29 @@
       font-size: 18px;
       line-height: 24px;
     }
+  }
 
-    &--shadow {
-      position: relative;
+  &__truncate {
+    position: relative;
+    height: 110px;
+    overflow: hidden;
 
-      &::before {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        height: 80px;
-        box-shadow: 0 -50px 10px rgba($white-color, 0.75) inset;
-      }
+    @include media-breakpoint-up(md) {
+      height: 150px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      height: 300px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 80px;
+      box-shadow: 0 -50px 10px rgba($white-color, 0.75) inset;
     }
   }
 
@@ -63,6 +88,12 @@
       grid-template-columns: 50% 1fr;
       grid-column-gap: 55px;
       //display: flex;
+    }
+
+    .page-section--article & {
+      @include media-breakpoint-up(xl) {
+        grid-column-gap: 150px;
+      }
     }
   }
 
