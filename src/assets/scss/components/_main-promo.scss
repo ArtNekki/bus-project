@@ -30,51 +30,43 @@
   &__title {
     margin: 0;
     font-size: 32px;
-    line-height: 38px;
+    line-height: 1.2;
     color: $black-color;
 
     @include media-breakpoint-only(sm) {
       font-size: 44px;
-      line-height: 55px;
     }
 
     @include media-breakpoint-up(lg) {
       font-size: 44px;
-      line-height: 55px;
     }
 
     @include media-breakpoint-up(xl) {
       font-size: 54px;
-      line-height: 65px;
     }
   }
 
   &__text {
     margin-top: 35px;
     font-size: 16px;
-    line-height: 19px;
+    line-height: 1.2;
     color: $black-color;
 
     @include media-breakpoint-only(sm) {
       font-size: 22px;
-      line-height: 28px;
     }
 
     @include media-breakpoint-up(md) {
-      //font-size: 16px;
-      //line-height: 26px;
       margin-top: 1.5em;
     }
 
     @include media-breakpoint-up(lg) {
       font-size: 22px;
-      line-height: 28px;
     }
 
     @include media-breakpoint-up(xl) {
       margin-top: 32px;
       font-size: 26px;
-      line-height: 31px;
     }
   }
 
@@ -83,7 +75,13 @@
     margin-right: 12px;
     padding-left: 10px;
     display: inline-block;
+    font-size: 17px;
+    line-height: 1.2;
     font-weight: 700;
+
+    @include media-breakpoint-only(sm) {
+      font-size: 23px;
+    }
 
     &::before {
       content: "";
@@ -124,13 +122,12 @@
     justify-content: start;
     grid-column-gap: 1.5em;
     font-size: 14px;
-    line-height: 17px;
+    line-height: 1.2;
     list-style: none;
 
     @include media-breakpoint-only(sm) {
       margin-top: 50px;
       font-size: 18px;
-      line-height: 22px;
     }
 
     @include media-breakpoint-up(md) {
@@ -142,7 +139,6 @@
     @include media-breakpoint-up(lg) {
       margin-top: 90px;
       font-size: 18px;
-      line-height: 22px;
     }
   }
 
