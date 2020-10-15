@@ -92,6 +92,10 @@
       grid-column-gap: 55px;
     }
 
+    @include media-breakpoint-up(xl) {
+      grid-column-gap: 65px;
+    }
+
     .page-section--article & {
       @include media-breakpoint-up(xl) {
         grid-column-gap: 150px;
