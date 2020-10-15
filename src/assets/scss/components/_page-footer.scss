@@ -1,7 +1,7 @@
 .page-footer {
   margin-top: 60px;
   padding-top: 30px;
-  background: #2F2F2F;
+  background-color: $secondary-color;
 
   &__container {
     @include container();
@@ -81,7 +81,7 @@
       grid-template-columns: repeat(6, auto);
       align-items: center;
       justify-content: space-between;
-      border-bottom: 1px solid rgba(#C4C4C4, 0.1);
+      border-bottom: 1px solid rgba($white-color, 0.075);
     }
   }
 
@@ -254,7 +254,7 @@
     padding-bottom: 40px;
     display: grid;
     grid-row-gap: 10px;
-    border-top: 1px solid rgba(#C4C4C4, 0.1);
+    border-top: 1px solid rgba($white-color, 0.075);
 
     &::before,
     &::after {
@@ -263,7 +263,7 @@
       top: -1px;
       height: 1px;
       width: $container-padding-x;
-      background-color: rgba(#C4C4C4, 0.1);
+      background-color: rgba($white-color, 0.075);
     }
 
     &::before {

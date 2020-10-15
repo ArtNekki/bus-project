@@ -57,7 +57,7 @@
   }
 
   &--gray {
-    color: #999999;
+    color: lighten($gray-dark-color, 10%);
   }
 
   &--blue {
@@ -83,7 +83,7 @@
       }
 
       .link--gray & {
-        border-bottom-color: #999999;
+        border-bottom-color: lighten($gray-dark-color, 10%);
       }
 
       .link--blue {

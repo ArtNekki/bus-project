@@ -44,7 +44,7 @@
     font-family: $font-family;
     font-size: 17px;
     line-height: 1.45;
-    color: #666666;
+    color: darken($gray-dark-color, 10%); //#666666
     text-decoration: none;
     white-space: nowrap;
 

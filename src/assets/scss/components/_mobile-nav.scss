@@ -18,7 +18,7 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: #fdfdfd;
+  background-color: $white-color;
   transition: transform 0.2s ease-in;
 
   @include mobile-open {
@@ -41,7 +41,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #e6e6e6;
+    border-bottom: 1px solid $gray-light-color;
   }
 
   &__logo {
@@ -89,7 +89,7 @@
       left: 50%;
       height: 100%;
       width: 1px;
-      background-color: #b3b3b3;
+      background-color: darken($gray-color, 13%); //#b3b3b3
 
       @include active {
         background-color: $black-color;
@@ -133,14 +133,14 @@
       padding-top: 20px;
       padding-bottom: 20px;
       opacity: 0;
-      background-color:  #f7f7f7;
+      background-color: lighten($gray-light-color, 7%); //#f7f7f7;
     }
   }
 
   &__link {
     padding: 15px $mobile-padding-right 15px $mobile-padding-left;
     display: block;
-    border-bottom: 1px solid #e6e6e6;
+    border-bottom: 1px solid $gray-light-color;
     font-size: 18px;
     line-height: 1.2;
     color: $font-color;
