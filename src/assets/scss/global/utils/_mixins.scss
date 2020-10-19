@@ -243,3 +243,13 @@
     background-color: $color;
   }
 }
+
+@mixin box($x: 0) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  background-color: $white-color;
+  box-shadow: $x 14px 21px rgba($black-color, 0.1);
+
+}

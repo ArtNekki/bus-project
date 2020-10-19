@@ -48,5 +48,14 @@
 //   }
 // }
 
+import Tabby from 'tabbyjs';
 
+const tabs = new Tabby('[data-tabs] ul');
 
+document.addEventListener('tabby', function (event) {
+  var tab = event.target;
+  var content = event.detail.content;
+
+  console.log('tab', tab);
+  console.log('content', content);
+}, false);

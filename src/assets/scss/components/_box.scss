@@ -1,0 +1,38 @@
+.box {
+  @include box();
+  height: auto;
+
+
+
+  &--shopping-live svg {
+    width: 135px;
+  }
+
+  &--decathlon svg {
+    width: 165px;
+  }
+
+  &--zara svg {
+    width: 140px;
+  }
+
+  &--child-world svg {
+    width: 173px;
+  }
+
+  &--iml svg {
+    width: 120px;
+  }
+
+  &--boxberry svg {
+    width: 200px;
+  }
+
+  &--hermes svg {
+    width: 170px;
+  }
+
+  &--kce  svg {
+    width: 153px;
+  }
+}

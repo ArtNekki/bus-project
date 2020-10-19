@@ -3,8 +3,27 @@
 
   $swiper-btn-size: 42px;
 
-  @include media-breakpoint-up(lg) {
-    width: 400px;
+  &--examples {
+    @include media-breakpoint-up(lg) {
+      width: 400px;
+    }
+  }
+
+  &-container {
+    .swiper--shadow & {
+      padding: 50px 0;
+    }
+  }
+
+  &-slide {
+
+    .swiper--shadow &:first-child {
+      box-shadow: 15px 14px 21px rgba($black-color, 0.1)
+    }
+
+    .swiper--shadow &:last-child {
+      box-shadow: -15px 14px 21px rgba($black-color, 0.1)
+    }
   }
 
   &-pagination {
@@ -25,7 +44,8 @@
 
   &-button {
     position: absolute;
-    top: 80px;
+    top: 50%;
+    transform: translateY(-50%);
     z-index: 10;
     padding: 0;
     width: $swiper-btn-size;
@@ -35,6 +55,11 @@
     background-color: $primary-color;
     border-radius: 50%;
     cursor: pointer;
+
+    .swiper--examples {
+      top: 80px;
+      transform: unset;
+    }
 
     @include media-breakpoint-up(lg) {
       display: block;

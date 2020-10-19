@@ -16,11 +16,10 @@ $font-family: "Kelson", -apple-system, BlinkMacSystemFont, "Roboto", "Ubuntu", "
 $font-family--secondary: "GraphikLCG", -apple-system, BlinkMacSystemFont, "Roboto", "Ubuntu", "Droid Sans", "Helvetica Neue", "Arial", sans-serif;
 
 //common
-$box-shadow: 0px 3px 3px rgba($black-color, 0.25);
+$shadow: 0px 3px 3px rgba($black-color, 0.25);
 $border-radius: 4px;
 $sticky-menu-bottom-space: 12px;
 $menu-item-transition: all 0.25s ease-in;
-
 $enable-grid-classes:  true !default;
 
 // Grid breakpoints

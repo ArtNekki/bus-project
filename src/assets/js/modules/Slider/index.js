@@ -19,3 +19,11 @@ if (exampleSlider) {
     }});
 }
 
+const dataSlider = document.querySelectorAll('[data-slider]');
+
+dataSlider.forEach((el) => {
+  new Slider({ target: el, settings: {
+      slidesPerView: 4,
+      spaceBetween: 30
+    }});
+});
