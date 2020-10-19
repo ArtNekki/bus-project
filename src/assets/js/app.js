@@ -6,6 +6,7 @@ import './utils/polyfill';
 //modules
 import './modules/PageHeader';
 import './modules/Slider';
+import './modules/Tabs';
 import { createPopper } from '@popperjs/core';
 
 import {TweenLite} from "gsap";

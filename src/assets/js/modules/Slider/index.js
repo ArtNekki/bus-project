@@ -9,8 +9,13 @@ document.addEventListener('DOMContentLoaded', function () {
   // alert(1);
 });
 
+const exampleSlider = document.querySelector('#example-slider');
 
-new Slider({ target: '#example-slider', settings: {
-    slidesPerView: 1,
-    spaceBetween: 1
-  }});
+if (exampleSlider) {
+
+  new Slider({ target: '#example-slider', settings: {
+      slidesPerView: 1,
+      spaceBetween: 1
+    }});
+}
+

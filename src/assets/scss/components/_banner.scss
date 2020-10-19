@@ -1,0 +1,39 @@
+.banner {
+  position: relative;
+  font-family: $font-family;
+  color: $black-color;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background-color: $primary-color;
+  }
+
+  &__container {
+    padding-top: 85px;
+    padding-bottom: 100px;
+    @include container();
+  }
+
+  &__title {
+    margin: 0 0 0.45em 0;
+    font-size: 42px;
+    line-height: 1.25;
+  }
+
+  &__text {
+    margin: 0;
+    margin-bottom: 0.65em;
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  &__text span {
+    @include text-bg($white-color);
+  }
+}

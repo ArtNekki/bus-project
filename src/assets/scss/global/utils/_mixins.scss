@@ -224,3 +224,22 @@
     }
   }
 }
+
+@mixin text-bg($color: $primary-color, $border-radius: $border-radius) {
+  position: relative;
+  padding-left: 0.55em;
+  margin-right: 0.7em;
+  display: inline-block;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -0.35em;
+    right: -0.55em;
+    bottom: -0.35em;
+    left: 0;
+    z-index: -1;
+    border-radius: $border-radius;
+    background-color: $color;
+  }
+}

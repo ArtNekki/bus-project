@@ -71,28 +71,14 @@
   }
 
   &__text span {
-    position: relative;
-    margin-right: 12px;
-    padding-left: 10px;
-    display: inline-block;
     font-size: 17px;
     line-height: 1.2;
     font-weight: 700;
 
+    @include text-bg();
+
     @include media-breakpoint-only(sm) {
       font-size: 23px;
-    }
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: -6px;
-      right: -10px;
-      bottom: -6px;
-      left: 0;
-      z-index: -1;
-      border-radius: $border-radius;
-      background-color: $primary-color;
     }
   }
 
