@@ -13,6 +13,7 @@
     "@popperjs/core": "^2.5.3",
     "baron": "^3.0.3",
     "choices.js": "^7.0.0",
+    "gmaps": "^0.4.25",
     "gsap": "^3.5.1",
     "gulp-gh-pages": "^0.5.4",
     "har-validator": "^5.1.3",
