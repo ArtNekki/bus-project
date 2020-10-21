@@ -2,15 +2,14 @@ import createHTMLMapMarker from './HtmlMapMarker';
 import { generateMarkerTemplate } from './MarkerTemplate';
 import markerCoords from '../../../../data/markerCoords.json';
 
-document.addEventListener('DOMContentLoaded', function() {
-  const html = this.documentElement;
-  const mapContainer = document.getElementById("map");
+function initMap(id, coords) {
+  const mapContainer = document.getElementById(id);
 
   if(!mapContainer) return;
 
-  const map = new google.maps.Map(document.getElementById("map"), {
+  const map = new google.maps.Map(mapContainer, {
     zoom: 9,
-    center: new google.maps.LatLng(markerCoords[0].coords.lat, markerCoords[0].coords.lng),
+    center: new google.maps.LatLng(coords[0].coords.lat, coords[0].coords.lng),
     disableDefaultUI: true,
     styles: [{
       stylers: [{
@@ -19,37 +18,18 @@ document.addEventListener('DOMContentLoaded', function() {
     }]
   });
 
-  markerCoords.forEach((mark) => {
+  coords.forEach((mark) => {
     createHTMLMapMarker({
-        latlng: new google.maps.LatLng(mark.coords.lat, mark.coords.lng),
-        map: map,
-        html: generateMarkerTemplate(mark.id, mark.count)
+      latlng: new google.maps.LatLng(mark.coords.lat, mark.coords.lng),
+      map: map,
+      html: generateMarkerTemplate(mark.id, mark.count)
     });
   });
-  //
-  // let activeMark = null;
-  //
-  // document.addEventListener('click', function(e) {
-  //   const mark = e.target.closest('.mark');
-  //
-  //   if(mark) {
-  //
-  //     if (activeMark) {
-  //       activeMark.classList.remove('mark--active');
-  //       activeMark = null;
-  //     }
-  //
-  //     activeMark = mark;
-  //     activeMark.classList.add('mark--active');
-  //
-  //     html.classList.add('page--marker-active');
-  //   };
-  //
-  // });
-  //
-  // document.querySelector('[data-close-panel]').addEventListener('click', function() {
-  //   html.classList.remove('page--marker-active');
-  //   activeMark.classList.remove('mark--active');
-  // });
-});
+}
+
+// document.addEventListener('DOMContentLoaded', function() {
+//   initMap('map', markerCoords);
+// });
+
+export default initMap;
 
