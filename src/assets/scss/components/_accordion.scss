@@ -1,9 +1,20 @@
+@keyframes accordion-toggle {
+
+}
+
 .accordion {
+  position: relative;
   $accordion-content-left: 25px;
   $accordion-content-right: 20px;
 
   &__input {
     display: none;
+  }
+
+  &__section {
+    //overflow: hidden;
+    display: flex;
+    flex-direction: column;
   }
 
   &__nav {
@@ -83,15 +94,24 @@
     //}
   }
 
-  &__tab {
-    padding-top: 20px;
-    padding-bottom: 5px;
+  &__content {
     //padding-right: $accordion-content-right;
     padding-left: $accordion-content-left;
-    display: none;
+    //max-height: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    height: 0;
+    //opacity: 0;
+    //transform: translateY(-300px);
+    transition: all 0.25s ease-in;
 
     .accordion__input:checked ~ & {
-      display: block;
+      padding-top: 17px;
+      padding-bottom: 5px;
+      height: 190px;
+      //opacity: 1;
+      //transform: translateY(0);
+      transition: all 0.25s ease-in;
     }
   }
 }

@@ -1,31 +1,31 @@
 <div class="accordion">
-  <div>
-    <input type="radio" class="accordion__input" name="accordion" id="tab-1">
+  <div class="accordion__section">
+    <input type="radio" class="accordion__input" name="accordion" id="tab-1" checked="true">
     <label for="tab-1" class="accordion__nav">
       <b class="accordion__label">Владивосток <span>(2 отделения)</span></b>
       <i class="accordion__indicator"></i>
     </label>
-    <div data-tab="tab-1" class="accordion__tab">
+    <div data-tab="tab-1" class="accordion__content">
       {{> contact-box}}
     </div>
   </div>
-  <div>
+  <div class="accordion__section">
     <input type="radio" class="accordion__input" name="accordion" id="tab-2">
     <label for="tab-2" class="accordion__nav">
       <b class="accordion__label">Уссурийск <span>(2 отделения)</span></b>
       <i class="accordion__indicator"></i>
     </label>
-    <div data-tab="tab-2" class="accordion__tab">
+    <div data-tab="tab-2" class="accordion__content">
       {{> contact-box}}
     </div>
   </div>
-  <div>
+  <div class="accordion__section">
     <input type="radio" class="accordion__input" name="accordion" id="tab-3">
     <label for="tab-3" class="accordion__nav">
       <b class="accordion__label">Находка <span>(1 отделение)</span></b>
       <i class="accordion__indicator"></i>
     </label>
-    <div data-tab="tab-3" class="accordion__tab">
+    <div data-tab="tab-3" class="accordion__content">
       {{> contact-box}}
     </div>
   </div>
