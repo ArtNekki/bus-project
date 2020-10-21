@@ -2,8 +2,7 @@ import createHTMLMapMarker from './HtmlMapMarker';
 import { generateMarkerTemplate } from './MarkerTemplate';
 import markerCoords from '../../../../data/pickupCoords.json';
 
-function initMap(id, coords) {
-  const mapContainer = document.getElementById(id);
+function initMap(mapContainer, coords) {
 
   if(!mapContainer) return;
 

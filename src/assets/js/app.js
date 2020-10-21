@@ -6,7 +6,7 @@ import './utils/polyfill';
 //modules
 import './modules/PageHeader';
 import './modules/Slider';
-import './modules/Tabs';
+import './modules/PickupTabs';
 import './modules/Map';
 import './modules/PickupPoint';
 import { createPopper } from '@popperjs/core';
