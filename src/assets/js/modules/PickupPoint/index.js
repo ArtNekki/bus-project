@@ -1,24 +1,12 @@
-import markerCoords from '../../../../data/markerCoords.json';
+import pickupCoords from '../../../../data/pickupCoords.json';
 import initMap from "../Map";
 
 document.addEventListener('DOMContentLoaded', function() {
-  initMap('map', markerCoords);
+  initMap('map', pickupCoords['vladivostok'].coords);
 
   const pickupSelector = document.querySelector('#pickupSelector');
 
   pickupSelector.addEventListener('change', function(e) {
-    const locationId = e.target.dataset.id;
-
-    switch(locationId) {
-      case 'vladivostok':
-        initMap('map', markerCoords);
-        break;
-      case 'ussurysk':
-        initMap('map', markerCoords);
-        break;
-      case 'nakhodka':
-        initMap('map', markerCoords);
-        break;
-    }
+    initMap('map', pickupCoords[e.target.dataset.id].coords);
   })
 });

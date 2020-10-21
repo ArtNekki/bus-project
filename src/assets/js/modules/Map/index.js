@@ -1,6 +1,6 @@
 import createHTMLMapMarker from './HtmlMapMarker';
 import { generateMarkerTemplate } from './MarkerTemplate';
-import markerCoords from '../../../../data/markerCoords.json';
+import markerCoords from '../../../../data/pickupCoords.json';
 
 function initMap(id, coords) {
   const mapContainer = document.getElementById(id);
@@ -8,9 +8,10 @@ function initMap(id, coords) {
   if(!mapContainer) return;
 
   const map = new google.maps.Map(mapContainer, {
-    zoom: 9,
-    center: new google.maps.LatLng(coords[0].coords.lat, coords[0].coords.lng),
+    zoom: 13,
+    center: new google.maps.LatLng(coords[0].lat, coords[0].lng),
     disableDefaultUI: true,
+    zoomControl: true,
     styles: [{
       stylers: [{
         saturation: -100
@@ -18,11 +19,11 @@ function initMap(id, coords) {
     }]
   });
 
-  coords.forEach((mark) => {
+  coords.forEach((marker) => {
     createHTMLMapMarker({
-      latlng: new google.maps.LatLng(mark.coords.lat, mark.coords.lng),
+      latlng: new google.maps.LatLng(marker.lat, marker.lng),
       map: map,
-      html: generateMarkerTemplate(mark.id, mark.count)
+      html: generateMarkerTemplate()
     });
   });
 }
