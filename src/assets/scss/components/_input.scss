@@ -1,17 +1,24 @@
 .input {
 
-}
+  &__field {
+    @include input();
 
-.text-area {
-  padding: 10px;
-  box-sizing: border-box;
-  width: 100%;
-  border: none;
-  border-radius: $border-radius;
-  appearance: none;
-  resize: none;
-
-  &:focus {
-    outline: none;
+    .input--textarea & {
+      height: auto;
+    }
   }
 }
+
+//.text-area {
+//  padding: 10px;
+//  box-sizing: border-box;
+//  width: 100%;
+//  border: none;
+//  border-radius: $border-radius;
+//  appearance: none;
+//  resize: none;
+//
+//  &:focus {
+//    outline: none;
+//  }
+//}
