@@ -9,6 +9,7 @@ import './modules/Slider';
 import './modules/PickupTabs';
 import './modules/Map';
 import './modules/PickupPoint';
+import './modules/Select';
 import { createPopper } from '@popperjs/core';
 
 import {TweenLite} from "gsap";
