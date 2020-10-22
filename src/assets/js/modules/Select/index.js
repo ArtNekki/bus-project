@@ -1,10 +1,10 @@
 import {Select} from './Select';
 
-const select = new Select('#select', {
-  onSelect(item) {
-    console.log('Selected Item', item)
-  }
-})
+const select = new Select('#select');
+
+document.addEventListener('customSelect', function (e) {
+  console.log('eee', e);
+});
 
 // const select = new Select('#select', {
 //   placeholder: 'Выбери пожалуйста элемент',

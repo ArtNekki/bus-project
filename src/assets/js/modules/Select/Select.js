@@ -5,12 +5,12 @@ const getTemplate = (data = [], placeholder, selectedId) => {
     let cls = '';
 
     if (item.id === selectedId) {
-      text = item.value
+      text = item.name
       cls = 'selected'
     }
 
     return `
-      <li class="select__item ${cls}" data-type="item" data-id="${item.id}" data-name="${item.name}">${item.value}</li>
+      <li class="select__item ${cls}" data-type="item" data-id="${item.id}" data-name="${item.value}">${item.name}</li>
     `
   })
 
@@ -31,6 +31,8 @@ const getTemplate = (data = [], placeholder, selectedId) => {
 export class Select {
   constructor(selector, options) {
     this.$el = document.querySelector(selector)
+    this.selectName = this.$el.firstElementChild.getAttribute('name')
+
     this.options = options
     // this.selectedId = options.selectedId
 
@@ -64,7 +66,6 @@ export class Select {
   setup() {
     this.clickHandler = this.clickHandler.bind(this)
     this.$el.addEventListener('click', this.clickHandler)
-    this.$arrow = this.$el.querySelector('[data-type="arrow"]')
     this.$value = this.$el.querySelector('[data-type="value"]')
   }
 
@@ -93,16 +94,35 @@ export class Select {
 
   select(id) {
     this.selectedId = id
-    this.$value.textContent = this.current.value
+    this.$value.textContent = this.current.name
 
     this.$el.querySelectorAll('[data-type="item"]').forEach(el => {
       el.classList.remove('selected')
     })
+
     this.$el.querySelector(`[data-id="${id}"]`).classList.add('selected')
 
-    this.options.onSelect ? this.options.onSelect(this.current) : null
-
+    this.emitEvent();
     this.close()
+  }
+
+  emitEvent() {
+    let  event;
+    const detail = Object.assign({field: this.selectName}, this.current);
+
+    if (typeof window.CustomEvent === 'function') {
+      event = new CustomEvent('customSelect', {
+        bubbles: true,
+        cancelable: true,
+        detail
+      });
+
+    } else {
+      event = document.createEvent('CustomEvent');
+      event.initCustomEvent('customSelect', true, true, detail);
+    }
+
+    this.$el.dispatchEvent(event);
   }
 
   toggle() {
@@ -111,14 +131,10 @@ export class Select {
 
   open() {
     this.$el.classList.add('open')
-    this.$arrow.classList.remove('fa-chevron-down')
-    this.$arrow.classList.add('fa-chevron-up')
   }
 
   close() {
     this.$el.classList.remove('open')
-    this.$arrow.classList.add('fa-chevron-down')
-    this.$arrow.classList.remove('fa-chevron-up')
   }
 
   destroy() {
