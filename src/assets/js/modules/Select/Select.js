@@ -2,13 +2,15 @@ const getTemplate = (data = [], placeholder, selectedId) => {
   let text = placeholder || 'Placeholder по умолчанию'
 
   const items = data.map(item => {
-    let cls = ''
+    let cls = '';
+
     if (item.id === selectedId) {
       text = item.value
       cls = 'selected'
     }
+
     return `
-      <li class="select__item ${cls}" data-type="item" data-id="${item.id}">${item.value}</li>
+      <li class="select__item ${cls}" data-type="item" data-id="${item.id}" data-name="${item.name}">${item.value}</li>
     `
   })
 
@@ -30,16 +32,33 @@ export class Select {
   constructor(selector, options) {
     this.$el = document.querySelector(selector)
     this.options = options
-    this.selectedId = options.selectedId
+    // this.selectedId = options.selectedId
 
     this.render()
     this.setup()
   }
 
   render() {
-    const {placeholder, data} = this.options
+
+    this.data = Array.from(this.$el.firstElementChild.options).map((item, i) => {
+      return {id: i, value: item.value, name: item.textContent, selected: item.selected};
+    });
+
+    const placeholder = this.data.shift().name;
+    const selected = this.data.filter((item) => item.selected)[0];
+
+    this.selectedId = selected ? selected.id : '0';
+
     this.$el.classList.add('select')
-    this.$el.innerHTML = getTemplate(data, placeholder, this.selectedId)
+    this.$el.innerHTML = getTemplate(this.data, placeholder, this.selectedId)
+
+    // if (this.options) {
+    //   const {placeholder, data} = this.options
+    // }
+    //
+    // const {placeholder, data} = this.options
+    // this.$el.classList.add('select')
+    // this.$el.innerHTML = getTemplate(data, placeholder, this.selectedId)
   }
 
   setup() {
@@ -67,7 +86,9 @@ export class Select {
   }
 
   get current() {
-    return this.options.data.find(item => item.id === this.selectedId)
+    return this.data.find(item => {
+      return item.id == this.selectedId
+    })
   }
 
   select(id) {
