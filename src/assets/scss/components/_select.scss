@@ -3,8 +3,11 @@
   $arrow-height: 6px;
 
   position: relative;
-  z-index: 100;
   width: 100%;
+
+  &.open {
+    z-index: 100;
+  }
 
   &:hover {
     border-color: darken($gray-light-color, 10%);
@@ -48,6 +51,7 @@
 
     .select.open & {
       display: block;
+      z-index: 100;
     }
   }
 
@@ -64,7 +68,7 @@
   &__backdrop {
     position: fixed;
     display: none;
-    z-index: -1;
+    z-index: 1;
     top: 0;
     right: 0;
     left: 0;

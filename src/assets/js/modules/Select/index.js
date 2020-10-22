@@ -1,6 +1,8 @@
 import {Select} from './Select';
 
-const select = new Select('#select');
+document.querySelectorAll('.select').forEach((node) => {
+  new Select(node);
+})
 
 document.addEventListener('customSelect', function (e) {
   console.log('eee', e);
@@ -21,11 +23,6 @@ document.addEventListener('customSelect', function (e) {
 //     console.log('Selected Item', item)
 //   }
 // })
-
-// select.select('4')
-window.s = select
-
-
 
 
 const getTemplate = (data = [], placeholder, selectedId) => {

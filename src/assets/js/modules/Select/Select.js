@@ -29,9 +29,9 @@ const getTemplate = (data = [], placeholder, selectedId) => {
 }
 
 export class Select {
-  constructor(selector, options) {
-    this.$el = document.querySelector(selector)
-    this.selectName = this.$el.firstElementChild.getAttribute('name')
+  constructor(el, options) {
+    this.$el = el
+    this.elName = this.$el.firstElementChild.getAttribute('name')
 
     this.options = options
     // this.selectedId = options.selectedId
@@ -101,14 +101,13 @@ export class Select {
     })
 
     this.$el.querySelector(`[data-id="${id}"]`).classList.add('selected')
-
     this.emitEvent();
     this.close()
   }
 
   emitEvent() {
     let  event;
-    const detail = Object.assign({field: this.selectName}, this.current);
+    const detail = Object.assign({field: this.elName}, this.current);
 
     if (typeof window.CustomEvent === 'function') {
       event = new CustomEvent('customSelect', {
