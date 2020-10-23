@@ -1,0 +1,110 @@
+.page-contacts {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+
+  //height: 675px;
+
+  //&__map {
+  // position: absolute;
+  // top: 0;
+  // right: 0;
+  // bottom: -60px;
+  // left: 0;
+  //}
+  //
+  //&__container {
+  //  @include container();
+  //
+  //  position: relative;
+  //  z-index: 1;
+  //  padding-top: 35px;
+  //  display: grid;
+  //  grid-template-columns: 400px 330px 355px 75px;
+  //  grid-template-rows: repeat(3, auto);
+  //  grid-template-areas:
+  //    "switcher . info info"
+  //    "select . info info"
+  //    "list panel panel .";
+  //  grid-column-gap: 10px;
+  //  grid-row-gap: 10px;
+  //}
+  //
+
+  //
+
+  //}
+  //
+
+  //}
+  //
+  //&__panel {
+  //  grid-area: panel;
+  //  height: 445px;
+  //  background-color: pink;
+  //}
+  //
+
+
+  &__main {
+    @include container();
+    transition: transform 0.5s ease-in;
+
+    .page-contacts--details-open & {
+      position: absolute;
+      transform: translateX(-100%);
+    }
+  }
+
+  &__details {
+    @include container();
+    transition: transform 0.5s ease-in-out;
+
+    position: absolute;
+    top: 0;
+    width: 100%;
+    transform: translateX(100%);
+    height: 600px;
+    background-color: deeppink;
+
+    .page-contacts--details-open & {
+      position: static;
+      transform: translateX(0);
+    }
+  }
+
+  &__switcher {
+    margin-top: 25px;
+    grid-area: switcher;
+    height: 60px;
+    background-color: green;
+  }
+
+  &__select {
+    margin-top: 20px;
+    grid-area: select;
+    height: 50px;
+    background-color: red;
+  }
+
+  &__list {
+    margin-top: 25px;
+    grid-area: list;
+    height: 445px;
+    background-color: yellow;
+  }
+
+  &__info {
+    margin-top: 30px;
+    grid-area: info;
+    height: 90px;
+    background-color: black;
+  }
+
+  &__map {
+    position: relative;
+    //left: -15px;
+    width: 100%;
+    height: 625px;
+  }
+}

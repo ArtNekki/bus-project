@@ -3,4 +3,38 @@ title: Контакты
 layout: default
 ---
 
-<h1>Контакты</h1>
+<!--<div class="page-contacts">-->
+<!--  <div id="contactsMap" class="page-contacts__map"></div>-->
+<!--  <div class="page-contacts__container">-->
+<!--    <div class="page-contacts__switcher"></div>-->
+<!--    <div class="page-contacts__select"></div>-->
+<!--    <div class="page-contacts__list"></div>-->
+<!--    <div class="page-contacts__panel"></div>-->
+<!--    <div class="page-contacts__info"></div>-->
+<!--  </div>-->
+<!--</div>-->
+
+<div class="page-contacts">
+  <div class="page-contacts__main">
+    <div data-contact-tabs class="tabs tabs--contacts">
+      <ul class="tabs__nav">
+        <li>
+          <a href="#contactsListPanel">На карте</a>
+        </li>
+        <li>
+          <a data-tabby-default href="#contactsMapPanel">Списком</a>
+        </li>
+      </ul>
+    </div>
+    <div class="page-contacts__switcher"></div>
+    <div class="page-contacts__select"></div>
+    <div id="contactsListPanel" class="tabs__panel">
+      <div class="page-contacts__list"></div>
+    </div>
+    <div id="contactsMapPanel" class="tabs__panel">
+      <div id="contactsMap" class="page-contacts__map"></div>
+    </div>
+    <div class="page-contacts__info"></div>
+  </div>
+  <div class="page-contacts__details">Details</div>
+</div>

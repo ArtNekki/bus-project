@@ -9,6 +9,10 @@
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: $tabs-nav-space;
     list-style: none;
+
+    .tabs--contacts & {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   &__nav li {

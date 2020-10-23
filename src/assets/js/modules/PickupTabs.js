@@ -3,8 +3,13 @@ import pickupCoords from '../../../data/pickupCoords.json';
 import initMap from "./Map";
 
 document.addEventListener('DOMContentLoaded', function() {
-  const tabs = new Tabby('[data-tabs] ul');
-  tabs.toggle('#boxBerry');
+  const tabsContainer = document.querySelector('[data-tabs]');
+
+  if (tabsContainer) {
+    const tabs = new Tabby('[data-tabs] ul');
+    tabs.toggle('#boxBerry');
+  }
+
 });
 
 document.addEventListener('tabby', function (event) {
