@@ -1,7 +1,13 @@
 .page-contacts {
   position: relative;
   width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
   overflow: hidden;
+
+  //@include media-breakpoint-up(md) {
+  //  display: block;
+  //}
 
   //height: 675px;
 
@@ -13,22 +19,7 @@
   // left: 0;
   //}
   //
-  //&__container {
-  //  @include container();
-  //
-  //  position: relative;
-  //  z-index: 1;
-  //  padding-top: 35px;
-  //  display: grid;
-  //  grid-template-columns: 400px 330px 355px 75px;
-  //  grid-template-rows: repeat(3, auto);
-  //  grid-template-areas:
-  //    "switcher . info info"
-  //    "select . info info"
-  //    "list panel panel .";
-  //  grid-column-gap: 10px;
-  //  grid-row-gap: 10px;
-  //}
+
   //
 
   //
@@ -45,31 +36,64 @@
   //}
   //
 
+  &__main {
+    @include container();
+
+
+  }
 
   &__main {
     @include container();
+
+    position: relative;
+    z-index: 2;
+    grid-template-columns: 400px 330px 355px 75px;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+      "switcher . info info"
+      "select . info info"
+      "list panel panel .";
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    width: 100%;
+    box-sizing: border-box;
     transition: transform 0.5s ease-in;
 
+    @include media-breakpoint-up(md) {
+      position: static;
+      padding-top: 35px;
+      display: grid;
+    }
+
     .page-contacts--details-open & {
-      position: absolute;
       transform: translateX(-100%);
     }
   }
 
   &__details {
     @include container();
-    transition: transform 0.5s ease-in-out;
 
-    position: absolute;
-    top: 0;
+    transition: transform 0.5s ease-in-out;
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
     width: 100%;
     transform: translateX(100%);
     height: 600px;
     background-color: deeppink;
+    box-sizing: border-box;
 
     .page-contacts--details-open & {
-      position: static;
       transform: translateX(0);
+    }
+
+    @include media-breakpoint-up(md) {
+      grid-area: panel;
+      grid-column: unset;
+      grid-row: unset;
+      transform: unset;
+      display: none;
     }
   }
 
@@ -104,7 +128,21 @@
   &__map {
     position: relative;
     //left: -15px;
-    width: 100%;
+    //width: 100%;
     height: 625px;
+
+    @include media-breakpoint-up(md) {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      height: 100%;
+    }
+  }
+
+  &__map div {
+    height: inherit;
   }
 }

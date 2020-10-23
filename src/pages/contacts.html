@@ -3,36 +3,24 @@ title: Контакты
 layout: default
 ---
 
-<!--<div class="page-contacts">-->
-<!--  <div id="contactsMap" class="page-contacts__map"></div>-->
-<!--  <div class="page-contacts__container">-->
-<!--    <div class="page-contacts__switcher"></div>-->
-<!--    <div class="page-contacts__select"></div>-->
-<!--    <div class="page-contacts__list"></div>-->
-<!--    <div class="page-contacts__panel"></div>-->
-<!--    <div class="page-contacts__info"></div>-->
-<!--  </div>-->
-<!--</div>-->
-
 <div class="page-contacts">
   <div class="page-contacts__main">
     <div data-contact-tabs class="tabs tabs--contacts">
       <ul class="tabs__nav">
         <li>
-          <a href="#contactsListPanel">На карте</a>
+          <a href="#contactsListPanel">Списком</a>
         </li>
         <li>
-          <a data-tabby-default href="#contactsMapPanel">Списком</a>
+          <a data-tabby-default href="#contactsMapPanel">На карте</a>
         </li>
       </ul>
     </div>
     <div class="page-contacts__switcher"></div>
     <div class="page-contacts__select"></div>
-    <div id="contactsListPanel" class="tabs__panel">
-      <div class="page-contacts__list"></div>
-    </div>
-    <div id="contactsMapPanel" class="tabs__panel">
-      <div id="contactsMap" class="page-contacts__map"></div>
+
+    <div id="contactsListPanel" class="page-contacts__list"></div>
+    <div id="contactsMapPanel" class="page-contacts__map">
+      <div id="contactsMap"></div>
     </div>
     <div class="page-contacts__info"></div>
   </div>

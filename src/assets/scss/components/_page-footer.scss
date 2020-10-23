@@ -3,6 +3,10 @@
   padding-top: 30px;
   background-color: $secondary-color;
 
+  .page-contacts ~ & {
+    margin-top: 0;
+  }
+
   &__container {
     @include container();
 

@@ -2,6 +2,12 @@
   $tabs-nav-space: 4px;
   $tab-nav-border-height: 2px;
 
+  &--contacts {
+    @include media-breakpoint-up(md) {
+      display: none;
+    }
+  }
+
   &__nav {
     margin: 0;
     padding: 0;
