@@ -124,10 +124,24 @@
       left: 0;
       z-index: -1;
       height: 100%;
+      grid-area: unset;
     }
   }
 
-  &__map div {
+  &__map-wrap {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -15px;
+    right: -15px;
+    height: inherit;
+
+    @include media-breakpoint-up(md) {
+      position: static;
+    }
+  }
+
+  &__map-wrap div {
     height: inherit;
   }
 
