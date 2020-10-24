@@ -3,6 +3,7 @@
   $tab-nav-border-height: 2px;
 
   &--contacts {
+    @include moveContactPageInfoLeft;
     @include media-breakpoint-up(md) {
       display: none;
     }
