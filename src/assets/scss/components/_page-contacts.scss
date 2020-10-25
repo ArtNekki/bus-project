@@ -75,8 +75,6 @@
   &__switcher {
     //margin-top: 25px;
     grid-area: switcher;
-    height: 60px;
-    background-color: green;
 
     @include moveContactPageInfoLeft;
   }
@@ -84,8 +82,6 @@
   &__select {
     //margin-top: 20px;
     grid-area: select;
-    height: 50px;
-    background-color: red;
 
     @include moveContactPageInfoLeft;
   }

@@ -15,8 +15,43 @@ layout: default
         </li>
       </ul>
     </div>
-    <div class="page-contacts__switcher"></div>
-    <div class="page-contacts__select"></div>
+    <div class="page-contacts__switcher">
+      <div class="contact-actions">
+        <button class="contact-actions__btn contact-actions__btn--active">
+          <svg width="15px" height="18px">
+            <use xlink:href="{{root}}assets/img/symbol/sprite.svg#location"></use>
+          </svg>
+          <span>Все адреса</span>
+        </button>
+        <button class="contact-actions__btn">
+          <svg width="18px" height="18px">
+            <use xlink:href="{{root}}assets/img/symbol/sprite.svg#accept"></use>
+          </svg>
+          <span>Прием грузов</span>
+        </button>
+        <button class="contact-actions__btn">
+          <svg width="18px" height="18px">
+            <use xlink:href="{{root}}assets/img/symbol/sprite.svg#give"></use>
+          </svg>
+          <span>Выдача грузов</span>
+        </button>
+        <button class="contact-actions__btn">
+          <svg width="18px" height="18px">
+            <use xlink:href="{{root}}assets/img/symbol/sprite.svg#office"></use>
+          </svg>
+          <span>Офис</span>
+        </button>
+      </div>
+    </div>
+    <div class="page-contacts__select">
+      <div class="select">
+        <select id="user-city" name="user-city" class="select__field">
+          <option value="">Выберите город</option>
+          <option value="nakhodka">Находка</option>
+          <option value="Arseniev">Арсеньев</option>
+        </select>
+      </div>
+    </div>
 
     <div id="contactsListPanel" class="page-contacts__list"></div>
     <div id="contactsMapPanel" class="page-contacts__map">
