@@ -1,0 +1,56 @@
+.filter-list {
+  padding-right: 10px;
+  height: 100%;
+  overflow-y: auto;
+
+  @include scollbar;
+
+  &__scroll {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: 1fr repeat(3, auto);
+    grid-template-rows: repeat(2, auto);
+    grid-column-gap: 11px;
+    grid-row-gap: 8px;
+
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__action {
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    @include focus {
+      outline: none;
+    }
+  }
+
+  &__action svg {
+    opacity: 0.3;
+
+    @include hover {
+      opacity: 0.5;
+    }
+  }
+
+  &__text {
+    font-family: $font-family--secondary;
+    font-size: 12px;
+    line-height: 1.2;
+
+    &--status {
+      grid-column: 2 / -1;
+      color: $red-color;
+    }
+  }
+}

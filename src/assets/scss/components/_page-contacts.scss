@@ -34,7 +34,7 @@
       padding-top: 35px;
       margin-bottom: 60px;
       grid-template-columns: 400px  1fr 1fr 75px;
-      grid-template-rows: repeat(2, auto) 1fr;
+      grid-template-rows: repeat(2, auto) 450px;
       grid-template-areas:
         "switcher . info info"
         "select . info info"
@@ -88,8 +88,11 @@
 
   &__list {
     //margin-top: 25px;
+    padding: 20px;
+    padding-right: 10px;
     grid-area: tab-content;
-    background-color: yellow;
+    background-color: $white-color;
+    border-radius: $border-radius;
 
     @include moveContactPageInfoLeft;
 

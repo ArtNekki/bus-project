@@ -53,7 +53,36 @@ layout: default
       </div>
     </div>
 
-    <div id="contactsListPanel" class="page-contacts__list"></div>
+    <div id="contactsListPanel" class="page-contacts__list">
+     <div class="filter-list">
+       <ul class="filter-list__scroll">
+         <li class="filter-list__item">
+           {{> filter-list-item}}
+         </li>
+         <li class="filter-list__item">
+           {{> filter-list-item}}
+         </li>
+         <li class="filter-list__item">
+           {{> filter-list-item}}
+         </li>
+         <li class="filter-list__item">
+           {{> filter-list-item status="Только забор"}}
+         </li>
+         <li class="filter-list__item">
+           {{> filter-list-item status="Только забор"}}
+         </li>
+         <li class="filter-list__item">
+           {{> filter-list-item}}
+         </li>
+         <li class="filter-list__item">
+           {{> filter-list-item}}
+         </li>
+         <li class="filter-list__item">
+           {{> filter-list-item}}
+         </li>
+       </ul>
+     </div>
+    </div>
     <div id="contactsMapPanel" class="page-contacts__map">
       <div class="page-contacts__map-wrap">
         <div id="contactsMap"></div>

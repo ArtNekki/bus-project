@@ -11,6 +11,7 @@ import './modules/Map';
 import './modules/PickupPoint';
 import './modules/Select';
 import './modules/Contacts';
+import './modules/Tooltip';
 import { createPopper } from '@popperjs/core';
 
 import {TweenLite} from "gsap";

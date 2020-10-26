@@ -56,6 +56,10 @@
     font-size: 12px;
   }
 
+  &--lg {
+    font-size: 16px;
+  }
+
   &--gray {
     color: lighten($gray-dark-color, 10%);
   }
@@ -67,6 +71,10 @@
   &__text {
     position: relative;
     display: inline-block;
+
+    .link--blue & {
+      color: $blue-color;
+    }
 
     &::before {
       content: "";
@@ -86,7 +94,7 @@
         border-bottom-color: lighten($gray-dark-color, 10%);
       }
 
-      .link--blue {
+      .link--blue & {
         border-bottom-color: $blue-color;
       }
     }
