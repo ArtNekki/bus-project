@@ -33,7 +33,7 @@
       position: static;
       padding-top: 35px;
       margin-bottom: 60px;
-      grid-template-columns: 400px  1fr 1fr 75px;
+      grid-template-columns: 400px  1fr 1fr 65px;
       grid-template-rows: repeat(2, auto) 450px;
       grid-template-areas:
         "switcher . info info"
@@ -47,16 +47,17 @@
   }
 
   &__details {
-    @include container();
-
+    //@include container();
+    padding: 40px 30px 40px 50px;
     grid-column: 1 / -1;
     grid-row: 1 / -1;
     width: 100%;
     z-index: 2;
     transition: transform 0.5s ease-in-out;
     transform: translateX(calc(100% + 15px));
-    background-color: deeppink;
+    background-color: $white-color;
     box-sizing: border-box;
+    border-radius: $border-radius;
 
     .page-contacts--details-open & {
       transform: translateX(0);

@@ -65,7 +65,7 @@
   }
 
   &--blue {
-    border-bottom-color: $blue-color;
+    color: $blue-color;
   }
 
   &__text {
@@ -96,6 +96,10 @@
 
       .link--blue & {
         border-bottom-color: $blue-color;
+      }
+
+      .link--no-underline & {
+        border: none;
       }
     }
   }
