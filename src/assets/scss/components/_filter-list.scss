@@ -1,7 +1,10 @@
 .filter-list {
-  padding-right: 10px;
   height: 100%;
   overflow-y: auto;
+
+  @include media-breakpoint-up(md) {
+    padding-right: 10px;
+  }
 
   @include scollbar;
 

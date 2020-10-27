@@ -48,13 +48,12 @@
 
   &__details {
     //@include container();
-    padding: 40px 30px 40px 50px;
     grid-column: 1 / -1;
     grid-row: 1 / -1;
     width: 100%;
     z-index: 2;
     transition: transform 0.5s ease-in-out;
-    transform: translateX(calc(100% + 15px));
+    transform: translateX(calc(100% + #{$container-padding-x}));
     background-color: $white-color;
     box-sizing: border-box;
     border-radius: $border-radius;
@@ -89,8 +88,7 @@
 
   &__list {
     //margin-top: 25px;
-    padding: 20px;
-    padding-right: 10px;
+    padding: 20px 0;
     grid-area: tab-content;
     background-color: $white-color;
     border-radius: $border-radius;
@@ -98,6 +96,8 @@
     @include moveContactPageInfoLeft;
 
     @include media-breakpoint-up(md) {
+      padding-left: 20px;
+      padding-right: 10px;
       grid-area: list;
     }
   }
