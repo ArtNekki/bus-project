@@ -31,3 +31,11 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
 });
+
+document.addEventListener('tabby', function (event) {
+  if (event.detail.content.classList.contains('page-contacts__map')) {
+    document.documentElement.classList.add('page--is-map-active');
+  } else {
+    document.documentElement.classList.remove('page--is-map-active');
+  }
+})
