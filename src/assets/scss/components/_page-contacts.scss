@@ -33,12 +33,12 @@
       position: static;
       padding-top: 35px;
       margin-bottom: 60px;
-      grid-template-columns: 400px  1fr 1fr 65px;
+      grid-template-columns: 400px  1fr 25px 1fr 65px;
       grid-template-rows: repeat(2, auto) 450px;
       grid-template-areas:
-        "switcher . info info"
-        "select . info info"
-        "list panel panel .";
+        "switcher . info info info"
+        "select . info info info"
+        "list panel panel panel .";
       grid-column-gap: 10px;
       grid-row-gap: 10px;
       height: auto;
@@ -102,13 +102,25 @@
     }
   }
 
-  &__info {
+  &__feedback {
     //margin-top: 30px;
+    padding: 20px 29px 20px 20px;
+    box-sizing: border-box;
     grid-area: info;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: repeat(2, auto);
+    grid-row-gap: 10px;
     height: 90px;
-    background-color: black;
+    background-color: $primary-color;
+    border-radius: $border-radius;
 
     @include moveContactPageInfoLeft;
+  }
+
+  &__feedback p {
+    margin: 0;
+    grid-column: 1 / -1;
   }
 
   &__map {

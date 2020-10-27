@@ -88,7 +88,21 @@ layout: default
         <div id="contactsMap"></div>
       </div>
     </div>
-    <div class="page-contacts__info"></div>
+    <div class="page-contacts__feedback">
+      <p>Единая справочная для всего Приморского края:</p>
+      <a href="tel: +7 (423) 205-86-27" class="link link--lg link--no-underline">
+        <svg class="icon icon--black" width="19px" height="16px">
+          <use xlink:href="{{root}}assets/img/symbol/sprite.svg#headphone"></use>
+        </svg>
+        <span class="link__text">+7 (423) 205-86-27</span>
+      </a>
+      <a href="mailto: inbox@busbox.guru" class="link link--lg">
+        <svg class="icon icon--black" width="19px" height="16px">
+          <use xlink:href="{{root}}assets/img/symbol/sprite.svg#email"></use>
+        </svg>
+        <span class="link__text">inbox@busbox.guru</span>
+      </a>
+    </div>
     <div class="page-contacts__details">
       {{> point-card}}
     </div>
