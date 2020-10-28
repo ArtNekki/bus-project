@@ -2,11 +2,22 @@
   //padding-right: $container-padding-x;
   //padding-left: $container-padding-x;
 
+  box-sizing: border-box;
+
   @include media-breakpoint-up(md) {
-    padding: 40px 30px 40px 50px;
+    padding: 30px;
+    max-width: 650px;
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: repeat(2, auto);
+    background-color: $white-color;
+    border-radius: $border-radius;
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding: 40px 30px 40px 50px;
+    max-width: 100%;
+    height: 100%;
   }
 
   &__title {

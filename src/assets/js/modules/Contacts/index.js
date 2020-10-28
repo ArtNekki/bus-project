@@ -38,4 +38,25 @@ document.addEventListener('tabby', function (event) {
   } else {
     document.documentElement.classList.remove('page--is-map-active');
   }
-})
+});
+
+let listIsOpen = true;
+
+document.addEventListener('click', function(e) {
+  const closeBtn = e.target.hasAttribute('data-close-contacts-ui');
+
+  if (!closeBtn) return;
+
+
+  listIsOpen = !listIsOpen;
+
+  if (listIsOpen) {
+    this.documentElement.classList.add('page--hide-contacts-ui');
+    e.target.textContent = 'Скрыть список';
+  } else {
+    this.documentElement.classList.remove('page--hide-contacts-ui');
+    e.target.textContent = 'Показать список';
+  }
+
+
+});

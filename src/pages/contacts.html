@@ -8,10 +8,10 @@ layout: default
     <div data-contact-tabs class="tabs tabs--contacts">
       <ul class="tabs__nav">
         <li>
-          <a href="#contactsListPanel">Списком</a>
+          <a data-tabby-default href="#contactsListPanel">Списком</a>
         </li>
         <li>
-          <a data-tabby-default href="#contactsMapPanel">На карте</a>
+          <a href="#contactsMapPanel">На карте</a>
         </li>
       </ul>
     </div>
@@ -102,6 +102,9 @@ layout: default
         </svg>
         <span class="link__text">inbox@busbox.guru</span>
       </a>
+    </div>
+    <div class="page-contacts__toggle" data-close-contacts-ui>
+      Скрыть список
     </div>
     <div class="page-contacts__details">
       {{> point-card}}
