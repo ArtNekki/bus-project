@@ -24,7 +24,7 @@ function initMap(mapContainer, coords) {
     createHTMLMapMarker({
       latlng: new google.maps.LatLng(marker.lat, marker.lng),
       map: map,
-      html: generateMarkerTemplate()
+      html: generateMarkerTemplate(marker.id)
     });
   });
 }

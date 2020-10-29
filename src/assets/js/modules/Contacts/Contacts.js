@@ -35,6 +35,7 @@ export default class ContactsPage {
     this.$pointsSwitcher.addEventListener('click', this.switchFilter);
     this.$pointsList.addEventListener('click', this.showPointCard.bind(this));
     this.$pointCard.addEventListener('click', this.hidePointCard.bind(this));
+    this.$map.addEventListener('click', this.showPointCard.bind(this));
   }
 
   initTabs() {
