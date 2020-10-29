@@ -6,11 +6,12 @@ export default class ContactsPage {
 
   constructor() {
     this.$pageContainer = document.getElementById('contactsPage');
-    this.$tabsContainer = document.querySelector('[data-contact-tabs]');
-    this.$contactsMap = document.getElementById('contactsMap');
-    this.$hideListBtn = document.querySelector('[data-close-contacts-ui]');
-    this.$filterSwitcher = document.querySelector('[data-filter-switcher]');
-    this.$pointsList = document.getElementById('pointsList');
+    this.$tabsContainer = this.$pageContainer.querySelector('.tabs');
+    this.$map = this.$pageContainer.querySelector('#contactsMap');
+    this.$toggleList = this.$pageContainer.querySelector('.page-contacts__toggle');
+    this.$pointsSwitcher = this.$pageContainer.querySelector('.page-contacts__switcher');
+    this.$pointsList = this.$pageContainer.querySelector('.points-list');
+    this.$pointCard = this.$pageContainer.querySelector('.point-card');
 
     this.breakpoint = window.matchMedia(`(min-width: 768px)`);
     this.listIsOpen = true;
@@ -22,28 +23,29 @@ export default class ContactsPage {
   initPage() {
     this.$pageContainer.classList.add(this.activeMapClass)
 
-    if (this.$contactsMap) {
-      initMap(this.$contactsMap, contactCoords['vladivostok'].coords);
+    if (this.$map) {
+      initMap(this.$map, contactCoords['vladivostok'].coords);
     }
 
     this.breakpoint.addListener(this.initTabs);
     this.initTabs();
 
-    this.$hideListBtn.addEventListener('click', this.toggleList.bind(this));
+    this.$toggleList.addEventListener('click', this.toggleList.bind(this));
 
-    this.$filterSwitcher.addEventListener('click', this.switchFilter);
-    this.$pointsList.addEventListener('click', this.showPointInfo.bind(this));
+    this.$pointsSwitcher.addEventListener('click', this.switchFilter);
+    this.$pointsList.addEventListener('click', this.showPointCard.bind(this));
+    this.$pointCard.addEventListener('click', this.hidePointCard.bind(this));
   }
 
   initTabs() {
     if (!this.$tabsContainer) return;
 
-    let tabs = new Tabby('[data-contact-tabs] ul')
+    let tabs = new Tabby('.page-contacts .tabs > ul')
 
     if (this.breakpoint.matches) {
       tabs.destroy()
     } else {
-      tabs = new Tabby('[data-contact-tabs] ul');
+      tabs = new Tabby('.page-contacts .tabs > ul');
     }
 
     this.toggleTabs();
@@ -63,10 +65,10 @@ export default class ContactsPage {
 
   toggleList(e) {
     if (this.listIsOpen) {
-      this.$pageContainer.classList.add('page--hide-list');
+      this.$pageContainer.classList.add('page-contacts--hide-list');
       e.target.textContent = 'Скрыть список';
     } else {
-      this.$pageContainer.classList.remove('page--hide-list');
+      this.$pageContainer.classList.remove('page-contacts--hide-list');
       e.target.textContent = 'Показать список';
     }
 
@@ -85,11 +87,19 @@ export default class ContactsPage {
     btn.classList.add('active');
   }
 
-  showPointInfo(e) {
+  showPointCard(e) {
     const id = e.target.closest('[data-point-id]');
 
     if (!id) return;
 
     this.$pageContainer.classList.add('page-contacts--details');
+  }
+
+  hidePointCard(e) {
+    const btn = e.target.closest('[data-close-btn]');
+
+    if (!btn) return;
+
+    this.$pageContainer.classList.remove('page-contacts--details');
   }
 }

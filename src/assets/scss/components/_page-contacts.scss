@@ -24,7 +24,7 @@
       "switcher"
       "select"
       "tab-content"
-      "info";
+      "panel";
     width: 100%;
     //height: 100vh;
     box-sizing: border-box;
@@ -38,9 +38,9 @@
       grid-template-columns: 400px  1fr 25px 1fr 65px;
       grid-template-rows: repeat(2, auto) 450px;
       grid-template-areas:
-        "switcher . info info info"
-        "select . info info info"
-        "list panel panel panel .";
+        "switcher . panel panel panel"
+        "select . panel panel panel"
+        "list details details details .";
       grid-column-gap: 10px;
       grid-row-gap: 10px;
       height: auto;
@@ -86,7 +86,7 @@
     @include media-breakpoint-up(lg) {
       position: static;
       display: block;
-      grid-area: panel;
+      grid-area: details;
       transform: unset;
       background: none;
 
@@ -190,7 +190,7 @@
       grid-area: list;
     }
 
-    .page--hide-list & {
+    .page-contacts--hide-list & {
       opacity: 0;
       z-index: -10;
     }
@@ -201,7 +201,7 @@
     margin-bottom: 60px;
     padding: 20px 29px 20px 20px;
     box-sizing: border-box;
-    grid-area: info;
+    grid-area: panel;
     display: grid;
     grid-row-gap: 10px;
     background-color: $primary-color;
@@ -275,7 +275,7 @@
 
   &__toggle {
     padding: 10px 20px;
-    grid-area: info;
+    grid-area: panel;
     justify-self: end;
     align-self: start;
     display: none;

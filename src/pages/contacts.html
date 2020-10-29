@@ -5,7 +5,7 @@ layout: default
 
 <div id="contactsPage" class="page-contacts">
   <div class="page-contacts__main">
-    <div class="tabs tabs--contacts" data-contact-tabs>
+    <div class="tabs tabs--contacts">
       <ul class="tabs__nav">
         <li>
           <a href="#contactsMapPanel">На карте</a>
@@ -15,7 +15,7 @@ layout: default
         </li>
       </ul>
     </div>
-    <div class="page-contacts__switcher" data-filter-switcher>
+    <div class="page-contacts__switcher">
       <button type="button" class="page-contacts__btn active">
         <svg class="icon" width="15px" height="18px">
           <use xlink:href="{{root}}assets/img/symbol/sprite.svg#location"></use>
@@ -52,7 +52,7 @@ layout: default
     </div>
 
     <div id="contactsListPanel" class="page-contacts__list">
-     <div id="pointsList" class="points-list">
+     <div class="points-list">
        <ul class="points-list__scroll">
          <li class="points-list__item">
            {{> points-list-item id="point-1" title="Владивосток, Автовокзал" }}
@@ -101,7 +101,7 @@ layout: default
         <span class="link__text">inbox@busbox.guru</span>
       </a>
     </div>
-    <div class="page-contacts__toggle" data-close-contacts-ui>
+    <div class="page-contacts__toggle">
       Скрыть список
     </div>
     <div class="page-contacts__details">
