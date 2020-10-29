@@ -1,11 +1,12 @@
 .icon {
-  fill: #B3B3B3;
+  display: inline-block;
+  fill: $black-color;
 
   &--blue {
     fill: $blue-color;
   }
 
-  &--black {
-    fill: $black-color;
+  &--gray {
+    fill: #B3B3B3;
   }
 }

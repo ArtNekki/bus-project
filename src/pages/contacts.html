@@ -3,40 +3,40 @@ title: Контакты
 layout: default
 ---
 
-<div class="page-contacts">
+<div id="contactsPage" class="page-contacts">
   <div class="page-contacts__main">
-    <div data-contact-tabs class="tabs tabs--contacts">
+    <div class="tabs tabs--contacts" data-contact-tabs>
       <ul class="tabs__nav">
-        <li>
-          <a data-tabby-default href="#contactsListPanel">Списком</a>
-        </li>
         <li>
           <a href="#contactsMapPanel">На карте</a>
         </li>
+        <li>
+          <a data-tabby-default href="#contactsListPanel">Списком</a>
+        </li>
       </ul>
     </div>
-    <div class="page-contacts__switcher">
+    <div class="page-contacts__switcher" data-filter-switcher>
       <div class="contact-actions">
         <button class="contact-actions__btn contact-actions__btn--active">
-          <svg width="15px" height="18px">
+          <svg class="icon" width="15px" height="18px">
             <use xlink:href="{{root}}assets/img/symbol/sprite.svg#location"></use>
           </svg>
           <span>Все адреса</span>
         </button>
         <button class="contact-actions__btn">
-          <svg width="18px" height="18px">
+          <svg class="icon" width="18px" height="18px">
             <use xlink:href="{{root}}assets/img/symbol/sprite.svg#accept"></use>
           </svg>
           <span>Прием грузов</span>
         </button>
         <button class="contact-actions__btn">
-          <svg width="18px" height="18px">
+          <svg class="icon" width="18px" height="18px">
             <use xlink:href="{{root}}assets/img/symbol/sprite.svg#give"></use>
           </svg>
           <span>Выдача грузов</span>
         </button>
         <button class="contact-actions__btn">
-          <svg width="18px" height="18px">
+          <svg class="icon" width="18px" height="18px">
             <use xlink:href="{{root}}assets/img/symbol/sprite.svg#office"></use>
           </svg>
           <span>Офис</span>

@@ -1,5 +1,6 @@
 .page-contacts {
   position: relative;
+  margin-top: 20px;
   width: 100%;
   display: grid;
   grid-template-columns: 1fr;
@@ -28,6 +29,7 @@
     //height: 100vh;
     box-sizing: border-box;
     transition: transform 0.5s ease-in;
+    overflow: hidden;
 
     @include media-breakpoint-up(md) {
       position: static;
@@ -133,7 +135,7 @@
       grid-area: list;
     }
 
-    .page--hide-contacts-ui & {
+    .page--hide-list & {
       opacity: 0;
       z-index: -10;
     }
@@ -154,7 +156,7 @@
       display: none;
     }
 
-    .page--is-map-active & {
+    .page-contacts--map-panel & {
       display: none;
 
       @include media-breakpoint-up(lg) {

@@ -21,16 +21,21 @@
 
     .tabs--contacts & {
       grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 0;
     }
   }
 
   &__nav li {
     background-color: #f2f2f2;
+
+    .tabs--contacts & {
+      background-color: $white-color;
+    }
   }
 
   &__nav a {
     position: relative;
-    padding: 0.85em 0;
+    padding: 18px 0;
     display: block;
     font-family: $font-family--secondary;
     font-size: 22px;
@@ -40,6 +45,14 @@
     text-align: center;
     text-decoration: none;
     border-bottom: $tab-nav-border-height solid transparent;
+    user-select: none;
+
+    .tabs--contacts & {
+      font-size: 16px;
+      line-height: 1.2;
+      color: darken($gray-color, 13%);
+      border-bottom-color: $gray-light-color;
+    }
 
     &::before,
     &::after {
@@ -49,6 +62,10 @@
       width: $tabs-nav-space;
       height: $tab-nav-border-height;
       background: transparent;
+
+      .tabs--contacts & {
+        display: none;
+      }
     }
 
     &::before {
@@ -64,6 +81,7 @@
     }
 
     &[aria-selected="true"] {
+      color: $black-color;
       background-color: $white-color;
       border-color: $primary-color;
 
