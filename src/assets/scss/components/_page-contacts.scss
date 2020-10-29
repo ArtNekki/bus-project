@@ -64,8 +64,8 @@
       transform: translateX(0);
     }
 
-    @include media-breakpoint-up(md) {
-      position: absolute;
+    @include media-breakpoint-up(sm) {
+      position: fixed;
       top: 0;
       right: 0;
       left: 0;

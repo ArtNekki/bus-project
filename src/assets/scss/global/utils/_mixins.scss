@@ -312,9 +312,49 @@
   .page-contacts--details & {
     transform: translateX(calc(-100% - #{$container-padding-x} * 2));
 
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(sm) {
       transition: unset;
       transform: none;
     }
+  }
+}
+
+@mixin close-button($size, $color, $colorHover, $colorActive: $colorHover) {
+  padding: 0;
+  width: $size;
+  height: $size;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  @include focus {
+    outline: none;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 1px;
+    background-color: $color; //#b3b3b3
+
+    @include hover {
+      background-color: $colorHover;
+    }
+
+    @include active {
+      background-color: $colorActive;
+    }
+  }
+
+  &::before {
+    transform: rotate3d(0, 0, 1, 45deg);
+  }
+
+  &::after {
+    transform: rotate3d(0, 0, 1, -45deg);
   }
 }

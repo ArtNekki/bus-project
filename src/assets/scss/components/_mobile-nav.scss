@@ -65,43 +65,12 @@
     top: 50%;
     transform: translateY(-50%);
     left: -45px;
-    padding: 0;
-    width: 35px;
-    height: 35px;
     display: none;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
 
-    @include focus {
-      outline: none;
-    }
+    @include close-button(35px, darken($gray-color, 13%), $black-color);
 
     @include mobile-open {
       display: block;
-    }
-
-    &::before,
-    &::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 50%;
-      height: 100%;
-      width: 1px;
-      background-color: darken($gray-color, 13%); //#b3b3b3
-
-      @include active {
-        background-color: $black-color;
-      }
-    }
-
-    &::before {
-      transform: rotate3d(0, 0, 1, 45deg);
-    }
-
-    &::after {
-      transform: rotate3d(0, 0, 1, -45deg);
     }
   }
 
