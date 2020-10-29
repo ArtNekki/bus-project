@@ -52,7 +52,7 @@
   }
 
   &__details {
-    //@include container();
+    position: relative;
     grid-column: 1 / -1;
     grid-row: 1 / -1;
     width: 100%;
@@ -176,6 +176,7 @@
   }
 
   &__list {
+    position: relative;
     //margin-top: 25px;
     //padding: 20px 0;
     grid-area: tab-content;

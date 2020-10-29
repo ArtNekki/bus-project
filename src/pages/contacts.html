@@ -42,7 +42,7 @@ layout: default
       </button>
     </div>
     <div class="page-contacts__select">
-      <div class="select">
+      <div id="selectCity" class="select">
         <select id="user-city" name="user-city" class="select__field">
           <option value="">Выберите город</option>
           <option value="nakhodka">Находка</option>
@@ -52,6 +52,7 @@ layout: default
     </div>
 
     <div id="contactsListPanel" class="page-contacts__list">
+      {{> preloader}}
      <div class="points-list">
        <ul class="points-list__scroll">
          <li class="points-list__item">
@@ -105,6 +106,7 @@ layout: default
       Скрыть список
     </div>
     <div class="page-contacts__details">
+      {{> preloader}}
       {{> point-card}}
     </div>
   </div>

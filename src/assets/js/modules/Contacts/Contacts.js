@@ -12,6 +12,7 @@ export default class ContactsPage {
     this.$pointsSwitcher = this.$pageContainer.querySelector('.page-contacts__switcher');
     this.$pointsList = this.$pageContainer.querySelector('.points-list');
     this.$pointCard = this.$pageContainer.querySelector('.point-card');
+    this.$select = this.$pageContainer.querySelector('#selectCity');
 
     this.breakpoint = window.matchMedia(`(min-width: 768px)`);
     this.listIsOpen = true;
@@ -32,10 +33,13 @@ export default class ContactsPage {
 
     this.$toggleList.addEventListener('click', this.toggleList.bind(this));
 
-    this.$pointsSwitcher.addEventListener('click', this.switchFilter);
+    this.$pointsSwitcher.addEventListener('click', this.switchFilter.bind(this));
     this.$pointsList.addEventListener('click', this.showPointCard.bind(this));
     this.$pointCard.addEventListener('click', this.hidePointCard.bind(this));
     this.$map.addEventListener('click', this.showPointCard.bind(this));
+    this.$select.addEventListener('click', this.loadPointsList.bind(this));
+
+    this.loadPointsList();
   }
 
   initTabs() {
@@ -86,6 +90,7 @@ export default class ContactsPage {
     });
 
     btn.classList.add('active');
+    this.loadPointsList();
   }
 
   showPointCard(e) {
@@ -94,6 +99,7 @@ export default class ContactsPage {
     if (!id) return;
 
     this.$pageContainer.classList.add('page-contacts--details');
+    this.loadPointCard();
   }
 
   hidePointCard(e) {
@@ -102,5 +108,21 @@ export default class ContactsPage {
     if (!btn) return;
 
     this.$pageContainer.classList.remove('page-contacts--details');
+  }
+
+  loadPointsList() {
+    this.$pageContainer.classList.add('page-contacts--points-list-loading');
+
+    setTimeout(() => {
+      this.$pageContainer.classList.remove('page-contacts--points-list-loading');
+    }, 1500);
+  }
+
+  loadPointCard() {
+    this.$pageContainer.classList.add('page-contacts--points-card-loading');
+
+    setTimeout(() => {
+      this.$pageContainer.classList.remove('page-contacts--points-card-loading');
+    }, 1500);
   }
 }
