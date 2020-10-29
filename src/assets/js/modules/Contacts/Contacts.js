@@ -10,6 +10,7 @@ export default class ContactsPage {
     this.$contactsMap = document.getElementById('contactsMap');
     this.$hideListBtn = document.querySelector('[data-close-contacts-ui]');
     this.$filterSwitcher = document.querySelector('[data-filter-switcher]');
+    this.$pointsList = document.getElementById('pointsList');
 
     this.breakpoint = window.matchMedia(`(min-width: 768px)`);
     this.listIsOpen = true;
@@ -27,9 +28,11 @@ export default class ContactsPage {
 
     this.breakpoint.addListener(this.initTabs);
     this.initTabs();
-    this.switchFilter();
 
-    this.$hideListBtn.addEventListener('click', this.toggleList.bind(this))
+    this.$hideListBtn.addEventListener('click', this.toggleList.bind(this));
+
+    this.$filterSwitcher.addEventListener('click', this.switchFilter);
+    this.$pointsList.addEventListener('click', this.showPointInfo.bind(this));
   }
 
   initTabs() {
@@ -70,21 +73,23 @@ export default class ContactsPage {
     this.listIsOpen = !this.listIsOpen;
   }
 
-  switchFilter() {
-    let activeBtn = null;
+  switchFilter(e) {
+    const btn = e.target.closest('button');
 
-    this.$filterSwitcher.addEventListener('click', (e) => {
-      const btn = e.target.closest('button');
+    if (!btn) return;
 
-      if (!btn) return;
+    btn.parentNode.querySelectorAll('button').forEach((el) => {
+      el.classList.remove('active');
+    });
 
-      btn.parentNode.querySelectorAll('button').forEach((el) => {
-        el.classList.remove('active');
-      });
+    btn.classList.add('active');
+  }
 
-      btn.classList.add('active');
+  showPointInfo(e) {
+    const id = e.target.closest('[data-point-id]');
 
+    if (!id) return;
 
-    })
+    this.$pageContainer.classList.add('page-contacts--details');
   }
 }

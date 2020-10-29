@@ -60,7 +60,7 @@
     transition: transform 0.5s ease-in-out;
     transform: translateX(calc(100% + #{$container-padding-x}));
 
-    .page-contacts--details-open & {
+    .page-contacts--details & {
       transform: translateX(0);
     }
 
@@ -78,7 +78,7 @@
       width: 100%;
       background-color: rgba($black-color, 0.5);
 
-      .page-contacts--details-open & {
+      .page-contacts--details & {
         display: flex;
       }
     }
@@ -90,7 +90,7 @@
       transform: unset;
       background: none;
 
-      .page-contacts--details-open & {
+      .page-contacts--details & {
         transform: unset;
       }
     }
