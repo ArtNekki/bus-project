@@ -28,7 +28,7 @@ export default class ContactsPage {
       initMap(this.$map, contactCoords['vladivostok'].coords);
     }
 
-    this.breakpoint.addListener(this.initTabs);
+    this.breakpoint.addListener(this.initTabs.bind(this));
     this.initTabs();
 
     this.$toggleList.addEventListener('click', this.toggleList.bind(this));
@@ -45,7 +45,7 @@ export default class ContactsPage {
   initTabs() {
     if (!this.$tabsContainer) return;
 
-    let tabs = new Tabby('.page-contacts .tabs > ul')
+    let tabs = new Tabby('.page-contacts .tabs > ul');
 
     if (this.breakpoint.matches) {
       tabs.destroy()
