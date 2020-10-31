@@ -54,7 +54,7 @@ export default class ContactsPage {
     }
 
     this.toggleTabs();
-    // tabs.toggle('#contactsMapPanel');
+    tabs.toggle('#contactsMapPanel');
   }
 
   toggleTabs() {
