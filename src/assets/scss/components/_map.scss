@@ -5,6 +5,17 @@
     height: 385px;
     background-color: $gray-light-color;
   }
+
+  &__point {
+
+    path:first-child {
+      fill: $primary-color;
+    }
+
+    &.active path:first-child {
+      fill: $red-color;
+    }
+  }
 }
 
 a[href^="http://maps.google.com/maps"]{display:none !important}

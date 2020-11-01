@@ -17,6 +17,7 @@ export default class ContactsPage {
     this.breakpoint = window.matchMedia(`(min-width: 768px)`);
     this.listIsOpen = true;
     this.activeMapClass = 'page-contacts--map-panel';
+    this.activePoint = null;
 
     this.initPage();
   }
@@ -38,6 +39,7 @@ export default class ContactsPage {
     this.$pointCard.addEventListener('click', this.hidePointCard.bind(this));
     this.$map.addEventListener('click', this.showPointCard.bind(this));
     this.$select.addEventListener('click', this.loadPointsList.bind(this));
+    this.$pageContainer.addEventListener('click', this.setActivePoint.bind(this));
 
     this.loadPointsList();
   }
@@ -94,11 +96,15 @@ export default class ContactsPage {
   }
 
   showPointCard(e) {
-    const id = e.target.closest('[data-point-id]');
+    e.stopPropagation();
 
-    if (!id) return;
+    const point = e.target.closest('[data-point-id]');
+
+    if (!point) return;
 
     this.$pageContainer.classList.add('page-contacts--details');
+
+    this.setActivePoint(point);
     this.loadPointCard();
   }
 
@@ -124,5 +130,18 @@ export default class ContactsPage {
     setTimeout(() => {
       this.$pageContainer.classList.remove('page-contacts--points-card-loading');
     }, 1500);
+  }
+
+  setActivePoint(point) {
+
+    if (this.activePoint) {
+      this.activePoint.classList.remove('active');
+      this.activePoint = null;
+    }
+
+    if (point.dataset && point.dataset.pointId) {
+      this.activePoint = point;
+      this.activePoint.classList.add('active');
+    }
   }
 }

@@ -33,6 +33,10 @@
     position: relative;
     display: inline-block;
 
+    .link.active & {
+      color: $red-color;
+    }
+
     .link--blue & {
       color: $blue-color;
     }
@@ -46,6 +50,10 @@
       border-bottom-width: 1px;
       border-bottom-style: dotted;
       border-bottom-color: $black-color;
+
+      .link.active & {
+        border-bottom-color: $red-color;
+      }
 
       .link--dashed & {
         border-bottom-style: dashed;
