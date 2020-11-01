@@ -97,6 +97,7 @@ export default class ContactsPage {
 
   showPointCard(e) {
     e.stopPropagation();
+    e.preventDefault();
 
     const point = e.target.closest('[data-point-id]');
 
@@ -117,18 +118,18 @@ export default class ContactsPage {
   }
 
   loadPointsList() {
-    this.$pageContainer.classList.add('page-contacts--points-list-loading');
+    this.$pointsList.classList.add('loading');
 
     setTimeout(() => {
-      this.$pageContainer.classList.remove('page-contacts--points-list-loading');
+      this.$pointsList.classList.remove('loading');
     }, 1500);
   }
 
   loadPointCard() {
-    this.$pageContainer.classList.add('page-contacts--points-card-loading');
+    this.$pointCard.classList.add('loading');
 
     setTimeout(() => {
-      this.$pageContainer.classList.remove('page-contacts--points-card-loading');
+      this.$pointCard.classList.remove('loading');
     }, 1500);
   }
 

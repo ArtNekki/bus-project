@@ -1,17 +1,16 @@
 .preloader {
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  top: 5px;
+  right: 5px;
+  bottom: 5px;
+  left: 5px;
   z-index: 5;
   display: none;
   justify-content: center;
   align-items: center;
   background-color: $white-color;
 
-  //.page-contacts--points-list-loading &,
-  //.page-contacts--points-card-loading & {
-  //  display: flex;
-  //}
+  .loading & {
+    display: flex;
+  }
 }
