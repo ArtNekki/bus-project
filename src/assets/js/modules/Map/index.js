@@ -27,6 +27,8 @@ function initMap(mapContainer, coords) {
       html: generateMarkerTemplate(marker.id)
     });
   });
+
+  return map;
 }
 
 // document.addEventListener('DOMContentLoaded', function() {

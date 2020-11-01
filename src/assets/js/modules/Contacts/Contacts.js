@@ -26,7 +26,7 @@ export default class ContactsPage {
     this.$pageContainer.classList.add(this.activeMapClass)
 
     if (this.$map) {
-      initMap(this.$map, contactCoords['vladivostok'].coords);
+      this.mapApi = initMap(this.$map, contactCoords['vladivostok'].coords);
     }
 
     this.breakpoint.addListener(this.initTabs.bind(this));
@@ -37,6 +37,7 @@ export default class ContactsPage {
     this.$pointsSwitcher.addEventListener('click', this.switchFilter.bind(this));
     this.$pointsList.addEventListener('click', this.showPointCard.bind(this));
     this.$pointCard.addEventListener('click', this.hidePointCard.bind(this));
+    this.$pointCard.addEventListener('click', this.zoomToPoint.bind(this));
     this.$map.addEventListener('click', this.showPointCard.bind(this));
     this.$select.addEventListener('click', this.loadPointsList.bind(this));
     this.$pageContainer.addEventListener('click', this.setActivePoint.bind(this));
@@ -144,5 +145,23 @@ export default class ContactsPage {
       this.activePoint = point;
       this.activePoint.classList.add('active');
     }
+  }
+
+  zoomToPoint(e) {
+    const zoom = e.target.closest('[data-zoom-id]');
+
+    if (!zoom) return;
+
+    const currentCoords = contactCoords['vladivostok'].coords.filter((item) => {
+      return item.id === zoom.dataset.zoomId;
+    })[0];
+
+    if (currentCoords) {
+
+      this.mapApi.setCenter(new google.maps.LatLng(currentCoords.lat, currentCoords.lng))
+      this.mapApi.setZoom(16);
+    }
+
+    this.$pageContainer.classList.remove('page-contacts--details');
   }
 }
