@@ -2,7 +2,7 @@ import createHTMLMapMarker from './HtmlMapMarker';
 import { generateMarkerTemplate } from './MarkerTemplate';
 import markerCoords from '../../../../data/pickupCoords.json';
 
-function initMap(mapContainer, coords) {
+function initMap(mapContainer, coords, gestureHandling = 'none', scrollWheel = false) {
 
   if(!mapContainer) return;
 
@@ -11,8 +11,8 @@ function initMap(mapContainer, coords) {
     center: new google.maps.LatLng(coords[0].lat, coords[0].lng),
     disableDefaultUI: true,
     zoomControl: true,
-    // gestureHandling: 'greedy',
-    // scrollwheel: false,
+    gestureHandling,
+    scrollWheel,
     styles: [{
       stylers: [{
         saturation: -100
