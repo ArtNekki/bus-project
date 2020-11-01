@@ -11,8 +11,8 @@ function initMap(mapContainer, coords) {
     center: new google.maps.LatLng(coords[0].lat, coords[0].lng),
     disableDefaultUI: true,
     zoomControl: true,
-    gestureHandling: 'greedy',
-    scrollwheel: false,
+    // gestureHandling: 'greedy',
+    // scrollwheel: false,
     styles: [{
       stylers: [{
         saturation: -100
