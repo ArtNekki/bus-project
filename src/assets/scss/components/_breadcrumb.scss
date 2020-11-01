@@ -1,5 +1,7 @@
 .breadcrumb {
   border-top: 1px solid lighten($gray-light-color, 5%);
+  white-space: nowrap;
+  overflow-x: auto;
 
   @include header-sticky(xs) {
     display: none;
