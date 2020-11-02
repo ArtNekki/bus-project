@@ -73,6 +73,14 @@ export default class ContactsPage {
       } else {
         this.$pageContainer.classList.remove(this.activeMapClass);
       }
+
+      // window.scrollTo({
+      //   top: 0
+      // });
+
+      // this.$pageContainer.scrollIntoView({
+      //   behavior: 'smooth'
+      // })
     });
   }
 
@@ -175,11 +183,13 @@ export default class ContactsPage {
   }
 
   scrollIntoView() {
+    // if (!this.breakpoint.matches) return;
+
     this.$pageHeader.classList.add('page-header--sticky');
     this.setContentSpace();
 
     this.$pageContainer.scrollIntoView({
-      behavior: 'smooth'
+      behavior: this.breakpoint.matches? 'smooth' : 'auto'
     });
 
     setTimeout(() => {
@@ -188,6 +198,7 @@ export default class ContactsPage {
   }
 
   scrollPage(e) {
+    // if (!this.breakpoint.matches) return;
 
     window.clearTimeout( this.isScrolling );
 
@@ -195,7 +206,8 @@ export default class ContactsPage {
     this.isScrolling = setTimeout(() => {
 
       if (this.$pageContainer.getBoundingClientRect().top  > '30') {
-          this.$pageContainer.style = null;
+        this.$pageContainer.style = null;
+        this.$pageContainer.classList.remove('page-contacts--into-view');
 
           window.scrollTo({
             top: 0
@@ -210,6 +222,7 @@ export default class ContactsPage {
 
   setContentSpace() {
     this.$pageContainer.style.marginTop = `${parseInt(this.$pageHeader.getBoundingClientRect().height)}px`;
-    this.$pageContainer.style.paddingTop = '30px';
+    // this.$pageContainer.style.paddingTop = '30px';
+    this.$pageContainer.classList.add('page-contacts--into-view');
   }
 }

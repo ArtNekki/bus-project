@@ -8,8 +8,12 @@
   display: none;
   justify-content: center;
   align-items: center;
-  background-color: $white-color;
+  background-color: lighten($gray-light-color, 7%);
   border-radius: $border-radius;
+
+  @include media-breakpoint-up(sm) {
+    background-color: $white-color;
+  }
 
   .loading & {
     display: flex;

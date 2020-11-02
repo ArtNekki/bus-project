@@ -5,9 +5,16 @@
   grid-template-columns: 1fr;
   //overflow: hidden;
 
-  &--scroll {
-    margin-top: 205px;
-    padding-top: 30px;
+  &--into-view {
+    padding-top: 90px;
+
+    @include media-breakpoint-up(md) {
+      padding-top: 60px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      padding-top: 30px;
+    }
   }
 
   @include media-breakpoint-up(md) {
