@@ -2,7 +2,7 @@ import createHTMLMapMarker from './HtmlMapMarker';
 import { generateMarkerTemplate } from './MarkerTemplate';
 import markerCoords from '../../../../data/pickupCoords.json';
 
-function initMap(mapContainer, coords, gestureHandling = 'none', scrollWheel = false) {
+function initMap(mapContainer, coords, gestureHandling = '', scrollWheel = false) {
 
   if(!mapContainer) return;
 

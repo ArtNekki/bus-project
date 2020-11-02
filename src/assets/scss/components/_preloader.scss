@@ -9,6 +9,7 @@
   justify-content: center;
   align-items: center;
   background-color: $white-color;
+  border-radius: $border-radius;
 
   .loading & {
     display: flex;
