@@ -3,6 +3,13 @@
   @include mobile-open {
     overflow: hidden;
   }
+
+  &__inner {
+
+    @include header-sticky(xs) {
+      padding-top: 85px;
+    }
+  }
 }
 
 body {

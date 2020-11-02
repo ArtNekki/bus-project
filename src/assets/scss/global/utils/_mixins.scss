@@ -186,7 +186,7 @@
 }
 
 @mixin header-sticky($bp) {
-  .page-header--sticky & {
+  .page--header-sticky & {
     @include media-breakpoint-up($bp) {
       @content;
     }

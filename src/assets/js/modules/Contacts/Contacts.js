@@ -4,9 +4,9 @@ import Tabby from "tabbyjs";
 
 export default class ContactsPage {
 
-  constructor() {
+  constructor(container) {
     this.$pageHeader = document.getElementById('pageHeader');
-    this.$pageContainer = document.getElementById('contactsPage');
+    this.$pageContainer = container;
     this.$tabsContainer = this.$pageContainer.querySelector('.tabs');
     this.$map = this.$pageContainer.querySelector('#contactsMap');
     this.$toggleList = this.$pageContainer.querySelector('.page-contacts__toggle');
@@ -183,41 +183,43 @@ export default class ContactsPage {
   }
 
   scrollIntoView() {
+    console.log('scroll');
+
     // if (!this.breakpoint.matches) return;
 
-    this.$pageHeader.classList.add('page-header--sticky');
-    this.setContentSpace();
-
-    this.$pageContainer.scrollIntoView({
-      behavior: this.breakpoint.matches? 'smooth' : 'auto'
-    });
-
-    setTimeout(() => {
-      this.pageContainerTop = this.$pageContainer.getBoundingClientRect().top;
-    }, 0)
+    // this.$pageHeader.classList.add('page-header--sticky');
+    // this.setContentSpace();
+    //
+    // this.$pageContainer.scrollIntoView({
+    //   behavior: this.breakpoint.matches? 'smooth' : 'auto'
+    // });
+    //
+    // setTimeout(() => {
+    //   this.pageContainerTop = this.$pageContainer.getBoundingClientRect().top;
+    // }, 0)
   }
 
   scrollPage(e) {
     // if (!this.breakpoint.matches) return;
 
-    window.clearTimeout( this.isScrolling );
-
-    // Set a timeout to run after scrolling ends
-    this.isScrolling = setTimeout(() => {
-
-      if (this.$pageContainer.getBoundingClientRect().top  > '30') {
-        this.$pageContainer.style = null;
-        this.$pageContainer.classList.remove('page-contacts--into-view');
-
-          window.scrollTo({
-            top: 0
-          });
-
-        } else if (window.pageYOffset > 0 && window.pageYOffset < 90) {
-        this.scrollIntoView();
-      }
-
-    }, 66);
+    // window.clearTimeout( this.isScrolling );
+    //
+    // // Set a timeout to run after scrolling ends
+    // this.isScrolling = setTimeout(() => {
+    //
+    //   if (this.$pageContainer.getBoundingClientRect().top  > '30') {
+    //     this.$pageContainer.style = null;
+    //     this.$pageContainer.classList.remove('page-contacts--into-view');
+    //
+    //       window.scrollTo({
+    //         top: 0
+    //       });
+    //
+    //     } else if (window.pageYOffset > 0 && window.pageYOffset < 90) {
+    //     this.scrollIntoView();
+    //   }
+    //
+    // }, 66);
   }
 
   setContentSpace() {

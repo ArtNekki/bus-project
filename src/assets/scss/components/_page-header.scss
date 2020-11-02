@@ -3,7 +3,7 @@
   background-color: $white-color;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05);
 
-  &--sticky {
+  @include header-sticky(xs) {
     position: fixed;
     top: 0;
     left: 0;
