@@ -69,6 +69,12 @@ export default class ContactsPage {
         this.$pageContainer.classList.remove(this.activeMapClass);
       }
     });
+
+    // console.log('maaaa')
+    //
+    // this.$map.scrollIntoView({
+    //   behavior: 'smooth'
+    // });
   }
 
   toggleList(e) {

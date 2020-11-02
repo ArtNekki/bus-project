@@ -3,7 +3,6 @@
   $tab-nav-border-height: 2px;
 
   &--contacts {
-    margin-top: 20px;
     grid-area: tabs;
 
     @include moveContactPageInfoLeft;
