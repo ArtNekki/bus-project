@@ -312,10 +312,12 @@
 
   .page-contacts--details & {
     transform: translateX(calc(-100% - #{$container-padding-x} * 2));
+    position: absolute;
 
     @include media-breakpoint-up(sm) {
       transition: unset;
       transform: none;
+      position: static;
     }
   }
 }
