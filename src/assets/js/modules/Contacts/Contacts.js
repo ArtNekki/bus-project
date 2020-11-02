@@ -121,7 +121,7 @@ export default class ContactsPage {
 
     this.setActivePoint(point);
     this.loadPointCard();
-    this.scrollIntoView();
+    this.scrollToTop();
   }
 
   hidePointCard(e) {
@@ -182,8 +182,12 @@ export default class ContactsPage {
     this.$pageContainer.classList.remove('page-contacts--details');
   }
 
-  scrollIntoView() {
-    console.log('scroll');
+  scrollToTop() {
+
+    window.scrollTo({
+      top: 5,
+      behavior: this.breakpoint.matches? 'smooth' : 'auto'
+    });
 
     // if (!this.breakpoint.matches) return;
 
