@@ -18,8 +18,8 @@
     display: grid;
     grid-template-columns: 1fr repeat(3, auto);
     grid-template-rows: repeat(2, auto);
-    grid-column-gap: 11px;
-    grid-row-gap: 8px;
+    grid-column-gap: 10px;
+    grid-row-gap: 5px;
 
     &:not(:last-child) {
       margin-bottom: 25px;
@@ -39,7 +39,7 @@
   }
 
   &__action svg {
-    opacity: 0.3;
+    opacity: 0.25;
 
     @include hover {
       opacity: 0.5;
@@ -54,6 +54,7 @@
     &--status {
       grid-column: 2 / -1;
       color: $red-color;
+      text-transform: lowercase;
     }
   }
 }
