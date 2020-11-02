@@ -1,14 +1,3 @@
-const pageHeader = document.querySelector('.page-header');
-
-function setStickyMenu () {
-  if (window.pageYOffset > 0) {
-    document.documentElement.classList.add('page--header-sticky');
-  } else {
-    document.documentElement.classList.remove('page--header-sticky');
-  }
-}
-
-
 document.addEventListener('click', function(e) {
 
   if (e.target && e.target.id === 'mobileNavOpen') {
@@ -18,5 +7,22 @@ document.addEventListener('click', function(e) {
   }
 });
 
-setStickyMenu();
-document.addEventListener('scroll', setStickyMenu);
+document.addEventListener('DOMContentLoaded', function() {
+  const header  = document.querySelector('.page-header');
+
+  function setStickyMenu () {
+
+    if (window.pageYOffset > 0) {
+      document.documentElement.classList.add('page--header-sticky');
+      document.body.style.paddingTop = `${parseInt(header.getBoundingClientRect().height)}px`;
+    } else {
+      document.documentElement.classList.remove('page--header-sticky');
+      document.body.style = null;
+    }
+  }
+
+  setStickyMenu();
+  document.addEventListener('scroll', setStickyMenu);
+  window.addEventListener('resize', setStickyMenu);
+
+});
