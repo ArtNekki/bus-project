@@ -5,6 +5,7 @@ import Tabby from "tabbyjs";
 export default class ContactsPage {
 
   constructor() {
+    this.$pageHeader = document.getElementById('pageHeader');
     this.$pageContainer = document.getElementById('contactsPage');
     this.$tabsContainer = this.$pageContainer.querySelector('.tabs');
     this.$map = this.$pageContainer.querySelector('#contactsMap');
@@ -18,6 +19,7 @@ export default class ContactsPage {
     this.listIsOpen = true;
     this.activeMapClass = 'page-contacts--map-panel';
     this.activePoint = null;
+    this.pageContainerTop = null;
 
     this.initPage();
   }
@@ -41,6 +43,9 @@ export default class ContactsPage {
     this.$map.addEventListener('click', this.showPointCard.bind(this));
     this.$select.addEventListener('click', this.loadPointsList.bind(this));
     this.$pageContainer.addEventListener('click', this.setActivePoint.bind(this));
+
+    // global
+    window.addEventListener('scroll', this.scrollPage.bind(this));
 
     this.loadPointsList();
   }
@@ -69,12 +74,6 @@ export default class ContactsPage {
         this.$pageContainer.classList.remove(this.activeMapClass);
       }
     });
-
-    // console.log('maaaa')
-    //
-    // this.$map.scrollIntoView({
-    //   behavior: 'smooth'
-    // });
   }
 
   toggleList(e) {
@@ -114,6 +113,7 @@ export default class ContactsPage {
 
     this.setActivePoint(point);
     this.loadPointCard();
+    this.scrollIntoView();
   }
 
   hidePointCard(e) {
@@ -172,5 +172,44 @@ export default class ContactsPage {
     }
 
     this.$pageContainer.classList.remove('page-contacts--details');
+  }
+
+  scrollIntoView() {
+    this.$pageHeader.classList.add('page-header--sticky');
+    this.setContentSpace();
+
+    this.$pageContainer.scrollIntoView({
+      behavior: 'smooth'
+    });
+
+    setTimeout(() => {
+      this.pageContainerTop = this.$pageContainer.getBoundingClientRect().top;
+    }, 0)
+  }
+
+  scrollPage(e) {
+
+    window.clearTimeout( this.isScrolling );
+
+    // Set a timeout to run after scrolling ends
+    this.isScrolling = setTimeout(() => {
+
+      if (this.$pageContainer.getBoundingClientRect().top  > '30') {
+          this.$pageContainer.style = null;
+
+          window.scrollTo({
+            top: 0
+          });
+
+        } else if (window.pageYOffset > 0 && window.pageYOffset < 90) {
+        this.scrollIntoView();
+      }
+
+    }, 66);
+  }
+
+  setContentSpace() {
+    this.$pageContainer.style.marginTop = `${parseInt(this.$pageHeader.getBoundingClientRect().height)}px`;
+    this.$pageContainer.style.paddingTop = '30px';
   }
 }

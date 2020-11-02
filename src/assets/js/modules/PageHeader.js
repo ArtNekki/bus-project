@@ -2,7 +2,6 @@ const pageHeader = document.querySelector('.page-header');
 
 function setStickyMenu () {
   if (window.pageYOffset > 0) {
-    console.log('page', 'da')
     pageHeader.classList.add('page-header--sticky');
   } else {
     pageHeader.classList.remove('page-header--sticky');
