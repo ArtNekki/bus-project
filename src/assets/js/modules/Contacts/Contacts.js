@@ -48,16 +48,16 @@ export default class ContactsPage {
   initTabs() {
     if (!this.$tabsContainer) return;
 
-    let tabs = new Tabby('.page-contacts .tabs > ul');
+    this.$tabs = new Tabby('.page-contacts .tabs > ul');
 
     if (this.breakpoint.matches) {
-      tabs.destroy()
+      this.$tabs.destroy();
+      this.$tabs = null;
     } else {
-      tabs = new Tabby('.page-contacts .tabs > ul');
+      this.$tabs = new Tabby('.page-contacts .tabs > ul');
+      this.toggleTabs();
+      this.$tabs.toggle('#contactsMapPanel');
     }
-
-    this.toggleTabs();
-    tabs.toggle('#contactsMapPanel');
   }
 
   toggleTabs() {
@@ -162,10 +162,13 @@ export default class ContactsPage {
       return item.id === zoom.dataset.zoomId;
     })[0];
 
-    if (currentCoords) {
+    if (!currentCoords) return;
 
-      this.mapApi.setCenter(new google.maps.LatLng(currentCoords.lat, currentCoords.lng))
-      this.mapApi.setZoom(16);
+    this.mapApi.setCenter(new google.maps.LatLng(currentCoords.lat, currentCoords.lng))
+    this.mapApi.setZoom(16);
+
+    if (this.$tabs) {
+      this.$tabs.toggle('#contactsMapPanel');
     }
 
     this.$pageContainer.classList.remove('page-contacts--details');

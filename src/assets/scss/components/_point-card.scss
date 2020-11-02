@@ -159,6 +159,6 @@
       display: block;
     }
 
-    @include close-button(20px, $gray-color, $gray-dark-color);
+    @include close-button(20px, $gray-color, darken($gray-color, 8%));
   }
 }

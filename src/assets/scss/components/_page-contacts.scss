@@ -106,6 +106,7 @@
       grid-area: details;
       transform: unset;
       background: none;
+      box-shadow: $box-shadow;
 
       .page-contacts--details & {
         transform: unset;
@@ -313,7 +314,9 @@
     justify-self: end;
     align-self: start;
     display: none;
-    background-color: $primary-color;
+    background-color: $white-color;
+    box-shadow: $input-shadow;
+    border-radius: $border-radius;
     cursor: pointer;
 
     @include media-breakpoint-only(md) {
