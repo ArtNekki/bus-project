@@ -358,3 +358,12 @@
     transform: rotate3d(0, 0, 1, -45deg);
   }
 }
+
+
+@mixin map-full-mode() {
+  .page--full-map & {
+    @include media-breakpoint-down(md) {
+      @content;
+    }
+  }
+}

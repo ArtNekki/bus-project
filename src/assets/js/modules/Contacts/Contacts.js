@@ -38,9 +38,10 @@ export default class ContactsPage {
 
     this.$pointsSwitcher.addEventListener('click', this.switchFilter.bind(this));
     this.$pointsList.addEventListener('click', this.showPointCard.bind(this));
-    this.$pointCard.addEventListener('click', this.hidePointCard.bind(this));
+    this.$pageContainer.addEventListener('click', this.hidePointCard.bind(this));
     this.$pointCard.addEventListener('click', this.zoomToPoint.bind(this));
     this.$map.addEventListener('click', this.showPointCard.bind(this));
+    this.$pageContainer.addEventListener('click', this.switchToFullMode.bind(this));
     this.$select.addEventListener('click', this.loadPointsList.bind(this));
     this.$pageContainer.addEventListener('click', this.setActivePoint.bind(this));
 
@@ -122,6 +123,7 @@ export default class ContactsPage {
     this.setActivePoint(point);
     this.loadPointCard();
     this.scrollToTop();
+    this.closeMap();
   }
 
   hidePointCard(e) {
@@ -130,6 +132,8 @@ export default class ContactsPage {
     if (!btn) return;
 
     this.$pageContainer.classList.remove('page-contacts--details');
+
+    this.closeMap();
   }
 
   loadPointsList() {
@@ -179,7 +183,10 @@ export default class ContactsPage {
       this.$tabs.toggle('#contactsMapPanel');
     }
 
+    document.documentElement.classList.add('page--full-map');
     this.$pageContainer.classList.remove('page-contacts--details');
+
+    this.scrollToTop();
   }
 
   scrollToTop() {
@@ -230,5 +237,19 @@ export default class ContactsPage {
     this.$pageContainer.style.marginTop = `${parseInt(this.$pageHeader.getBoundingClientRect().height)}px`;
     // this.$pageContainer.style.paddingTop = '30px';
     this.$pageContainer.classList.add('page-contacts--into-view');
+  }
+
+  switchToFullMode(e) {
+    const btn = e.target.closest('[data-full-mode]');
+console.log('btn', btn);
+    if (!btn) return;
+
+    document.documentElement.classList.add('page--full-map');
+    this.mapApi.setZoom(14);
+  }
+
+  closeMap() {
+    document.documentElement.classList.remove('page--full-map');
+    this.mapApi.setZoom(13);
   }
 }
