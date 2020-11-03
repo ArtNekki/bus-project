@@ -10,6 +10,10 @@
     z-index: 100;
   }
 
+  @include map-full-mode {
+    display: none;
+  }
+
   &__inner {
     @include container();
 
