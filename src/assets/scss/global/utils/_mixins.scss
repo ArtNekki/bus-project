@@ -367,3 +367,11 @@
     }
   }
 }
+
+@mixin active-map-panel($bp) {
+  .page-contacts--map-panel & {
+    @include media-breakpoint-down($bp) {
+      @content;
+    }
+  }
+}
