@@ -9,9 +9,7 @@
   @include scollbar;
 
   &__scroll {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+   @include list-clear();
   }
 
   &__item {
@@ -27,15 +25,7 @@
   }
 
   &__action {
-    margin: 0;
-    padding: 0;
-    background: none;
-    border: none;
-    cursor: pointer;
-
-    @include focus {
-      outline: none;
-    }
+    @include btn-default();
   }
 
   &__action svg {
