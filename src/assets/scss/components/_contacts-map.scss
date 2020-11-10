@@ -35,7 +35,7 @@
     }
 
     @include map-full-mode {
-      padding: 0 15px;
+      padding: 0 $container-padding-x;
       background-color: $white-color;
       box-shadow: $header-shadow;
     }
@@ -53,15 +53,7 @@
   }
 
   &__full {
-    margin: 0;
-    padding: 0;
-    background: none;
-    border: none;
-    cursor: pointer;
-
-    @include focus {
-      outline: none;
-    }
+    @include btn-default();
 
     @include map-full-mode {
       display: none;

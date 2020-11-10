@@ -4,7 +4,7 @@
   box-sizing: border-box;
 
   @include media-breakpoint-up(sm) {
-    padding: 20px 15px 30px 15px;
+    padding: 20px $container-padding-x 30px $container-padding-x;
     max-width: 570px;
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -61,10 +61,6 @@
         margin-bottom: 35px;
       }
     }
-
-    //&:first-child {
-    //  margin-bottom: 35px;
-    //}
   }
 
   &__text {
@@ -119,7 +115,7 @@
     justify-content: center;
     font-family: $font-family--secondary;
     font-size: 16px;
-    line-height: 22px;
+    line-height: 1.4;
     color: #333333;
     background-color: #FAFAFA;
     border: none;
@@ -146,6 +142,7 @@
   }
 
   &__btn span {
+    display: block;
     margin-left: 20px;
   }
 
