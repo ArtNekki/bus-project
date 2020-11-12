@@ -1,6 +1,6 @@
 <form action="#" class="calculator">
   <section class="calculator__delivery">
-    <label class="calculator__label">Откуда</label>
+    <label class="calculator__label calculator__label--lg">Откуда</label>
     <div class="calculator__select calculator__select--from">
       <div class="select">
         <select id="delivery-from" name="delivery-from" class="select__field">
@@ -10,7 +10,7 @@
         </select>
       </div>
     </div>
-    <label class="calculator__label">Куда</label>
+    <label class="calculator__label calculator__label--lg">Куда</label>
     <div class="calculator__select calculator__select--to">
       <div class="select">
         <select id="delivery-to" name="delivery-to" class="select__field">
@@ -22,35 +22,33 @@
     </div>
     <button type="button" class="calculator__refresh">
       <svg class="icon" width="18px" height="18px">
-        <use xlink:href="{{root}}assets/img/symbol/sprite.svg#office"></use>
+        <use xlink:href="{{root}}assets/img/symbol/sprite.svg#refresh"></use>
       </svg>
     </button>
-    <div class="calculator__switcher-from">
+    <div class="calculator__switcher calculator__switcher--from">
       <div class="switcher">
         <button type="button" class="switcher__btn active">Сдать в отделение</button>
         <button type="button" class="switcher__btn">Вызвать курьера</button>
       </div>
     </div>
-    <div class="calculator__switcher-to">
+    <div class="calculator__switcher calculator__switcher--to">
       <div class="switcher">
         <button type="button" class="switcher__btn">Забрать в отделении</button>
         <button type="button" class="switcher__btn active">Доставка курьером</button>
       </div>
     </div>
-    <div class="calculator__info-from">
-      <label class="calculator__label">Выберите отделение:</label>
+    <div class="calculator__details calculator__details--from">
+      <label class="calculator__label calculator__label--light">Выберите отделение:</label>
       <label class="radio">
-        <input type="radio" class="radio__input">
-        <i class="radio__indicator"></i>
+        <input type="radio" class="radio__input" name="department">
         <span class="radio__label">Владивосток, Гоголя 22</span>
       </label>
       <label class="radio">
-        <input type="radio" class="radio__input">
-        <i class="radio__indicator"></i>
+        <input type="radio" class="radio__input" name="department">
         <span class="radio__label">Владивосток, Карла Маркса</span>
       </label>
     </div>
-    <div class="calculator__info-to">
+    <div class="calculator__details calculator__details--to">
       <div class="calculator__field">
         <label for="street-to" class="calculator__label">Улица</label>
         <div class="input">
@@ -70,16 +68,14 @@
         </div>
       </div>
       <div class="calculator__schedule">
-        <label class="calculator__label">Удобное время для приезда курьера</label>
+        <label class="calculator__label calculator__label--light">Удобное время для приезда курьера</label>
         <label class="radio">
-          <input type="radio" class="radio__input" name="first-time">
-          <i class="radio__indicator"></i>
-          <span class="radio__label">8:00 - 14:00</span>
+          <input type="radio" class="radio__input" name="delivery-time">
+          <span class="radio__label">8:00 &#8211; 14:00</span>
         </label>
         <label class="radio">
-          <input type="radio" class="radio__input" name="last-time">
-          <i class="radio__indicator"></i>
-          <span class="radio__label">14:00 - 18:00</span>
+          <input type="radio" class="radio__input" name="delivery-time">
+          <span class="radio__label">14:00 &#8211; 18:00</span>
         </label>
       </div>
     </div>
