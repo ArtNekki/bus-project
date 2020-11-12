@@ -60,7 +60,11 @@
     }
   }
 
-  &__full svg:hover {
+  &__full svg {
     fill: rgba($black-color, 0.6);
+
+    &:hover {
+      fill: rgba($black-color, 0.7);
+    }
   }
 }

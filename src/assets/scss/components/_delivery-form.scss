@@ -1,0 +1,8 @@
+.calculator {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr) 40px repeat(2, 1fr);
+  grid-template-areas:
+    "label-to label-to . label-from label-from"
+    "field-to field-to btn-refresh field-from field-from"
+    "btn-1 btn-2 . btn-3 btn-4";
+}

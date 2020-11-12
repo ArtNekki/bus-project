@@ -1,0 +1,91 @@
+<form action="#" class="calculator">
+  <fieldset class="calculator__delivery">
+    <label class="calculator__label">Откуда</label>
+    <div class="select">
+      <select id="delivery-from" name="delivery-from" class="select__field">
+        <option value="">Выберите город</option>
+        <option value="nakhodka">Находка</option>
+        <option value="Arseniev">Арсеньев</option>
+      </select>
+    </div>
+    <label class="calculator__label">Откуда</label>
+    <div class="select">
+      <select id="delivery-to" name="delivery-to" class="select__field">
+        <option value="">Выберите город</option>
+        <option value="nakhodka">Находка</option>
+        <option value="Arseniev">Арсеньев</option>
+      </select>
+    </div>
+    <button type="button" class="calculator__refresh">
+      <svg class="icon" width="18px" height="18px">
+        <use xlink:href="{{root}}assets/img/symbol/sprite.svg#office"></use>
+      </svg>
+    </button>
+    <div class="switcher">
+      <label class="switcher__item">
+        <input type="radio" name="delivery-from">
+        <span class="switcher__btn">Сдать в отделение</span>
+      </label>
+      <label class="switcher__item">
+        <input type="radio" name="delivery-from">
+        <span class="switcher__btn">Вызвать курьера</span>
+      </label>
+    </div>
+    <div class="switcher">
+      <label class="switcher__item">
+        <input type="radio" name="delivery-to">
+        <span class="switcher__btn">Забрать в отделении</span>
+      </label>
+      <label class="switcher__item">
+        <input type="radio" name="delivery-to">
+        <span class="switcher__btn">Доставка курьером</span>
+      </label>
+    </div>
+    <div class="calculator__from">
+      <label class="calculator__label">Выберите отделение:</label>
+      <label class="radio">
+        <input type="radio" class="radio__input">
+        <i class="radio__indicator"></i>
+        <span class="radio__label">Владивосток, Гоголя 22</span>
+      </label>
+      <label class="radio">
+        <input type="radio" class="radio__input">
+        <i class="radio__indicator"></i>
+        <span class="radio__label">Владивосток, Карла Маркса</span>
+      </label>
+    </div>
+    <div class="calculator__to">
+      <div class="calculator__field">
+        <label for="street-to" class="calculator__label">Улица</label>
+        <div class="input">
+          <input id="street-to" class="input__field" type="text" name="street-to"/>
+        </div>
+      </div>
+      <div class="calculator__field">
+        <label for="building-to" class="calculator__label">Дом, корус, строение</label>
+        <div class="input">
+          <input id="building-to" class="input__field" type="text" name="building-to"/>
+        </div>
+      </div>
+      <div class="calculator__field">
+        <label for="apartment-to" class="calculator__label">Кв. / офис</label>
+        <div class="input">
+          <input id="apartment-to" class="input__field" type="text" name="apartment-to"/>
+        </div>
+      </div>
+      <div class="calculator__schedule">
+        <label class="calculator__label">Удобное время для приезда курьера</label>
+        <label class="radio">
+          <input type="radio" class="radio__input" name="first-time">
+          <i class="radio__indicator"></i>
+          <span class="radio__label">8:00 - 14:00</span>
+        </label>
+        <label class="radio">
+          <input type="radio" class="radio__input" name="last-time">
+          <i class="radio__indicator"></i>
+          <span class="radio__label">14:00 - 18:00</span>
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</form>

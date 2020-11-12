@@ -19,6 +19,13 @@
     //  padding-top: 85px;
     //}
   }
+
+  &__main {
+    @include container();
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    grid-column-gap: 70px;
+  }
 }
 
 body {
