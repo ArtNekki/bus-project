@@ -8,6 +8,7 @@
       "select-from select-from btn-refresh select-to select-to"
       "switcher-from switcher-from . switcher-to switcher-to"
       "info-from info-from . info-to info-to";
+    grid-row-gap: 10px;
   }
 
   &__delivery > &__label {
