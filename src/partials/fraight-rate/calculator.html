@@ -1,47 +1,55 @@
 <form action="#" class="calculator">
-  <fieldset class="calculator__delivery">
+  <section class="calculator__delivery">
     <label class="calculator__label">Откуда</label>
-    <div class="select">
-      <select id="delivery-from" name="delivery-from" class="select__field">
-        <option value="">Выберите город</option>
-        <option value="nakhodka">Находка</option>
-        <option value="Arseniev">Арсеньев</option>
-      </select>
+    <div class="calculator__select calculator__select--from">
+      <div class="select">
+        <select id="delivery-from" name="delivery-from" class="select__field">
+          <option value="">Выберите город</option>
+          <option value="nakhodka">Находка</option>
+          <option value="Arseniev">Арсеньев</option>
+        </select>
+      </div>
     </div>
-    <label class="calculator__label">Откуда</label>
-    <div class="select">
-      <select id="delivery-to" name="delivery-to" class="select__field">
-        <option value="">Выберите город</option>
-        <option value="nakhodka">Находка</option>
-        <option value="Arseniev">Арсеньев</option>
-      </select>
+    <label class="calculator__label">Куда</label>
+    <div class="calculator__select calculator__select--to">
+      <div class="select">
+        <select id="delivery-to" name="delivery-to" class="select__field">
+          <option value="">Выберите город</option>
+          <option value="nakhodka">Находка</option>
+          <option value="Arseniev">Арсеньев</option>
+        </select>
+      </div>
     </div>
     <button type="button" class="calculator__refresh">
       <svg class="icon" width="18px" height="18px">
         <use xlink:href="{{root}}assets/img/symbol/sprite.svg#office"></use>
       </svg>
     </button>
-    <div class="switcher">
-      <label class="switcher__item">
-        <input type="radio" name="delivery-from">
-        <span class="switcher__btn">Сдать в отделение</span>
-      </label>
-      <label class="switcher__item">
-        <input type="radio" name="delivery-from">
-        <span class="switcher__btn">Вызвать курьера</span>
-      </label>
+    <div class="calculator__switcher-from">
+      <div class="switcher">
+        <label class="switcher__item">
+          <input type="radio" name="delivery-from">
+          <span class="switcher__btn">Сдать в отделение</span>
+        </label>
+        <label class="switcher__item">
+          <input type="radio" name="delivery-from">
+          <span class="switcher__btn">Вызвать курьера</span>
+        </label>
+      </div>
     </div>
-    <div class="switcher">
-      <label class="switcher__item">
-        <input type="radio" name="delivery-to">
-        <span class="switcher__btn">Забрать в отделении</span>
-      </label>
-      <label class="switcher__item">
-        <input type="radio" name="delivery-to">
-        <span class="switcher__btn">Доставка курьером</span>
-      </label>
+    <div class="calculator__switcher-to">
+      <div class="switcher">
+        <label class="switcher__item">
+          <input type="radio" name="delivery-to">
+          <span class="switcher__btn">Забрать в отделении</span>
+        </label>
+        <label class="switcher__item">
+          <input type="radio" name="delivery-to">
+          <span class="switcher__btn">Доставка курьером</span>
+        </label>
+      </div>
     </div>
-    <div class="calculator__from">
+    <div class="calculator__info-from">
       <label class="calculator__label">Выберите отделение:</label>
       <label class="radio">
         <input type="radio" class="radio__input">
@@ -54,7 +62,7 @@
         <span class="radio__label">Владивосток, Карла Маркса</span>
       </label>
     </div>
-    <div class="calculator__to">
+    <div class="calculator__info-to">
       <div class="calculator__field">
         <label for="street-to" class="calculator__label">Улица</label>
         <div class="input">
@@ -87,5 +95,5 @@
         </label>
       </div>
     </div>
-  </fieldset>
+  </section>
 </form>

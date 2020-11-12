@@ -1,8 +1,76 @@
 .calculator {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr) 40px repeat(2, 1fr);
-  grid-template-areas:
-    "label-to label-to . label-from label-from"
-    "field-to field-to btn-refresh field-from field-from"
-    "btn-1 btn-2 . btn-3 btn-4";
+
+  &__delivery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) 40px repeat(2, 1fr);
+    grid-template-areas:
+      "label-from label-from . label-to label-to"
+      "select-from select-from btn-refresh select-to select-to"
+      "switcher-from switcher-from . switcher-to switcher-to"
+      "info-from info-from . info-to info-to";
+  }
+
+  &__delivery > &__label {
+
+    &:first-child {
+      grid-area: label-from;
+    }
+
+    &:first-child {
+      grid-area: label-to;
+    }
+  }
+
+  &__select {
+
+    &:first-of-type {
+      grid-area: select-from;
+    }
+
+    &:nth-of-type(2) {
+      grid-area: select-to;
+    }
+  }
+
+  &__refresh {
+    grid-area: btn-refresh;
+  }
+
+  &__switcher-from {
+    grid-area: switcher-from;
+  }
+
+  &__switcher-to {
+    grid-area: switcher-to;
+  }
+
+  &__info-from {
+    grid-area: info-from;
+  }
+
+  &__info-to {
+    grid-area: info-to;
+    display: grid;
+    grid-template-columns: 1fr 100px;
+    grid-column-gap: 30px;
+  }
+
+  &__info-to > &__field {
+
+    &:first-of-type {
+      grid-column: 1 / -1;
+    }
+
+    &:nth-of-type(2) {
+      grid-column: 1 / 2;
+    }
+
+    &:nth-of-type(3) {
+      grid-column: 2 / -1;
+    }
+  }
+
+  &__schedule {
+    grid-column: 1 / -1;
+  }
 }
