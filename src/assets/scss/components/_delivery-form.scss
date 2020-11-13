@@ -34,6 +34,15 @@
         "details-from details-from . details-to details-to";
       grid-row-gap: 10px;
     }
+
+    & > *:nth-child(#{index($areas, details-from)}),
+    & > *:nth-child(#{index($areas, details-to)}) {
+      margin-top: 7px;
+
+      @include media-breakpoint-up(md) {
+        margin-top: 25px;
+      }
+    }
   }
 
   &__section--department {
@@ -76,8 +85,6 @@
     }
   }
 
-
-
   &__label {
     margin-bottom: 0.25em;
     display: block;
@@ -112,15 +119,4 @@
       align-self: center;
     }
   }
-
-  //&__details {
-  //  margin-top: 7px;
-  //  display: grid;
-  //
-  //  @include media-breakpoint-up(md) {
-  //    margin-top: 25px;
-  //  }
-  //}
-
-
 }
