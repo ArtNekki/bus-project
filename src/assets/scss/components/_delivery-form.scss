@@ -3,25 +3,43 @@
 
   &__delivery {
     display: grid;
-    grid-template-columns: repeat(2, 1fr) 40px repeat(2, 1fr);
+    grid-template-columns: 1fr auto;
     grid-template-areas:
-      "label-from label-from . label-to label-to"
-      "select-from select-from btn-refresh select-to select-to"
-      "switcher-from switcher-from . switcher-to switcher-to"
-      "info-from info-from . info-to info-to";
-    grid-row-gap: 10px;
+      "label-from label-from"
+      "select-from select-from"
+      "switcher-from switcher-from"
+      "info-from info-from"
+      "label-to btn-refresh"
+      "select-to select-to"
+      "switcher-to switcher-to"
+      "info-to info-to";
+    grid-row-gap: 15px;
+    align-items: end;
+
+
+    @include media-breakpoint-up(md) {
+      grid-template-columns: repeat(2, 1fr) 40px repeat(2, 1fr);
+      grid-template-areas:
+        "label-from label-from . label-to label-to"
+        "select-from select-from btn-refresh select-to select-to"
+        "switcher-from switcher-from . switcher-to switcher-to"
+        "info-from info-from . info-to info-to";
+      grid-row-gap: 10px;
+    }
   }
 
   &__label {
+    margin-bottom: 0.25em;
     display: block;
     font-family: $font-family--secondary;
     font-size: 14px;
-    line-height: 20px;
+    line-height: 1.4;
     color: $font-color;
 
     &--lg {
+      margin-bottom: 0;
       font-size: 22px;
-      line-height: 27px;
+      line-height: 1;
       font-weight: 500;
     }
 
@@ -31,13 +49,13 @@
   }
 
   &__delivery > &__label {
-    margin-bottom: 5px;
+    //margin-bottom: 5px;
 
-    &:first-child {
+    &:first-of-type {
       grid-area: label-from;
     }
 
-    &:first-child {
+    &:last-of-type {
       grid-area: label-to;
     }
   }
@@ -62,6 +80,10 @@
     @include hover {
       opacity: 0.3;
     }
+
+    @include media-breakpoint-up(md) {
+      align-self: center;
+    }
   }
 
   &__switcher {
@@ -76,20 +98,34 @@
   }
 
   &__details {
-    margin-top: 25px;
+    margin-top: 7px;
     display: grid;
 
+    @include media-breakpoint-up(md) {
+      margin-top: 25px;
+    }
+
     &--from {
-      grid-row-gap: 15px;
+      margin-bottom: 25px;
+      grid-row-gap: 10px;
       grid-area: info-from;
       align-self: start;
+
+      @include media-breakpoint-up(md) {
+        grid-row-gap: 15px;
+      }
     }
 
     &--to {
       grid-area: info-to;
       grid-template-columns: 1fr 100px;
-      grid-column-gap: 30px;
+      grid-column-gap: 20px;
       grid-row-gap: 17px;
+      align-items: end;
+
+      @include media-breakpoint-up(md) {
+        grid-column-gap: 30px;
+      }
     }
 
     &--to > .calculator__field {
@@ -108,14 +144,17 @@
     }
   }
 
-
-
   &__schedule {
+    margin-top: 10px;
     display: grid;
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: auto 1fr;
     grid-column-gap: 30px;
     grid-row-gap: 12px;
     grid-column: 1 / -1;
+
+    @include media-breakpoint-up(md) {
+      margin-top: 0;
+    }
   }
 
   &__schedule > &__label {
