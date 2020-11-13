@@ -1,7 +1,15 @@
-.calculator {
+.form {
   margin-top: 35px;
 
-  &__delivery {
+  &__section--delivery {
+    $areas: label-from, select-from, label-to, select-to, form-refresh, switcher-from, switcher-to, details-from, details-to;
+
+    @for $i from 1 through length($areas) {
+      & > *:nth-child(#{$i}) {
+        grid-area: nth($areas, $i);
+      }
+    }
+
     padding-bottom: 40px;
     display: grid;
     grid-template-columns: 1fr auto;
@@ -9,26 +17,66 @@
       "label-from label-from"
       "select-from select-from"
       "switcher-from switcher-from"
-      "info-from info-from"
-      "label-to btn-refresh"
+      "details-from details-from"
+      "label-to form-refresh"
       "select-to select-to"
       "switcher-to switcher-to"
-      "info-to info-to";
+      "details-to details-to";
     grid-row-gap: 15px;
-    align-items: end;
     border-bottom: 3px solid #F2F2F2;
-
 
     @include media-breakpoint-up(md) {
       grid-template-columns: repeat(2, 1fr) 40px repeat(2, 1fr);
       grid-template-areas:
         "label-from label-from . label-to label-to"
-        "select-from select-from btn-refresh select-to select-to"
+        "select-from select-from form-refresh select-to select-to"
         "switcher-from switcher-from . switcher-to switcher-to"
-        "info-from info-from . info-to info-to";
+        "details-from details-from . details-to details-to";
       grid-row-gap: 10px;
     }
   }
+
+  &__section--department {
+    margin-bottom: 25px;
+    display: grid;
+    grid-row-gap: 10px;
+    align-self: start;
+
+    @include media-breakpoint-up(md) {
+      grid-row-gap: 15px;
+    }
+  }
+
+  &__section--address {
+    display: grid;
+    grid-template-columns: 1fr 100px;
+    grid-column-gap: 20px;
+    grid-row-gap: 17px;
+    align-items: end;
+
+    @include media-breakpoint-up(md) {
+      grid-column-gap: 30px;
+    }
+
+    & > .form__field:first-child {
+      grid-column: 1 / -1;
+    }
+  }
+
+  &__section--schedule {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-column-gap: 30px;
+    grid-row-gap: 12px;
+    grid-column: 1 / -1;
+
+    & > *:first-child {
+      grid-column: 1 / -1;
+    }
+  }
+
+
 
   &__label {
     margin-bottom: 0.25em;
@@ -50,33 +98,10 @@
     }
   }
 
-  &__delivery > &__label {
-    //margin-bottom: 5px;
-
-    &:first-of-type {
-      grid-area: label-from;
-    }
-
-    &:last-of-type {
-      grid-area: label-to;
-    }
-  }
-
-  &__select {
-
-    &:first-of-type {
-      grid-area: select-from;
-    }
-
-    &:nth-of-type(2) {
-      grid-area: select-to;
-    }
-  }
 
   &__refresh {
     @include btn-default();
 
-    grid-area: btn-refresh;
     opacity: 0.1;
 
     @include hover {
@@ -88,78 +113,14 @@
     }
   }
 
-  &__switcher {
+  //&__details {
+  //  margin-top: 7px;
+  //  display: grid;
+  //
+  //  @include media-breakpoint-up(md) {
+  //    margin-top: 25px;
+  //  }
+  //}
 
-    &--from {
-      grid-area: switcher-from;
-    }
 
-    &--to {
-      grid-area: switcher-to;
-    }
-  }
-
-  &__details {
-    margin-top: 7px;
-    display: grid;
-
-    @include media-breakpoint-up(md) {
-      margin-top: 25px;
-    }
-
-    &--from {
-      margin-bottom: 25px;
-      grid-row-gap: 10px;
-      grid-area: info-from;
-      align-self: start;
-
-      @include media-breakpoint-up(md) {
-        grid-row-gap: 15px;
-      }
-    }
-
-    &--to {
-      grid-area: info-to;
-      grid-template-columns: 1fr 100px;
-      grid-column-gap: 20px;
-      grid-row-gap: 17px;
-      align-items: end;
-
-      @include media-breakpoint-up(md) {
-        grid-column-gap: 30px;
-      }
-    }
-
-    &--to > .calculator__field {
-
-      &:first-of-type {
-        grid-column: 1 / -1;
-      }
-
-      &:nth-of-type(2) {
-        grid-column: 1 / 2;
-      }
-
-      &:nth-of-type(3) {
-        grid-column: 2 / -1;
-      }
-    }
-  }
-
-  &__schedule {
-    margin-top: 10px;
-    display: grid;
-    grid-template-columns: auto 1fr;
-    grid-column-gap: 30px;
-    grid-row-gap: 12px;
-    grid-column: 1 / -1;
-
-    @include media-breakpoint-up(md) {
-      margin-top: 0;
-    }
-  }
-
-  &__schedule > &__label {
-    grid-column: 1 / -1;
-  }
 }
