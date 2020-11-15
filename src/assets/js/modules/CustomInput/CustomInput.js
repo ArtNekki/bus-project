@@ -10,10 +10,12 @@ export default class InputWithUnit {
   }
 
   _focus() {
-    const length = this.$editField.textContent.length;
+    const len = this.$editField.textContent.length;
 
     this.$editField.focus();
     this.$el.classList.add('focused');
+
+    this._setCursor(len);
   }
 
   _blur() {
@@ -23,5 +25,18 @@ export default class InputWithUnit {
 
   _onInput(e) {
     this.$input.value = e.target.textContent;
+  }
+
+  _setCursor(pos) {
+
+    const range = document.createRange();
+    const selection = window.getSelection();
+
+    range.setStart(this.$editField.childNodes[0], pos);
+    range.collapse(true);
+
+
+    selection.removeAllRanges();
+    selection.addRange(range);
   }
 }

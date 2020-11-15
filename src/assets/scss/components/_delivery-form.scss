@@ -115,6 +115,11 @@
     grid-column: 1 / -1;
   }
 
+  &__field {
+    display: flex;
+    flex-direction: column;
+  }
+
   &__label {
     margin-bottom: 0.25em;
     display: block;
