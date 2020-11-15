@@ -125,4 +125,45 @@
       </button>
     </div>
   </div>
+  <div class="form__params form__params--package">
+    <div class="form__field">
+      <label class="form__label" for="package-count">Кол-во мест</label>
+      <div class="input" data-input-unit>
+        <div class="input__field">
+          <input type="text" id="package-count" name="package-count" hidden />
+          <span  class="input__edit" contenteditable>0</span>
+          <span class="input__unit">кг</span>
+        </div>
+      </div>
+    </div>
+    <div class="form__field">
+      <label class="form__label" for="package-weight">Вес</label>
+      <div class="input">
+        <input type="text" id="package-weight" class="input__field" name="package-weight"/>
+      </div>
+    </div>
+    <div class="form__field">
+      <label class="form__label" for="package-width">Ширина</label>
+      <div class="input">
+        <input type="text" id="package-width" class="input__field" name="package-width"/>
+      </div>
+    </div>
+    <div class="form__field">
+      <label class="form__label" for="package-height">Высота</label>
+      <div class="input">
+        <input type="text" id="package-height" class="input__field" name="package-height"/>
+      </div>
+    </div>
+    <div class="form__field">
+      <label class="form__label" for="package-length">Длина</label>
+      <div class="input">
+        <input type="text" id="package-length" class="input__field" name="package-length"/>
+      </div>
+    </div>
+    <div class="form__field">
+      <label class="form__label">&#160;</label>
+      <button>Button</button>
+    </div>
+    <div class="form__error">Габариты превышают допустимые значения 0,5×0,5×0,5 м. Перевозка невозможна.</div>
+  </div>
 </form>

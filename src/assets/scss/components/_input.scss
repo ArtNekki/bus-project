@@ -2,10 +2,39 @@
 
   &__field {
     @include input();
+    display: flex;
+    align-items: center;
 
     .input--textarea & {
       height: auto;
     }
+
+    .input.focused & {
+      color: $black-color;
+      border: 2px solid $primary-color;
+    }
+  }
+
+  &__edit {
+    display: inline-block;
+    //min-width: 25px;
+    width: auto;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow-x: auto;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    @include focus {
+      outline: none;
+    }
+  }
+
+  &__unit {
+    margin-left: 5px;
+    display: block;
   }
 }
 

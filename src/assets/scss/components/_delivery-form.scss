@@ -100,6 +100,21 @@
     grid-column-gap: 30px;
   }
 
+  &__params {
+
+  }
+
+  &__params--package {
+    display: grid;
+    grid-template-columns: repeat(5, 100px) 1fr;
+    grid-column-gap: 15px;
+    grid-row-gap: 10px;
+  }
+
+  &__error {
+    grid-column: 1 / -1;
+  }
+
   &__label {
     margin-bottom: 0.25em;
     display: block;
