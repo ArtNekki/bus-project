@@ -1,4 +1,5 @@
-module.exports = function() {
+module.exports = function(options) {
+  console.log('options', options)
   const name = options.hash.name;
   const mods = options.hash.mods;
   const root = options.data.root.root;
