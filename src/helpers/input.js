@@ -32,7 +32,7 @@ module.exports = function(options) {
   } else {
     input = ` 
       <div class=${cssClass}>
-        <input type=${type} id=${id} name=${name} class="input__field" />
+        <input type=${type} id=${id} name=${name} class="input__field" placeholder=${placeholder} />
       </div>`
   }
 
