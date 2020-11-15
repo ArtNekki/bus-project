@@ -88,7 +88,15 @@
   &__section--tags {
     margin-top: 40px;
     display: flex;
+  }
 
+  &__section--goods-type {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 125px repeat(4, auto);
+    align-items: center;
+    justify-content: start;
+    grid-column-gap: 30px;
   }
 
   &__label {
