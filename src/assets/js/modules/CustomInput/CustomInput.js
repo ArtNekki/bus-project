@@ -10,6 +10,8 @@ export default class InputWithUnit {
   }
 
   _focus() {
+    const length = this.$editField.textContent.length;
+
     this.$editField.focus();
     this.$el.classList.add('focused');
   }

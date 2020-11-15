@@ -17,7 +17,7 @@
 
   &__edit {
     display: inline-block;
-    //min-width: 25px;
+    min-width: 1px;
     width: auto;
     max-width: 100%;
     white-space: nowrap;
@@ -35,6 +35,10 @@
   &__unit {
     margin-left: 5px;
     display: block;
+
+    .input__edit:empty ~ & {
+      display: none;
+    }
   }
 }
 
