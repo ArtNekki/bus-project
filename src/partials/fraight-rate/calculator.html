@@ -72,21 +72,26 @@
       </div>
     </div>
   </section>
-<!--  <div class="calculator__tags">-->
-<!--    <div class="calculator__tag">-->
-<!--      <span>Груз №1</span>-->
-<!--      <button type="button" class="button">x</button>-->
-<!--    </div>-->
-<!--    <div class="calculator__tag">-->
-<!--      <span>Груз №2</span>-->
-<!--      <button type="button" class="button">x</button>-->
-<!--    </div>-->
-<!--    <button type="button" class="calculator__tag calculator__tag&#45;&#45;add">-->
-<!--      <svg class="icon" width="18px" height="18px">-->
-<!--        <use xlink:href="{{root}}assets/img/symbol/sprite.svg#refresh"></use>-->
-<!--      </svg>-->
-<!--      <span>Добавить</span>-->
-<!--    </button>-->
-<!--  </div>-->
-
+  <section class="form__section form__section--tags">
+    <label class="form-tag">
+      <input type="radio" name="form-tag" class="form-tag__input" checked="true">
+      <div class="form-tag__body">
+        <span class="form-tag__text">Груз №1</span>
+        <button type="button" class="form-tag__delete">&#160;</button>
+      </div>
+    </label>
+    <label class="form-tag">
+      <input type="radio" name="form-tag" class="form-tag__input">
+      <div class="form-tag__body">
+        <span class="form-tag__text">Груз №2</span>
+        <button type="button" class="form-tag__delete">&#160;</button>
+      </div>
+    </label>
+    <button type="button" class="form-tag form-tag--add">
+      <div class="form-tag__body">
+        <i class="icon icon--plus"></i>
+        <span class="form-tag__text">Добавить</span>
+      </div>
+    </button>
+  </section>
 </form>

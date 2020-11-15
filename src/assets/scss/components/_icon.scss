@@ -13,4 +13,33 @@
   &--yellow {
     fill: $primary-color;
   }
+
+  &--plus {
+    position: relative;
+    padding-left: 1px;
+    width: 20px;
+    height: 20px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #F2F2F2;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      background-color: #C4C4C4;
+    }
+
+    &::before {
+      width: 7px;
+      height: 1px;
+    }
+
+    &::after {
+      width: 1px;
+      height: 7px;
+    }
+  }
 }
