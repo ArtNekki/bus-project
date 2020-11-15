@@ -1,4 +1,4 @@
-<form action="#" class="form">
+<form action="#" class="form" autocomplete="off">
   <section class="form__section form__section--delivery">
     <label class="form__label form__label--lg">Откуда</label>
     <div class="select">
@@ -113,4 +113,16 @@
       <span class="radio__label">Другое</span>
     </label>
   </section>
+  <div class="form__field">
+    <label class="form__label">Количество мест</label>
+    <div class="counter" data-counter>
+      <button type="button" class="counter__btn">
+        <i class="icon icon--minus"></i>
+      </button>
+      <input type="text" name="place-count" class="counter__input" value="0" disabled="true" />
+      <button type="button" class="counter__btn">
+        <i class="icon icon--plus"></i>
+      </button>
+    </div>
+  </div>
 </form>

@@ -14,7 +14,8 @@
     fill: $primary-color;
   }
 
-  &--plus {
+  &--plus,
+  &--minus {
     position: relative;
     padding-left: 1px;
     width: 20px;
@@ -40,6 +41,18 @@
     &::after {
       width: 1px;
       height: 7px;
+    }
+  }
+
+  &--minus {
+    background-color: $primary-color;
+
+    &::before {
+      background-color: #333333;
+    }
+
+    &::after {
+      display: none;
     }
   }
 }
