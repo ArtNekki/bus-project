@@ -105,7 +105,7 @@
   }
 
   &__params--package {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     display: grid;
     grid-template-columns: repeat(5, 100px) 1fr;
     grid-column-gap: 15px;
@@ -114,6 +114,10 @@
 
   &__error {
     grid-column: 1 / -1;
+    font-family: $font-family--secondary;
+    font-size: 14px;
+    line-height: 1.4;
+    color: $red-color;
   }
 
   &__field {

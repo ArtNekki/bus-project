@@ -125,64 +125,8 @@
       </button>
     </div>
   </div>
-  <div class="form__params form__params--package">
-    <div class="form__field">
-      <label class="form__label" for="package-count">Кол-во мест</label>
-      {{{ input type="text" id="package-count" name="package-count" placeholder="0" }}}
-    </div>
-    <div class="form__field">
-      <label class="form__label" for="package-weight">Вес</label>
-      {{{ input type="text" id="package-weight" name="package-weight" placeholder="0" unit="кг"}}}
-    </div>
-    <div class="form__field">
-      <label class="form__label" for="package-width">Ширина</label>
-      {{{ input type="text" id="package-width" name="package-width" placeholder="0" unit="см"}}}
-    </div>
-    <div class="form__field">
-      <label class="form__label" for="package-height">Высота</label>
-      {{{ input type="text" id="package-height" name="package-height" placeholder="0" unit="см"}}}
-    </div>
-    <div class="form__field">
-      <label class="form__label" for="package-length">Длина</label>
-      {{{ input type="text" id="package-length" name="package-length" placeholder="0" unit="см"}}}
-    </div>
-    <div class="form__field">
-      <label class="form__label">&#160;</label>
-      <button type="button" class="btn btn--delete">
-        {{{ icon name="delete" width="18" height="18" }}}
-        <span class="btn__text">Удалить</span>
-      </button>
-    </div>
-    <div class="form__error">Габариты превышают допустимые значения 0,5×0,5×0,5 м. Перевозка невозможна.</div>
-  </div>
-  <div class="form__params form__params--package">
-    <div class="form__field">
-      <label class="form__label" for="package-count">Кол-во мест</label>
-      {{{ input type="text" id="package-count" name="package-count" placeholder="0" }}}
-    </div>
-    <div class="form__field">
-      <label class="form__label" for="package-weight">Вес</label>
-      {{{ input type="text" id="package-weight" name="package-weight" placeholder="0" unit="кг"}}}
-    </div>
-    <div class="form__field">
-      <label class="form__label" for="package-width">Ширина</label>
-      {{{ input type="text" id="package-width" name="package-width" placeholder="0" unit="см"}}}
-    </div>
-    <div class="form__field">
-      <label class="form__label" for="package-height">Высота</label>
-      {{{ input type="text" id="package-height" name="package-height" placeholder="0" unit="см"}}}
-    </div>
-    <div class="form__field">
-      <label class="form__label" for="package-length">Длина</label>
-      {{{ input type="text" id="package-length" name="package-length" placeholder="0" unit="см"}}}
-    </div>
-    <div class="form__field">
-      <label class="form__label">&#160;</label>
-      <button type="button" class="btn btn--delete">
-        {{{ icon name="delete" width="18" height="18" }}}
-        <span class="btn__text">Удалить</span>
-      </button>
-    </div>
-    <div class="form__error">Габариты превышают допустимые значения 0,5×0,5×0,5 м. Перевозка невозможна.</div>
-  </div>
+  {{> package-params-row  delete="true"}}
+  {{> package-params-row error="true" delete="true"}}
+  {{> package-params-row }}
+  <button type="button" class="btn">Добавить еще 1 позицию</button>
 </form>
