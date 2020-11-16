@@ -101,7 +101,7 @@
   }
 
   &__params {
-
+    position: relative;
   }
 
   &__params--package {
@@ -110,6 +110,17 @@
     grid-template-columns: repeat(5, 100px) 1fr;
     grid-column-gap: 15px;
     grid-row-gap: 10px;
+  }
+
+  &__params--auto-part {
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: 330px auto;
+    grid-column-gap: 20px;
+
+    &:last-of-type {
+      margin-bottom: 20px;
+    }
   }
 
   &__error {

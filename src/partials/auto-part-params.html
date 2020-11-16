@@ -1,0 +1,17 @@
+<div class="form__params form__params--auto-part">
+  {{{ select
+  id="type-auto-part"
+  name="type-auto-part"
+  data='[
+  {"value": "part-1", "name": "Коробка передач 1"},
+  {"value": "part-1", "name": "Коробка передач 2", "selected": "true"},
+  {"value": "part-1", "name": "Коробка передач 3"}]'
+  }}}
+
+  {{#if delete}}
+    <button type="button" class="btn btn--delete">
+      {{{ icon name="delete" width="18" height="18" }}}
+      <span class="btn__text">Удалить</span>
+    </button>
+  {{/if}}
+</div>

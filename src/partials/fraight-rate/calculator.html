@@ -129,16 +129,15 @@
     {{> package-params-row  delete="true"}}
     {{> package-params-row error="true" delete="true"}}
     {{> package-params-row }}
-    <button type="button" class="btn">Добавить еще 1 позицию</button>
+    <button type="button" class="btn">
+      <span class="btn__text">Добавить еще 1 позицию</span>
+    </button>
   </div>
-  <div class="">
-    {{{ select
-      id="type-auto-part"
-      name="type-auto-part"
-      data='[
-        {"value": "part-1", "name": "Коробка передач 1"},
-        {"value": "part-1", "name": "Коробка передач 2", "selected": "true"},
-        {"value": "part-1", "name": "Коробка передач 3"}]'
-    }}}
+  <div>
+    {{> auto-part-params delete="true"}}
+    {{> auto-part-params }}
+    <button type="button" class="btn">
+      <span class="btn__text">Добавить еще 1 позицию</span>
+    </button>
   </div>
 </form>
