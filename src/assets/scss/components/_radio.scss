@@ -16,6 +16,7 @@
     grid-column-gap: 10px;
     grid-row-gap: 5px;
     align-items: center;
+    font-family: $font-family--secondary;
 
     &::before {
       content: '';
@@ -57,7 +58,6 @@
   &__label {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
-    font-family: $font-family--secondary;
     font-size: 16px;
     line-height: 1;
   }
@@ -74,7 +74,6 @@
   &__meta {
     grid-column: 2 / 4;
     grid-row: 2 / 3;
-    font-family: $font-family--secondary;
     font-size: 14px;
     line-height: 1.2;
     color: $gray-dark-color;
