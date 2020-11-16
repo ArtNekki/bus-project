@@ -1,7 +1,21 @@
 .btn {
+  @include btn-default();
 
-  &--center {
+  &--delete {
     margin-top: auto;
     margin-bottom: auto;
+    display: flex;
+    align-items: center;
+  }
+
+  &__text {
+    margin-left: 10px;
+    font-family: $font-family--secondary;
+    font-size: 14px;
+    line-height: 1;
+
+    .btn--delete & {
+      color: $red-color;
+    }
   }
 }

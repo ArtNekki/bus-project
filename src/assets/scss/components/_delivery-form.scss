@@ -105,6 +105,7 @@
   }
 
   &__params--package {
+    margin-bottom: 15px;
     display: grid;
     grid-template-columns: repeat(5, 100px) 1fr;
     grid-column-gap: 15px;
