@@ -3,6 +3,7 @@ module.exports = function(options) {
   const name = options.hash.name;
   const help = options.hash.help;
   const meta = options.hash.meta;
+  const checked = options.hash.checked;
   const mods = options.hash.mods;
   const root = options.data.root.root;
   let cssClass = 'radio';
@@ -31,7 +32,7 @@ module.exports = function(options) {
 
    const radio  = `
       <label class="${cssClass}">
-        <input type="radio" id="${id}" name="${name}" class="radio__input">
+        <input type="radio" id="${id}" name="${name}" class="radio__input" ${checked ? 'checked' : ''}>
         <div class="radio__body">
             <span class="radio__label">Автозапчасти</span>
             ${ meta ? renderMeta(meta) : ''}
