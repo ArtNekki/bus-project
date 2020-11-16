@@ -134,10 +134,14 @@
     </button>
   </div>
   <div>
+    <label class="form__label">Выберите тип запчасти</label>
     {{> auto-part-params delete="true"}}
     {{> auto-part-params }}
     <button type="button" class="btn">
       <span class="btn__text">Добавить еще 1 позицию</span>
     </button>
+  </div>
+  <div class="page__section page__section--package">
+    {{{ radio id="nekki" name="nekki" help="ddd" meta="50 руб. - 180 руб."}}}
   </div>
 </form>
