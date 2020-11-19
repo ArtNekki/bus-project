@@ -27,8 +27,12 @@
     {{{ switcher name="city-to" items='[{"id": "city-to-2", "name": "Забрать в отделении", "checked": "true"}, {"id": "city-to-2", "name": "Доставка курьером"}]' }}}
     <section class="form__section form__section--department">
       <label class="form__label form__label--light">Выберите отделение:</label>
-      {{{ radio name="department" label="Владивосток, Гоголя 22" }}}
-      {{{ radio name="department" label="Владивосток, Карла Маркса" }}}
+      <div class="form__field">
+        {{{ radio name="department" label="Владивосток, Гоголя 22" }}}
+      </div>
+      <div class="form__field">
+        {{{ radio name="department" label="Владивосток, Карла Маркса" }}}
+      </div>
     </section>
     <div class="form__section form__section--address">
       <div class="form__field">
@@ -45,8 +49,12 @@
       </div>
       <div class="form__section form__section--schedule">
         <label class="form__label form__label--light">Удобное время для приезда курьера</label>
-        {{{ radio name="delivery-time" label="8:00 - 14:00" }}}
-        {{{ radio name="delivery-time" label="14:00 - 18:00" }}}
+        <div class="form__field">
+          {{{ radio name="delivery-time" label="8:00 - 14:00" }}}
+        </div>
+        <div class="form__field">
+          {{{ radio name="delivery-time" label="14:00 - 18:00" }}}
+        </div>
       </div>
     </div>
   </section>
@@ -57,10 +65,18 @@
   </section>
   <section class="form__section form__section--goods-type">
     <label class="form__label form__label--lg">Тип груза:</label>
-    {{{ radio name="goods-type" label="Документы" }}}
-    {{{ radio name="goods-type" label="Посылки" }}}
-    {{{ radio name="goods-type" label="Автозапчасти" }}}
-    {{{ radio name="goods-type" label="Другое" }}}
+    <div class="form__field">
+      {{{ radio name="goods-type" label="Документы" }}}
+    </div>
+    <div class="form__field">
+      {{{ radio name="goods-type" label="Посылки" }}}
+    </div>
+    <div class="form__field">
+      {{{ radio name="goods-type" label="Автозапчасти" }}}
+    </div>
+    <div class="form__field">
+      {{{ radio name="goods-type" label="Другое" }}}
+    </div>
   </section>
   <div class="form__field">
     <label class="form__label">Количество мест</label>
