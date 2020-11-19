@@ -1,21 +1,23 @@
 <form action="#" class="form" autocomplete="off">
   <section class="form__section form__section--delivery">
     <label class="form__label form__label--lg">Откуда</label>
-    <div class="select">
-      <select id="delivery-from" name="delivery-from" class="select__field">
-        <option value="">Выберите город</option>
-        <option value="nakhodka">Находка</option>
-        <option value="Arseniev">Арсеньев</option>
-      </select>
-    </div>
+    {{{ select
+    id="delivery-from"
+    name="delivery-from"
+    data='[
+      {"value": "", "name": "Выберите город"},
+      {"value": "nakhodka", "name": "Находка"},
+      {"value": "arseniev", "name": "Арсеньев"}]'
+    }}}
     <label class="form__label form__label--lg">Куда</label>
-    <div class="select">
-      <select id="delivery-to" name="delivery-to" class="select__field">
-        <option value="">Выберите город</option>
-        <option value="nakhodka">Находка</option>
-        <option value="Arseniev">Арсеньев</option>
-      </select>
-    </div>
+    {{{ select
+    id="delivery-to"
+    name="delivery-to"
+    data='[
+      {"value": "", "name": "Выберите город"},
+      {"value": "nakhodka", "name": "Находка"},
+      {"value": "arseniev", "name": "Арсеньев"}]'
+    }}}
     <button type="button" class="form__refresh">
       <svg class="icon" width="18px" height="18px">
         <use xlink:href="{{root}}assets/img/symbol/sprite.svg#refresh"></use>
@@ -25,115 +27,56 @@
     {{{ switcher name="city-to" items='[{"id": "city-to-2", "name": "Забрать в отделении", "checked": "true"}, {"id": "city-to-2", "name": "Доставка курьером"}]' }}}
     <section class="form__section form__section--department">
       <label class="form__label form__label--light">Выберите отделение:</label>
-      <label class="radio">
-        <input type="radio" class="radio__input" name="department">
-        <span class="radio__label">Владивосток, Гоголя 22</span>
-      </label>
-      <label class="radio">
-        <input type="radio" class="radio__input" name="department">
-        <span class="radio__label">Владивосток, Карла Маркса</span>
-      </label>
+      {{{ radio name="department" label="Владивосток, Гоголя 22" }}}
+      {{{ radio name="department" label="Владивосток, Карла Маркса" }}}
     </section>
     <div class="form__section form__section--address">
       <div class="form__field">
         <label for="street-to" class="form__label">Улица</label>
-        <div class="input">
-          <input id="street-to" class="input__field" type="text" name="street-to"/>
-        </div>
+        {{{ input type="text" id="street-to" name="street-to" }}}
       </div>
       <div class="form__field">
         <label for="building-to" class="form__label">Дом, корус, строение</label>
-        <div class="input">
-          <input id="building-to" class="input__field" type="text" name="building-to"/>
-        </div>
+        {{{ input type="text" id="street-to" name="street-to" }}}
       </div>
       <div class="form__field">
         <label for="apartment-to" class="form__label">Кв. / офис</label>
-        <div class="input">
-          <input id="apartment-to" class="input__field" type="text" name="apartment-to"/>
-        </div>
+        {{{ input type="text" id="apartment-to" name="apartment-to" }}}
       </div>
       <div class="form__section form__section--schedule">
         <label class="form__label form__label--light">Удобное время для приезда курьера</label>
-        <label class="radio">
-          <input type="radio" class="radio__input" name="delivery-time">
-          <span class="radio__label">8:00 &#8211; 14:00</span>
-        </label>
-        <label class="radio">
-          <input type="radio" class="radio__input" name="delivery-time">
-          <span class="radio__label">14:00 &#8211; 18:00</span>
-        </label>
+        {{{ radio name="delivery-time" label="8:00 - 14:00" }}}
+        {{{ radio name="delivery-time" label="14:00 - 18:00" }}}
       </div>
     </div>
   </section>
   <section class="form__section form__section--tags">
-    <label class="form-tag">
-      <input type="radio" name="form-tag" class="form-tag__input" checked="true">
-      <div class="form-tag__body">
-        <span class="form-tag__text">Груз №1</span>
-        <button type="button" class="form-tag__delete">&#160;</button>
-      </div>
-    </label>
-    <label class="form-tag">
-      <input type="radio" name="form-tag" class="form-tag__input">
-      <div class="form-tag__body">
-        <span class="form-tag__text">Груз №2</span>
-        <button type="button" class="form-tag__delete">&#160;</button>
-      </div>
-    </label>
-    <button type="button" class="form-tag form-tag--add">
-      <div class="form-tag__body">
-        <i class="icon icon--plus"></i>
-        <span class="form-tag__text">Добавить</span>
-      </div>
-    </button>
+    {{{ form-tag label="Груз №1" checked="true" }}}
+    {{{ form-tag label="Груз №2" }}}
+    {{{ form-tag add="true" }}}
   </section>
   <section class="form__section form__section--goods-type">
     <label class="form__label form__label--lg">Тип груза:</label>
-    <label class="radio">
-      <input type="radio" class="radio__input" name="goods-type">
-      <span class="radio__label">Документы</span>
-    </label>
-    <label class="radio">
-      <input type="radio" class="radio__input" name="goods-type">
-      <span class="radio__label">Посылки</span>
-    </label>
-    <label class="radio">
-      <input type="radio" class="radio__input" name="goods-type">
-      <span class="radio__label">Автозапчасти</span>
-    </label>
-    <label class="radio">
-      <input type="radio" class="radio__input" name="goods-type">
-      <span class="radio__label">Другое</span>
-    </label>
+    {{{ radio name="goods-type" label="Документы" }}}
+    {{{ radio name="goods-type" label="Посылки" }}}
+    {{{ radio name="goods-type" label="Автозапчасти" }}}
+    {{{ radio name="goods-type" label="Другое" }}}
   </section>
   <div class="form__field">
     <label class="form__label">Количество мест</label>
-    <div class="counter" data-counter>
-      <button type="button" class="counter__btn" data-dec>
-        <i class="icon icon--minus"></i>
-      </button>
-      <input type="text" name="place-count" class="counter__input" value="0" disabled="true" />
-      <button type="button" class="counter__btn" data-inc>
-        <i class="icon icon--plus"></i>
-      </button>
-    </div>
+    {{{ counter name="place-count" }}}
   </div>
   <div>
     {{> package-params-row  delete="true"}}
     {{> package-params-row error="true" delete="true"}}
     {{> package-params-row }}
-    <button type="button" class="btn">
-      <span class="btn__text">Добавить еще 1 позицию</span>
-    </button>
+    {{{ btn text="Добавить еще 1 позицию" }}}
   </div>
   <div>
     <label class="form__label">Выберите тип запчасти</label>
     {{> auto-part-params delete="true"}}
     {{> auto-part-params }}
-    <button type="button" class="btn">
-      <span class="btn__text">Добавить еще 1 позицию</span>
-    </button>
+    {{{ btn text="Добавить еще 1 позицию" }}}
   </div>
   <div class="form__label form__label--lg">Упаковка:</div>
   <section class="form__section form__section--package">
@@ -165,7 +108,5 @@
       {{{ radio name="add-services" label="СМС-уведомления получателю" help="help" }}}
     </div>
   </div>
-  <button type="button" class="btn">
-    <span class="btn__text">Рассчитать стоимость</span>
-  </button>
+  {{{ btn text="Рассчитать стоимость" }}}
 </form>

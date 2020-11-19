@@ -25,14 +25,14 @@ module.exports = function(options) {
       <div class=${cssClass} data-input-width-unit>
           <div class="input__field">
             <input type=${type} id=${id} name=${name} hidden />
-            <span  class="input__edit" contenteditable>${placeholder}</span>
+            <span  class="input__edit" contenteditable>${placeholder || ''}</span>
             <span class="input__unit">${unit}</span>
           </div>
       </div>`
   } else {
     input = ` 
       <div class=${cssClass}>
-        <input type=${type} id=${id} name=${name} class="input__field" placeholder=${placeholder} />
+        <input type=${type} id=${id} name=${name} class="input__field" placeholder="${placeholder || ''}" />
       </div>`
   }
 
