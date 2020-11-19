@@ -1,20 +1,28 @@
 .switcher {
   display: flex;
   justify-content: space-between;
+  align-self: start;
+  //align-items: flex-start;
+
+  label {
+    flex-basis: 50%;
+  }
 
   &__btn {
-    @include btn-default();
-
     padding: 10px;
-    min-height: 45px;
-    flex-basis: 50%;
+    min-height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-family: $font-family--secondary;
     font-size: 14px;
-    line-height: 20px;
+    line-height: 1.4;
+    text-align: center;
     background-color: #f2f2f2;
     border-radius: $border-radius;
+    cursor: pointer;
 
-    &.active {
+    .switcher__input:checked ~ & {
       background-color: $primary-color;
     }
   }

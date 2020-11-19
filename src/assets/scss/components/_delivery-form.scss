@@ -1,6 +1,12 @@
 .form {
   margin-top: 35px;
 
+  &__section {
+    //.form__label ~ & {
+    //  border: 1px solid red;
+    //}
+  }
+
   &__section--delivery {
     $areas: label-from, select-from, label-to, select-to, form-refresh, switcher-from, switcher-to, details-from, details-to;
 
@@ -101,7 +107,10 @@
   }
 
   &__section--package {
-
+    display: grid;
+    grid-template-columns: repeat(3, minmax(max-content, auto));
+    grid-column-gap: 35px;
+    grid-row-gap: 35px;
   }
 
   &__params {
@@ -138,6 +147,10 @@
   &__field {
     display: flex;
     flex-direction: column;
+
+    &--span-2 {
+      grid-column: span 2;
+    }
   }
 
   &__label {
@@ -157,6 +170,10 @@
 
     &--light {
       color: rgba($black-color, 0.4);
+    }
+
+    &--full {
+      grid-column: 1 / -1;
     }
   }
 
