@@ -2,7 +2,7 @@
   margin-top: 35px;
 
   &__section {
-   margin-bottom: 40px;
+   margin-bottom: 50px;
   }
 
   &__fieldset {
@@ -92,7 +92,7 @@
   }
 
   &__fieldset--goods-type {
-    margin-bottom: 25px;
+    margin-bottom: 30px;
     display: grid;
     grid-template-columns: 125px repeat(4, auto);
     align-items: center;
@@ -167,6 +167,19 @@
 
     &--full {
       grid-column: 1 / -1;
+    }
+  }
+
+  &__details {
+    margin: 40px 0 60px 0;
+    font-family: $font-family--secondary;
+    font-size: 15px;
+    line-height: 1.4;
+
+    dd {
+      margin-top: 5px;
+      margin-left: 0;
+      color: $gray-dark-color;
     }
   }
 

@@ -18,6 +18,10 @@
     align-items: center;
     font-family: $font-family--secondary;
 
+    //.radio--no-indicator & {
+    //  grid-auto-columns: auto 18px;
+    //}
+
     &::before {
       content: '';
       width: 20px;
@@ -32,6 +36,11 @@
         border-width: 2px;
         border-color: $primary-color;
       }
+
+      //.radio--no-indicator & {
+      //  content: unset;
+      //  display: none;
+      //}
     }
 
     &::after {
@@ -52,6 +61,11 @@
       .radio__input:checked ~ & {
         display: block;
       }
+
+      //.radio--no-indicator .radio__input:checked ~ & {
+      //  content: unset;
+      //  display: none;
+      //}
     }
   }
 
