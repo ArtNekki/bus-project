@@ -3,13 +3,21 @@
 
   &__section {
    margin-bottom: 40px;
-   display: grid;
-   grid-row-gap: 15px;
-   justify-content: start;
-   align-self: start;
   }
 
-  &__section--delivery {
+  &__fieldset {
+    margin: 0;
+    display: grid;
+    grid-row-gap: 15px;
+    align-self: start;
+  }
+
+  &__fieldset dd {
+    margin-left: 30px;
+    width: 240px;
+  }
+
+  &__fieldset--delivery {
     $areas: label-from, select-from, label-to, select-to, form-refresh, switcher-from, switcher-to, details-from, details-to;
 
     @for $i from 1 through length($areas) {
@@ -51,16 +59,6 @@
     }
   }
 
-  //&__section--department {
-  //  margin-bottom: 25px;
-  //}
-
-  &__fieldset {
-    display: grid;
-    grid-row-gap: 15px;
-    align-self: start;
-  }
-
   &__fieldset--address {
     grid-template-columns: 1fr 100px;
     grid-column-gap: 20px;
@@ -89,13 +87,12 @@
   }
 
   &__fieldset--tags {
-    margin-top: 40px;
+    margin-bottom: 30px;
     display: flex;
   }
 
   &__fieldset--goods-type {
-    margin-top: 30px;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     display: grid;
     grid-template-columns: 125px repeat(4, auto);
     align-items: center;
@@ -123,7 +120,7 @@
   &__fieldset--boxing {
     grid-template-columns: repeat(3, minmax(max-content, auto));
     grid-column-gap: 35px;
-    //grid-row-gap: 35px;
+    grid-row-gap: 35px;
   }
 
   &__error {
@@ -152,15 +149,20 @@
     line-height: 1.4;
     color: $font-color;
 
-    &--lg {
-      margin-bottom: 0;
-      font-size: 22px;
-      line-height: 1;
-      font-weight: 500;
-    }
-
     &--light {
       color: rgba($black-color, 0.4);
+    }
+  }
+
+  &__heading {
+    margin: 0;
+    font-family: $font-family--secondary;
+    font-size: 22px;
+    line-height: 1;
+    font-weight: 500;
+
+    &:not(&--no-mgb) {
+      margin-bottom: 25px;
     }
 
     &--full {
@@ -187,7 +189,7 @@
     opacity: 0;
 
     &.active {
-      display: grid;
+      display: block;
 
       animation-name: fade-in;
       animation-duration: 0.5s;
