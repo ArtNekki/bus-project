@@ -31,95 +31,47 @@
     {{{ switcher name="city-to" items='[{"id": "city-to-1", "name": "Забрать в отделении"}, {"id": "city-to-2", "name": "Доставка курьером", "checked": "true"}]' }}}
     <div>
       <div class="active" data-content="city-from-1">
-        {{> form-section--department}}
+        {{> fieldset--department}}
       </div>
       <div data-content="city-from-2">
-        {{> form-section--address}}
-        {{> form-section--schedule}}
+        {{> fieldset--address}}
+        {{> fieldset--schedule}}
       </div>
     </div>
     <div>
       <div data-content="city-to-1">
-        {{> form-section--department}}
+        {{> fieldset--department}}
       </div>
       <div class="active" data-content="city-to-2">
-        {{> form-section--address}}
-        {{> form-section--schedule}}
+        {{> fieldset--address}}
+        {{> fieldset--schedule}}
       </div>
     </div>
   </section>
-  <section class="form__section form__section--tags">
-    {{{ form-tag label="Груз №1" checked="true" }}}
-    {{{ form-tag label="Груз №2" }}}
-    {{{ form-tag add="true" }}}
-  </section>
-  <section class="form__section form__section--goods-type">
-    <label class="form__label form__label--lg">Тип груза:</label>
-    <div class="form__field">
-      {{{ radio id="goods-type-docs" name="goods-type" label="Документы" checked="true"}}}
-    </div>
-    <div class="form__field">
-      {{{ radio id="goods-type-package" name="goods-type" label="Посылки" }}}
-    </div>
-    <div class="form__field">
-      {{{ radio id="goods-type-auto" name="goods-type" label="Автозапчасти" }}}
-    </div>
-    <div class="form__field">
-      {{{ radio id="goods-type-other" name="goods-type" label="Другое" }}}
-    </div>
-  </section>
-  <div class="form__content active" data-content="goods-type-docs">
+  {{> fieldset--tags}}
+  {{> fieldset--goods-type}}
+  <div class="active" data-content="goods-type-docs">
     <div class="form__field">
       <label class="form__label">Количество мест</label>
       {{{ counter name="place-count" }}}
     </div>
   </div>
-  <div class="form__content" data-content="goods-type-package">
-    {{> package-params-row  delete="true"}}
-    {{> package-params-row error="true" delete="true"}}
-    {{> package-params-row }}
+  <div data-content="goods-type-package">
+    {{> fieldset--package delete="true"}}
+    {{> fieldset--package error="true" delete="true"}}
+    {{> fieldset--package }}
     {{{ btn text="Добавить еще 1 позицию" }}}
   </div>
-  <div class="form__content" data-content="goods-type-auto">
+  <div data-content="goods-type-auto">
     <label class="form__label">Выберите тип запчасти</label>
-    {{> auto-part-params delete="true"}}
-    {{> auto-part-params }}
+    {{> fieldset--auto-part delete="true"}}
+    {{> fieldset--auto-part }}
     {{{ btn text="Добавить еще 1 позицию" }}}
   </div>
-  <div class="form__content" data-content="goods-type-other">
+  <div data-content="goods-type-other">
     Что-то другое ...
   </div>
-  <section class="form__section form__section--package">
-    <div class="form__label form__label--lg form__label--full">Упаковка:</div>
-    <div class="form__field">
-      {{{ checkbox name="cardboard-box" label="Коробка картонная" help="help" meta="50 руб. - 180 руб."}}}
-    </div>
-    <div class="form__field">
-      {{{ checkbox name="transparent-film" label="Пленка стрейч прозрачная" help="help" meta="30 руб. за 1 м."}}}
-    </div>
-    <div class="form__field">
-      {{{ checkbox name="safe-pack" label="Сейф пакет" help="help" meta="10 руб."}}}
-    </div>
-    <div class="form__field">
-      {{{ checkbox name="black-film" label="Пленка стрейч черная" help="help" meta="30 руб. за 1 м."}}}
-    </div>
-    <div class="form__field form__field--span-2">
-      {{{ checkbox name="bag-with-seal" label="Мешок полипропиленовый с пломбой" help="help" meta="50 руб. - 180 руб."}}}
-    </div>
-  </section>
-  <div class="form__section">
-    <label class="form__label form__label--lg">Дополнительные услуги</label>
-    {{{ radio id="insurance" name="add-services" label="Страхования" help="help" }}}
-    <div class="form__content" data-content="insurance">
-      <label for="insurance" class="form__label">Объявленная ценность</label>
-      {{{ input type="text" id="insurance" name="insurance" unit="Р" }}}
-    </div>
-    <div class="form__field">
-      {{{ radio name="add-services" label="СМС-уведомления отправителю" help="help" }}}
-    </div>
-    <div class="form__field">
-      {{{ radio name="add-services" label="СМС-уведомления получателю" help="help" }}}
-    </div>
-  </div>
+  {{> fieldset--boxing }}
+  {{> fieldset--add-services }}
   {{{ btn text="Рассчитать стоимость" }}}
 </form>

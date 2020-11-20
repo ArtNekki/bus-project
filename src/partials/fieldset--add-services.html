@@ -1,0 +1,14 @@
+<div class="form__fieldset">
+  <label class="form__label form__label--lg">Дополнительные услуги</label>
+  {{{ radio id="insurance" name="add-services" label="Страхования" help="help" }}}
+  <div class="form__content" data-content="insurance">
+    <label for="insurance" class="form__label">Объявленная ценность</label>
+    {{{ input type="text" id="insurance" name="insurance" unit="Р" }}}
+  </div>
+  <div class="form__field">
+    {{{ radio name="add-services" label="СМС-уведомления отправителю" help="help" }}}
+  </div>
+  <div class="form__field">
+    {{{ radio name="add-services" label="СМС-уведомления получателю" help="help" }}}
+  </div>
+</div>

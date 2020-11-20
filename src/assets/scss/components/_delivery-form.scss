@@ -2,6 +2,7 @@
   margin-top: 35px;
 
   &__section {
+   margin-bottom: 40px;
    display: grid;
    grid-row-gap: 15px;
    justify-content: start;
@@ -54,7 +55,13 @@
   //  margin-bottom: 25px;
   //}
 
-  &__section--address {
+  &__fieldset {
+    display: grid;
+    grid-row-gap: 15px;
+    align-self: start;
+  }
+
+  &__fieldset--address {
     grid-template-columns: 1fr 100px;
     grid-column-gap: 20px;
     align-items: end;
@@ -68,7 +75,7 @@
     }
   }
 
-  &__section--schedule {
+  &__fieldset--schedule {
     margin-top: 25px;
     display: grid;
     grid-template-columns: auto 1fr;
@@ -81,12 +88,12 @@
     }
   }
 
-  &__section--tags {
+  &__fieldset--tags {
     margin-top: 40px;
     display: flex;
   }
 
-  &__section--goods-type {
+  &__fieldset--goods-type {
     margin-top: 30px;
     margin-bottom: 15px;
     display: grid;
@@ -96,33 +103,27 @@
     grid-column-gap: 30px;
   }
 
-  &__section--package {
-    grid-template-columns: repeat(3, minmax(max-content, auto));
-    grid-column-gap: 35px;
-    //grid-row-gap: 35px;
-  }
-
-  &__params {
-    position: relative;
-  }
-
-  &__params--package {
+  &__fieldset--package {
     margin-bottom: 20px;
-    display: grid;
     grid-template-columns: repeat(5, 100px) 1fr;
     grid-column-gap: 15px;
     grid-row-gap: 10px;
   }
 
-  &__params--auto-part {
+  &__fieldset--auto-part {
     margin-bottom: 10px;
-    display: grid;
     grid-template-columns: 330px auto;
     grid-column-gap: 20px;
 
     &:last-of-type {
       margin-bottom: 20px;
     }
+  }
+
+  &__fieldset--boxing {
+    grid-template-columns: repeat(3, minmax(max-content, auto));
+    grid-column-gap: 35px;
+    //grid-row-gap: 35px;
   }
 
   &__error {
