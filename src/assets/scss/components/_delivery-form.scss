@@ -2,9 +2,10 @@
   margin-top: 35px;
 
   &__section {
-    //.form__label ~ & {
-    //  border: 1px solid red;
-    //}
+   display: grid;
+   grid-row-gap: 15px;
+   justify-content: start;
+   align-self: start;
   }
 
   &__section--delivery {
@@ -28,7 +29,6 @@
       "select-to select-to"
       "switcher-to switcher-to"
       "details-to details-to";
-    grid-row-gap: 15px;
     border-bottom: 3px solid #F2F2F2;
 
     @include media-breakpoint-up(md) {
@@ -38,7 +38,6 @@
         "select-from select-from form-refresh select-to select-to"
         "switcher-from switcher-from . switcher-to switcher-to"
         "details-from details-from . details-to details-to";
-      grid-row-gap: 10px;
     }
 
     & > *:nth-child(#{index($areas, details-from)}),
@@ -46,27 +45,18 @@
       margin-top: 7px;
 
       @include media-breakpoint-up(md) {
-        margin-top: 25px;
+        margin-top: 20px;
       }
     }
   }
 
-  &__section--department {
-    margin-bottom: 25px;
-    display: grid;
-    grid-row-gap: 10px;
-    align-self: start;
-
-    @include media-breakpoint-up(md) {
-      grid-row-gap: 15px;
-    }
-  }
+  //&__section--department {
+  //  margin-bottom: 25px;
+  //}
 
   &__section--address {
-    display: grid;
     grid-template-columns: 1fr 100px;
     grid-column-gap: 20px;
-    grid-row-gap: 17px;
     align-items: end;
 
     @include media-breakpoint-up(md) {
@@ -79,11 +69,11 @@
   }
 
   &__section--schedule {
-    margin-top: 10px;
+    margin-top: 25px;
     display: grid;
     grid-template-columns: auto 1fr;
     grid-column-gap: 30px;
-    grid-row-gap: 12px;
+    grid-row-gap: 10px;
     grid-column: 1 / -1;
 
     & > *:first-child {
@@ -107,10 +97,9 @@
   }
 
   &__section--package {
-    display: grid;
     grid-template-columns: repeat(3, minmax(max-content, auto));
     grid-column-gap: 35px;
-    grid-row-gap: 35px;
+    //grid-row-gap: 35px;
   }
 
   &__params {
@@ -145,6 +134,7 @@
   }
 
   &__field {
+    //margin-bottom: 15px;
     display: flex;
     flex-direction: column;
 
@@ -177,7 +167,6 @@
     }
   }
 
-
   &__refresh {
     @include btn-default();
 
@@ -189,6 +178,19 @@
 
     @include media-breakpoint-up(md) {
       align-self: center;
+    }
+  }
+
+  [data-content] {
+    display: none;
+    opacity: 0;
+
+    &.active {
+      display: grid;
+
+      animation-name: fade-in;
+      animation-duration: 0.5s;
+      animation-fill-mode: forwards;
     }
   }
 }

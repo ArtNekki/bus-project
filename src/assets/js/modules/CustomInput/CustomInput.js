@@ -32,9 +32,10 @@ export default class InputWithUnit {
     const range = document.createRange();
     const selection = window.getSelection();
 
-    range.setStart(this.$editField.childNodes[0], pos);
-    range.collapse(true);
-
+    if (this.$editField.childNodes[0]) {
+      range.setStart(this.$editField.childNodes[0], pos);
+      range.collapse(true);
+    }
 
     selection.removeAllRanges();
     selection.addRange(range);
