@@ -5,7 +5,7 @@
   grid-column-gap: 10px;
   font-family: $font-family--secondary;
   font-size: 14px;
-  line-height: 1.3;
+  line-height: 1.45;
   text-decoration: none;
   color: $black-color;
 
@@ -44,36 +44,22 @@
     .link--blue & {
       color: $blue-color;
     }
+  }
 
-    &::before {
-      content: "";
-      position: absolute;
-      bottom: -1px;
-      right: 0;
-      left: 0;
-      border-bottom-width: 1px;
-      border-bottom-style: dotted;
-      border-bottom-color: $black-color;
+  &__text span {
+    display: inline-block;
+    // background-image: linear-gradient(to right, blue 75%, transparent 75%);
+    background-image: linear-gradient(to right, blue 50%, transparent 50%);
+    background-position: 0 1.3em;
+    background-repeat: repeat-x;
+    background-size: 3px 1px;
 
-      .link.active & {
-        border-bottom-color: $red-color;
-      }
+    .link--gray & {
+      background-image: linear-gradient(to right, $gray-dark-color 50%, transparent 50%);
+    }
 
-      .link--dashed & {
-        border-bottom-style: dashed;
-      }
-
-      .link--gray & {
-        border-bottom-color: lighten($gray-dark-color, 10%);
-      }
-
-      .link--blue & {
-        border-bottom-color: $blue-color;
-      }
-
-      .link--no-underline & {
-        border: none;
-      }
+    .link--blue & {
+      background-image: linear-gradient(to right, $blue-color 50%, transparent 50%);
     }
   }
 }
