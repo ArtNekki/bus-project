@@ -1,4 +1,5 @@
 .input {
+  position: relative;
 
   &__field {
     @include input();
@@ -12,6 +13,12 @@
     .input.focused & {
       color: $black-color;
       border: 2px solid $primary-color;
+    }
+
+    .input--error & {
+      border: 1px solid $red-color;
+      background-color: rgba($red-color, 0.5);
+      color: $black-color;
     }
   }
 
@@ -40,6 +47,29 @@
     .input__edit:empty ~ & {
       display: none;
     }
+  }
+
+  &__error {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 15px;
+    display: none;
+    font-family: $font-family--secondary;
+    font-size: 16px;
+    line-height: 1;
+    color: $red-color;
+    pointer-events: none;
+
+    .input--error & {
+      display: block;
+    }
+
+    .input.focused &,
+    .input__field:focus ~ & {
+      display: none;
+    }
+
   }
 }
 

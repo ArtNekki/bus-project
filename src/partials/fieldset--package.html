@@ -1,7 +1,7 @@
 <div class="form__fieldset form__fieldset--package">
   <div class="form__field">
     <label class="form__label" for="package-count">Кол-во мест</label>
-    {{{ input type="text" id="package-count" name="package-count" placeholder="0" }}}
+    {{{ input type="text" id="package-count" name="package-count" placeholder="0" mods="error"  }}}
   </div>
   <div class="form__field">
     <label class="form__label" for="package-weight">Вес</label>
@@ -20,7 +20,7 @@
     {{{ input type="text" id="package-length" name="package-length" placeholder="0" unit="см"}}}
   </div>
   <div class="form__field">
-    <label class="form__label">&#160;</label>
+    <label class="form__label">&#16 0;</label>
     {{#if delete}}
       {{{ btn type="delete" }}}
     {{/if}}

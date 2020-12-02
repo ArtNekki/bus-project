@@ -9,6 +9,10 @@
   text-decoration: none;
   color: $black-color;
 
+  &--align-start {
+    align-items: start;
+  }
+
   &--sm {
     font-size: 12px;
   }
