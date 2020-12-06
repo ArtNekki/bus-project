@@ -57,6 +57,14 @@
         margin-top: 20px;
       }
     }
+
+    & > *:nth-child(#{index($areas, label-to)}) {
+      margin-top: 15px;
+
+      @include media-breakpoint-up(md) {
+        margin-top: 0;
+      }
+    }
   }
 
   &__fieldset--address {
@@ -89,6 +97,8 @@
   &__fieldset--tags {
     margin-bottom: 30px;
     display: flex;
+    flex-wrap: wrap;
+    grid-row-gap: 0;
   }
 
   &__fieldset--goods-type {
