@@ -30,17 +30,20 @@ module.exports = function(options) {
 
   function renderLink(cssClass) {
     return `<a href='${href}' class='${cssClass}'>
-            ${iconPosition == 'start' ? renderIcon(icon) : ''}
-            <div class='link__text'>${text}</div>
-            ${iconPosition == 'end' ? renderIcon(icon) : ''}
+         
+            <div class='link__text'>
+              <span>${text}</span>
+            </div>
+           
           </a>`
   }
 
   function renderHelpLink(cssClass) {
     return `<a href='${href}' class='${cssClass}'>
-            ${iconPosition == 'start' ? renderHelpIcon() : ''}
-            <div class='link__text'>${text}</div>
-            ${iconPosition == 'end' ? renderHelpIcon() : ''}
+            ${renderHelpIcon()}
+            <div class='link__text'>
+              <span>${text}</span>
+            </div>
           </a>`
   }
 

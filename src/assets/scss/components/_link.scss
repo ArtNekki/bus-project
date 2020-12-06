@@ -3,9 +3,6 @@
   grid-template-columns: auto 1fr;
   align-items: center;
   grid-column-gap: 10px;
-  font-family: $font-family--secondary;
-  font-size: 14px;
-  line-height: 1.45;
   text-decoration: none;
   color: $black-color;
 
@@ -46,20 +43,29 @@
     }
   }
 
-  &__text span {
-    display: inline-block;
+  &__text {
+    // display: inline-block;
     // background-image: linear-gradient(to right, blue 75%, transparent 75%);
-    background-image: linear-gradient(to right, blue 50%, transparent 50%);
-    background-position: 0 1.3em;
-    background-repeat: repeat-x;
-    background-size: 3px 1px;
+    // background-image: linear-gradient(to right, blue 50%, transparent 50%);
+    // background-position: 0 1.3em;
+    // background-repeat: repeat-x;
+    // background-size: 3px 1px;
 
-    .link--gray & {
-      background-image: linear-gradient(to right, $gray-dark-color 50%, transparent 50%);
-    }
 
-    .link--blue & {
-      background-image: linear-gradient(to right, $blue-color 50%, transparent 50%);
-    }
+    // .link--gray & {
+    //   background-image: linear-gradient(to right, $gray-dark-color 50%, transparent 50%);
+    // }
+
+    // .link--blue & {
+    //   background-image: linear-gradient(to right, $blue-color 50%, transparent 50%);
+    // }
+  }
+
+  &__text span {
+    position: relative;
+    font-family: $font-family--secondary;
+    font-size: 14px;
+    line-height: 1.45;
+    border-bottom: 1px dashed green;
   }
 }

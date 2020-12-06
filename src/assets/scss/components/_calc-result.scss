@@ -1,0 +1,195 @@
+.calc-result {
+    $left-space: 30px;
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background-color: $white-color;
+
+    &__link {
+        margin-left: $left-space;
+        display: none;    
+
+        @include media-breakpoint-up(lg) {
+            display: block; 
+        }
+    }
+
+    &__main {
+        // margin-top: 25px;
+        // padding: 25px 30px;
+        box-shadow: $box-shadow;
+        border-radius: $border-radius;
+    }
+
+    &__title {
+        margin: 0;
+        padding: 0 $left-space / 2;
+        display: none;
+        font-family: $font-family--secondary;
+        font-size: 22px;
+        line-height: 1.4;
+
+        @include media-breakpoint-up(lg) {
+            display: block; 
+        }
+    }
+
+    &__details {
+        padding: 20px ($left-space / 2) 0;
+        display: none;
+        height: 360px;
+
+        .calc-result.active & {
+            display: block;
+        }
+
+        p {
+            margin: 0.5em 0;
+            font-family: $font-family--secondary;
+            font-size: 13px;
+            line-height: 1.2;
+        }
+    
+        dl {
+            position: relative;
+            margin: 0.5em 0;
+            font-family: $font-family--secondary;
+            font-size: 13px;
+            line-height: 1.2;
+
+            &::before {
+              content: "";
+              display: block;
+              clear: both;
+            }
+        }
+
+        dt {
+            margin-right: 5px;
+            float: left;
+        }
+
+        dd {
+            margin-left: 0;
+        }
+        
+    }
+
+    &__scroll {
+        @include scrollbar();
+
+        height: 100%;
+        overflow-y: auto;
+    }
+
+    &__footer {
+        padding: 15px $left-space / 2;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: 0px 4px 44px rgba(0, 0, 0, 0.25);
+
+        .calc-result.active & {
+          box-shadow: none;  
+        }
+       
+        p {
+            margin: 0;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            grid-column-gap: 10px;
+            font-size: 24px;
+            line-height: 1.2;
+
+            @include media-breakpoint-up(lg) {
+                font-size: 28px;
+            }
+        }
+
+        small {
+            margin-bottom: 20px;
+            display: none;
+            font-family: $font-family--secondary;
+            font-size: 12px;
+            line-height: 1.2;
+            color: #B3B3B3;
+
+            @include media-breakpoint-up(lg) {
+                display: block; 
+            }
+        }
+
+        button {
+            // display: none;
+
+            @include media-breakpoint-up(lg) {
+                display: block; 
+            }
+        }
+    }
+
+    &__reset {
+        @include btn-default();
+
+        margin-top: 13px;
+        display: none;
+        font-family: $font-family--secondary;
+        font-size: 14px;
+        line-height: 1.2;
+        color: $red-color;
+
+        @include media-breakpoint-up(lg) {
+            display: block; 
+        }
+    }
+
+    &__collapse {
+        @include btn-default();
+        position: relative;
+        width: 50px;
+        height: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid $gray-light-color; 
+        border-radius: $border-radius;
+
+        .calc-result.active & {
+            background-color: #F2F2F2;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            // top: 4px;
+            // left: 4px;
+            display: block;
+            width: 5px;
+            height: 5px;
+            border: 1px solid $gray-dark-color;
+            border-bottom-width: 0;
+            border-right-width: 0;
+    
+            transform: rotate3d(0, 0, 1, 45deg);
+
+            .calc-result.active & {
+                border-bottom-width: 1px;
+                border-right-width: 1px;
+                border-top-width: 0;
+                border-left-width: 0;
+            }
+        }
+    }
+
+
+    .gray {
+        color: $gray-color;
+    }
+
+    .lg {
+        font-size: 16px;
+    }
+}

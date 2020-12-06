@@ -15,6 +15,7 @@ import './modules/Tooltip';
 import './modules/Counter';
 import './modules/CustomInput';
 import './modules/Form';
+import './modules/CalcResult';
 import { createPopper } from '@popperjs/core';
 
 import {TweenLite} from "gsap";
