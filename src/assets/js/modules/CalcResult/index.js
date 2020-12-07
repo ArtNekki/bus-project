@@ -29,4 +29,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // addScroll($details);
     });
+
+    document.addEventListener('click', function(e) {
+
+        if (e.target.classList.contains('calc-result')) {
+            $sidebar.classList.remove('active');
+            document.documentElement.classList.remove('page--no-scroll');
+            sidebarIsActive = false;
+        }
+       
+    });
 });
