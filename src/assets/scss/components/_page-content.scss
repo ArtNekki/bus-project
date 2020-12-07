@@ -1,9 +1,9 @@
-.page-content {
-  @include container();
+// .page-content {
+//   @include container();
 
-  @include media-breakpoint-up(lg) {
-    display: grid;
-    grid-template-columns: 1fr 400px;
-    grid-column-gap: 70px;
-  }
-}
+//   @include media-breakpoint-up(xl) {
+//     display: grid;
+//     grid-template-columns: minmax(auto, 700px) 400px;
+//     grid-column-gap: 70px;
+//   }
+// }
