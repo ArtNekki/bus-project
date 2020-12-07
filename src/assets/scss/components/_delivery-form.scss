@@ -104,33 +104,69 @@
   &__fieldset--goods-type {
     margin-bottom: 30px;
     display: grid;
-    grid-template-columns: 125px repeat(4, auto);
-    align-items: center;
+    grid-template-columns: repeat(2, auto);
     justify-content: start;
     grid-column-gap: 30px;
+
+    @include media-breakpoint-up(sm) {
+      grid-template-columns: repeat(4, auto);
+    }
+
+    @include media-breakpoint-up(md) {
+      grid-template-columns: 125px repeat(4, auto);
+      align-items: center;
+    }
   }
 
   &__fieldset--package {
     margin-bottom: 20px;
-    grid-template-columns: repeat(5, 100px) 1fr;
+    padding: 20px;
+    grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 15px;
-    grid-row-gap: 10px;
+    box-shadow: 0 0 10px rgba($black-color, 0.15);
+    border-radius: $border-radius;
+
+    @include media-breakpoint-up(sm) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include media-breakpoint-up(md) {
+      padding: 0;
+      grid-template-columns: repeat(5, 100px) 1fr;
+      grid-row-gap: 10px;
+      box-shadow: none;
+      border-radius: none;
+    }
   }
 
   &__fieldset--auto-part {
     margin-bottom: 10px;
-    grid-template-columns: 330px auto;
+    grid-template-columns: 1fr minmax(80px, min-content);
     grid-column-gap: 20px;
 
     &:last-of-type {
       margin-bottom: 20px;
     }
+
+    @include media-breakpoint-up(md) {
+      grid-template-columns: 330px auto;
+    }
   }
 
   &__fieldset--boxing {
-    grid-template-columns: repeat(3, minmax(max-content, auto));
-    grid-column-gap: 35px;
-    grid-row-gap: 35px;
+    grid-row-gap: 10px;
+    grid-template-columns: 1fr;
+
+    @include media-breakpoint-up(sm) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-row-gap: 15px;
+    }
+
+    @include media-breakpoint-up(md) {
+      grid-template-columns: repeat(3, minmax(max-content, auto));
+      grid-column-gap: 35px;
+      grid-row-gap: 35px;
+    }
   }
 
   &__error {
@@ -147,7 +183,17 @@
     flex-direction: column;
 
     &--span-2 {
-      grid-column: span 2;
+      @include media-breakpoint-up(sm) {
+        grid-column: span 2;
+      }
+    }
+
+    &--align-center {
+      align-items: center;
+
+      @include media-breakpoint-up(md) {
+        align-items: flex-start;
+      }
     }
   }
 
@@ -177,6 +223,14 @@
 
     &--full {
       grid-column: 1 / -1;
+    }
+
+    .form__fieldset--goods-type & {
+      grid-column: 1 / -1;
+
+      @include media-breakpoint-up(md) {
+        grid-column: unset;
+      }
     }
   }
 
