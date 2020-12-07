@@ -1,5 +1,5 @@
 .calc-result {
-    $left-space: 30px;
+    $box-shadow: 0px 4px 44px rgba(0, 0, 0, 0.25);
 
     position: fixed;
     bottom: 0;
@@ -8,8 +8,13 @@
     z-index: 10;
     background-color: $white-color;
 
+    @include media-breakpoint-up(lg) {
+        position: static;
+        margin-top: 125px;
+    }
+
     &__link {
-        margin-left: $left-space;
+        margin-left: $container-padding-x * 2;
         display: none;    
 
         @include media-breakpoint-up(lg) {
@@ -18,27 +23,37 @@
     }
 
     &__main {
-        // margin-top: 25px;
-        // padding: 25px 30px;
+        display: flex;
+        flex-direction: column;
         box-shadow: $box-shadow;
         border-radius: $border-radius;
+
+        .calc-result.active & {
+            box-shadow: $box-shadow;
+        }
+
+        @include media-breakpoint-up(lg) {
+            margin-top: 25px;
+            padding: 15px 30px 25px 30px;
+        }
     }
 
     &__title {
-        margin: 0;
-        padding: 0 $left-space / 2;
+        margin: 0 0 10px  0;
+        padding: 0 $container-padding-x;
         display: none;
         font-family: $font-family--secondary;
         font-size: 22px;
         line-height: 1.4;
 
         @include media-breakpoint-up(lg) {
-            display: block; 
+            padding: 0;
+            display: block;
         }
     }
 
     &__details {
-        padding: 20px ($left-space / 2) 0;
+        padding: 20px $container-padding-x 0;
         display: none;
         height: 340px;
 
@@ -46,108 +61,143 @@
             display: block;
         }
 
-        p {
-            margin: 0.5em 0;
-            font-family: $font-family--secondary;
-            font-size: 13px;
-            line-height: 1.2;
+        @include media-breakpoint-up(lg) {
+            padding: 0;
+            display: block;
+            height: auto;
         }
-    
-        dl {
-            position: relative;
-            margin: 0.5em 0;
-            font-family: $font-family--secondary;
-            font-size: 13px;
-            line-height: 1.2;
+    }
 
-            &::before {
-              content: "";
-              display: block;
-              clear: both;
-            }
-        }
+    &__details p {
+        margin: 0.5em 0;
+        font-family: $font-family--secondary;
+        font-size: 13px;
+        line-height: 1.2;
+    }
 
-        dt {
-            margin-right: 5px;
-            float: left;
-        }
+    &__details dl {
+        position: relative;
+        margin: 0.5em 0;
+        font-family: $font-family--secondary;
+        font-size: 13px;
+        line-height: 1.2;
 
-        dd {
-            margin-left: 0;
+        &::before {
+          content: "";
+          display: block;
+          clear: both;
         }
-        
+    }
+
+    &__details dt {
+        margin-right: 5px;
+        float: left;
+    }
+
+    &__details dd {
+        margin-left: 0;
     }
 
     &__scroll {
-        // @include scrollbar();
-
         height: 100%;
         overflow-y: auto;
     }
 
-    &__footer {
-        padding: 15px $left-space / 2;
+    &__total {
+        padding: 15px $container-padding-x;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        box-shadow: 0px 4px 44px rgba(0, 0, 0, 0.25);
+        box-shadow: $box-shadow;
+        order: 1;
+
+        @include media-breakpoint-up(lg) {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            padding: 0;
+        }
 
         .calc-result.active & {
-          box-shadow: none;  
+            margin-top: 20px;
+            border-top: 1px solid $gray-light-color;
+            box-shadow: none;
+            
+            @include media-breakpoint-up(lg) {
+                border-top: none;
+            }
         }
-       
-        p {
-            margin: 0;
-            display: grid;
-            grid-template-columns: auto 1fr;
-            grid-column-gap: 10px;
-            font-size: 24px;
-            line-height: 1.2;
+  
+        @include media-breakpoint-up(lg) {
+            padding: 0;
+            display: block;
+            box-shadow: none;
+            order: unset;
+        }
+    }
+
+    &__total p {
+        margin: 0;
+        font-size: 24px;
+        line-height: 1.2;
+
+        @include media-breakpoint-up(lg) {
+            font-size: 28px;
+        }
+    }
+
+    &__footer {
+        padding: 10px $container-padding-x 0 $container-padding-x;
+        display: none;
+        flex-wrap: wrap;
+
+        .calc-result.active & {
+            display: flex;
 
             @include media-breakpoint-up(lg) {
-                font-size: 28px;
+                display: block;
             }
         }
 
-        small {
-            margin-bottom: 20px;
-            display: none;
-            font-family: $font-family--secondary;
-            font-size: 12px;
-            line-height: 1.2;
-            color: #B3B3B3;
-
-            @include media-breakpoint-up(lg) {
-                display: block; 
-            }
+        @include media-breakpoint-up(lg) {
+            padding: 0;
+            display: block;
         }
+    }
 
-        button {
-            // display: none;
+    &__footer small {
+        margin-bottom: 20px;
+        display: block;
+        width: 100%;
+        font-family: $font-family--secondary;
+        font-size: 12px;
+        line-height: 1.2;
+        color: #B3B3B3;
 
-            @include media-breakpoint-up(lg) {
-                display: block; 
-            }
+        @include media-breakpoint-up(lg) {
+            margin-top: 0;
         }
     }
 
     &__reset {
         @include btn-default();
 
-        margin-top: 13px;
-        display: none;
+        margin-left: 15px;
+        display: inline-block;
         font-family: $font-family--secondary;
         font-size: 14px;
         line-height: 1.2;
         color: $red-color;
 
         @include media-breakpoint-up(lg) {
+            margin-top: 13px;
+            margin-left: 0;
             display: block; 
         }
     }
 
     &__collapse {
         @include btn-default();
+
         position: relative;
         width: 50px;
         height: 35px;
@@ -159,6 +209,10 @@
 
         .calc-result.active & {
             background-color: #F2F2F2;
+        }
+
+        @include media-breakpoint-up(lg) {
+            display: none;
         }
 
         &::before {
