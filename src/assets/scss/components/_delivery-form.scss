@@ -1,4 +1,6 @@
 .form {
+  $form-column-gap: $container-padding-x;
+
   margin-top: 35px;
   margin-bottom: 50px;
 
@@ -16,10 +18,19 @@
   &__fieldset dd {
     margin-left: 30px;
     width: 240px;
+    // border: 1px solid red;
   }
 
   &__fieldset--delivery {
     $areas: label-from, select-from, label-to, select-to, form-refresh, switcher-from, switcher-to, details-from, details-to;
+    $template-columns-md: repeat(2, 1fr) 40px repeat(2, 1fr);
+    $template-areas-md: 
+      "label-from label-from . label-to label-to"
+      "select-from select-from form-refresh select-to select-to"
+      "switcher-from switcher-from . switcher-to switcher-to"
+      "details-from details-from . details-to details-to";
+    $details-top-md: 20px;
+    $label-top-md: 0;
 
     @for $i from 1 through length($areas) {
       & > *:nth-child(#{$i}) {
@@ -41,29 +52,38 @@
       "details-to details-to";
     border-bottom: 3px solid #F2F2F2;
 
-    @include media-breakpoint-up(md) {
-      grid-template-columns: repeat(2, 1fr) 40px repeat(2, 1fr);
-      grid-template-areas:
-        "label-from label-from . label-to label-to"
-        "select-from select-from form-refresh select-to select-to"
-        "switcher-from switcher-from . switcher-to switcher-to"
-        "details-from details-from . details-to details-to";
+    @include media-breakpoint-only(md) {
+      grid-template-columns: $template-columns-md;
+      grid-template-areas: $template-areas-md;
+    }
+
+    @include media-breakpoint-up(xl) {
+      grid-template-columns: $template-columns-md;
+      grid-template-areas: $template-areas-md;
     }
 
     & > *:nth-child(#{index($areas, details-from)}),
     & > *:nth-child(#{index($areas, details-to)}) {
       margin-top: 7px;
 
-      @include media-breakpoint-up(md) {
-        margin-top: 20px;
+      @include media-breakpoint-only(md) {
+        margin-top: $details-top-md;
+      }
+
+      @include media-breakpoint-up(xl) {
+        margin-top: $details-top-md;
       }
     }
 
     & > *:nth-child(#{index($areas, label-to)}) {
       margin-top: 15px;
 
-      @include media-breakpoint-up(md) {
-        margin-top: 0;
+      @include media-breakpoint-only(md) {
+        margin-top: $label-top-md;
+      }
+
+      @include media-breakpoint-up(xl) {
+        margin-top: $label-top-md;
       }
     }
   }
@@ -74,7 +94,7 @@
     align-items: end;
 
     @include media-breakpoint-up(md) {
-      grid-column-gap: 30px;
+      grid-column-gap: $form-column-gap * 2;
     }
 
     & > .form__field:first-child {
@@ -86,7 +106,7 @@
     margin-top: 25px;
     display: grid;
     grid-template-columns: auto 1fr;
-    grid-column-gap: 30px;
+    grid-column-gap: $form-column-gap * 2;
     grid-row-gap: 10px;
     grid-column: 1 / -1;
 
@@ -103,27 +123,36 @@
   }
 
   &__fieldset--goods-type {
+    $template-columns-md: 125px repeat(4, auto);
+
     margin-bottom: 30px;
     display: grid;
     grid-template-columns: repeat(2, auto);
     justify-content: start;
-    grid-column-gap: 30px;
+    align-items: center;
+    grid-column-gap: $form-column-gap * 2;
 
     @include media-breakpoint-up(sm) {
       grid-template-columns: repeat(4, auto);
     }
 
-    @include media-breakpoint-up(md) {
-      grid-template-columns: 125px repeat(4, auto);
-      align-items: center;
+    @include media-breakpoint-only(md) {
+      grid-template-columns: $template-columns-md;
+    }
+
+    @include media-breakpoint-up(xl) {
+      grid-template-columns: $template-columns-md;
     }
   }
 
   &__fieldset--package {
+    $template-columns-md: repeat(5, 100px) 1fr;
+    $row-gap-md: 10px;
+
     margin-bottom: 20px;
     padding: 20px;
     grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 15px;
+    grid-column-gap: $form-column-gap;
     box-shadow: 0 0 10px rgba($black-color, 0.15);
     border-radius: $border-radius;
 
@@ -131,10 +160,18 @@
       grid-template-columns: repeat(3, 1fr);
     }
 
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-only(md) {
       padding: 0;
-      grid-template-columns: repeat(5, 100px) 1fr;
-      grid-row-gap: 10px;
+      grid-template-columns: $template-columns-md;
+      grid-row-gap: $row-gap-md;
+      box-shadow: none;
+      border-radius: none;
+    }
+
+    @include media-breakpoint-up(xl) {
+      padding: 0;
+      grid-template-columns: $template-columns-md;
+      grid-row-gap: $row-gap-md;
       box-shadow: none;
       border-radius: none;
     }
@@ -155,6 +192,10 @@
   }
 
   &__fieldset--boxing {
+    $template-columns-md: repeat(3, minmax(max-content, auto));
+    $column-gap-md: 35px;
+    $row-gap-md: 35px;
+
     grid-row-gap: 10px;
     grid-template-columns: 1fr;
 
@@ -163,10 +204,16 @@
       grid-row-gap: 15px;
     }
 
-    @include media-breakpoint-up(md) {
-      grid-template-columns: repeat(3, minmax(max-content, auto));
-      grid-column-gap: 35px;
-      grid-row-gap: 35px;
+    @include media-breakpoint-only(md) {
+      grid-template-columns: $template-columns-md;
+      grid-column-gap: $column-gap-md;
+      grid-row-gap: $row-gap-md;
+    }
+
+    @include media-breakpoint-up(xl) {
+      grid-template-columns: $template-columns-md;
+      grid-column-gap: $column-gap-md;
+      grid-row-gap: $row-gap-md;
     }
   }
 
@@ -192,7 +239,11 @@
     &--align-center {
       align-items: center;
 
-      @include media-breakpoint-up(md) {
+      @include media-breakpoint-only(md) {
+        align-items: flex-start;
+      }
+
+      @include media-breakpoint-up(xl) {
         align-items: flex-start;
       }
     }
@@ -229,7 +280,11 @@
     .form__fieldset--goods-type & {
       grid-column: 1 / -1;
 
-      @include media-breakpoint-up(md) {
+      @include media-breakpoint-only(md) {
+        grid-column: unset;
+      }
+
+      @include media-breakpoint-up(xl) {
         grid-column: unset;
       }
     }
