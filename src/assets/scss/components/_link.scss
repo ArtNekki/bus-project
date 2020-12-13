@@ -66,6 +66,10 @@
     font-family: $font-family--secondary;
     font-size: 14px;
     line-height: 1.45;
-    border-bottom: 1px dashed green;
+    border-bottom: 1px dashed $black-color;
+
+    .link--gray & {
+      border-bottom-color: lighten($gray-dark-color, 10%);
+    }
   }
 }

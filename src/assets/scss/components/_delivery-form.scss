@@ -88,6 +88,21 @@
     }
   }
 
+  &__fieldset--department {
+    $template-columns: auto 1fr;
+    $column-gap: $form-column-gap * 2;
+
+    @include media-breakpoint-only(sm) {
+      grid-template-columns: $template-columns;
+      grid-column-gap: $column-gap;
+    }
+
+    @include media-breakpoint-only(lg) {
+      grid-template-columns: $template-columns;
+      grid-column-gap: $column-gap;
+    }
+  }
+
   &__fieldset--address {
     grid-template-columns: 1fr 100px;
     grid-column-gap: 20px;
@@ -138,6 +153,10 @@
 
     @include media-breakpoint-only(md) {
       grid-template-columns: $template-columns-md;
+    }
+
+    @include media-breakpoint-only(lg) {
+      grid-column-gap: $form-column-gap;
     }
 
     @include media-breakpoint-up(xl) {
@@ -260,6 +279,10 @@
     &--light {
       color: rgba($black-color, 0.4);
     }
+
+    &--full {
+      grid-column: 1 / -1;
+    }
   }
 
   &__heading {
@@ -305,6 +328,7 @@
 
   &__refresh {
     @include btn-default();
+    align-self: end;
 
     opacity: 0.1;
 
@@ -312,7 +336,11 @@
       opacity: 0.3;
     }
 
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-only(md) {
+      align-self: center;
+    }
+
+    @include media-breakpoint-only(xl) {
       align-self: center;
     }
   }

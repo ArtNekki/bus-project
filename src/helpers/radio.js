@@ -32,14 +32,14 @@ module.exports = function(options) {
   }
 
    const radio  = `
-      <label class="${cssClass}">
+      <div class="${cssClass}">
         <input type="radio" id="${id}" name="${name}" class="radio__input" ${checked ? 'checked' : ''}>
         <div class="radio__body">
-            <span class="radio__label">${label}</span>
+            <label for="${id}" class="radio__label">${label}</label>
             ${ meta ? renderMeta(meta) : ''}
             ${ help ? renderHelp() : ''}
         </div>
-      </label>`
+      </div>`
 
   return radio;
 }
