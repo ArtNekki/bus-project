@@ -71,5 +71,9 @@
     .link--gray & {
       border-bottom-color: lighten($gray-dark-color, 10%);
     }
+
+    .link--blue & {
+      border-bottom-color: $blue-color;
+    }
   }
 }

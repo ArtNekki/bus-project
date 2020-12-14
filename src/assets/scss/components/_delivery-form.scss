@@ -350,8 +350,14 @@
     font-family: $font-family--secondary;
     font-size: 18px;
     line-height: 1.2;
-    text-align: center;
-    color: #B3B3B3;
+    
+    &--gray {
+      color: #B3B3B3;
+    }
+
+    &--align-center {
+      text-align: center;
+    }
   }
 
   [data-content] {
