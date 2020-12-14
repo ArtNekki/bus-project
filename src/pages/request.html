@@ -1,6 +1,13 @@
 ---
 title: Заявка на перевозку
+title-text: Заполните форму необходимыми данными и отправьте
 layout: layout--with-calc-result
 ---
 
 {{> calc-steps}}
+
+<section class="form__section">
+    <h2 class="form__heading">Ваши данные</h2>
+    {{{ switcher name="user-type" items='[{"id": "natural", "name": "Физическое лицо", "checked": "true"}, {"id": "entity", "name": "Юридическое лицо"}]' }}}
+    <p class="form__help-text">Выберите статус лица для перехода на следующий шаг</p>
+</section>    
