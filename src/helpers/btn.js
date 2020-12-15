@@ -1,6 +1,7 @@
 module.exports = function(options) {
   const text = options.hash.text;
   const type = options.hash.type;
+  const disabled = options.hash.disabled;
   const mods = options.hash.mods;
   const root = options.data.root.root;
   let cssClass = 'btn';
@@ -29,7 +30,7 @@ module.exports = function(options) {
   }
 
   function renderDefault() {
-    return `<button type="button" class="${cssClass}">
+    return `<button type="${type}" class="${cssClass}" ${disabled ? 'disabled' : ''}>
       <span class="btn__text">${text}</span>
     </button>`;
   }

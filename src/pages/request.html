@@ -6,48 +6,50 @@ layout: layout--with-calc-result
 
 {{> calc-steps}}
 
-<section class="form__section">
-    <h2 class="form__heading">Ваши данные</h2>
-    {{{ switcher name="user-type" items='[{"id": "natural", "name": "Физическое лицо", "checked": "true"}, {"id": "entity", "name": "Юридическое лицо"}]' }}}
-    <!-- <p class="form__help-text form__help-text--gray form__help-text--align-center">Выберите статус лица для перехода на следующий шаг</p> -->
-    <!-- <p class="form__help-text">Чтобы оформить заказ как юридическое лицо, вам необходимо
-        {{{link href="#" text="войти" mods="blue"}}} или {{{link href="#" text="зарегистрироваться" mods="blue"}}}
-    </p> -->
-    <div class="form__fieldset form__fieldset--2-col-sm form__fieldset--3-col-xl">
-        <div class="form__field">
-            <label for="last-name" class="form__label">Фамилия<sup>*</sup></label>
-            {{{ input type="text" id="last-name" name="last-name" }}}
+<form class="form">
+    <section class="form__section">
+        <h2 class="form__heading">Ваши данные</h2>
+        {{{ switcher name="user-type" items='[{"id": "natural", "name": "Физическое лицо", "checked": "true"}, {"id": "entity", "name": "Юридическое лицо"}]' }}}
+        <!-- <p class="form__help-text form__help-text--gray form__help-text--align-center">Выберите статус лица для перехода на следующий шаг</p> -->
+        <!-- <p class="form__help-text">Чтобы оформить заказ как юридическое лицо, вам необходимо
+            {{{link href="#" text="войти" mods="blue"}}} или {{{link href="#" text="зарегистрироваться" mods="blue"}}}
+        </p> -->
+        <div class="form__fieldset form__fieldset--2-col-sm form__fieldset--3-col-xl">
+            <div class="form__field">
+                <label for="last-name" class="form__label">Фамилия<sup>*</sup></label>
+                {{{ input type="text" id="last-name" name="last-name" error="Не заполнено"}}}
+            </div>
+            <div class="form__field">
+                <label for="first-name" class="form__label">Имя<sup>*</sup></label>
+                {{{ input type="text" id="first-name" name="first-name" error="Не заполнено"}}}
+            </div>
+            <div class="form__field">
+                <label for="middle-name" class="form__label">Отчество<sup>*</sup></label>
+                {{{ input type="text" id="middle-name" name="middle-name" error="Не заполнено"}}}
+            </div>
+            <div class="form__field">
+                <label for="tel" class="form__label">E-mail<sup>*</sup></label>
+                {{{ input type="email" id="email" name="email" error="Не заполнено"}}}
+            </div>
+            <div class="form__field">
+                <label for="tel" class="form__label">Телефон<sup>*</sup></label>
+                {{{ input type="text" id="tel" name="tel" error="Не заполнено"}}}
+            </div>
+            <div class="form__field">
+                <label for="tel" class="form__label">Роль</label>
+                {{{ select
+                    id="role"
+                    name="role"
+                    data='[
+                    {"value": "nakhodka", "name": "Отправитель"},
+                    {"value": "arseniev", "name": "Отправитель"}]'
+                }}}
+            </div>
         </div>
-        <div class="form__field">
-            <label for="first-name" class="form__label">Имя<sup>*</sup></label>
-            {{{ input type="text" id="first-name" name="first-name" }}}
+        <div class="form__fieldset form__fieldset--actions form__fieldset--2-col-sm form__fieldset--3-col-xl">
+            <div class="form__field form__field--end-xl">
+                {{{ btn type="submit" text="Далее" mods="lg"  disabled="true"}}}
+            </div>
         </div>
-        <div class="form__field">
-            <label for="middle-name" class="form__label">Отчество<sup>*</sup></label>
-            {{{ input type="text" id="middle-name" name="middle-name" }}}
-        </div>
-        <div class="form__field">
-            <label for="tel" class="form__label">E-mail<sup>*</sup></label>
-            {{{ input type="email" id="email" name="email" }}}
-        </div>
-        <div class="form__field">
-            <label for="tel" class="form__label">Телефон<sup>*</sup></label>
-            {{{ input type="text" id="tel" name="tel" }}}
-        </div>
-        <div class="form__field">
-            <label for="tel" class="form__label">Роль<sup>*</sup></label>
-            {{{ select
-                id="role"
-                name="role"
-                data='[
-                {"value": "nakhodka", "name": "Отправитель"},
-                {"value": "arseniev", "name": "Отправитель"}]'
-            }}}
-        </div>
-    </div>
-    <div class="form__fieldset form__fieldset--actions form__fieldset--2-col-sm form__fieldset--3-col-xl">
-        <div class="form__field form__field--end-xl">
-            {{{ btn text="Далее" mods="lg" }}}
-        </div>
-    </div>
-</section>    
+    </section>
+</form>

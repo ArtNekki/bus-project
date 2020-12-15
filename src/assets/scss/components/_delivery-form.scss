@@ -311,6 +311,10 @@
     }
   }
 
+  &__label sup {
+    color: $red-color;
+  }
+
   &__heading {
     margin: 0;
     font-family: $font-family--secondary;

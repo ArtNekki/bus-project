@@ -1,5 +1,4 @@
 function clearSiblings(content) {
-  console.log('nekki', content.parentNode)
   content.parentNode.querySelectorAll('[data-content]').forEach((item) => {
     item.classList.remove('active');
   });
@@ -20,6 +19,16 @@ document.addEventListener('change', function(e) {
   }
 
   // if (!content) return;
+});
 
 
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.querySelector('.form');
+
+  if (!form) return;
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    this.classList.add('error');
+  });
 });

@@ -15,7 +15,8 @@
       border: 2px solid $primary-color;
     }
 
-    .input--error & {
+    .input--error &,
+    .form.error & {
       border: 1px solid $red-color;
       background-color: rgba($red-color, 0.5);
       color: $black-color;
@@ -61,7 +62,8 @@
     color: $red-color;
     pointer-events: none;
 
-    .input--error & {
+    .input--error &,
+    .form.error & {
       display: block;
     }
 

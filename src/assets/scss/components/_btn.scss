@@ -8,6 +8,12 @@
   border-radius: $border-radius;
   box-sizing: border-box;
 
+  &:disabled {
+    background-color: #F2F2F2;
+    color: #B3B3B3;
+    cursor: not-allowed;
+  }
+
   &--lg {
     font-size: 18px;
   }
