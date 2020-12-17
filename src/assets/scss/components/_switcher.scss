@@ -1,8 +1,12 @@
 .switcher {
-  margin-bottom: 35px;
+  // margin-bottom: 35px;
+  width: 100%;
+  // min-width: 330px;
   display: flex;
   justify-content: space-between;
   align-self: start;
+  justify-self: start;
+  grid-area: switcher;
   //align-items: flex-start;
 
   label {
@@ -21,6 +25,7 @@
     text-align: center;
     background-color: #f2f2f2;
     border-radius: $border-radius;
+    white-space: nowrap;
     cursor: pointer;
 
     .switcher__input:checked ~ & {

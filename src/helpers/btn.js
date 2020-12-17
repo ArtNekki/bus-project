@@ -3,9 +3,11 @@ module.exports = function(options) {
   const type = options.hash.type;
   const disabled = options.hash.disabled;
   const mods = options.hash.mods;
+  const data = options.hash.data;
   const root = options.data.root.root;
   let cssClass = 'btn';
   let allMods = '';
+  let allData = '';
 
   if (mods !== 'undefined' && mods ) {
     const modsList = mods.split(',');
@@ -14,7 +16,23 @@ module.exports = function(options) {
       }
   }
 
+  if (data !== 'undefined' && data ) {
+    const dataList = data.split(',');
+      for (let i = 0; i < dataList.length; i++) {
+        allData = allData + ' data-' + dataList[i].trim();
+      }
+  }
+
   cssClass+= allMods;
+
+  function renderBack() {
+    return `<button type="button" class="${cssClass} btn--back" ${allData}>
+      <svg width="24px" height="20px">
+        <use xlink:href="${root}assets/img/symbol/sprite.svg#back"></use>
+      </svg>
+      <span>Назад</span>
+    </button>`;
+  }
 
   function renderDelete() {
     return `<button type="button" class="${cssClass} ${cssClass}--delete">
@@ -42,10 +60,13 @@ module.exports = function(options) {
       btn = renderDelete();
       break;
     case 'refresh':
-      btn = renderRefresh()
+      btn = renderRefresh();
       break;
+    case 'back':
+      btn = renderBack();
+      break;  
     default:
-      btn = renderDefault()
+      btn = renderDefault();
   }
 
   return btn;

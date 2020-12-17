@@ -1,12 +1,9 @@
 <article class="point-card">
   {{> preloader}}
   <button type="button" class="point-card__close" data-close-btn></button>
-  <button type="button" class="point-card__btn" data-close-btn>
-    <svg width="24px" height="20px">
-      <use xlink:href="{{root}}assets/img/symbol/sprite.svg#back"></use>
-    </svg>
-    <span>Назад</span>
-  </button>
+  <div class="point-card__back">
+    {{{ btn type="back" text="Назад" data="close-btn"}}}
+  </div>
   <h1 class="point-card__title">Владивосток, Автовокзал</h1>
   <div class="point-card__contacts">
     <div class="point-card__contact">
@@ -50,10 +47,7 @@
          srcset="{{root}}assets/img/content/index/example-slide@2x.png 2x, {{root}}assets/img/content/index/example-slide@3x.png 3x">
     <p class="point-card__text point-card__text--sm">За содержимое грузов и документов (далее — отправление) несет ответственность лицо, являющееся Отправителем.</p>
   </div>
-  <button type="button" class="point-card__btn" data-close-btn>
-    <svg width="24px" height="20px">
-      <use xlink:href="{{root}}assets/img/symbol/sprite.svg#back"></use>
-    </svg>
-    <span>Назад</span>
-  </button>
+  <div class="point-card__back">
+    {{{ btn type="back" text="Назад" data="close-btn"}}}
+  </div>
 </article>
