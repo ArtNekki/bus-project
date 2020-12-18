@@ -119,20 +119,8 @@
   }
 
   &__fieldset--department {
-    $template-columns: auto 1fr;
-    $column-gap: $form-column-gap * 2;
-
     grid-area: department;
-
-    @include media-breakpoint-only(sm) {
-      grid-template-columns: $template-columns;
-      grid-column-gap: $column-gap;
-    }
-
-    @include media-breakpoint-only(lg) {
-      grid-template-columns: $template-columns;
-      grid-column-gap: $column-gap;
-    }
+    grid-template-columns: repeat(auto-fill, minmax(230px, max-content));
   }
 
   &__fieldset--address {
@@ -278,6 +266,22 @@
 
     @include media-breakpoint-up(sm) {
       grid-template-columns: repeat(2, 1fr);
+      grid-template-areas: 
+        "location location"
+        "department department"
+        "switcher switcher"
+        "delivery-date .";
+    }
+
+    @include media-breakpoint-only(md) {
+      grid-template-areas: 
+        "location location"
+        "department department"
+        "switcher ."
+        "delivery-date .";
+    }
+
+    @include media-breakpoint-up(xl) {
       grid-template-areas: 
         "location location"
         "department department"
@@ -434,8 +438,33 @@
 
   &__actions {
     display: grid;
+    grid-template-areas: 
+    "next"
+    "back";
+    grid-column-gap: $form-column-gap;
+    grid-row-gap: 20px;
+    align-items: center;
 
-    
+    @include media-breakpoint-up(sm) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas: 
+      "next ."
+      "back .";
+    }
+
+    @include media-breakpoint-up(lg) {
+      grid-template-columns: 130px minmax(min-content, 210px);
+      grid-template-areas: "back next";
+      justify-content: space-between;
+    }
+
+    *:first-child {
+      grid-area: back;
+    }
+
+    *:last-child {
+      grid-area: next;
+    } 
   }
 
   [data-content] {
