@@ -23,21 +23,24 @@
         grid-column-gap: 10px;
         grid-row-gap: $row-gap;
 
-
-        &:not(:last-child)::after {
+        &:not(:last-child)::after,
+        &:not(:last-child)::before {
             content: "";
             height: 7px;
             align-self: center;
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
             background-color: #F2F2F2;
-
-            .calc-steps__item.done & {
-                background-color: $primary-color;
-            }
+            transition: all 0.5s;
         }
 
-        &:not(:last-child).active::after,
-        &:not(:last-child).done::after {
+        &:not(:last-child)::after {
             background-color: $primary-color;
+            width: 0;
+        }
+
+        &:not(:last-child).done::after {
+            width: 100%;
         }
     }
 
@@ -55,6 +58,8 @@
         color: rgba($black-color, 0.2);
         background-color: #F2F2F2;
         border-radius: 50%;
+        transition-property: all;
+        transition-delay: 0.5s;
 
         .calc-steps__item.active &,
         .calc-steps__item.done & {

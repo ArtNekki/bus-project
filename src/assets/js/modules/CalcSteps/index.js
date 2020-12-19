@@ -1,12 +1,20 @@
-document.addEventListener('DOMContentLoaded', function() {
-    function hideSteps(steps) {
-        steps.forEach(step => {
-            step.style.display="none";
-        });
-    }
+function hideSteps(steps) {
+    steps.forEach(step => {
+        step.style.display="none";
+    });
+}
 
+function scrollToTop() {
+    window.scrollTo({
+        top: 5,
+        behavior: 'smooth'
+    });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
     let currentStep = 0;
 
+    const calcSteps = document.querySelector('.calc-steps');
     const stepPoints = document.querySelectorAll('.calc-steps__item');
     const steps = document.querySelectorAll('[data-step-content]');
     
@@ -17,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     nextStep.addEventListener('click', function() {
         hideSteps(steps);
+        scrollToTop(calcSteps);
 
         if (!stepPoints[currentStep]) return;
 
@@ -42,6 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     backStep.addEventListener('click', function() {
         hideSteps(steps);
+        scrollToTop(calcSteps);
 
         if (stepPoints[currentStep]) {
             stepPoints[currentStep].classList.remove('done');
