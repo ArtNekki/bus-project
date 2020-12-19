@@ -2,9 +2,12 @@ module.exports = function(options) {
   const text = options.hash.text;
   const type = options.hash.type;
   const disabled = options.hash.disabled;
+  const hidden = options.hash.hidden;
   const mods = options.hash.mods;
   const data = options.hash.data;
   const root = options.data.root.root;
+  const id = options.hash.id;
+
   let cssClass = 'btn';
   let allMods = '';
   let allData = '';
@@ -26,7 +29,7 @@ module.exports = function(options) {
   cssClass+= allMods;
 
   function renderBack() {
-    return `<button type="button" class="${cssClass} btn--back" ${allData}>
+    return `<button id="${id}" type="button" class="${cssClass} btn--back" ${allData}>
       <svg width="24px" height="20px">
         <use xlink:href="${root}assets/img/symbol/sprite.svg#back"></use>
       </svg>
@@ -35,7 +38,7 @@ module.exports = function(options) {
   }
 
   function renderDelete() {
-    return `<button type="button" class="${cssClass} ${cssClass}--delete">
+    return `<button id="${id}" type="button" class="${cssClass} ${cssClass}--delete">
       <svg class="icon" width="18" height="18">
         <use xlink:href="${root}assets/img/symbol/sprite.svg#delete"></use>
       </svg>
@@ -48,7 +51,7 @@ module.exports = function(options) {
   }
 
   function renderDefault() {
-    return `<button type="${type}" class="${cssClass}" ${disabled ? 'disabled' : ''}>
+    return `<button id="${id}" type="${type}" class="${cssClass}" ${disabled ? 'disabled' : ''} ${hidden ? 'hidden' : ''}>
       <span class="btn__text">${text}</span>
     </button>`;
   }

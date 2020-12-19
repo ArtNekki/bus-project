@@ -7,14 +7,15 @@ layout: layout--with-calc-result
 {{> calc-steps}}
 
 <form class="form">
-    <!-- <section class="form__section">
+   <div data-step-content="1" style="display: none;">
+       <section class="form__section">
         <h2 class="form__heading">Ваши данные</h2>
         {{{ switcher name="user-type" items='[{"id": "natural", "name": "Физическое лицо", "checked": "true"}, {"id": "entity", "name": "Юридическое лицо"}]' }}}
-        <p class="form__help-text form__help-text--gray form__help-text--align-center">Выберите статус лица для перехода на следующий шаг</p>
+        <!-- <p class="form__help-text form__help-text--gray form__help-text--align-center">Выберите статус лица для перехода на следующий шаг</p>
         <p class="form__help-text">Чтобы оформить заказ как юридическое лицо, вам необходимо
             {{{link href="#" text="войти" mods="blue"}}} или {{{link href="#" text="зарегистрироваться" mods="blue"}}}
-        </p>
-        <div class="form__fieldset form__fieldset--2-col-sm form__fieldset--3-col-xl">
+        </p> -->
+        <div class="form__fieldset form__fieldset--2-col-sm form__fieldset--3-col-xl form__fieldset--mg-top">
             <div class="form__field">
                 <label for="last-name" class="form__label">Фамилия<sup>*</sup></label>
                 {{{ input type="text" id="last-name" name="last-name" error="Не заполнено"}}}
@@ -46,13 +47,15 @@ layout: layout--with-calc-result
                 }}}
             </div>
         </div>
-        <div class="form__fieldset form__fieldset--actions form__fieldset--2-col-sm form__fieldset--3-col-xl">
+        <!-- <div class="form__fieldset form__fieldset--actions form__fieldset--2-col-sm form__fieldset--3-col-xl">
             <div class="form__field form__field--end-xl">
                 {{{ btn type="submit" text="Далее" mods="lg"  disabled="true"}}}
             </div>
-        </div>
-    </section> -->
-    <section class="form__section">
+        </div> -->
+    </section>
+   </div> 
+   <div data-step-content="2" style="display: none;">
+        <section class="form__section">
         <h2 class="form__heading">Отправитель</h2>
         <div class="form__fieldset form__fieldset--2-col-sm">
             <div class="form__field form__field--full">
@@ -102,8 +105,88 @@ layout: layout--with-calc-result
             </div>
         </div>
     </section>
+   </div>
+   <div data-step-content="3" style="display: none;">
+    {{> fieldset--tags}}
+    <div class="form__section">
+        {{> fieldset--goods-type}}
+        <div class="active" data-content="goods-type-docs">
+        <div class="form__field">
+            <label class="form__label">Количество мест</label>
+            {{{ counter name="place-count" }}}
+        </div>
+        </div>
+        <div data-content="goods-type-package">
+        {{> fieldset--package delete="true"}}
+        {{> fieldset--package error="true" delete="true"}}
+        {{> fieldset--package }}
+        {{{ btn text="Добавить еще 1 позицию" }}}
+        </div>
+        <div data-content="goods-type-auto">
+        <label class="form__label">Выберите тип запчасти</label>
+        {{> fieldset--auto-part delete="true"}}
+        {{> fieldset--auto-part }}
+        {{{ btn text="Добавить еще 1 позицию" }}}
+        <dl class="form__details">
+            <dt><b>Тип груза:</b></dt>
+            <dd>Пожалуйста, выберите тип запчасти из списка. Если вы не нашли подходящей запчасти, рассчитайте стоимость обычной посылки.</dd>
+        </dl>
+        </div>
+        <div data-content="goods-type-other">
+        Что-то другое ...
+        </div>
+    </div>
+    <section class="form__section">
+        <h2 class="form__heading">Упаковка:</h2>
+        {{> fieldset--boxing }}
+    </section>
+    <section class="form__section">
+        <h2 class="form__heading">Дополнительные услуги:</h2>
+        {{> fieldset--add-services }}
+    </section>
+    <section class="form__section">
+        <h2 class="form__heading">Получатель:</h2>
+        <div class="form__fieldset form__fieldset--2-col-sm">
+            <div class="form__field form__field--full">
+                <label for="fio" class="form__label">ФИО<sup>*</sup></label>
+                {{{ input type="text" id="fio" name="fio" error="Не заполнено"}}}
+            </div>
+            <div class="form__field">
+                <label for="tel" class="form__label">Номер телефона<sup>*</sup></label>
+                {{{ input type="tel" id="tel" name="tel" error="Не заполнено"}}}
+            </div>      
+        </div>
+    </section>
+    <section class="form__section">
+        <h2 class="form__heading">Пункт получения</h2>
+        <div class="form__fieldset form__fieldset--pickup-point form__fieldset--row-gap-lg">
+            <div class="form__field form__field--location">
+                <label for="destination" class="form__label">Населенный пункт<sup>*</sup></label>
+                {{{ input type="text" id="destination" name="destination" error="Не заполнено"}}}
+            </div>
+            <div class="form__fieldset form__fieldset--department">
+                <label class="form__label form__label--light form__label--full">Выберите отделение:</label>
+                <div class="form__field">
+                    {{{ radio name="department" label="Владивосток, Гоголя 22" }}}
+                </div>
+                <div class="form__field">
+                    {{{ radio name="department" label="Владивосток, Карла Маркса" }}}
+                </div>
+            </div>              
+            {{{ switcher name="city-from" items='[{"id": "city-from-1", "name": "Встретить с автобуса"}, {"id": "city-from-2", "name": "Доставка курьером", "checked": "true"}]' }}}
+            <div class="form__tab active" data-content="city-from-2">
+                {{> fieldset--address}}
+                {{> fieldset--schedule}}
+            </div>
+        </div> 
+    </section>
+   </div>
+   <div data-step-content="4" style="display: none;">
+        Результат
+    </div>
     <div class="form__actions">
-        {{{ btn type="back"}}}
-        {{{ btn type="submit" text="Далее" mods="lg"}}}
+        {{{ btn id="backStep" type="back" disabled="true"}}}
+        <!-- {{{ btn type="submit" text="Далее" mods="lg"}}} -->
+        {{{ btn id="nextStep" type="button" text="Далее" mods="lg"}}}
     </div>
 </form>

@@ -35,6 +35,7 @@
             }
         }
 
+        &:not(:last-child).active::after,
         &:not(:last-child).done::after {
             background-color: $primary-color;
         }

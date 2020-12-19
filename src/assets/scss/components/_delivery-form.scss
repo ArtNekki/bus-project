@@ -14,7 +14,7 @@
     grid-column-gap: $form-column-gap;
     grid-row-gap: 15px;
     // justify-content: start;
-    align-items: center;
+    align-items: start;
     align-self: start;
 
     & > * {
@@ -47,13 +47,17 @@
     grid-column: 1 / -1;
   }
 
-  &__fieldset--actions {
-    margin-top: 40px;
+  &__fieldset--mg-top {
+    margin-top: 30px;
+
+    @include media-breakpoint-up(md) {
+      margin-top: 40px;
+    }
   }
 
   &__fieldset--delivery {
     $areas: label-from, select-from, label-to, select-to, form-refresh, switcher-from, switcher-to, details-from, details-to;
-    $template-columns-md: repeat(2, 1fr) 40px repeat(2, 1fr);
+    $template-columns-md: repeat(2, 1fr) 18px repeat(2, 1fr);
     $template-areas-md: 
       "label-from label-from . label-to label-to"
       "select-from select-from form-refresh select-to select-to"
@@ -257,11 +261,19 @@
   }
 
   &__fieldset--delivery-point {
+    $template-areas-md:   
+      "location location"
+      "department department"
+      "switcher ."
+      "form-tab form-tab"
+      "delivery-date .";
+
     grid-template-columns: 1fr;
     grid-template-areas: 
       "location"
       "department"
       "switcher"
+      "form-tab"
       "delivery-date";
 
     @include media-breakpoint-up(sm) {
@@ -270,23 +282,48 @@
         "location location"
         "department department"
         "switcher switcher"
+        "form-tab form-tab"
         "delivery-date .";
     }
 
     @include media-breakpoint-only(md) {
-      grid-template-areas: 
-        "location location"
-        "department department"
-        "switcher ."
-        "delivery-date .";
+      grid-template-areas: $template-areas-md;
     }
 
     @include media-breakpoint-up(xl) {
+      grid-template-areas: $template-areas-md;
+    }
+  }
+
+  &__fieldset--pickup-point {
+    $template-areas-md:   
+      "location location"
+      "department department"
+      "switcher ."
+      "form-tab form-tab";
+
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+      "location"
+      "department"
+      "switcher"
+      "form-tab";
+
+    @include media-breakpoint-up(sm) {
+      grid-template-columns: repeat(2, 1fr);
       grid-template-areas: 
         "location location"
         "department department"
-        "switcher ."
-        "delivery-date .";
+        "switcher switcher"
+        "form-tab form-tab";
+    }
+
+    @include media-breakpoint-only(md) {
+      grid-template-areas: $template-areas-md;
+    }
+
+    @include media-breakpoint-up(xl) {
+      grid-template-areas: $template-areas-md;
     }
   }
 
@@ -421,6 +458,10 @@
     }
   }
 
+  &__tab {
+    grid-area: form-tab;
+  }
+
   &__help-text {
     margin: 50px 0 0 0;
     font-family: $font-family--secondary;
@@ -453,9 +494,9 @@
     }
 
     @include media-breakpoint-up(lg) {
-      grid-template-columns: 130px minmax(min-content, 210px);
-      grid-template-areas: "back next";
-      justify-content: space-between;
+      grid-template-columns: 130px 1fr minmax(min-content, 223px);
+      grid-template-areas: "back . next";
+      // justify-content: space-between;
     }
 
     *:first-child {
