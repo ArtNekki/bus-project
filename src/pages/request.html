@@ -246,9 +246,7 @@ layout: layout--with-calc-result
             <div class="form__fieldset">
                 <div class="form__field">
                     <label class="form__label">Комментарий к заявке</label>
-                    <div class="input input--textarea">
-                        <textarea name="describe-task" id="describe-task"  rows="5" class="input__field"></textarea>
-                    </div>
+                    {{{ textarea id="user-comment" name="user-comment" }}}
                 </div>
                 {{{ checkbox id="agree" name="agree" label="Нажимая кнопку «Отправить», я даю свое согласие на <a href='#' class='link link--blue'><span class='link__text'>обработку моих персональных данных</span></a>" mods="sm"}}}
             </div>
