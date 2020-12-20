@@ -242,6 +242,17 @@ layout: layout--with-calc-result
                 {"name": "СМС-уведомления<br />получателю", "value": "Нет"}]'
             }}}
         </section>
+        <section class="form__section">
+            <div class="form__fieldset">
+                <div class="form__field">
+                    <label class="form__label">Комментарий к заявке</label>
+                    <div class="input input--textarea">
+                        <textarea name="describe-task" id="describe-task"  rows="5" class="input__field"></textarea>
+                    </div>
+                </div>
+                {{{ checkbox id="agree" name="agree" label="Нажимая кнопку «Отправить», я даю свое согласие на <a href='#' class='link link--blue'><span class='link__text'>обработку моих персональных данных</span></a>" mods="sm"}}}
+            </div>
+        </section>
     </div>
     <div class="form__actions">
         {{{ btn id="backStep" type="back" disabled="true"}}}

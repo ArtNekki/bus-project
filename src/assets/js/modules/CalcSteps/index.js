@@ -7,7 +7,7 @@ function hideSteps(steps) {
 function scrollToTop() {
     window.scrollTo({
         top: 5,
-        behavior: 'smooth'
+        // behavior: 'smooth'
     });
 }
 

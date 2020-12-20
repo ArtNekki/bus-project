@@ -60,6 +60,10 @@
     line-height: 1;
     cursor: pointer;
     //color: #988300;
+
+    .checkbox--sm & {
+      font-size: 12px;
+    }
   }
 
   &__help {
