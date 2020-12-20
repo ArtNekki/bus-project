@@ -5,6 +5,7 @@ module.exports = function(options) {
   const placeholder = options.hash.placeholder;
   const mods = options.hash.mods;
   const unit = options.hash.unit;
+  const value = options.hash.value;
   const error = options.hash.error;
   const root = options.data.root.root;
   let cssClass = 'input';
@@ -29,8 +30,8 @@ module.exports = function(options) {
     input = `
       <div class="${cssClass}" data-input-width-unit>
           <div class="input__field">
-            <input type="${type}" id="${id}" name="${name}" hidden />
-            <span  class="input__edit" contenteditable>${placeholder || ""}</span>
+            <input ${type ? `type="${type}"` : ``} ${id ? `id="${id}"` : ``} ${name ? `name="${name}"` : ``} hidden />
+            <span  class="input__edit" contenteditable>${placeholder || value || ""}</span>
             <span class="input__unit">${unit}</span>
           </div>
           ${error ? renderError(error) : ""}
@@ -38,7 +39,7 @@ module.exports = function(options) {
   } else {
     input = ` 
       <div class="${cssClass}">
-        <input type="${type}" id="${id}" name="${name}" class="input__field" placeholder="${placeholder || ''}"  />
+        <input ${type ? `type="${type}"` : ``} ${id ? `id="${id}"` : ``} ${name ? `name="${name}"` : ``} ${value ? `value="${value}"` : ``} ${placeholder ? `placeholder="${placeholder}"` : ``}  class="input__field" />
         ${error ? renderError(error) : ""}
       </div>`
   }

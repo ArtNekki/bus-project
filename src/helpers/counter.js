@@ -19,7 +19,7 @@ module.exports = function(options) {
                 <button type="button" class="counter__btn" data-dec>
                   <i class="icon icon--minus"></i>
                 </button>
-                <input type="text" name="${name}" class="counter__input" value="0" disabled="true" />
+                <input type="text" ${name ? `name="${name}"` : ``} class="counter__input" value="0" disabled="true" />
                 <button type="button" class="counter__btn" data-inc>
                   <i class="icon icon--plus"></i>
                 </button>

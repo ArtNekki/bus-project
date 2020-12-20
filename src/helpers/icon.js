@@ -16,7 +16,7 @@ module.exports = function(options) {
 
   cssClass+= allMods;
 
-  const svg = `<svg class="${cssClass}" width=${width} height=${height}>
+  const svg = `<svg class="${cssClass}" ${width ? `width="${width}"` : ``} ${height ? `height="${height}"` : ``}>
                  <use xlink:href="${root}assets/img/symbol/sprite.svg#${name}">
               </svg>`
 

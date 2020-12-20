@@ -1,5 +1,6 @@
 module.exports = function(options) {
   const name = options.hash.name;
+  const id = options.hash.id;
   const items = JSON.parse(options.hash.items);
   const mods = options.hash.mods;
   const root = options.data.root.root;
@@ -18,7 +19,7 @@ module.exports = function(options) {
   function renderItems(items) {
     return items.map((item) => {
       return `<label class="switcher__item">
-                <input type="radio" name="${name}" id="${item.id}" ${item.checked ? "checked" : ""} class="switcher__input" hidden>
+                <input type="radio" ${id ? `id="${id}"` : ``} ${name ? `id="${name}"` : ``} ${item.checked ? "checked" : ""} class="switcher__input" hidden>
                 <span class="switcher__btn">${item.name}</span>
             </label>`
     }).join(``);

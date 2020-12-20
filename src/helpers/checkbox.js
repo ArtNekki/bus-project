@@ -33,9 +33,9 @@ module.exports = function(options) {
 
    const checkbox  = `
       <div class="${cssClass}">
-        <input type="checkbox" id="${id}" name="${name}" class="checkbox__input" ${checked ? 'checked' : ''}>
+        <input type="checkbox" ${id ? `id="${id}"` : ``} ${name ? `name="${name}"` : ``} class="checkbox__input" ${checked ? 'checked' : ''}>
         <div class="checkbox__body">
-            <label for="${id}" class="checkbox__label">${label}</label>
+            <label ${id ? `for="${id}"` : ``} class="checkbox__label">${label}</label>
             ${ meta ? renderMeta(meta) : ''}
             ${ help ? renderHelp() : ''}
         </div>

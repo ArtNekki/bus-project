@@ -29,7 +29,7 @@ module.exports = function(options) {
   cssClass+= allMods;
 
   function renderBack() {
-    return `<button id="${id}" type="button" class="${cssClass} btn--back" ${allData}>
+    return `<button ${id ? `id="${id}"` : ``} type="button" class="${cssClass} btn--back" ${allData}>
       <svg width="24px" height="20px">
         <use xlink:href="${root}assets/img/symbol/sprite.svg#back"></use>
       </svg>
@@ -38,7 +38,7 @@ module.exports = function(options) {
   }
 
   function renderDelete() {
-    return `<button id="${id}" type="button" class="${cssClass} ${cssClass}--delete">
+    return `<button ${id ? `id="${id}"` : ``} type="button" class="${cssClass} ${cssClass}--delete">
       <svg class="icon" width="18" height="18">
         <use xlink:href="${root}assets/img/symbol/sprite.svg#delete"></use>
       </svg>
@@ -51,7 +51,7 @@ module.exports = function(options) {
   }
 
   function renderDefault() {
-    return `<button id="${id}" type="${type}" class="${cssClass}" ${disabled ? 'disabled' : ''} ${hidden ? 'hidden' : ''}>
+    return `<button ${id ? `id="${id}"` : ``} ${type ? `type="${type}"` : ``} class="${cssClass}" ${disabled ? 'disabled' : ''} ${hidden ? 'hidden' : ''}>
       <span class="btn__text">${text}</span>
     </button>`;
   }
