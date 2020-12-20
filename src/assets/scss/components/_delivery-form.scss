@@ -3,9 +3,15 @@
 
   margin-top: 35px;
   margin-bottom: 50px;
+  counter-reset: heading;
 
   &__section {
    margin-bottom: 50px;
+
+   &--w-underline {
+    padding-bottom: 40px; 
+    border-bottom: 2px solid #F2F2F2;
+   }
   }
 
   &__fieldset {
@@ -72,7 +78,6 @@
       }
     }
 
-    padding-bottom: 40px;
     display: grid;
     grid-template-columns: 1fr auto;
     grid-template-areas:
@@ -84,7 +89,7 @@
       "select-to select-to"
       "switcher-to switcher-to"
       "details-to details-to";
-    border-bottom: 3px solid #F2F2F2;
+
 
     @include media-breakpoint-only(md) {
       grid-template-columns: $template-columns-md;
@@ -413,6 +418,15 @@
       grid-column: 1 / -1;
     }
 
+    &--w-counter {
+      &::before {
+        counter-increment: heading;
+        content: counter(heading, decimal-leading-zero) ".";
+        margin-right: 5px;
+        color: #B3B3B3;
+      }
+    }
+
     .form__fieldset--goods-type & {
       grid-column: 1 / -1;
 
@@ -475,6 +489,16 @@
     &--align-center {
       text-align: center;
     }
+  }
+
+  &__mark {
+    margin-bottom: 15px;
+    padding: 6px 8px;
+    display: inline-block;
+    font-family: $font-family--secondary;
+    font-size: 15px;
+    line-height: 1;
+    background-color: $primary-color;
   }
 
   &__actions {

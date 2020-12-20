@@ -1,0 +1,40 @@
+.order-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: $font-family--secondary;
+    font-size: 15px;
+    line-height: 1.2;
+
+    &:not(:last-of-type) {
+        margin-bottom: 30px;
+    }
+
+    &__item {
+        display: grid;
+        grid-template-columns: auto 1fr 70%;
+        grid-template-areas: "name dots value";
+        align-items: baseline;
+        grid-column-gap: 5px;
+
+        &::before {
+            content: "";
+            grid-area: dots;
+            border-bottom: 1px dotted #B3B3B3;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
+    }
+
+    &__name {
+        grid-area: name;
+        color: #B3B3B3;
+    }
+
+    &__value {
+        grid-area: value;
+        justify-self: start;
+    }
+}

@@ -182,7 +182,66 @@ layout: layout--with-calc-result
     </section>
    </div>
    <div data-step-content="4" style="display: none;">
-        Результат
+        <section class="form__section form__section--w-underline">
+            <h2 class="form__heading form__heading--w-counter">Отправитель</h2>
+            {{{ order-list items='[
+                {"name": "Ваша роль", "value": "Отправитель"},
+                {"name": "ФИО", "value": "Иванов Иван Иванович"},
+                {"name": "Телефон", "value": "+7(914)123-12-12"},
+                {"name": "E-mail", "value": "ivan@mail.ru"}]' 
+            }}}
+        </section>
+        <section class="form__section form__section--w-underline">
+            <h2 class="form__heading form__heading--w-counter">Пункт отправления</h2>
+            {{{ order-list items='[
+                {"name": "Населенный пункт", "value": "Владивосток"},
+                {"name": "Доставка курьером", "value": "ул. Кирова, д. 12, офис/кв. 66"},
+                {"name": "Дата отправки", "value": "22.11.2019"}]'
+            }}}
+        </section>
+        <section class="form__section form__section--w-underline">
+            <h2 class="form__heading form__heading--w-counter">Получатель</h2>
+            {{{ order-list items='[
+                {"name": "ФИО", "value": "Иванов Иван Иванович"},
+                {"name": "Документ", "value": "Паспорт"},
+                {"name": "Номер документа", "value": "1234 123493"},
+                {"name": "Телефон", "value": "+ 7(914)123-12-12"}]' 
+            }}}
+        </section>
+        <section class="form__section form__section--w-underline">
+            <h2 class="form__heading form__heading--w-counter">Пункт получения</h2>
+            {{{ order-list items='[
+                {"name": "Населенный пункт", "value": "Уссурийск"},
+                {"name": "Доставка курьером", "value": "ул. Кирова, д. 12, офис/кв. 66"},
+                {"name": "Дата отправки", "value": "22.11.2019"}]'
+            }}}
+        </section>
+        <section class="form__section form__section--w-underline">
+            <h2 class="form__heading form__heading--w-counter">Пункт получения</h2>
+            {{{ order-list items='[
+                {"name": "Характер груза", "value": "Посылка"}]' 
+            }}}
+            <div class="form__mark">Место №1</div>
+            {{{ order-list items='[
+                {"name": "Габариты", "value": "Ширина: <b>32 см</b>., Высота: <b>120 см</b>., Длина: <b>50 см</b>. "},
+                {"name": "Вес", "value": "12 кг."},
+                {"name": "Упаковка", "value": "Коробка картонная (4 шт), Сейф пакет (1 шт)"}]' 
+            }}}
+            <div class="form__mark">Место №2</div>
+            {{{ order-list items='[
+                {"name": "Габариты", "value": "Ширина: <b>32 см</b>., Высота: <b>120 см</b>., Длина: <b>50 см</b>. "},
+                {"name": "Вес", "value": "12 кг."},
+                {"name": "Упаковка", "value": "Коробка картонная (4 шт), Сейф пакет (1 шт)"}]' 
+            }}}
+        </section>
+        <section class="form__section form__section--w-underline">
+            <h2 class="form__heading form__heading--w-counter">Дополнительные услуги</h2>
+            {{{ order-list items='[
+                {"name": "Страховка", "value": "25 000 руб."},
+                {"name": "СМС-уведомления<br />отправителю", "value": "Нет"},
+                {"name": "СМС-уведомления<br />получателю", "value": "Нет"}]'
+            }}}
+        </section>
     </div>
     <div class="form__actions">
         {{{ btn id="backStep" type="back" disabled="true"}}}
