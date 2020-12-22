@@ -17,6 +17,8 @@ import './modules/CustomInput';
 import './modules/Form';
 import './modules/CalcResult';
 import './modules/CalcSteps';
+import './modules/Tabs';
+
 import { createPopper } from '@popperjs/core';
 
 import {TweenLite} from "gsap";

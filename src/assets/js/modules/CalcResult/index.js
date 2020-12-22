@@ -13,6 +13,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let sidebarIsActive = false;
     let $sidebar = document.querySelector('.calc-result');
+
+    if (!$sidebar) return;
+
     let $details = $sidebar.querySelector('.calc-result__details')
     let $sidebarToggle = document.querySelector('.calc-result__collapse');
 

@@ -17,8 +17,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const calcSteps = document.querySelector('.calc-steps');
     const stepPoints = document.querySelectorAll('.calc-steps__item');
     const steps = document.querySelectorAll('[data-step-content]');
-    
-    steps[currentStep].style.display = 'block';
+
+    if (steps[currentStep]) {
+        steps[currentStep].style.display = 'block';
+    }
+
+    // if(!nextStep || !backStep) return;
     
     const nextStep = document.getElementById('nextStep');
     const backStep = document.getElementById('backStep');

@@ -23,6 +23,11 @@
       grid-template-columns: repeat(2, 1fr);
       grid-column-gap: 0;
     }
+
+    .tabs--two & {
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 0;
+    }
   }
 
   &__nav li {

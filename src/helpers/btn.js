@@ -51,7 +51,7 @@ module.exports = function(options) {
   }
 
   function renderDefault() {
-    return `<button ${id ? `id="${id}"` : ``} ${type ? `type="${type}"` : ``} class="${cssClass}" ${disabled ? 'disabled' : ''} ${hidden ? 'hidden' : ''}>
+    return `<button ${id ? `id="${id}"` : ``} ${type ? `type="${type}"` : ``} class="${cssClass}" ${disabled ? 'disabled' : ''} ${hidden ? 'hidden=hidden' : ''}>
       <span class="btn__text">${text}</span>
     </button>`;
   }

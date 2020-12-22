@@ -2,8 +2,8 @@
   @include btn-default();
 
   padding: 1em 1.5em;
-  display: block;
-  width: 100%;
+  display: inline-block;
+  // width: 100%;
   font-family: $font-family--secondary;
   font-size: 13px;
   line-height: 1;

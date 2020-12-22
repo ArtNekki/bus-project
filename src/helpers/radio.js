@@ -33,7 +33,7 @@ module.exports = function(options) {
 
    const radio  = `
       <div class="${cssClass}">
-        <input type="radio" ${id ? `id="${id}"` : ``} ${name ? `id="${name}"` : ``} class="radio__input" ${checked ? 'checked' : ''}>
+        <input type="radio" ${id ? `id="${id}"` : ``} ${name ? `name="${name}"` : ``} class="radio__input" ${checked ? 'checked' : ''}>
         <div class="radio__body">
             <label ${id ? `for="${id}"` : ``} class="radio__label">${label}</label>
             ${ meta ? renderMeta(meta) : ''}

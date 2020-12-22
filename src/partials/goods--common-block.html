@@ -1,0 +1,37 @@
+{{> fieldset--tags}}
+<div class="form__section">
+  {{> fieldset--goods-type}}
+  <div class="active" data-content="goods-type-docs">
+    <div class="form__field">
+      <label class="form__label">Количество мест</label>
+      {{{ counter name="place-count" }}}
+    </div>
+  </div>
+  <div data-content="goods-type-package">
+    {{> fieldset--package delete="true"}}
+    {{> fieldset--package error="true" delete="true"}}
+    {{> fieldset--package }}
+    {{{ btn text="Добавить еще 1 позицию" }}}
+  </div>
+  <div data-content="goods-type-auto">
+    <label class="form__label">Выберите тип запчасти</label>
+    {{> fieldset--auto-part delete="true"}}
+    {{> fieldset--auto-part }}
+    {{{ btn text="Добавить еще 1 позицию" }}}
+    <dl class="form__details">
+      <dt><b>Тип груза:</b></dt>
+      <dd>Пожалуйста, выберите тип запчасти из списка. Если вы не нашли подходящей запчасти, рассчитайте стоимость обычной посылки.</dd>
+    </dl>
+  </div>
+  <div data-content="goods-type-other">
+    Что-то другое ...
+  </div>
+</div>
+<section class="form__section">
+  <h2 class="form__heading">Упаковка:</h2>
+  {{> fieldset--boxing }}
+</section>
+<section class="form__section">
+  <h2 class="form__heading">Дополнительные услуги:</h2>
+  {{> fieldset--add-services }}
+</section>

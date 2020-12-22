@@ -19,7 +19,7 @@ module.exports = function(options) {
   function renderItems(items) {
     return items.map((item) => {
       return `<label class="switcher__item">
-                <input type="radio" ${id ? `id="${id}"` : ``} ${name ? `id="${name}"` : ``} ${item.checked ? "checked" : ""} class="switcher__input" hidden>
+                <input type="radio" ${id ? `id="${id}"` : ``} ${name ? `name="${name}"` : ``} ${item.checked ? "checked" : ""} class="switcher__input" hidden>
                 <span class="switcher__btn">${item.name}</span>
             </label>`
     }).join(``);
