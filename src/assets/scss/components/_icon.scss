@@ -7,7 +7,7 @@
   }
 
   &--gray {
-    fill: #B3B3B3;
+    fill: $gray-color--down-11;
   }
 
   &--yellow {
@@ -24,7 +24,7 @@
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    background-color: #F2F2F2;
+    background-color: $gray-light-color--up-5;
 
     &::before,
     &::after {

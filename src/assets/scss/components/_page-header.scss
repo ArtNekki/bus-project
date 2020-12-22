@@ -241,7 +241,7 @@
     width: 100%;
     height: 1px;
     display: block;
-    background-color: #B3B3B3;
+    background-color: $gray-color--down-11;
 
     &::before,
     &::after {
@@ -250,7 +250,7 @@
       left: 0;
       right: 0;
       height: 1px;
-      background-color: #B3B3B3;
+      background-color: $gray-color--down-11;
     }
 
     &::before {

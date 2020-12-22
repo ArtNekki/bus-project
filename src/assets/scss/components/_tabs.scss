@@ -31,7 +31,7 @@
   }
 
   &__nav li {
-    background-color: #f2f2f2;
+    background-color: $gray-light-color--up-5;
 
     .tabs--contacts & {
       background-color: $white-color;

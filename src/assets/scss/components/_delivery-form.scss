@@ -9,8 +9,8 @@
    margin-bottom: 50px;
 
    &--w-underline {
-    padding-bottom: 40px; 
-    border-bottom: 2px solid #F2F2F2;
+    padding-bottom: 40px;
+    border-bottom: 2px solid $gray-light-color--up-5;
    }
   }
 
@@ -19,7 +19,6 @@
     display: grid;
     grid-column-gap: $form-column-gap;
     grid-row-gap: 15px;
-    // justify-content: start;
     align-items: start;
     align-self: start;
 
@@ -64,7 +63,7 @@
   &__fieldset--delivery {
     $areas: label-from, select-from, label-to, select-to, form-refresh, switcher-from, switcher-to, details-from, details-to;
     $template-columns-md: repeat(2, 1fr) 18px repeat(2, 1fr);
-    $template-areas-md: 
+    $template-areas-md:
       "label-from label-from . label-to label-to"
       "select-from select-from form-refresh select-to select-to"
       "switcher-from switcher-from . switcher-to switcher-to"
@@ -78,7 +77,6 @@
       }
     }
 
-    display: grid;
     grid-template-columns: 1fr auto;
     grid-template-areas:
       "label-from label-from"
@@ -148,7 +146,6 @@
 
   &__fieldset--schedule {
     margin-top: 25px;
-    display: grid;
     grid-template-columns: auto 1fr;
     grid-column-gap: $form-column-gap * 2;
     grid-row-gap: 10px;
@@ -170,7 +167,6 @@
     $template-columns-md: 125px repeat(4, auto);
 
     margin-bottom: 30px;
-    display: grid;
     grid-template-columns: repeat(2, auto);
     justify-content: start;
     align-items: center;
@@ -267,7 +263,7 @@
   }
 
   &__fieldset--delivery-point {
-    $template-areas-md:   
+    $template-areas-md:
       "location location"
       "department department"
       "switcher ."
@@ -275,7 +271,7 @@
       "delivery-date .";
 
     grid-template-columns: 1fr;
-    grid-template-areas: 
+    grid-template-areas:
       "location"
       "department"
       "switcher"
@@ -284,7 +280,7 @@
 
     @include media-breakpoint-up(sm) {
       grid-template-columns: repeat(2, 1fr);
-      grid-template-areas: 
+      grid-template-areas:
         "location location"
         "department department"
         "switcher switcher"
@@ -302,14 +298,14 @@
   }
 
   &__fieldset--pickup-point {
-    $template-areas-md:   
+    $template-areas-md:
       "location location"
       "department department"
       "switcher ."
       "form-tab form-tab";
 
     grid-template-columns: 1fr;
-    grid-template-areas: 
+    grid-template-areas:
       "location"
       "department"
       "switcher"
@@ -317,7 +313,7 @@
 
     @include media-breakpoint-up(sm) {
       grid-template-columns: repeat(2, 1fr);
-      grid-template-areas: 
+      grid-template-areas:
         "location location"
         "department department"
         "switcher switcher"
@@ -424,7 +420,7 @@
         counter-increment: heading;
         content: counter(heading, decimal-leading-zero) ".";
         margin-right: 5px;
-        color: #B3B3B3;
+        color: $gray-color--down-11;
       }
     }
 
@@ -499,13 +495,13 @@
     line-height: 1.4;
     text-align: center;
     color: $black-color;
-    background-color: #f2f2f2;
+    background-color: $gray-light-color--up-5;
     text-align: center;
     text-decoration: none;
     white-space: nowrap;
     user-select: none;
     cursor: pointer;
-  
+
     @include focus {
       outline: none;
     }
@@ -545,9 +541,9 @@
     font-size: 18px;
     line-height: 1.2;
     text-align: center;
-    
+
     &--gray {
-      color: #B3B3B3;
+      color: $gray-color--down-11;
     }
 
     &--align-center {
@@ -575,7 +571,7 @@
 
   &__actions {
     display: grid;
-    grid-template-areas: 
+    grid-template-areas:
     "next"
     "back";
     grid-column-gap: $form-column-gap;
@@ -584,7 +580,7 @@
 
     @include media-breakpoint-up(sm) {
       grid-template-columns: repeat(2, 1fr);
-      grid-template-areas: 
+      grid-template-areas:
       "next ."
       "back .";
     }
@@ -592,7 +588,6 @@
     @include media-breakpoint-up(lg) {
       grid-template-columns: 130px 1fr minmax(min-content, 223px);
       grid-template-areas: "back . next";
-      // justify-content: space-between;
     }
 
     *:first-child {
@@ -601,7 +596,7 @@
 
     *:last-child {
       grid-area: next;
-    } 
+    }
   }
 
   [data-content] {

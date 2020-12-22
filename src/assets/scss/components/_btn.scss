@@ -15,8 +15,8 @@
 
 
   &:disabled {
-    background-color: #F2F2F2;
-    color: #B3B3B3;
+    background-color: $gray-light-color--up-5;
+    color: $gray-color--down-11;
     cursor: not-allowed;
   }
 

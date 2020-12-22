@@ -19,7 +19,7 @@
         position: relative;
         display: grid;
         grid-template-columns: $item-size 1fr;
-   
+
         grid-column-gap: 10px;
         grid-row-gap: $row-gap;
 
@@ -30,7 +30,7 @@
             align-self: center;
             grid-column: 2 / 3;
             grid-row: 1 / 2;
-            background-color: #F2F2F2;
+            background-color: $gray-light-color--up-5;
             transition: all 0.5s;
         }
 
@@ -56,7 +56,8 @@
         line-height: 1;
         font-style: normal;
         color: rgba($black-color, 0.2);
-        background-color: #F2F2F2;
+        background-color: $gray-light-color--up-5;
+        background-color: lighten(#E5E5E5, 5%);
         border-radius: 50%;
         transition-property: all;
         transition-delay: 0.5s;
@@ -77,10 +78,10 @@
         }
 
         &::after {
-          content: "";  
+          content: "";
           position: absolute;
           top: 15px;
-          left: 15px; 
+          left: 15px;
           width: 16px;
           height: 8px;
           display: none;
@@ -106,7 +107,7 @@
         text-transform: uppercase;
         letter-spacing: 0.08em;
         white-space: nowrap;
-        color: #B3B3B3;
+        color: $gray-color--down-11;
         opacity: 0;
 
         .calc-steps__item.active & {

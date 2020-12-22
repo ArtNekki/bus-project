@@ -28,7 +28,7 @@
         &::before {
             content: "";
             grid-area: dots;
-            border-bottom: 1px dotted #B3B3B3;
+            border-bottom: 1px dotted $gray-color--down-11;
         }
 
         &:not(:last-child) {
@@ -38,7 +38,7 @@
 
     &__name {
         grid-area: name;
-        color: #B3B3B3;
+        color: $gray-color--down-11;
     }
 
     &__value {
