@@ -1,4 +1,4 @@
-.order-list {
+.data-list {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -12,10 +12,18 @@
 
     &__item {
         display: grid;
-        grid-template-columns: auto 1fr 70%;
+        grid-template-columns: auto 1fr 50%;
         grid-template-areas: "name dots value";
         align-items: baseline;
         grid-column-gap: 5px;
+
+        @include media-breakpoint-only(md) {
+            grid-template-columns: auto 1fr 75%;
+        }
+
+        @include media-breakpoint-up(xl) {
+            grid-template-columns: auto 1fr 74%;
+        }
 
         &::before {
             content: "";
