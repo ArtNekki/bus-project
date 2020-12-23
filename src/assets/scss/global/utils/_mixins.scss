@@ -287,6 +287,10 @@
     color: $black-color;
     border: 2px solid $primary-color;
   }
+
+  @include placeholder {
+    color: $gray-color--down-11;
+  }
 }
 
 @mixin scollbar {

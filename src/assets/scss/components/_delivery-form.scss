@@ -5,6 +5,10 @@
   margin-bottom: 50px;
   counter-reset: heading;
 
+  &--no-margin {
+    margin: 0;
+  }
+
   &__section {
    margin-bottom: 50px;
 

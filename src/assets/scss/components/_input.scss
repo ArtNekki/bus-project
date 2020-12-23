@@ -23,6 +23,11 @@
       background-color: rgba($red-color, 0.5);
       color: $black-color;
     }
+
+    .input--clean & {
+      box-shadow: none;
+      border: none;
+    }
   }
 
   &__edit {

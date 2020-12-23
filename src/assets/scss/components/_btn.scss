@@ -24,6 +24,10 @@
     outline: none;
   }
 
+  &--black {
+    background-color: $black-color;
+  }
+
   &--lg {
     font-size: 18px;
   }
@@ -72,6 +76,10 @@
 
     .btn > svg ~ & {
       margin-left: 10px;
+    }
+
+    .btn--black & {
+      color: $white-color;
     }
 
     .btn--delete & {

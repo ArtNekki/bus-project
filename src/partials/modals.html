@@ -1,4 +1,5 @@
-<div class="modal">
+<!--Thank's modal-->
+<article class="modal" style="display: none;">
   <div class="modal__content">
     <button type="button" class="modal__close">&#160;</button>
     <div class="modal__icon">
@@ -9,4 +10,56 @@
       {{{ btn type="button" text="Хорошо, спасибо!"}}}
     </div>
   </div>
-</div>
+</article>
+
+<!--Sign-in-->
+<article class="modal modal--theme-yellow">
+  <div class="modal__content">
+    <button type="button" class="modal__close">&#160;</button>
+    <h1 class="modal__title">Регистрация</h1>
+    <div data-pickup-tabs class="tabs tabs--two tabs--invert tabs--nav-sm tabs--no-space">
+      <ul class="tabs__nav">
+        <li>
+          <a data-tabby-default href="#physics">Для физ. лиц</a>
+        </li>
+        <li>
+          <a href="#entity">Для юр. лиц</a>
+        </li>
+      </ul>
+      <div id="physics" class="tabs__panel tabs__panel--pdt-sm">
+        <form action="#" class="form form--no-margin" autocomplete="off">
+          <div class="form__fieldset">
+            <div class="form__field">
+              <label for="user-name" class="form__label">ФИО</label>
+              {{{ input type="text" id="user-name" name="user-name" mods="clean" placeholder="Петров Александр Максимович" error="Не заполнено"}}}
+            </div>
+            <div class="form__field">
+              <label for="email" class="form__label">Почта</label>
+              {{{ input type="email" id="email" name="email" mods="clean" placeholder="example@mail.ru" error="Не заполнено"}}}
+            </div>
+            <div class="form__field">
+              <label for="tel" class="form__label">Телефон</label>
+              {{{ input type="text" id="tel" name="tel" mods="clean" placeholder="+7 (__) __-__-__" error="Не заполнено"}}}
+            </div>
+            {{{ btn type="submit" text="Зарегистрироваться" mods="lg, black" }}}
+          </div>
+        </form>
+      </div>
+      <div id="entity" class="tabs__panel tabs__panel--pdt-sm">
+        <form action="#" class="form form--no-margin" autocomplete="off">
+          <div class="form__fieldset">
+            <div class="form__field">
+              <label for="entity-email" class="form__label">Почта</label>
+              {{{ input type="email" id="entity-email" name="entity-email" mods="clean" placeholder="example@mail.ru" error="Не заполнено"}}}
+            </div>
+            <div class="form__field">
+              <label for="entity-tel" class="form__label">Телефон</label>
+              {{{ input type="text" id="entity-tel" name="entity-tel" mods="clean" placeholder="+7 (__) __-__-__" error="Не заполнено"}}}
+            </div>
+            {{{ btn type="submit" text="Зарегистрироваться" mods="lg, black" }}}
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</article>

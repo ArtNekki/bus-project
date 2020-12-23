@@ -26,6 +26,9 @@
 
     .tabs--two & {
       grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tabs--no-space & {
       grid-column-gap: 0;
     }
   }
@@ -36,11 +39,15 @@
     .tabs--contacts & {
       background-color: $white-color;
     }
+
+    .tabs--invert & {
+      background-color: transparent;
+    }
   }
 
   &__nav a {
     position: relative;
-    padding: 18px 0;
+    padding: 18px 20px;
     display: block;
     font-family: $font-family--secondary;
     font-size: 22px;
@@ -59,6 +66,16 @@
       border-bottom-color: $gray-light-color;
     }
 
+    .tabs--invert & {
+      border-bottom-color: $yellow-dark-color;
+      color: $yellow-dark-color;
+    }
+
+    .tabs--nav-sm & {
+      font-size: 16px;
+      border-bottom-width: 1px;
+    }
+
     &::before,
     &::after {
       content: "";
@@ -68,7 +85,8 @@
       height: $tab-nav-border-height;
       background: transparent;
 
-      .tabs--contacts & {
+      .tabs--contacts &,
+      .tabs--no-space & {
         display: none;
       }
     }
@@ -90,9 +108,18 @@
       background-color: $white-color;
       border-color: $primary-color;
 
+      .tabs--invert & {
+        background-color: transparent;
+        border-color: $white-color;
+      }
+
       &::before,
       &::after {
         background-color: $primary-color;
+
+        .tabs--invert & {
+          background-color: $white-color;
+        }
       }
     }
   }
@@ -104,6 +131,10 @@
 
   &__panel {
     padding-top: 40px;
+
+    &--pdt-sm {
+      padding-top: 20px;
+    }
   }
 
   &__content {
