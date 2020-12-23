@@ -25,10 +25,15 @@
       height: 20px;
       box-sizing: border-box;
       border: 1px solid $gray-light-color;
+      background-color: $white-color;
       border-radius: calc(#{$border-radius} / 2);
 
       .checkbox__input:checked ~ & {
         background-color: $primary-color;
+      }
+
+      .checkbox--inverted .checkbox__input:checked ~ & {
+        background-color: $white-color;
       }
     }
 
@@ -63,6 +68,10 @@
 
     .checkbox--sm & {
       font-size: 12px;
+    }
+
+    .checkbox--md & {
+      font-size: 14px;
     }
   }
 

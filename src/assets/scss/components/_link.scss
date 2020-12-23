@@ -10,14 +10,6 @@
     align-items: start;
   }
 
-  &--sm {
-    font-size: 12px;
-  }
-
-  &--lg {
-    font-size: 16px;
-  }
-
   &--gray {
     color: lighten($gray-dark-color, 10%);
   }
@@ -28,6 +20,10 @@
 
   &--bold {
     font-weight: 500;
+  }
+
+  &--justify-center {
+    justify-self: center;
   }
 
   &__text {
@@ -53,6 +49,14 @@
       font-size: inherit;
       line-height: inherit;
     }
+
+    .link--sm & {
+      font-size: 12px;
+    }
+
+    .link--lg & {
+      font-size: 16px;
+    }
   }
 
   &__text span {
@@ -65,6 +69,10 @@
 
     .link--blue & {
       border-bottom-color: $blue-color;
+    }
+
+    .link--no-underline & {
+      border: none;
     }
   }
 }

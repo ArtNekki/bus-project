@@ -13,7 +13,7 @@
 </article>
 
 <!--Sign-in-->
-<article class="modal modal--theme-yellow">
+<article class="modal modal--theme-yellow" style="display: none;">
   <div class="modal__content">
     <button type="button" class="modal__close">&#160;</button>
     <h1 class="modal__title">Регистрация</h1>
@@ -61,5 +61,28 @@
         </form>
       </div>
     </div>
+  </div>
+</article>
+
+<!--Log-in-->
+<article class="modal modal--theme-yellow">
+  <div class="modal__content">
+    <button type="button" class="modal__close">&#160;</button>
+    <h1 class="modal__title">Авторизация</h1>
+    <form action="#" class="form" autocomplete="off">
+      <div class="form__fieldset">
+        <div class="form__field">
+          <label for="login" class="form__label">Логин</label>
+          {{{ input type="text" id="login" name="login" mods="clean" placeholder="Номер телефона" error="Не заполнено"}}}
+        </div>
+        <div class="form__field">
+          <label for="password" class="form__label">Пароль</label>
+          {{{ input type="password" id="password" name="password" mods="clean" value="********" error="Не заполнено"}}}
+        </div>
+        {{{ checkbox id="agree" name="agree" label="Запомнить" mods="md, inverted"}}}
+        {{{ btn type="submit" text="Авторизоваться" mods="lg, black" }}}
+        {{{ link href="#" text="Регистрация" mods="lg, no-underline, justify-center"}}}
+      </div>
+    </form>
   </div>
 </article>
