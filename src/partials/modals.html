@@ -65,7 +65,7 @@
 </article>
 
 <!--Log-in-->
-<article class="modal modal--theme-yellow">
+<article class="modal modal--theme-yellow" style="display: none;">
   <div class="modal__content">
     <button type="button" class="modal__close">&#160;</button>
     <h1 class="modal__title">Авторизация</h1>
@@ -84,5 +84,84 @@
         {{{ link href="#" text="Регистрация" mods="lg, no-underline, justify-center"}}}
       </div>
     </form>
+  </div>
+</article>
+
+<!--render report-->
+<article class="modal" style="display: none;">
+  <div class="modal__content">
+    <button type="button" class="modal__close">&#160;</button>
+    <h1 class="modal__title">Сформировать отчет</h1>
+    <form action="#" class="form" autocomplete="off">
+      <div class="form__fieldset">
+        <div class="form__field">
+          <label for="sum" class="form__label">Введите сумму счета в рублях <sup>*</sup></label>
+          {{{ input type="text" id="sum" name="sum"  value="15 000 Р" error="Не заполнено"}}}
+        </div>
+        {{{ btn type="submit" text="Сформировать отчет" mods="lg" }}}
+      </div>
+    </form>
+  </div>
+</article>
+
+<!--report rendered-->
+<article class="modal modal--content-justify-center" style="display: none;">
+  <div class="modal__content">
+    <button type="button" class="modal__close">&#160;</button>
+    <div class="modal__icon">
+      {{{ icon name="files" width="49" height="62" }}}
+    </div>
+    <p class="modal__text">Счет на 10 000 руб. сформирован! Загрузка счета на ваш компьютер произойдет автоматически.</p>
+    <div class="modal__btn">
+      {{{ btn type="button" text="Хорошо, спасибо!"}}}
+    </div>
+  </div>
+</article>
+
+<!--render report-->
+<article class="modal">
+  <div class="modal__content">
+    <button type="button" class="modal__close">&#160;</button>
+    <h1 class="modal__title">№	614933</h1>
+    <div class="calc-result calc-result--in-modal">
+      <section class="calc-result__main">
+        <div class="calc-result__details">
+          <div class="calc-result__scroll">
+            <p class="gray">Тип груза:</p>
+            <dl>
+              <dt><b>Груз 1:</b></dt>
+              <dd>Запчасти: бампер (мест: 1), капот (мест: 2), стекло (мест: 1) </dd>
+              <dt><b>Груз 2:</b></dt>
+              <dd>Посылку (мест: 1)</dd>
+              <dt><b>Груз 3:</b></dt>
+              <dd>Документы (мест: 1)</dd>
+            </dl>
+            <p class="gray">Направление перевозки:</p>
+            <p>г. Владивосток — г. Уссурийск <b class="lg">500 руб.</b></p>
+            <p class="gray">Забор посылки у отправителя - вызов курьера</p>
+            <p><b class="lg">300 руб.</b></p>
+            <p class="gray">Доставка посылки до получателя - вызов курьера</p>
+            <p><b class="lg">300 руб.</b></p>
+            <p class="gray">Упаковка груза:</p>
+            <dl>
+              <dt>Коробка картонная (4 шт):</dt>
+              <dd><b class="lg">120 руб.</b></dd>
+              <dt>Сейф пакет (1 шт):</dt>
+              <dd><b class="lg">120 руб.</b></dd>
+            </dl>
+            <p class="gray">Страхование посылки на сумму 25 000 руб.</p>
+            <p><b class="lg">200 руб.</b></p>
+          </div>
+        </div>
+        <div class="calc-result__total">
+          <p><span class="gray">Итого: </span><b>1 550 руб.</b></p>
+        </div>
+        <div class="calc-result__footer">
+          <div class="calc-result__submit">
+            {{{ btn text="Отменить заказ" mods="lg, black, w-270"}}}
+          </div>
+        </div>
+      </section>
+    </div>
   </div>
 </article>

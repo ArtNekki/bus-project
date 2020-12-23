@@ -20,6 +20,12 @@
         margin-top: 125px;
     }
 
+    &--in-modal {
+      position: relative;
+      margin-top: 0;
+      display: block;
+    }
+
     &__link {
         margin-left: $container-padding-x * 2;
         display: none;
@@ -44,6 +50,17 @@
             padding: 15px ($container-padding-x * 2) 25px ($container-padding-x * 2);
             border-radius: $border-radius;
         }
+
+
+      .calc-result--in-modal & {
+        margin-top: 0;
+        padding: 0;
+        box-shadow: none;
+      }
+
+      .calc-result--in-modal .calc-result.active & {
+        box-shadow: none;
+      }
     }
 
     &__title {
