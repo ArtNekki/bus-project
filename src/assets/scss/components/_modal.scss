@@ -64,4 +64,11 @@
   &__btn {
     margin-top: 15px;
   }
+
+  &__actions {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-column-gap: 10px;
+  }
 }
