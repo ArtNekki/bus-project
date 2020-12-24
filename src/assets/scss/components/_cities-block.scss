@@ -3,6 +3,10 @@
   grid-template-columns: auto 1fr;
   grid-column-gap: 30px;
 
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
   &__letter {
     font-family: $font-family;
     font-size: 24px;
