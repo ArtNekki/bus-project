@@ -167,7 +167,7 @@
 </article>
 
 <!-- undo order form -->
-<article class="modal modal--content-justify-center">
+<article class="modal modal--content-justify-center" style="display: none;">
   <div class="modal__content">
     <button type="button" class="modal__close">&#160;</button>
     <div class="modal__icon">
@@ -177,6 +177,20 @@
     <div class="modal__actions">
       {{{ btn type="button" text="Нет, не отменять!" mods="black"}}}
       {{{ btn type="button" text="Да, отменить!" mods="white"}}}
+    </div>
+  </div>
+</article>
+
+<!--report rendered-->
+<article class="modal modal--content-justify-center">
+  <div class="modal__content">
+    <button type="button" class="modal__close">&#160;</button>
+    <div class="modal__icon">
+      {{{ icon name="circle-ok" width="52" height="46" }}}
+    </div>
+    <p class="modal__text">Заказ отменен</p>
+    <div class="modal__btn">
+      {{{ btn type="button" text="Хорошо, спасибо!" mods="black" }}}
     </div>
   </div>
 </article>
