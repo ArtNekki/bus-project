@@ -19,19 +19,21 @@ document.addEventListener('DOMContentLoaded', function() {
     let $details = $sidebar.querySelector('.calc-result__details')
     let $sidebarToggle = document.querySelector('.calc-result__collapse');
 
-    $sidebarToggle.addEventListener('click', function() {
+    if ($sidebarToggle) {
+      $sidebarToggle.addEventListener('click', function() {
         if (sidebarIsActive) {
-            $sidebar.classList.remove('active');
-            document.documentElement.classList.remove('page--no-scroll');
-            sidebarIsActive = false;
+          $sidebar.classList.remove('active');
+          document.documentElement.classList.remove('page--no-scroll');
+          sidebarIsActive = false;
         } else {
-            $sidebar.classList.add('active');
-            document.documentElement.classList.add('page--no-scroll');
-            sidebarIsActive = true;
+          $sidebar.classList.add('active');
+          document.documentElement.classList.add('page--no-scroll');
+          sidebarIsActive = true;
         }
 
         // addScroll($details);
-    });
+      });
+    }
 
     document.addEventListener('click', function(e) {
 
@@ -40,6 +42,6 @@ document.addEventListener('DOMContentLoaded', function() {
             document.documentElement.classList.remove('page--no-scroll');
             sidebarIsActive = false;
         }
-       
+
     });
 });
