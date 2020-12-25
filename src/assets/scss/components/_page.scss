@@ -32,11 +32,7 @@
     @include container();
 
     &--account-two-col {
-      display: grid;
 
-      @include media-breakpoint-up(md) {
-        grid-template-columns: 1fr minmax(min-content, 270px);
-      }
     }
 
     //@include media-breakpoint-up(lg) {
@@ -50,6 +46,27 @@
     //  grid-template-columns: minmax(auto, 700px) minmax(auto, 400px);
     //  grid-column-gap: 70px;
     //}
+  }
+
+  &__title {
+    margin: 0;
+    margin-top: 40px;
+    margin-bottom: 25px;
+    font-family: $font-family;
+    font-size: 32px;
+    line-height: 1.2;
+    color: $black-color;
+
+    @include media-breakpoint-up(md) {
+      margin-top: 35px;
+      margin-bottom: 45px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      margin-top: 65px;
+      margin-bottom: 40px;
+      font-size: 42px;
+    }
   }
 }
 

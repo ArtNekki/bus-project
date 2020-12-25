@@ -3,13 +3,17 @@
   {{> head}}
 <body>
 {{> page-header}}
-<div class="page__container page__container--account-two-col">
-  <main class="page-section">
-    <h1 class="page-section__title">{{{title}}}</h1>
-    {{> body}}
-  </main>
-  {{> entity-account-sidebar}}
-</div>
+<main class="page__container">
+  <h1 class="page__title">{{{title}}}</h1>
+  <div class="account">
+    <div class="account__main">
+      {{> body}}
+    </div>
+    <aside class="account__sidebar">
+      {{> entity-account-sidebar}}
+    </aside>
+  </div>
+</main>
 {{> page-footer}}
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDy38NKqY0dEc4P0rKJHvB5skmvNiFPNk0&&region=RUS&language=ru"></script>
 <script src="{{root}}assets/js/app.js"></script>

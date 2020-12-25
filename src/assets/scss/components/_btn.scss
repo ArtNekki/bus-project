@@ -46,6 +46,11 @@
     min-width: 270px;
   }
 
+  &--w-full {
+    display: block;
+    width: 100%;
+  }
+
   &--delete {
     margin-top: auto;
     margin-bottom: auto;
