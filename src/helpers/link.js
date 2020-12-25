@@ -36,6 +36,17 @@ module.exports = function(options) {
           </a>`
   }
 
+  function renderLogoutLink(cssClass) {
+    return `<a href='${href}' class='${cssClass}'>
+            <div class='link__text'>
+              <span>${text}</span>
+            </div>
+            <svg width="27" height="27">
+                <use xlink:href="${root}assets/img/symbol/sprite.svg#user-logged-in"></use>
+            </svg>
+          </a>`
+  }
+
   function renderHelpLink(cssClass) {
     return `<a href='${href}' class='${cssClass}'>
             ${renderHelpIcon()}
@@ -53,8 +64,11 @@ module.exports = function(options) {
     case 'help':
       link = renderHelpLink(cssClass)
       break;
+    case 'logout':
+      link = renderLogoutLink(cssClass)
+      break;
     default:
-      link = renderLink(cssClass)  
+      link = renderLink(cssClass)
   }
 
   return link;
