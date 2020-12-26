@@ -24,7 +24,7 @@ module.exports = function(options) {
   cssClass+= allMods;
 
   let list = `
-    <ul ${id ? `id="${id}"` : ``} class=${cssClass}>
+    <ul ${id ? `id="${id}"` : ``} class="${cssClass}">
       ${renderItems(items)}
     </ul>`;
 

@@ -168,6 +168,7 @@
     margin-bottom: 30px;
     display: flex;
     flex-wrap: wrap;
+    grid-column-gap: 0;
     grid-row-gap: 0;
   }
 
@@ -226,7 +227,7 @@
       grid-template-columns: $template-columns-md;
       grid-row-gap: $row-gap-md;
       box-shadow: none;
-      border-radius: none;
+      border-radius: 0;
     }
   }
 

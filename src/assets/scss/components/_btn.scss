@@ -80,6 +80,10 @@
     margin-left: 20px;
   }
 
+  .data-list + & {
+    margin-top: 30px;
+  }
+
   &__text {
     font-family: $font-family--secondary;
     font-weight: 500;
