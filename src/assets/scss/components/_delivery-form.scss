@@ -37,6 +37,10 @@
     &--row-gap-lg {
       grid-row-gap: 25px;
     }
+
+    & + & {
+      margin-top: 15px;
+    }
   }
 
   &__fieldset dd {

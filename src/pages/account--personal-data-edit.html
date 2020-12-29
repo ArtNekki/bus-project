@@ -1,0 +1,91 @@
+---
+title: Персональные данные
+layout: account--inner
+---
+
+<form action="#" class="form" autocomplete="off">
+  <section class="form__section form__section--w-underline">
+    {{{ data-list items='[
+    {"name": "Логин:", "value": "tafibuchgalter@mail.ru"},
+    {"name": "Пароль:", "value": "********"}]' mods="account"
+    }}}
+  </section>
+  <section class="form__section form__section--w-underline">
+    <h2 class="form__heading">Данные организации</h2>
+    <div class="form__fieldset form__fieldset--2-col-sm">
+      <div class="form__field">
+        <label for="organization-name" class="form__label">Наименование организации:</label>
+        {{{ input type="text" id="organization-name" name="organization-name" error="Не заполнено"}}}
+      </div>
+      <div class="form__field">
+        <label for="organization-lead" class="form__label">Руководитель:</label>
+        {{{ input type="text" id="organization-lead" name="organization-lead" error="Не заполнено"}}}
+      </div>
+      <div class="form__field">
+        <label for="organization-tel" class="form__label">Телефон:</label>
+        {{{ input type="tel" id="organization-tel" name="organization-tel" error="Не заполнено"}}}
+      </div>
+    </div>
+    <div class="form__fieldset form__fieldset--2-col-sm">
+      <div class="form__field">
+        <label for="organization-inn" class="form__label">ИНН:</label>
+        {{{ input type="text" id="organization-inn" name="organization-inn" error="Не заполнено"}}}
+      </div>
+      <div class="form__field">
+        <label for="organization-kpp" class="form__label">КПП:</label>
+        {{{ input type="text" id="organization-kpp" name="organization-kpp" error="Не заполнено"}}}
+      </div>
+      <div class="form__field">
+        <label for="organization-ogrn" class="form__label">ОГРН:</label>
+        {{{ input type="text" id="organization-ogrn" name="organization-ogrn" error="Не заполнено"}}}
+      </div>
+      <div class="form__field">
+        <label for="organization-bank" class="form__label">Банк:</label>
+        {{{ input type="text" id="organization-bank" name="organization-bank" error="Не заполнено"}}}
+      </div>
+      <div class="form__field">
+        <label for="organization-pc" class="form__label">P/c:</label>
+        {{{ input type="text" id="organization-pc" name="organization-pc" error="Не заполнено"}}}
+      </div>
+      <div class="form__field">
+        <label for="organization-kc" class="form__label">К/c:</label>
+        {{{ input type="text" id="organization-kc" name="organization-kc" error="Не заполнено"}}}
+      </div>
+      <div class="form__field">
+        <label for="organization-contract-number" class="form__label">Номер договора:</label>
+        {{{ input type="tel" id="organization-contract-number" name="organization-contract-number" error="Не заполнено"}}}
+      </div>
+      <div class="form__field">
+        <label for="organization-contract-date" class="form__label">Дата договора:</label>
+        {{{ input type="tel" id="organization-contract-date" name="organization-contract-date" error="Не заполнено"}}}
+      </div>
+      <div class="form__field">
+        <label for="organization-carrier" class="form__label">Перевозчик:</label>
+        {{{ input type="tel" id="organization-carrier" name="organization-carrier" error="Не заполнено"}}}
+      </div>
+      <div class="form__field">
+        <span class="form__label">&#160;</span>
+        {{{ btn type="button" text="Сохранить данные" mods="lg"}}}
+      </div>
+    </div>
+  </section>
+  <section class="form__section form__section--w-underline">
+    <h2 class="form__heading">Отправитель по доверенности</h2>
+    {{> fieldset--tags-surety}}
+    <div class="form__fieldset form__fieldset--2-col-sm">
+      <div class="form__field">
+        <label for="fio" class="form__label">ФИО:</label>
+        {{{ input type="text" id="fio" name="fio" error="Не заполнено"}}}
+      </div>
+      <div class="form__field">
+        <label for="tel" class="form__label">Телефон:</label>
+        {{{ input type="tel" id="tel" name="tel" error="Не заполнено"}}}
+      </div>
+      <div class="form__field">
+        <label for="contract-number" class="form__label">Номер договоренности:</label>
+        {{{ input type="text" id="contract-number" name="contract-number" error="Не заполнено"}}}
+      </div>
+    </div>
+  </section>
+  {{{ checkbox id="subscribe" name="subscribe" label="Получать e-mail уведомления"}}}
+</form>
