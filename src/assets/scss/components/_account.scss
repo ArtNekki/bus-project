@@ -1,7 +1,8 @@
 .account {
-  display: grid;
 
   &--main {
+    display: grid;
+
     @include media-breakpoint-up(md) {
       grid-template-columns: 1fr minmax(min-content, 270px);
       grid-column-gap: 50px;

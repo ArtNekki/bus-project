@@ -3,9 +3,18 @@
 
   margin-right: auto;
   margin-left: auto;
+  margin-bottom: 20px;
   display: grid;
   grid-template-columns: repeat(5, 34px);
   grid-column-gap: 5px;
+
+  @include media-breakpoint-up(md) {
+    margin-bottom: 35px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 0;
+  }
 
   &__item {
     span,
