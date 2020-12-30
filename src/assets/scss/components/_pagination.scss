@@ -1,0 +1,29 @@
+.pagination {
+  @include list-clear();
+
+  margin-right: auto;
+  margin-left: auto;
+  display: grid;
+  grid-template-columns: repeat(5, 34px);
+  grid-column-gap: 5px;
+
+  &__item {
+    span,
+    a {
+      height: 34px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: $font-family--secondary;
+      font-size: 14px;
+      color: $black-color;
+      text-decoration: none;
+      border-radius: 50%;
+    }
+
+    &.current span,
+    &.current a {
+      background-color: $primary-color;
+    }
+  }
+}
