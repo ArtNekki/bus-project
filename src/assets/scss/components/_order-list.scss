@@ -10,6 +10,11 @@
         margin-bottom: 30px;
     }
 
+    &--w-underline {
+      padding-bottom: 30px;
+      border-bottom: 2px solid $gray-light-color--up-5;
+    }
+
     &__item {
         display: grid;
         grid-template-columns: auto 1fr 50%;
