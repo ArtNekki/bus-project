@@ -12,11 +12,38 @@ module.exports = function(options) {
       }
   }
 
+  function renderValue(item) {
+    let value = ``;
+
+    if (!item.type) {
+      value = `<span class="data-list__value">${item.value}</span>`;
+    } else if (item.type === 'link') {
+      value = `<span class="data-list__value">
+        <a href="#" class="link link--blue link--no-underline">
+            <div class="link__text">
+                <span>${item.value}</span>
+            </div>
+        </a></span>`;
+    } else if (item.type === 'bold') {
+      value = `<b class="data-list__value">${item.value}</b>`;
+    }
+
+    switch(item.type) {
+      case '':
+        break;
+      default:
+
+    }
+
+    return value;
+
+  }
+
   function renderItems(data) {
     return data.map((item) => {
       return `<li class="data-list__item">
         <span class="data-list__name">${item.name}</span>
-        <span class="data-list__value">${item.value}</span>
+        ${renderValue(item)}
       </li>`
     }).join(``);
   }

@@ -1,0 +1,44 @@
+---
+title: Сформировать отчет
+layout: account--full
+---
+
+<form action="#" class="form form--no-margin" autocomplete="off">
+  <section class="form__section">
+    <div class="form__fieldset form__fieldset--filter">
+      <div class="form__group">
+        <span class="form__label">Период:</span>
+        {{{ input type="text" id="period-from" name="period-from" placeholder="дд.мм.гггг" error="Не заполнено" mods="no-shadow" }}}
+        {{{ input type="text" id="period-to" name="period-to" placeholder="дд.мм.гггг" error="Не заполнено" mods="no-shadow" }}}
+      </div>
+      <div class="form__field">
+        <label for="city-from" class="form__label form__label--light">Город отправления</label>
+        {{{ select
+        id="delivery-to"
+        name="delivery-to"
+        data='[
+        {"value": "", "name": "Выберите город"},
+        {"value": "nakhodka", "name": "Находка"},
+        {"value": "arseniev", "name": "Арсеньев"}]'
+        mods="no-shadow"
+        }}}
+      </div>
+      <div class="form__field">
+        <label for="city-to" class="form__label form__label--light">Город получения</label>
+        {{{ select
+        id="delivery-to"
+        name="delivery-to"
+        data='[
+        {"value": "", "name": "Выберите город"},
+        {"value": "nakhodka", "name": "Находка"},
+        {"value": "arseniev", "name": "Арсеньев"}]'
+        mods="no-shadow"
+        }}}
+      </div>
+      {{{ btn type="button" text="Показать" mods="lg"}}}
+    </div>
+  </section>
+</form>
+<div class="report">
+  <p class="report__text">По указанным параметрам нет данных</p>
+</div>

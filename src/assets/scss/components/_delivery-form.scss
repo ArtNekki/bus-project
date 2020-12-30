@@ -368,13 +368,15 @@
       //grid-column-gap: 30px;
     }
 
-    //& > *:first-child {
-    //  margin-right: 10px;
-    //}
-    //
-    //& > *:last-child {
-    //  margin-left: 10px;
-    //}
+    &.form__fieldset--orders {
+      @include media-breakpoint-up(lg) {
+        grid-template-columns: repeat(2, 1fr) 150px;
+      }
+
+      //@include media-breakpoint-up(xl) {
+      //  grid-template-columns: minmax(auto, 360px) repeat(3, 1fr);
+      //}
+    }
   }
 
   &__error {
