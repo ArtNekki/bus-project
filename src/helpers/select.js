@@ -38,7 +38,7 @@ module.exports = function(options) {
   cssClass+= allMods;
 
   let select = `
-    <div class=${cssClass}>
+    <div class="${cssClass}">
       <select id=${id} name=${name} class="select__field">
         ${renderData(data)}
       </select>

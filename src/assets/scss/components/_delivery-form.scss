@@ -38,6 +38,10 @@
       grid-row-gap: 25px;
     }
 
+    &--col-gap-lg {
+      grid-row-gap: 30px;
+    }
+
     & + & {
       margin-top: 15px;
     }
@@ -223,7 +227,7 @@
       grid-template-columns: $template-columns-md;
       grid-row-gap: $row-gap-md;
       box-shadow: none;
-      border-radius: none;
+      border-radius: 0;
     }
 
     @include media-breakpoint-up(xl) {
@@ -342,6 +346,37 @@
     }
   }
 
+  &__fieldset--filter {
+    @include media-breakpoint-up(md) {
+      grid-template-columns: repeat(2, 1fr);
+      //grid-column-gap: 30px;
+      grid-column-gap: 15px;
+      align-items: end;
+    }
+
+    @include media-breakpoint-up(lg) {
+      padding: 15px 30px 35px 30px;
+      grid-template-columns: minmax(auto, 300px) repeat(2, 1fr) 150px;
+      //grid-column-gap: 15px;
+      box-shadow: 0px 24px 24px rgba(0, 0, 0, 0.1);
+      border-radius: $border-radius;
+    }
+
+    @include media-breakpoint-up(xl) {
+      padding: 15px 30px 35px 30px;
+      grid-template-columns: minmax(auto, 360px) repeat(3, 1fr);
+      //grid-column-gap: 30px;
+    }
+
+    //& > *:first-child {
+    //  margin-right: 10px;
+    //}
+    //
+    //& > *:last-child {
+    //  margin-left: 10px;
+    //}
+  }
+
   &__error {
     grid-column: 1 / -1;
     font-family: $font-family--secondary;
@@ -392,6 +427,31 @@
     }
   }
 
+  &__group {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    //justify-content: start;
+    grid-column-gap: 7px;
+
+    @include media-breakpoint-up(xl) {
+      grid-template-columns: auto 1fr auto 1fr;
+    }
+
+    &::before {
+      content: "-";
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+      color: #333333;
+
+      @include media-breakpoint-up(xl) {
+        grid-column: 3 / 4;
+        grid-row: 1 / 2;
+      }
+    }
+  }
+
   &__label {
     margin-bottom: 0.25em;
     display: block;
@@ -401,11 +461,26 @@
     color: $font-color;
 
     &--light {
-      color: rgba($black-color, 0.4);
+      //color: rgba($black-color, 0.4);
+      color: $gray-color--down-11;
     }
 
     &--full {
       grid-column: 1 / -1;
+    }
+
+    .form__group & {
+      grid-column: 1 / -1;
+      color: $gray-color--down-11;
+
+      @include media-breakpoint-up(xl) {
+        margin-bottom: 0;
+        margin-right: 15px;
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        font-size: 16px;
+        color: $font-color;
+      }
     }
   }
 

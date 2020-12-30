@@ -28,6 +28,10 @@
       box-shadow: none;
       border: none;
     }
+
+    .input--no-shadow & {
+      box-shadow: none;
+    }
   }
 
   &__edit {

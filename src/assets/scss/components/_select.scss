@@ -27,10 +27,14 @@
   }
 
   &__field {
-   @include input();
+     @include input();
 
-   display: flex;
-   align-items: center;
+     display: flex;
+     align-items: center;
+
+    .select--no-shadow & {
+      box-shadow: none;
+    }
   }
 
   &__field span {
