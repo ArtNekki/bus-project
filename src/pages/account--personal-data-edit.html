@@ -1,16 +1,16 @@
 ---
 title: Персональные данные
-layout: account--inner
+layout: layout--inner
 ---
 
 <form action="#" class="form" autocomplete="off">
-  <section class="form__section form__section--w-underline">
+  <section class="form__section form__section--w-underline form__section--account">
     {{{ data-list items='[
     {"name": "Логин:", "value": "tafibuchgalter@mail.ru"},
     {"name": "Пароль:", "value": "********"}]' mods="account"
     }}}
   </section>
-  <section class="form__section form__section--w-underline">
+  <section class="form__section form__section--w-underline form__section--account">
     <h2 class="form__heading">Данные организации</h2>
     <div class="form__fieldset form__fieldset--2-col-sm">
       <div class="form__field">
@@ -69,7 +69,7 @@ layout: account--inner
       </div>
     </div>
   </section>
-  <section class="form__section form__section--w-underline">
+  <section class="form__section form__section--w-underline form__section--account">
     <h2 class="form__heading">Отправитель по доверенности</h2>
     {{> fieldset--tags-surety}}
     <div class="form__fieldset form__fieldset--2-col-sm">

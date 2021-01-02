@@ -1,8 +1,20 @@
 ---
-title: Личный кабинет
-layout: account
+title:
+layout: default
 ---
 
-{{{ media title="Мои заявки" text="Вы еще не создали ни одного отправления<br />Посмотрите историю ваших отправлений." imgName="orders" imgWidth="65" imgHeight="51" }}}
-{{{ media title="Персональные данные" text="Вы еще не создали ни одного отправления<br />Посмотрите историю ваших отправлений." imgName="profile" imgWidth="65" imgHeight="54" }}}
-{{{ media title="Сформировать отчет" text="Удобное формирование отчета с применением фильтров." imgName="report" imgWidth="48" imgHeight="66" }}}
+<main class="page__inner">
+  <h1 class="page__title">Личный кабинет</h1>
+
+  <div class="account">
+    <div class="account__main">
+      {{{ media title="Мои заявки" text="Вы еще не создали ни одного отправления<br />Посмотрите историю ваших отправлений." imgName="orders" imgWidth="65" imgHeight="51" }}}
+      {{{ media title="Персональные данные" text="Вы еще не создали ни одного отправления<br />Посмотрите историю ваших отправлений." imgName="profile" imgWidth="65" imgHeight="54" }}}
+      {{{ media title="Сформировать отчет" text="Удобное формирование отчета с применением фильтров." imgName="report" imgWidth="48" imgHeight="66" }}}
+    </div>
+
+    <aside class="account__sidebar">
+      {{> entity-account-sidebar}}
+    </aside>
+  </div>
+</main>

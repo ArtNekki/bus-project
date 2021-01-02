@@ -17,6 +17,7 @@
   }
 
   &__inner {
+    @include container();
 
     //.page-contacts--full-map & {
     //  position: fixed;
@@ -52,6 +53,8 @@
     margin: 0;
     margin-top: 40px;
     margin-bottom: 25px;
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
     font-family: $font-family;
     font-size: 32px;
     line-height: 1.2;

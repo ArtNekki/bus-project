@@ -20,6 +20,10 @@
     padding-bottom: 40px;
     border-bottom: 2px solid $gray-light-color--up-5;
    }
+
+   &--account {
+     max-width: 570px;
+   }
   }
 
   &__fieldset {

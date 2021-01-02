@@ -3,13 +3,9 @@
   {{> head}}
 <body>
 {{> page-header}}
-<main class="page__container">
+<main class="page__inner">
   <h1 class="page__title">{{{title}}}</h1>
-  <div class="account account--inner">
-    <div class="account__main">
-      {{> body}}
-    </div>
-  </div>
+  {{> body}}
 </main>
 {{> page-footer}}
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDy38NKqY0dEc4P0rKJHvB5skmvNiFPNk0&&region=RUS&language=ru"></script>

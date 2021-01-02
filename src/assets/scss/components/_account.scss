@@ -1,12 +1,9 @@
 .account {
+  display: grid;
 
-  &--main {
-    display: grid;
-
-    @include media-breakpoint-up(md) {
-      grid-template-columns: 1fr minmax(min-content, 270px);
-      grid-column-gap: 50px;
-    }
+  @include media-breakpoint-up(md) {
+    grid-template-columns: 1fr minmax(min-content, 270px);
+    grid-column-gap: 50px;
   }
 
   &--inner {
@@ -19,13 +16,10 @@
 
   &__main {
     order: 2;
+    //max-width: 570px;
 
     @include media-breakpoint-up(md) {
       order: 1;
-    }
-
-    .account--inner & {
-      max-width: 570px;
     }
   }
 
