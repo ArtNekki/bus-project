@@ -13,8 +13,18 @@ layout: default
       {{{ media title="Сформировать отчет" text="Удобное формирование отчета с применением фильтров." imgName="report" imgWidth="48" imgHeight="66" }}}
     </div>
 
-    <aside class="account__sidebar">
-      {{> entity-account-sidebar}}
-    </aside>
+    <div class="account__sidebar">
+      <article class="balance-block">
+        <div class="balance-block__label">Ваш баланс:</div>
+        <b class="balance-block__sum">12,500 <span>Р.</span></b>
+        {{{ link href="#" text="Пополнить" mods="lg, blue"}}}
+      </article>
+      <div class="account__sidebar-btn">
+        {{{ btn type="button" text="Оформить заказ" mods="lg, w-full"}}}
+      </div>
+      <div class="account__logout">
+        {{{ link href="#" text="Выйти из личного кабинета" mods="lg, no-underline" type="logout" }}}
+      </div>
+    </div>
   </div>
 </main>

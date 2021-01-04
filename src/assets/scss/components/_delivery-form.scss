@@ -43,11 +43,15 @@
     }
 
     &--col-gap-lg {
-      grid-row-gap: 30px;
+      grid-column-gap: 30px;
     }
 
     & + & {
       margin-top: 15px;
+    }
+
+    & + &--mgt {
+      margin-top: 30px;
     }
   }
 
@@ -70,14 +74,6 @@
 
   &__fieldset--full {
     grid-column: 1 / -1;
-  }
-
-  &__fieldset--mg-top {
-    margin-top: 30px;
-
-    @include media-breakpoint-up(md) {
-      margin-top: 40px;
-    }
   }
 
   &__fieldset--delivery {
@@ -383,6 +379,34 @@
     }
   }
 
+  &__fieldset--edit-password {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "old-password"
+      "new-password"
+      "new-password-repeat";
+
+    @include media-breakpoint-up(sm) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas:
+        "old-password ."
+        "new-password ."
+        "new-password-repeat .";
+    }
+
+    & > *:nth-child(1) {
+      grid-area: old-password;
+    }
+
+    & > *:nth-child(2) {
+      grid-area: new-password;
+    }
+
+    & > *:nth-child(3) {
+      grid-area: new-password-repeat;
+    }
+  }
+
   &__error {
     grid-column: 1 / -1;
     font-family: $font-family--secondary;
@@ -415,6 +439,16 @@
 
       @include media-breakpoint-up(xl) {
         align-items: flex-start;
+      }
+    }
+
+    &--cancel {
+      align-items: center;
+
+      @include media-breakpoint-up(sm) {
+        align-items: flex-start;
+        justify-content: center;
+        height: 100%;
       }
     }
 
