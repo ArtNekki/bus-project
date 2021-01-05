@@ -7,7 +7,7 @@ layout: layout--inner
   <section class="form__section form__section--w-underline form__section--account">
     {{{ data-list items='[
     {"name": "Логин:", "value": "tafibuchgalter@mail.ru"},
-    {"name": "Пароль:", "value": "********"}]' mods="account"
+    {"name": "Пароль:", "value": "********", "type": "password", "href": "account--physic-edit-password.html"}]' mods="account"
     }}}
   </section>
   <section class="form__section form__section--w-underline form__section--account">
@@ -27,7 +27,7 @@ layout: layout--inner
     {"name": "Перевозчик:", "value": "21"}
     ]' mods="account"
     }}}
-    {{{ btn type="button" text="Изменить данные" mods="lg, w-270"}}}
+    {{{ btn type="link" href="account--entity-personal-data-edit.html" text="Изменить данные" mods="lg, w-270"}}}
   </section>
   <section class="form__section form__section--w-underline form__section--account">
     <h2 class="form__heading">Отправитель по доверенности</h2>
