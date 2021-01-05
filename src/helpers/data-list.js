@@ -19,20 +19,22 @@ module.exports = function(options) {
       value = `<span class="data-list__value">${item.value}</span>`;
     } else if (item.type === 'link') {
       value = `<span class="data-list__value">
-        <a href="#" class="link link--blue link--no-underline">
+        <a href="${item.href}" class="link link--blue link--no-underline">
             <div class="link__text">
                 <span>${item.value}</span>
             </div>
         </a></span>`;
     } else if (item.type === 'bold') {
       value = `<b class="data-list__value">${item.value}</b>`;
-    }
-
-    switch(item.type) {
-      case '':
-        break;
-      default:
-
+    } else if (item.type === 'password') {
+      value = `<div class="data-list__value">
+        <span>${item.value}</span>
+        <a href="${item.href}" class="link link--blue" style="position: relative; top: -4px; left: 5px;">
+            <div class="link__text">
+                <span>Изменить</span>
+            </div>
+        </a> 
+        </div>`;
     }
 
     return value;

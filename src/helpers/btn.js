@@ -1,6 +1,7 @@
 module.exports = function(options) {
   const text = options.hash.text;
   const type = options.hash.type;
+  const href = options.hash.href;
   const disabled = options.hash.disabled;
   const hidden = options.hash.hidden;
   const mods = options.hash.mods;
@@ -50,6 +51,12 @@ module.exports = function(options) {
     return ``;
   }
 
+  function renderLink() {
+    return `<a href="${href}" ${id ? `id="${id}"` : ``} ${type ? `type="${type}"` : ``} class="${cssClass}" ${disabled ? 'disabled' : ''} ${hidden ? 'hidden=hidden' : ''}>
+      <span class="btn__text">${text}</span>
+    </a>`;
+  }
+
   function renderDefault() {
     return `<button ${id ? `id="${id}"` : ``} ${type ? `type="${type}"` : ``} class="${cssClass}" ${disabled ? 'disabled' : ''} ${hidden ? 'hidden=hidden' : ''}>
       <span class="btn__text">${text}</span>
@@ -67,7 +74,10 @@ module.exports = function(options) {
       break;
     case 'back':
       btn = renderBack();
-      break;  
+      break;
+    case 'link':
+      btn = renderLink();
+      break;
     default:
       btn = renderDefault();
   }

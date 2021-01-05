@@ -5,14 +5,15 @@ layout: layout--inner
 
 <form action="#" class="form" autocomplete="off">
   <section class="form__section form__section--w-underline form__section--account">
+
     {{{ data-list items='[
     {"name": "ФИО:", "value": "Петров Иван Александрович"},
     {"name": "Email:", "value": "tafibuchgalter@mail.ru"},
     {"name": "Телефон:", "value": "+7 (900) 434 34 54"},
     {"name": "Паспортные данные:", "value": "8013 902456"},
-    {"name": "Пароль:", "value": "********"}]' mods="account"
+    {"name": "Пароль:", "value": "********", "type": "password", "href": "account--physic-edit-password.html"}]' mods="account"
     }}}
-    {{{ btn type="button" text="Изменить данные" mods="lg, w-270"}}}
+    {{{ btn type="link" href="account--physic-personal-data-edit.html" text="Изменить данные" mods="lg, w-270"}}}
   </section>
   {{{ checkbox id="subscribe" name="subscribe" label="Получать e-mail уведомления"}}}
 </form>

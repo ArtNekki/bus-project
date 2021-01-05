@@ -1,6 +1,8 @@
 module.exports = function(options) {
   const title = options.hash.title;
   const text = options.hash.text;
+  const href = options.hash.href;
+  const type = options.hash.type;
   const imgName= options.hash.imgName;
   const imgWidth = options.hash.imgWidth;
   const imgHeight = options.hash.imgHeight;
@@ -18,7 +20,22 @@ module.exports = function(options) {
 
   cssClass+= allMods;
 
-  const media = `<a href="#" class="${cssClass}">
+  // function renderDefault() {
+  //   return `<div class="${cssClass}">
+  //       <div class="media__img">
+  //           <svg ${imgWidth ? `width="${imgWidth}px"` : ``} ${imgHeight ? `height="${imgHeight}px"` : ``}>
+  //               <use xlink:href="${root}assets/img/symbol/sprite.svg#${imgName}">
+  //           </svg>
+  //       </div>
+  //       <div class="media__body">
+  //           <h2 class="media__title">${title}</h2>
+  //           <p class="media__text">${text}</p>
+  //       </div>
+  //   </div>`
+  // }
+
+  function renderDefault() {
+    return `<a href="${href}" class="${cssClass}">
         <div class="media__img">
             <svg ${imgWidth ? `width="${imgWidth}px"` : ``} ${imgHeight ? `height="${imgHeight}px"` : ``}>
                 <use xlink:href="${root}assets/img/symbol/sprite.svg#${imgName}">
@@ -27,9 +44,19 @@ module.exports = function(options) {
         <div class="media__body">
             <h2 class="media__title">${title}</h2>
             <p class="media__text">${text}</p>
-<!--            <i class="media__arrow"></i>-->
         </div>
     </a>`
+  }
+
+  let media = renderDefault();
+
+  // switch(type) {
+  //   case 'link':
+  //     media = renderLink();
+  //     break;
+  //   default:
+  //     media = renderDefault();
+  // }
 
   return media;
 }
