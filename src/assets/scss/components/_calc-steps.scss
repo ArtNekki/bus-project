@@ -45,55 +45,43 @@
     }
 
     &__point {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: $item-size;
-        height: $item-size;
-        font-family: $font-family;
-        font-size: 24px;
-        line-height: 1;
-        font-style: normal;
-        color: rgba($black-color, 0.2);
-        background-color: $gray-light-color--up-5;
-        background-color: lighten(#E5E5E5, 5%);
-        border-radius: 50%;
-        transition-property: all;
-        transition-delay: 0.5s;
+      @include step-point($item-size, 24px, rgba($black-color, 0.2), $gray-light-color--up-5);
 
-        .calc-steps__item.active &,
+      transition-property: all;
+      transition-delay: 0.5s;
+
+      .calc-steps__item.active &,
+      .calc-steps__item.done & {
+        background-color: $primary-color;
+        color: $black-color;
+      }
+
+      &::before {
+        counter-increment: point;
+        content: counter(point);
+
         .calc-steps__item.done & {
-            background-color: $primary-color;
-            color: $black-color;
+            opacity: 0;
         }
+      }
 
-        &::before {
-            counter-increment: point;
-            content: counter(point);
+      &::after {
+        content: "";
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        width: 16px;
+        height: 8px;
+        display: none;
+        border: 2px solid transparent;
+        border-bottom-color: $black-color;
+        border-left-color: $black-color;
+        transform: rotate3d(0, 0, 1, -45deg);
 
-            .calc-steps__item.done & {
-                opacity: 0;
-            }
+        .calc-steps__item.done & {
+            display: block;
         }
-
-        &::after {
-          content: "";
-          position: absolute;
-          top: 15px;
-          left: 15px;
-          width: 16px;
-          height: 8px;
-          display: none;
-          border: 2px solid transparent;
-          border-bottom-color: $black-color;
-          border-left-color: $black-color;
-          transform: rotate3d(0, 0, 1, -45deg);
-
-          .calc-steps__item.done & {
-              display: block;
-          }
-        }
+      }
     }
 
     &__label {

@@ -398,3 +398,19 @@
   }
 }
 
+@mixin step-point($size, $fontSize, $color: $black-color, $backgroundColor: $primary-color) {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: $size;
+  height: $size;
+  font-family: $font-family;
+  font-size: $fontSize;
+  line-height: 1;
+  font-style: normal;
+  color: $color;
+  background-color: $backgroundColor;
+  //background-color: lighten(#E5E5E5, 5%);
+  border-radius: 50%;
+}

@@ -1,0 +1,64 @@
+.list {
+  @include list-clear();
+
+  $letters: "а", "б", "в", "г", "д", "е", "ё", "ж", "з", "и", "к", "л", "м";
+
+  &--numbers {
+    counter-reset: number;
+  }
+
+  &--letters {
+
+    @for $i from 1 through length($letters) {
+      & > .list__item:nth-child(#{$i})::before {
+        content: nth($letters, $i) + ")";
+      }
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-column-gap: 15px;
+
+    .list--numbers & {
+      grid-column-gap: 30px;
+    }
+
+    &::before {
+
+      .list--numbers & {
+        @include step-point(38px, 20px);
+
+        counter-increment: number;
+        content: counter(number);
+      }
+
+      .list--letters & {
+        font-family: $font-family--secondary;
+        font-size: 16px;
+        line-height: 1.2;
+        color: $gray-color--down-11;
+      }
+
+    }
+
+    &:not(&:last-child) {
+      margin-bottom: 45px;
+    }
+  }
+
+  &__content {
+    font-family: $font-family--secondary;
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  &__content p {
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
