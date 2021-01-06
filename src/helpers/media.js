@@ -42,14 +42,14 @@ module.exports = function(options) {
                 <use xlink:href="${root}assets/img/symbol/sprite.svg#${imgName}">
             </svg>
         </div>
-        <div class="media__body">
-            ${text ? `<p class="media__text">${text}</p>` : ''}
-            ${link ? `<a href="${link.href}" class="link link--blue link--lg">
-            <div class="link__text">
-                <span>${link.text}</span>
-            </div>
-        </a>` : ''}
-        </div>
+         ${text ? `<p class="media__text">${text}</p>` : ''}
+         <div class="media__link">
+          ${link ? `<a href="${link.href}" class="link link--blue link--lg">
+              <div class="link__text">
+                  <span>${link.text}</span>
+              </div>
+          </a>` : ''} 
+        </div>  
     </article>`
   }
 

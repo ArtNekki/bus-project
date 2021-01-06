@@ -3,22 +3,31 @@
   max-width: 370px;
   display: grid;
   grid-template-columns: auto 1fr;
+  grid-template-areas:
+    "media-img media-text"
+    "media-img media-link";
   grid-column-gap: 20px;
+  grid-row-gap: 10px;
   align-items: center;
   box-shadow: $box-shadow;
   box-sizing: border-box;
   border-radius: $border-radius;
 
   &__text {
-    margin-top: 0;
-    margin-bottom: 0.65em;
+    margin: 0;
+    grid-area: media-text;
     font-family: $font-family--secondary;
     font-size: 18px;
     line-height: 1.2;
   }
 
+  &__link {
+    grid-area: media-link;
+  }
+
   &__img {
     margin-top: 2px;
     align-self: start;
+    grid-area: media-img;
   }
 }
