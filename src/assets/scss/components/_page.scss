@@ -19,6 +19,12 @@
   &__inner {
     @include container();
 
+    &--col-2 {
+      display: grid;
+      grid-template-columns: minmax(min-content, 600px) 370px;
+      justify-content: space-between;
+    }
+
     //.page-contacts--full-map & {
     //  position: fixed;
     //  overflow: hidden;
@@ -32,9 +38,9 @@
   &__container {
     @include container();
 
-    &--account-two-col {
-
-    }
+    //&--account-two-col {
+    //
+    //}
 
     @include media-breakpoint-up(lg) {
       display: grid;
