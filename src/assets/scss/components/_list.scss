@@ -8,6 +8,7 @@
   }
 
   &--letters {
+    margin-top: 20px;
 
     @for $i from 1 through length($letters) {
       & > .list__item:nth-child(#{$i})::before {

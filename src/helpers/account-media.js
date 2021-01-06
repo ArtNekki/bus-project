@@ -1,7 +1,6 @@
 module.exports = function(options) {
   const title = options.hash.title;
   const text = options.hash.text;
-  const link = JSON.parse(options.hash.link);
   const href = options.hash.href;
   const type = options.hash.type;
   const imgName= options.hash.imgName;
@@ -9,13 +8,13 @@ module.exports = function(options) {
   const imgHeight = options.hash.imgHeight;
   const mods = options.hash.mods;
   const root = options.data.root.root;
-  let cssClass = 'media';
+  let cssClass = 'account-media';
   let allMods = '';
 
   if (mods !== 'undefined' && mods ) {
     const modsList = mods.split(',');
       for (let i = 0; i < modsList.length; i++) {
-        allMods = allMods + 'media--' + modsList[i].trim();
+        allMods = allMods + ' account-media--' + modsList[i].trim();
       }
   }
 
@@ -36,21 +35,17 @@ module.exports = function(options) {
   // }
 
   function renderDefault() {
-    return `<article class="${cssClass}">
-        <div class="media__img">
+    return `<a href="${href}" class="${cssClass}">
+        <div class="account-media__img">
             <svg ${imgWidth ? `width="${imgWidth}px"` : ``} ${imgHeight ? `height="${imgHeight}px"` : ``}>
                 <use xlink:href="${root}assets/img/symbol/sprite.svg#${imgName}">
             </svg>
         </div>
-        <div class="media__body">
-            ${text ? `<p class="media__text">${text}</p>` : ''}
-            ${link ? `<a href="${link.href}" class="link link--blue link--lg">
-            <div class="link__text">
-                <span>${link.text}</span>
-            </div>
-        </a>` : ''}
+        <div class="account-media__body">
+            <h2 class="account-media__title">${title}</h2>
+            <p class="account-media__text">${text}</p>
         </div>
-    </article>`
+    </a>`
   }
 
   let media = renderDefault();
