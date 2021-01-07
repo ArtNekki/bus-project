@@ -1,0 +1,44 @@
+.package-block {
+  display: grid;
+  grid-template-columns: 1fr 270px;
+  grid-template-rows: repeat(3, auto);
+  grid-column-gap: 45px;
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 0.55em;
+    font-family: $font-family--secondary;
+    font-size: 22px;
+    line-height: 1.2;
+  }
+
+  &__text {
+    margin-bottom: 25px;
+    font-size: 15px;
+    opacity: 0.8;
+  }
+
+  &__table {
+
+  }
+
+  &__label {
+    padding: 0.75em 1.75em;
+    justify-self: start;
+    font-family: $font-family--secondary;
+    font-size: 16px;
+    line-height: 1.4;
+    border: 2px solid $primary-color;
+    border-radius: 0.5em;
+  }
+
+  &__img {
+    width: 270px;
+    height: 175px;
+    grid-column: 2 / 3;
+    grid-row: 1 / -1;
+    display: block;
+    background-color: red;
+    border-radius: 10px;
+  }
+}

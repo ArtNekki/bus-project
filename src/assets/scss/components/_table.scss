@@ -44,6 +44,29 @@
     border-bottom: 3px solid $primary-color;
   }
 
+  &__header {
+    border-bottom: 3px solid $primary-color;
+
+    &--uppercase {
+      text-transform: uppercase;
+    }
+
+    &--primary {
+      border: none !important;
+      background-color: $primary-color;
+
+      th:first-child {
+        border-top-left-radius: $border-radius;
+        border-bottom-left-radius: $border-radius;
+      }
+
+      th:last-child {
+        border-top-right-radius: $border-radius;
+        border-bottom-right-radius: $border-radius;
+      }
+    }
+  }
+
   tr {
     &:nth-child(even) {
       background-color: #F7F7F7;

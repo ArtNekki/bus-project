@@ -60,6 +60,12 @@
     .list--letters > &:not(&:last-child) {
       margin-bottom: 15px;
     }
+
+    .list--items-with-border & {
+      padding-top: 40px;
+      border-top: 1px solid $gray-light-color;
+      //border-bottom: 1px solid $gray-light-color;
+    }
   }
 
   &__content {

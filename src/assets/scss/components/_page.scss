@@ -28,8 +28,9 @@
       }
 
       @include media-breakpoint-up(lg) {
-        grid-template-columns: minmax(min-content, 600px) 370px;
-        justify-content: space-between;
+        //grid-template-columns: minmax(min-content, 600px) 370px;
+        grid-template-columns: 1fr 370px;
+        //justify-content: space-between;
       }
     }
 
