@@ -23,9 +23,9 @@
       display: grid;
       grid-column-gap: 45px;
 
-      @include media-breakpoint-up(sm) {
-        grid-template-columns: minmax(min-content, 750px);
-      }
+      //@include media-breakpoint-up(sm) {
+      //  grid-template-columns: minmax(min-content, 750px);
+      //}
 
       @include media-breakpoint-up(lg) {
         //grid-template-columns: minmax(min-content, 600px) 370px;

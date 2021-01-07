@@ -1,28 +1,83 @@
 .package-block {
+  $step-point-size: 38px;
+
+  margin-bottom: 30px;
+  padding-top: 30px;
   display: grid;
-  grid-template-columns: 1fr 270px;
-  grid-template-rows: repeat(3, auto);
-  grid-column-gap: 45px;
+  grid-template-columns: $step-point-size 1fr;
+  grid-template-rows: repeat(4, auto);
+  grid-column-gap: 20px;
+  align-items: start;
+  border-top: 1px solid $gray-light-color;
+
+  @include media-breakpoint-up(md) {
+    margin-bottom: 40px;
+    padding-top: 40px;
+    grid-template-columns: $step-point-size 1fr 270px;
+    grid-template-rows: repeat(3, auto);
+    grid-column-gap: 30px;
+  }
+
+  @include media-breakpoint-only(lg) {
+    grid-template-columns: $step-point-size 1fr;
+  }
+
+  &::before {
+    @include step-point($step-point-size, 20px);
+
+    content: "1";
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+  }
 
   &__title {
-    margin-top: 0;
-    margin-bottom: 0.55em;
+    margin: 6px 0 0 0;
     font-family: $font-family--secondary;
     font-size: 22px;
     line-height: 1.2;
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: 0.55em;
+    }
   }
 
   &__text {
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     font-size: 15px;
     opacity: 0.8;
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: 25px;
+    }
   }
 
   &__table {
+    $table-mg-top: 30px;
 
+    margin-top: $table-mg-top;
+    grid-column: 1 / -1;
+    grid-row: 4 / 5;
+
+    @include media-breakpoint-up(sm) {
+      grid-column: 2 / -1;
+    }
+
+    @include media-breakpoint-up(md) {
+      margin: 0;
+      grid-column: unset;
+      grid-row: unset;
+    }
+
+    @include media-breakpoint-only(lg) {
+      margin-top: $table-mg-top;
+      grid-column: 2 / -1;
+    }
   }
 
   &__label {
+    $label-mg-bottom: 20px;
+
+    margin-bottom: $label-mg-bottom;
     padding: 0.75em 1.75em;
     justify-self: start;
     font-family: $font-family--secondary;
@@ -30,15 +85,32 @@
     line-height: 1.4;
     border: 2px solid $primary-color;
     border-radius: 0.5em;
+
+    @include media-breakpoint-up(md) {
+      margin: 0;
+    }
+
+    @include media-breakpoint-only(lg) {
+      margin-top: $label-mg-bottom;
+      grid-column: 2 / 3;
+    }
   }
 
   &__img {
     width: 270px;
     height: 175px;
-    grid-column: 2 / 3;
-    grid-row: 1 / -1;
     display: block;
     background-color: red;
     border-radius: 10px;
+
+    @include media-breakpoint-up(md) {
+      grid-column: 3 / 4;
+      grid-row: 1 / -1;
+    }
+
+    @include media-breakpoint-only(lg) {
+      grid-column: 2 / 3;
+      grid-row: 3 / 4;
+    }
   }
 }
