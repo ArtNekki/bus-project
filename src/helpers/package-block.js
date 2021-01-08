@@ -3,6 +3,7 @@ module.exports = function(options) {
   const text = options.hash.text;
   const table = options.hash.table && JSON.parse(options.hash.table);
   const label = options.hash.label;
+  const count = options.hash.count;
   const img = options.hash.img;
   const mods = options.hash.mods;
   const root = options.data.root.root;
@@ -43,19 +44,19 @@ module.exports = function(options) {
 
   function renderImg(img) {
     return `<img class="package-block__img"
-             src="${root}assets/img/content/index/${img}.jpg"
-             srcset="${root}assets/img/content/index/${img}@2x.jpg 2x, ${root}assets/img/content/index/${img}@3x.jpg 3x">`;
+             src="${root}assets/img/content/cargo-packing/${img}.jpg"
+             srcset="${root}assets/img/content/cargo-packing/${img}@2x.jpg 2x, ${root}assets/img/content/cargo-packing/${img}@3x.jpg 3x">`;
   }
 
   cssClass+= allMods;
 
   const block = `
-    <article class="${cssClass}">
+    <article class="${cssClass}" data-count="${count}">
         <h1 class="package-block__title">${title}</h1>
         <p class="package-block__text">${text}</p>
         ${table ? renderTable(table) : ''}
         ${label ? renderLabel(label) : ''}
-        ${renderImg()}
+        ${renderImg(img)}
       </article>
   `
 

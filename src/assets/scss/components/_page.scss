@@ -64,13 +64,19 @@
     }
   }
 
+  &__content {
+    //grid-column: 1 / 2;
+  }
+
   &__sidebar {
     margin-top: 40px;
+    //grid-column: 2 / 3;
 
     @include media-breakpoint-up(lg) {
       margin-top: 0;
     }
   }
+
 
   &__go-back {
     $circle-size: 30px;

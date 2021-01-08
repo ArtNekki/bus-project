@@ -25,7 +25,7 @@
   &::before {
     @include step-point($list-number--size, 20px);
 
-    content: "1";
+    content: attr(data-count);
     grid-column: 1 / 2;
     grid-row: 1 / -1;
   }
