@@ -3,7 +3,7 @@ module.exports = function(options) {
   const text = options.hash.text;
   const link = JSON.parse(options.hash.link);
   const href = options.hash.href;
-  const type = options.hash.type;
+  const theme = options.hash.theme;
   const imgName= options.hash.imgName;
   const imgWidth = options.hash.imgWidth;
   const imgHeight = options.hash.imgHeight;
@@ -15,7 +15,7 @@ module.exports = function(options) {
   if (mods !== 'undefined' && mods ) {
     const modsList = mods.split(',');
       for (let i = 0; i < modsList.length; i++) {
-        allMods = allMods + 'media--' + modsList[i].trim();
+        allMods = allMods + ' media--' + modsList[i].trim();
       }
   }
 
@@ -35,6 +35,24 @@ module.exports = function(options) {
   //   </div>`
   // }
 
+  function renderThemeTwo() {
+    return `<article class="${cssClass} media--theme-two">
+        <div class="media__img">
+            <svg ${imgWidth ? `width="${imgWidth}px"` : ``} ${imgHeight ? `height="${imgHeight}px"` : ``}>
+                <use xlink:href="${root}assets/img/symbol/sprite.svg#${imgName}">
+            </svg>
+        </div>
+         ${text ? `<p class="media__text">${text}</p>` : ''}
+         <div class="media__link">
+          ${link ? `<a href="${link.href}" class="link link--lg">
+              <div class="link__text">
+                  <span><b>Скачать в PDF</b> (80 кб)</span>
+              </div>
+          </a>` : ''} 
+        </div>  
+    </article>`
+  }
+
   function renderDefault() {
     return `<article class="${cssClass}">
         <div class="media__img">
@@ -44,7 +62,7 @@ module.exports = function(options) {
         </div>
          ${text ? `<p class="media__text">${text}</p>` : ''}
          <div class="media__link">
-          ${link ? `<a href="${link.href}" class="link link--blue link--lg">
+          ${link ? `<a href="${link.href}" class="link link--lg link--blue">
               <div class="link__text">
                   <span>${link.text}</span>
               </div>
@@ -53,15 +71,15 @@ module.exports = function(options) {
     </article>`
   }
 
-  let media = renderDefault();
+  let media = ``;
 
-  // switch(type) {
-  //   case 'link':
-  //     media = renderLink();
-  //     break;
-  //   default:
-  //     media = ;
-  // }
+  switch(theme) {
+    case 'two':
+      media = renderThemeTwo();
+      break;
+    default:
+      media = renderDefault();
+  }
 
   return media;
 }
