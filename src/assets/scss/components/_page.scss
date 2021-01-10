@@ -70,7 +70,16 @@
 
   &__sidebar {
     margin-top: 40px;
+    display: grid;
+    grid-row-gap: 40px;
+    align-content: start;
     //grid-column: 2 / 3;
+
+    @include media-breakpoint-only(md) {
+      grid-template-columns: repeat(2, auto);
+      grid-column-gap: $container-padding-x * 2;
+      justify-content: start;
+    }
 
     @include media-breakpoint-up(lg) {
       margin-top: 0;

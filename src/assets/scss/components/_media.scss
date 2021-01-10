@@ -2,7 +2,7 @@
   padding: 23px 30px 25px;
   max-width: 370px;
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: 40px 1fr;
   grid-template-areas:
     "media-img media-text"
     "media-img media-link";
@@ -16,6 +16,7 @@
   &--theme-two {
     margin-top: 40px;
     padding: 35px 20px 25px;
+    grid-template-columns: auto 1fr;
     grid-template-areas:
       "media-text media-text"
       "media-img media-link";
@@ -76,5 +77,10 @@
     margin-top: 2px;
     align-self: start;
     grid-area: media-img;
+    justify-self: end;
+
+    //.media--theme-two {
+    //  alig
+    //}
   }
 }
