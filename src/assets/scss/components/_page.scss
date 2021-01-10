@@ -66,6 +66,15 @@
 
   &__content {
     //grid-column: 1 / 2;
+
+    &--media {
+      display: grid;
+      grid-row-gap: 20px;
+
+      @include media-breakpoint-up(md) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
   }
 
   &__sidebar {
