@@ -3,7 +3,8 @@
   padding-top: 30px;
   background-color: $secondary-color;
 
-  .page-contacts ~ & {
+  .page-contacts ~ &,
+  .page-section--theme-primary ~ & {
     margin-top: 0;
   }
 

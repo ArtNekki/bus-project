@@ -24,6 +24,10 @@
    &--account {
      max-width: 570px;
    }
+
+   &--no-margin {
+     margin: 0;
+   }
   }
 
   &__fieldset {
@@ -31,8 +35,9 @@
     display: grid;
     grid-column-gap: $form-column-gap;
     grid-row-gap: 15px;
-    align-items: start;
-    align-self: start;
+    //align-items: start;
+    //align-self: start;
+    align-items: end;
 
     & > * {
       order: 1;

@@ -22,6 +22,13 @@
     }
   }
 
+  &--inner {
+    margin-top: 70px;
+    padding-top: 75px;
+    padding-bottom: 75px;
+    background-color: $primary-color;
+  }
+
   &__container {
     @include container();
   }
@@ -77,6 +84,16 @@
         font-size: 32px;
       }
     }
+
+    .page-section--inner & {
+      margin: 0;
+      font-size: 28px;
+      grid-column: 1 / -1;
+
+      @include media-breakpoint-up(lg) {
+        font-size: 32px;
+      }
+    }
   }
 
   &__title br {
@@ -99,6 +116,12 @@
       margin-bottom: 35px;
       font-size: 18px;
       line-height: 1.4;
+    }
+
+    .page-section--inner & {
+      margin-top: 8px;
+      margin-bottom: 20px;
+      font-size: 14px;
     }
   }
 
