@@ -3,14 +3,16 @@ title:
 layout: default
 ---
 
-<main class="page__inner">
+<div class="page__container">
   <h1 class="page__title">Работа в команде Bus-Курьер</h1>
   <div class="page__row">
     <p class="page__text">Bus-Курьер - это единственная в России официальная служба сверхсрочной доставки грузов междугородними рейсовыми автобусами!</p>
-    <p class="page__text page__text--lg"><b>Мы работаем с 2013 года</b></p>
+    <p class="page__text page__text--work-since"><b>Мы работаем с 2013 года</b></p>
   </div>
-  <div class="achievements">
-    <div class="achievements__top">
+</div>
+<div class="achievements">
+  <div class="achievements__top">
+    <div class="achievements__container achievements__container--top">
       <div class="achievements__info achievements__info--work" data-count="7">
         <p class="achievements__text">лет работы<br />
           на рынке грузоперевозок</p>
@@ -20,6 +22,8 @@ layout: default
           с 2013 года</p>
       </div>
     </div>
+  </div>
+  <div class="achievements__container achievements__container--bottom">
     <div class="achievements__col achievements__col--prim">
       <div class="achievements__info achievements__info--location" data-count="6">
         <b class="achievements__title">терминалов<br />в Приморском крае</b>
@@ -33,7 +37,9 @@ layout: default
       </div>
     </div>
   </div>
-  <div class="work-in-team">
+</div>
+<div class="work-in-team">
+  <div class="work-in-team__container">
     <div class="work-in-team__header">
       {{{ img name="work-in-team" alt="Возможно это ты" }}}
       <div class="work-in-team__header-box">
@@ -76,4 +82,4 @@ layout: default
       {{{ media theme="two" title="Хотите присоединиться к нашей команде?" text="Отправляйте своё резюме на почту!" link='{"href": "#", "text": "personal@untd.pro"}' mods="under-list, no-icon" }}}
     </div>
   </div>
-</main>
+</div>

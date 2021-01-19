@@ -1,18 +1,36 @@
 .achievements {
   margin-top: 40px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-column-gap: 15px;
 
   &__top {
     position: relative;
-    //min-height: 210px;
-    padding: 23px 0;
-    display: grid;
-    grid-template-columns: 495px 1fr;
-    align-items: center;
-    grid-column: 1 / -1;
+    display: none;
     background-color: $primary-color;
+
+    @include media-breakpoint-up(md) {
+      display: block;
+    }
+  }
+
+  &__container {
+    @include container();
+
+    &--top {
+      position: relative;
+      padding: 23px 0;
+      display: grid;
+      grid-template-columns: 495px 1fr;
+      align-items: center;
+      grid-column: 1 / -1;
+    }
+
+    &--bottom {
+
+      @include media-breakpoint-up(lg) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 15px;
+      }
+    }
   }
 
   &__info {
@@ -90,13 +108,20 @@
   &__col--prim {
 
     &::before {
-      top: -175px;
-      left: -70px;
-      width: 518px;
-      height: 518px;
+      top: -123px;
+      left: -33px;
+      width: 415px;
+      height: 415px;
       background-image: url("map-prim");
       background-position-y: 100%;
       background-size: 100%;
+
+      @include media-breakpoint-up(lg) {
+        top: -175px;
+        left: -70px;
+        width: 518px;
+        height: 518px;
+      }
     }
   }
 

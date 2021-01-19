@@ -1,6 +1,10 @@
 .work-in-team {
   margin-top: 125px;
 
+  &__container {
+    @include container();
+  }
+
   &__header {
     margin-bottom: 110px;
     position: relative;
