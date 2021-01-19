@@ -184,6 +184,12 @@
       }
     }
   }
+
+  &__row {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    grid-column-gap: 145px;
+  }
 }
 
 body {

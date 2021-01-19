@@ -1,0 +1,112 @@
+.achievements {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 15px;
+
+  &__top {
+    position: relative;
+    //min-height: 210px;
+    padding: 23px 0;
+    display: grid;
+    grid-template-columns: 495px 1fr;
+    align-items: center;
+    grid-column: 1 / -1;
+    background-color: $primary-color;
+  }
+
+  &__info {
+    min-height: 165px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-column-gap: 32px;
+    align-items: start;
+    align-content: center;
+    background-repeat: no-repeat;
+    background-position-y: 50%;
+
+    &::before {
+      content: attr(data-count);
+      font-family: $font-family;
+      font-size: 82px;
+      line-height: 1;
+    }
+  }
+
+  &__info--location {
+    width: 350px;
+    min-height: 130px;
+    grid-template-rows: auto 1fr;
+
+    &::before {
+      grid-row: 1 / -1;
+    }
+  }
+
+  &__info--work {
+    background-image: url("work");
+    background-position-x: 20%;
+  }
+
+  &__info--parcels {
+    background-image: url("parcels");
+    background-position-x: 46%;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    font-family: $font-family--secondary;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+
+  &__text {
+    margin: 0;
+    font-family: $font-family--secondary;
+    font-size: 24px;
+    line-height: 1.3;
+
+    .achievements__info--location & {
+      font-size: 18px;
+      line-height: 1.25;
+    }
+  }
+
+  &__col {
+    position: relative;
+    min-height: 290px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+    }
+  }
+
+  &__col--prim {
+
+    &::before {
+      top: -175px;
+      left: -70px;
+      width: 518px;
+      height: 518px;
+      background-image: url("map-prim");
+      background-position-y: 100%;
+      background-size: 100%;
+    }
+  }
+
+  &__col--tat {
+    &::before {
+      top: -20px;
+      left: 0;
+      width: 455px;
+      height: 305px;
+      background-image: url("map-tat");
+    }
+  }
+}
