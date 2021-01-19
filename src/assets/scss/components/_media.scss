@@ -4,7 +4,7 @@
   display: grid;
   grid-template-columns: 40px 1fr;
   grid-template-areas:
-    "media-img media-text"
+    "media-img media-title"
     "media-img media-link";
   grid-column-gap: 20px;
   grid-row-gap: 10px;
@@ -18,11 +18,19 @@
     padding: 35px 20px 25px;
     grid-template-columns: auto 1fr;
     grid-template-areas:
-      "media-text media-text"
+      "media-title media-title"
       "media-img media-link";
     grid-column-gap: 15px;
     max-width: 100%;
     background-color: $primary-color;
+  }
+
+  &--no-icon {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "media-title"
+      "media-text"
+      "media-link";
   }
 
   &--under-list {
@@ -36,9 +44,9 @@
     }
   }
 
-  &__text {
+  &__title {
     margin: 0;
-    grid-area: media-text;
+    grid-area: media-title;
     font-family: $font-family--secondary;
     font-size: 18px;
     line-height: 1.2;
@@ -57,7 +65,7 @@
     }
   }
 
-  &__text br {
+  &__title br {
     display: none;
 
     @include media-breakpoint-only(md) {
@@ -67,6 +75,11 @@
     @include media-breakpoint-up(xl) {
       display: block;
     }
+  }
+
+  &__text {
+    margin: 0;
+    grid-area: media-text;
   }
 
   &__link {

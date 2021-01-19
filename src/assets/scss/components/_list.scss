@@ -19,10 +19,10 @@
 
   &__item {
     position: relative;
+    margin-bottom: 12px;
     display: grid;
     grid-template-columns: auto 1fr;
     grid-auto-rows: max-content;
-    align-items: center;
     grid-column-gap: 15px;
     font-family: $font-family--secondary;
     font-size: 16px;
@@ -50,15 +50,20 @@
         line-height: 1.2;
         color: $gray-color--down-11;
       }
-
     }
 
-    &:not(&:last-child) {
+    .list--numbers > & {
       margin-bottom: 45px;
+      align-items: center;
     }
 
-    .list--letters > &:not(&:last-child) {
+    .list--letters > & {
       margin-bottom: 15px;
+      align-items: center;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
     }
 
     .list--items-with-border & {

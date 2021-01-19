@@ -35,18 +35,23 @@ module.exports = function(options) {
   //   </div>`
   // }
 
+  function renderImg() {
+    return `<div class="media__img">
+        <svg ${imgWidth ? `width="${imgWidth}px"` : ``} ${imgHeight ? `height="${imgHeight}px"` : ``}>
+            <use xlink:href="${root}assets/img/symbol/sprite.svg#${imgName}">
+        </svg>
+    </div>`
+  }
+
   function renderThemeTwo() {
     return `<article class="${cssClass} media--theme-two">
-        <div class="media__img">
-            <svg ${imgWidth ? `width="${imgWidth}px"` : ``} ${imgHeight ? `height="${imgHeight}px"` : ``}>
-                <use xlink:href="${root}assets/img/symbol/sprite.svg#${imgName}">
-            </svg>
-        </div>
+         ${imgName ? renderImg() : ``}   
+         ${title ? `<h1 class="media__title">${title}</h1>` : ''}
          ${text ? `<p class="media__text">${text}</p>` : ''}
          <div class="media__link">
           ${link ? `<a href="${link.href}" class="link link--lg">
               <div class="link__text">
-                  <span><b>Скачать в PDF</b> (80 кб)</span>
+                  <span>${link.text}</span>
               </div>
           </a>` : ''} 
         </div>  
