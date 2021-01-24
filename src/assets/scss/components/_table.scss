@@ -1,6 +1,10 @@
 .table {
   position: relative;
 
+  &--max-width-500 {
+    max-width: 500px;
+  }
+
   &__scroll {
     overflow-x: auto;
   }
