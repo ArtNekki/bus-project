@@ -47,6 +47,15 @@
   &__container {
     @include container();
 
+    &--col-2 {
+      display: grid;
+
+      @include media-breakpoint-up(lg) {
+        grid-template-columns: 1fr 370px;
+        grid-column-gap: 50px;
+      }
+    }
+
     //&--account-two-col {
     //
     //}
