@@ -26,7 +26,8 @@
     margin-top: 70px;
     padding-top: 75px;
     padding-bottom: 75px;
-    background-color: $primary-color;
+    border-top: 1px solid $gray-color;
+    //background-color: $primary-color;
   }
 
   &__container {
