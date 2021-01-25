@@ -3,4 +3,23 @@ title: Тарифы на перевозку
 layout: default
 ---
 
-<h1>Тарифы на перевозку</h1>
+<div class="page__container">
+  <h1 class="page__title">Тарифы на перевозку по Приморскому краю</h1>
+  <p class="page__text">Для получения тарифов, выберите регион и город, из которого планируется отправление.</p>
+  <div class="rates-box">
+    <h2 class="rates-box__heading">Регион:</h2>
+    <div class="rates-box__col">
+      {{{ radio id="prim"  name="regions" label="Приморский край" checked="true"}}}
+      {{{ radio id="tat"  name="regions" label="Республика Татарстан"}}}
+    </div>
+    <h2 class="rates-box__heading">Город:</h2>
+    <div class="rates-box__col rates-box__col--cities">
+      {{{ radio name="cities" label="Владивосток" checked="true"}}}
+      {{{ radio name="cities" label="Уссурийск"}}}
+      {{{ radio name="cities" label="Артем"}}}
+      {{{ radio name="cities" label="Находка"}}}
+      {{{ radio name="cities" label="Дальнегорск"}}}
+    </div>
+  </div>
+</div>
+
