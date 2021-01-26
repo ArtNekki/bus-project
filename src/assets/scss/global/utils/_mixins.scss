@@ -414,3 +414,20 @@
   //background-color: lighten(#E5E5E5, 5%);
   border-radius: 50%;
 }
+
+
+@mixin bg-image($name, $ext) {
+  background-image: url($general-images + $name + "." + $ext);
+
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    background-image: url($general-images + $name + "@2x." + $ext);
+  }
+
+  @media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi) {
+    background-image: url($general-images + $name + "@3x." + $ext);
+  }
+
+  @media (-webkit-min-device-pixel-ratio: 4), (min-resolution: 384dpi) {
+    background-image: url($general-images + $name + "@4x." + $ext);
+  }
+}
