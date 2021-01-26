@@ -30,6 +30,13 @@
     outline: none;
   }
 
+  &--default {
+    padding: 0;
+    background: none;
+    border: none;
+    transition: unset;
+  }
+
   &--black {
     background-color: $black-color;
   }

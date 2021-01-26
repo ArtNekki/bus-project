@@ -1,0 +1,47 @@
+.content-box {
+  padding: 40px 0;
+  display: grid;
+  grid-template-columns: $list-number--size 1fr;
+  grid-column-gap: $list-number--gap-md;
+  border-top: 1px solid $gray-light-color;
+  border-bottom: 1px solid $gray-light-color;
+
+  &::before {
+    @include step-point($list-number--size, 20px);
+
+    content: attr(data-count);
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+    opacity: 0;
+  }
+
+  &[data-count]::before {
+    opacity: 1;
+  }
+
+  &__title {
+    margin: 0 0 10px 0;
+    font-family: $font-family;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 34px;
+  }
+
+  &__text {
+    margin: 0 0 20px 0;
+    font-family: $font-family--secondary;
+    font-size: 15px;
+    line-height: 20px;
+    opacity: 0.8;
+
+    &--note {
+      margin: 25px 0 0 0;
+      font-size: 14px;
+      color: $gray-dark-color;
+    }
+  }
+
+  &__data {
+    margin-top: 20px;
+  }
+}

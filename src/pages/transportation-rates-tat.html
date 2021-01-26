@@ -34,6 +34,56 @@ layout: default
     {{{ info-box title="Зона 5" text="Челябинск, Екатеринбург, Дубовка, Актобе" }}}
     {{{ info-box title="Зона 6" text="Волгоград, Грозный, Дагестанские Огни, Дербент, Избербаш, Каспийск, Кизилюрт, Кизляр, Махачкала, Новочеркаск,
     Хасавюрт, Элиста, Яшкуль" }}}
+
+    <article class="content-box" data-count="1">
+      <div class="content-box__body">
+        <h1 class="content-box__title">Документы</h1>
+        <div class="content-box__text">не более формата А4 до 1,5 см толщиной.</div>
+        {{{ table
+        head='["Зона 1", "Зона 2", "Зона 3", "Зона 4", "Зона 5", "Зона 6"]'
+        body='[["250 руб", "300 руб", "400 руб", "500 руб", "600 руб", "700 руб"]]'
+        mods='clean, width-auto'
+        }}}
+      </div>
+    </article>
+    <article class="content-box" data-count="2">
+      <div class="context-box__body">
+        <h1 class="content-box__title">Посылки</h1>
+        <div class="content-box__text">за 1 станд. место габаритами не больше 30х30х70</div>
+        {{{ table
+        head='["Вес", "Зона 1", "Зона 2", "Зона 3", "Зона 4", "Зона 5", "Зона 6"]'
+        body='[
+        ["0-20 кг.", "300 руб", "400 руб", "500 руб", "600 руб", "700 руб", "800 р."],
+        ["20-40 кг.", "400 руб", "500 руб", "600 руб", "700 руб", "800 руб", "900 р."],
+        ["40-60 кг.", "500 руб", "600 руб", "700 руб", "800 руб", "900 руб", "1000 р."]
+        ]'
+        mods='clean, width-auto'
+        }}}
+        <p class="content-box__text content-box__text--note">*До 20 кг место</p>
+      </div>
+    </article>
+    <article class="content-box">
+      <div class="content-box__body">
+        <h1 class="content-box__title">Прайс на дополнительные услуги</h1>
+        <div class="content-box__data">
+          {{{ data-list items='[
+            {"name": "Расширенное СМС", "value": "30 р."},
+            {"name": "СМС отправителю", "value": "30 р."}]'
+          }}}
+        </div>
+      </div>
+    </article>
+    <article class="content-box">
+      <div class="content-box__body">
+        <h1 class="content-box__title">Хранение</h1>
+        <p>Хранение отправлений в пунктах выдачи свыше суток с момента доставки оплачивается получателем отдельно, в соответствии
+          с тарифами, установленными Курьерской службой, а именно 100 рублей за каждые последующие сутки.</p>
+      </div>
+    </article>
+    {{{ media theme="two" title="Вы можете скачать файл «Правила приемки<br /> и отправки грузов» в формате PDF" link='{"href": "#", "text": "Скачать в PDF (80 кб)"}' imgName="pdf" imgWidth="36" imgHeight="40" mods="under-list" }}}
   </div>
+  <aside class="page__sidebar">
+    {{{ media title="Тарифы на упаковку в другом городе" link='{"href": "#", "text": "Приморский край"}' imgName="map-point" imgWidth="20" imgHeight="35" }}}
+  </aside>
 </div>
 

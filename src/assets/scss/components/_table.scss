@@ -13,6 +13,10 @@
     width: 100%;
     white-space: nowrap;
     border-collapse: collapse;
+
+    .table--width-auto & {
+      width: auto;
+    }
   }
 
   &__scrollbar {
@@ -44,9 +48,9 @@
     }
   }
 
-  thead {
-    border-bottom: 3px solid $primary-color;
-  }
+  //thead {
+  //  border-bottom: 3px solid $primary-color;
+  //}
 
   &__header {
     border-bottom: 3px solid $primary-color;
@@ -69,12 +73,20 @@
         border-bottom-right-radius: $border-radius;
       }
     }
+
+    .table--clean & {
+      border-color: transparent;
+    }
   }
 
   tr {
     &:nth-child(even) {
       background-color: #F7F7F7;
     }
+  }
+
+  &--clean tr:nth-child(even) {
+    background-color: transparent;
   }
 
   td, th {
@@ -85,8 +97,35 @@
     //white-space: nowrap;
   }
 
+  &--clean th,
+  &--clean td {
+    min-width: 90px;
+    padding: 4px 10px;
+    box-sizing: border-box;
+    border-right: 1px solid $gray-light-color;
+
+    &:first-child {
+      padding-left: 0;
+    }
+  }
+
   th {
     font-size: 15px;
+  }
+
+  &--clean th {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  &--clean th span {
+    margin-right: 5px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &--clean th button {
+    vertical-align: middle;
   }
 
   td {
