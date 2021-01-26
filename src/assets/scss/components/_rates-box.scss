@@ -66,8 +66,11 @@
 
     @include media-breakpoint-up(md) {
       grid-template-columns: repeat(3, auto);
+      //grid-row-gap: 20px;
+    }
+
+    @include media-breakpoint-up(xl) {
       justify-content: space-between;
-      grid-row-gap: 20px;
     }
   }
 }

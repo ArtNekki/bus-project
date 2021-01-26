@@ -59,6 +59,18 @@
       }
     }
 
+    &--col-2-xl {
+
+      @include media-breakpoint-up(xl) {
+        $col-gap: 50px;
+        $sidebar-width: 370px;
+
+        display: grid;
+        grid-template-columns: calc(100% - (#{$col-gap} + #{$sidebar-width})) $sidebar-width;
+        grid-column-gap: $col-gap;
+      }
+    }
+
     //&--account-two-col {
     //
     //}
