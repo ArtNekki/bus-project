@@ -41,9 +41,15 @@
     font-size: 15px;
     line-height: 20px;
     opacity: 0.8;
+  }
 
-    &--note {
-      margin: 25px 0 0 0;
+  &__note {
+    margin: 25px 0 0 0;
+
+    small {
+      margin: 0;
+      display: block;
+      font-family: $font-family--secondary;
       font-size: 14px;
       color: $gray-dark-color;
     }
