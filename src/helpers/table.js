@@ -38,7 +38,7 @@ module.exports = function(options) {
                   </tbody>
                 </table>
               </div>
-              <div class="table__scroll-bar"></div>
+              <div class="table__scrollbar"></div>
           </div>`;
 
   return table;

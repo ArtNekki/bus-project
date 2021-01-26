@@ -48,9 +48,9 @@
     @include container();
 
     &--col-2 {
-      display: grid;
 
       @include media-breakpoint-up(lg) {
+        display: grid;
         grid-template-columns: 1fr 370px;
         grid-column-gap: 50px;
       }

@@ -1,7 +1,7 @@
 .content-box {
   padding: 40px 0;
   display: grid;
-  grid-template-columns: $list-number--size 1fr;
+  grid-template-columns: $list-number--size calc(100% - (#{$list-number--size} + #{$list-number--gap-md}));
   grid-column-gap: $list-number--gap-md;
   border-top: 1px solid $gray-light-color;
   border-bottom: 1px solid $gray-light-color;
