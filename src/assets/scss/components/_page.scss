@@ -50,9 +50,12 @@
     &--col-2 {
 
       @include media-breakpoint-up(lg) {
+        $col-gap: 50px;
+        $sidebar-width: 370px;
+
         display: grid;
-        grid-template-columns: 1fr 370px;
-        grid-column-gap: 50px;
+        grid-template-columns: calc(100% - (#{$col-gap} + #{$sidebar-width})) $sidebar-width;
+        grid-column-gap: $col-gap;
       }
     }
 
