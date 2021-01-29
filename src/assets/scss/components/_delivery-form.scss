@@ -1,5 +1,6 @@
 .form {
   $form-column-gap: $container-padding-x;
+  $form-border-radius: 10px;
 
   margin-top: 35px;
   margin-bottom: 50px;
@@ -7,6 +8,39 @@
 
   &--no-margin {
     margin: 0;
+  }
+
+  &--promo {
+    padding: 45px 33px 60px 33px;
+    background-color: $primary-color;
+    border-radius: $form-border-radius;
+    box-sizing: border-box;
+
+    @include media-breakpoint-up(sm) {
+      padding-right: 45px;
+      padding-left: 45px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      display: inline-grid;
+      max-width: 375px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: -$container-padding-x;
+      bottom: 0;
+      left: -$container-padding-x;
+      z-index: -1;
+      background-color: $primary-color;
+      border-radius: $form-border-radius;
+
+      @include media-breakpoint-up(sm) {
+        display: none;
+      }
+    }
   }
 
   //&--mg-top-sm {
@@ -551,6 +585,12 @@
     }
   }
 
+  &__title {
+    margin: 0;
+    font-size: 24px;
+    line-height: 28px;
+  }
+
   &__label {
     margin-bottom: 0.25em;
     display: block;
@@ -796,6 +836,23 @@
       animation-name: fade-in;
       animation-duration: 0.5s;
       animation-fill-mode: forwards;
+    }
+  }
+
+  &__submit {
+    margin-top: 13px;
+    padding: 14px 10px;
+    display: block;
+    font-family: $font-family--secondary;
+    font-size: 18px;
+    line-height: 1.2;
+    color: $white-color;
+    background-color: $black-color;
+    border-radius: $border-radius;
+    border: none;
+
+    &:focus {
+      outline: none;
     }
   }
 }

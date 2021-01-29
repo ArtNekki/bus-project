@@ -37,23 +37,25 @@ layout: default
         <h2 class="form__title">Рассчитайте стоимость</h2>
         <div class="form__field">
           <label for="delivery-from" class="form__label">Откуда отправляем?</label>
-          <div class="select">
-            <select  name="delivery-from" id="delivery-from" class="select__field">
-              <option value="">Выберите город</option>
-              <option value="">Находка</option>
-              <option value="">Арсеньев</option>
-            </select>
-          </div>
+          {{{ select
+          id="delivery-from"
+          name="delivery-from"
+          data='[
+          {"value": "", "name": "Выберите город"},
+          {"value": "nakhodka", "name": "Находка"},
+          {"value": "arseniev", "name": "Арсеньев"}]'
+          }}}
         </div>
         <div class="form__field">
           <label for="delivery-to" class="form__label">Куда отправляем?</label>
-          <div class="select">
-            <select id="delivery-to" name="delivery-from"  class="select__field">
-              <option value="">Выберите город</option>
-              <option value="">Находка</option>
-              <option value="">Арсеньев</option>
-            </select>
-          </div>
+          {{{ select
+          id="delivery-to"
+          name="delivery-to"
+          data='[
+          {"value": "", "name": "Выберите город"},
+          {"value": "nakhodka", "name": "Находка"},
+          {"value": "arseniev", "name": "Арсеньев"}]'
+          }}}
         </div>
         <button type="submit" class="form__submit">Рассчитать</button>
       </form>
