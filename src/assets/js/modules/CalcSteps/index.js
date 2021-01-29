@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
         steps[currentStep].style.display = 'block';
     }
 
-    if(!nextStep || !backStep) return;
+    if(!calcSteps) return;
 
     const nextStep = document.getElementById('nextStep');
     const backStep = document.getElementById('backStep');

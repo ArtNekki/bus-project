@@ -59,6 +59,17 @@
       }
     }
 
+    &--calc-rate {
+      @include media-breakpoint-up(lg) {
+        $col-gap: 50px;
+        $sidebar-width: 400px;
+
+        display: grid;
+        grid-template-columns: 1fr 400px;
+        grid-column-gap: $col-gap;
+      }
+    }
+
     &--col-2-xl {
 
       @include media-breakpoint-up(xl) {
@@ -75,17 +86,19 @@
     //
     //}
 
-    //@include media-breakpoint-up(lg) {
-    //  display: grid;
-    //  grid-template-columns: auto 400px;
-    //  grid-column-gap: 35px;
-    //}
-    //
-    //@include media-breakpoint-up(xl) {
-    //  display: grid;
-    //  grid-template-columns: minmax(auto, 700px) minmax(auto, 400px);
-    //  grid-column-gap: 70px;
-    //}
+    &--calc {
+      @include media-breakpoint-up(lg) {
+        display: grid;
+        grid-template-columns: auto 400px;
+        grid-column-gap: 35px;
+      }
+
+      @include media-breakpoint-up(xl) {
+        display: grid;
+        grid-template-columns: minmax(auto, 700px) minmax(auto, 400px);
+        grid-column-gap: 70px;
+      }
+    }
   }
 
   &__content {
