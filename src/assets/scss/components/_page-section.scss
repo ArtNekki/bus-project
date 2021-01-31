@@ -130,25 +130,6 @@
 
   }
 
-  &__row {
-
-    @include media-breakpoint-up(lg) {
-      display: grid;
-      grid-template-columns: 50% 1fr;
-      grid-column-gap: 55px;
-    }
-
-    @include media-breakpoint-up(xl) {
-      grid-column-gap: 65px;
-    }
-
-    .page-section--article & {
-      @include media-breakpoint-up(xl) {
-        grid-column-gap: 150px;
-      }
-    }
-  }
-
   &__images {
     margin-top: 30px;
     padding-right: 35px;

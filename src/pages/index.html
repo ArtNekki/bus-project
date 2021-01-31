@@ -13,21 +13,15 @@ layout: default
            srcset="{{root}}assets/img/content/index/bus-sm@2x.png 2x, {{root}}assets/img/content/index/bus-sm@3x.png 3x">
       <ul class="main-promo__list">
         <li>
-          <svg width="26" height="28">
-            <use xlink:href="{{root}}assets/img/symbol/sprite.svg#parcel"></use>
-          </svg>
+          {{{ icon name="parcel" width="26" height="28" }}}
           <span>Посылки</span>
         </li>
         <li>
-          <svg width="28" height="28">
-            <use xlink:href="{{root}}assets/img/symbol/sprite.svg#docs"></use>
-          </svg>
+          {{{ icon name="docs" width="28" height="28" }}}
           <span>Документы</span>
         </li>
         <li>
-          <svg width="25" height="28">
-            <use xlink:href="{{root}}assets/img/symbol/sprite.svg#cargo"></use>
-          </svg>
+          {{{ icon name="docs" width="25" height="28" }}}
           <span>Грузы</span>
         </li>
       </ul>
@@ -35,27 +29,29 @@ layout: default
     <div class="main-promo__form">
       <form action="#" class="form form--promo">
         <h2 class="form__title">Рассчитайте стоимость</h2>
-        <div class="form__field">
-          <label for="delivery-from" class="form__label">Откуда отправляем?</label>
-          {{{ select
-          id="delivery-from"
-          name="delivery-from"
-          data='[
-          {"value": "", "name": "Выберите город"},
-          {"value": "nakhodka", "name": "Находка"},
-          {"value": "arseniev", "name": "Арсеньев"}]'
-          }}}
-        </div>
-        <div class="form__field">
-          <label for="delivery-to" class="form__label">Куда отправляем?</label>
-          {{{ select
-          id="delivery-to"
-          name="delivery-to"
-          data='[
-          {"value": "", "name": "Выберите город"},
-          {"value": "nakhodka", "name": "Находка"},
-          {"value": "arseniev", "name": "Арсеньев"}]'
-          }}}
+        <div class="form__fieldset">
+          <div class="form__field">
+            <label for="delivery-from" class="form__label">Откуда отправляем?</label>
+            {{{ select
+            id="delivery-from"
+            name="delivery-from"
+            data='[
+            {"value": "", "name": "Выберите город"},
+            {"value": "nakhodka", "name": "Находка"},
+            {"value": "arseniev", "name": "Арсеньев"}]'
+            }}}
+          </div>
+          <div class="form__field">
+            <label for="delivery-to" class="form__label">Куда отправляем?</label>
+            {{{ select
+            id="delivery-to"
+            name="delivery-to"
+            data='[
+            {"value": "", "name": "Выберите город"},
+            {"value": "nakhodka", "name": "Находка"},
+            {"value": "arseniev", "name": "Арсеньев"}]'
+            }}}
+          </div>
         </div>
         <button type="submit" class="form__submit">Рассчитать</button>
       </form>
@@ -91,27 +87,21 @@ layout: default
     <ul class="services-list">
       <li class="services-list__item">
         <div class="services-list__icon">
-          <svg width="50" height="50">
-            <use xlink:href="{{root}}assets/img/symbol/sprite.svg#delivery-to-door"></use>
-          </svg>
+          {{{ icon name="delivery-to-door" width="50" height="50" }}}
         </div>
         <h3 class="services-list__title">Доставка от двери<br />до двери</h3>
         <p class="services-list__text">Курьер заберет вашу посылку и доставит её до двери получателя.</p>
       </li>
       <li class="services-list__item">
         <div class="services-list__icon">
-          <svg width="52" height="51">
-            <use xlink:href="{{root}}assets/img/symbol/sprite.svg#sms-call"></use>
-          </svg>
+          {{{ icon name="sms-call" width="52" height="51" }}}
         </div>
         <h3 class="services-list__title">SMS-уведомления<br />о статусе доставки</h3>
         <p class="services-list__text">Вы знаете о всех этапах движения посылки. SMS-уведомления получают отправитель и получатель.</p>
       </li>
       <li class="services-list__item">
         <div class="services-list__icon">
-          <svg width="50" height="50">
-            <use xlink:href="{{root}}assets/img/symbol/sprite.svg#package"></use>
-          </svg>
+          {{{ icon name="package" width="50" height="50" }}}
         </div>
         <h3 class="services-list__title">Упаковка грузов</h3>
         <p class="services-list__text">Подберем оптимальную упаковку для вашего груза и бережно запакуем его.</p>
@@ -121,27 +111,21 @@ layout: default
       </li>
       <li class="services-list__item">
         <div class="services-list__icon">
-          <svg width="55" height="55">
-            <use xlink:href="{{root}}assets/img/symbol/sprite.svg#stock"></use>
-          </svg>
+          {{{ icon name="stock" width="55" height="55" }}}
         </div>
         <h3 class="services-list__title">Складское<br>хранение грузов</h3>
         <p class="services-list__text">Бесплатное хранение вашего груза в течение суток.</p>
       </li>
       <li class="services-list__item">
         <div class="services-list__icon">
-          <svg width="70" height="42">
-            <use xlink:href="{{root}}assets/img/symbol/sprite.svg#delivery-from-airport"></use>
-          </svg>
+          {{{ icon name="delivery-from-airport" width="70" height="42" }}}
         </div>
         <h3 class="services-list__title">Доставка<br />из аэропорта</h3>
         <p class="services-list__text">Забор груза из Аэропорта и Карго-Владивосток, прохождение необходимых процедур.</p>
       </li>
       <li class="services-list__item">
         <div class="services-list__icon">
-          <svg width="51" height="51">
-            <use xlink:href="{{root}}assets/img/symbol/sprite.svg#ensurance"></use>
-          </svg>
+          {{{ icon name="ensurance" width="51" height="51" }}}
         </div>
         <h3 class="services-list__title">Страхование груза</h3>
         <p class="services-list__text">Страховая защита груза и максимально быстрое возмещение ущерба.</p>
@@ -151,42 +135,44 @@ layout: default
 </section>
 <section class="page-section">
   <div class="page-section__container">
-    <h2 class="page-section__title">Решаем нестандартные<br />логистические задачи</h2>
+    <h2 class="page-section__title">Решаем нестандартные <br />логистические задачи</h2>
     <p class="page-section__text">Нужно организовать доставку нестандартного груза в очень сжатые сроки?<br /> Трудно найти исполнителя? Мы предложим индивидуальное решение вашей задачи!</p>
-    <div class="page-section__row">
+    <div class="row row--no-standart-tasks">
       <form action="#" class="form form--send-cargo">
-        <div class="form__field">
-          <label for="delivery-from-second" class="form__label">Откуда отправляем?</label>
-          <div class="select">
-            <select name="delivery-from" id="delivery-from-second" class="select__field">
-              <option value="">Выберите город</option>
-              <option value="">Находка</option>
-              <option value="">Арсеньев</option>
-            </select>
+        <div class="form__fieldset form__fieldset--2-col-sm form__fieldset--1-col-lg form__fieldset--2-col-xl">
+          <div class="form__field">
+            <label for="delivery-from-2" class="form__label">Откуда отправляем?</label>
+            {{{ select
+            id="delivery-from-2"
+            name="delivery-from-2"
+            data='[
+            {"value": "", "name": "Выберите город"},
+            {"value": "nakhodka", "name": "Находка"},
+            {"value": "arseniev", "name": "Арсеньев"}]'
+            }}}
+          </div>
+          <div class="form__field">
+            <label for="delivery-to-2" class="form__label">Куда отправляем?</label>
+            {{{ select
+            id="delivery-to-2"
+            name="delivery-to-2"
+            data='[
+            {"value": "", "name": "Выберите город"},
+            {"value": "nakhodka", "name": "Находка"},
+            {"value": "arseniev", "name": "Арсеньев"}]'
+            }}}
+          </div>
+          <div class="form__field form__field--full">
+            <label for="describe-task" class="form__label">Куда отправляем?</label>
+            {{{ textarea id="describe-task" name="describe-task" }}}
+          </div>
+          <div class="form__field form__field--full">
+            {{{ checkbox id="subscribe" name="personal-data" label="Нажимая кнопку «Отправить», я даю свое согласие на обработку моих персональных данных" mods="sm"}}}
           </div>
         </div>
-        <div class="form__field">
-          <label for="delivery-to-second" class="form__label">Куда отправляем?</label>
-          <div class="select">
-            <select id="delivery-to-second" name="delivery-from"  class="select__field">
-              <option value="">Выберите город</option>
-              <option value="">Находка</option>
-              <option value="">Арсеньев</option>
-            </select>
-          </div>
+        <div class="form__fieldset form__fieldset--2-col-sm form__fieldset--1-col-lg form__fieldset--2-col-xl">
+          <button type="submit" class="form__submit">Отправить</button>
         </div>
-        <div class="form__field form__field--full">
-          <label for="describe-task" class="form__label">Куда отправляем?</label>
-          <textarea name="describe-task" id="describe-task"  rows="5" class="text-area"></textarea>
-        </div>
-        <div class="form__field form__field--full">
-          <label class="checkbox">
-            <input type="checkbox" class="checkbox__input">
-            <span class="checkbox__label">Нажимая кнопку «Отправить», я даю свое согласие на</span>
-          </label>
-          <a href="#" class="link link--sm"><span class="link__text">обработку моих персональных данных</span></a>
-        </div>
-        <button type="submit" class="form__submit">Отправить</button>
       </form>
       <section class="page-section page-section--examples">
         <h2 class="page-section__title">Примеры</h2>
@@ -201,24 +187,16 @@ layout: default
     <p class="page-section__text">С нами работает более 500 компаний, которые регулярно отправляют грузы<br />по Приморскому краю и в Хабаровск.</p>
     <div class="partners">
       <div class="partners__item">
-        <svg>
-          <use xlink:href="{{root}}assets/img/symbol/sprite.svg#sber"></use>
-        </svg>
+        {{{ icon name="sber" }}}
       </div>
       <div class="partners__item">
-        <svg>
-          <use xlink:href="{{root}}assets/img/symbol/sprite.svg#aeroflot"></use>
-        </svg>
+        {{{ icon name="aeroflot" }}}
       </div>
       <div class="partners__item">
-        <svg >
-          <use xlink:href="{{root}}assets/img/symbol/sprite.svg#giperauto"></use>
-        </svg>
+        {{{ icon name="giperauto" }}}
       </div>
       <div class="partners__item">
-        <svg>
-          <use xlink:href="{{root}}assets/img/symbol/sprite.svg#unilab"></use>
-        </svg>
+        {{{ icon name="unilab" }}}
       </div>
     </div>
   </div>
