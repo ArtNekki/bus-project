@@ -1,5 +1,17 @@
 .row {
 
+  &--article {
+    @include media-breakpoint-up(lg) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 100px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      grid-column-gap: 150px;
+    }
+  }
+
   &--no-standart-tasks {
     $first-column--lg: 50%;
     $first-column--xl: 670px;

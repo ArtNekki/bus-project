@@ -23,3 +23,16 @@ small {
   line-height: 22px;
   color: $gray-dark-color;
 }
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+// utils
+
+.u-no-mgt--lg {
+  @include media-breakpoint-up(lg) {
+    margin-top: 0;
+  }
+}
