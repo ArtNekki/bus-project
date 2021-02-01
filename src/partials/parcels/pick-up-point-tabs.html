@@ -1,20 +1,23 @@
-<div data-pickup-tabs class="tabs">
-  <ul class="tabs__nav">
-    <li>
-      <a href="#boxBerry">BoxBerry <span>(4 отделения)</span></a>
-    </li>
-    <li>
-      <a data-tabby-default href="#iml">IML <span>(2 отделения)</span></a>
-    </li>
-    <li>
-      <a href="#hermes">Hermes <span>(4 отделения)</span></a>
-    </li>
-    <li>
-      <a href="#kce">КСЭ <span>(1 отделение)</span></a>
-    </li>
-  </ul>
+<div data-pickup-tabs class="tabs tabs--accordeon">
+  <input type="radio" name="pick-up-tabs" id="boxberryTab" hidden>
+  <input type="radio" name="pick-up-tabs" id="imlTab" hidden>
+  <input type="radio" name="pick-up-tabs" id="hermesTab" hidden>
+  <input type="radio" name="pick-up-tabs" id="kceTab" hidden>
 
-  <div id="boxBerry" class="tabs__panel">
+  <div class="tabs__item">
+    <label for="boxberryTab">BoxBerry <span>(4 отделения)</span></label>
+  </div>
+  <div class="tabs__item">
+    <label for="imlTab">IML <span>(2 отделения)</span></label>
+  </div>
+  <div class="tabs__item">
+    <label for="hermesTab">Hermes <span>(4 отделения)</span></label>
+  </div>
+  <div class="tabs__item">
+    <label for="kceTab">КСЭ <span>(1 отделение)</span></label>
+  </div>
+
+  <div id="boxberry" class="tabs__panel">
     <div class="tabs__content">
       {{> accordion name="boxberry"}}
       <div class="map">
