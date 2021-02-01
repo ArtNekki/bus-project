@@ -37,7 +37,7 @@
     //display: grid;
     //grid-template-columns: repeat(4, auto);
 
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(xl) {
       display: none;
     }
   }
@@ -61,7 +61,7 @@
       transform: unset;
     }
 
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(xl) {
       display: block;
     }
 

@@ -1,4 +1,5 @@
 import Slider from './SliderComponent.js';
+import { MediaQuery } from '../../utils/utils';
 
 document.addEventListener('DOMContentLoaded', function () {
   // new Slider({ target: '#example-slider', settings: {
@@ -23,7 +24,26 @@ const dataSlider = document.querySelectorAll('[data-slider]');
 
 dataSlider.forEach((el) => {
   new Slider({ target: el, settings: {
-      slidesPerView: 4,
-      spaceBetween: 30
+      slidesPerView: 1,
+      spaceBetween: 0,
+      breakpointsInverse: true,
+      breakpoints: {
+        // [MediaQuery.S]: {
+        //   slidesPerView: 2,
+        //   spaceBetween: 15
+        // },
+        [MediaQuery.SM]: {
+          slidesPerView: 2,
+          spaceBetween: 15
+        },
+        [MediaQuery.MD]: {
+          slidesPerView: 3,
+          spaceBetween: 15
+        },
+        [MediaQuery.LG]: {
+          slidesPerView: 4,
+          spaceBetween: 30
+        }
+      }
     }});
 });
