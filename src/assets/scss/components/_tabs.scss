@@ -12,6 +12,7 @@
   }
 
   &--accordeon {
+    margin-top: 40px;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(8, auto);
@@ -188,7 +189,7 @@
       }
     }
 
-    .tabs--accordeon input[id="boxberryTab"]:checked
+    //.tabs--accordeon input[id="boxberryTab"]:checked
   }
 
   &__item span {

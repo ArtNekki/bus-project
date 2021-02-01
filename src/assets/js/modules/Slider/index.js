@@ -25,7 +25,7 @@ const dataSlider = document.querySelectorAll('[data-slider]');
 dataSlider.forEach((el) => {
   new Slider({ target: el, settings: {
       slidesPerView: 1,
-      spaceBetween: 0,
+      spaceBetween: 15,
       breakpointsInverse: true,
       breakpoints: {
         // [MediaQuery.S]: {
