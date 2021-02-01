@@ -25,7 +25,19 @@
   }
 
   &--md {
+    margin: 50px 0 10px 0;
+    font-size: 28px;
+    line-height: 33.6px;
 
+    @include media-breakpoint-up(md) {
+      margin-top: 60px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      margin: 90px 0 15px 0;
+      font-size: 32px;
+      line-height: 38.4px;
+    }
   }
 
   &--sm {
