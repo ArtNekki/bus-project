@@ -1,4 +1,18 @@
 .banner {
+
+  --banner-img-width: 236px;
+  --banner-img-height: 314px;
+
+  @include media-breakpoint-up(md) {
+    --banner-img-width: 584px;
+    --banner-img-height: 362px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    --banner-img-width: 777px;
+    --banner-img-height: 447px;
+  }
+
   position: relative;
   font-family: $font-family;
   color: $black-color;
@@ -12,6 +26,28 @@
     left: 0;
     z-index: -1;
     background-color: $primary-color;
+    //background-color: #fde018;
+  }
+
+  &::after {
+    @include bg-image('banner-img--xs', 'png');
+
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    width: var(--banner-img-width);
+    height: var(--banner-img-height);
+    background-size: var(--banner-img-width) var(--banner-img-height);
+
+    @include media-breakpoint-up(md) {
+      @include bg-image('banner-img--md', 'png');
+    }
+
+    @include media-breakpoint-up(lg) {
+      @include bg-image('banner-img--lg', 'png');
+    }
   }
 
   &__container {
@@ -34,7 +70,7 @@
     line-height: 33.6px;
     font-weight: 700;
 
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(sm) {
       max-width: 420px;
     }
 
@@ -52,7 +88,7 @@
     font-size: 16px;
     line-height: 22px;
 
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(sm) {
       max-width: 320px;
     }
 
