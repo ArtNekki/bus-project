@@ -7,16 +7,19 @@
 
   @include media-breakpoint-up(sm) {
     width: 545px;
-    //height: 278px;
   }
 
   @include media-breakpoint-up(md) {
     width: 721px;
-    //height: 415px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    width: 545px;
   }
 
   @include media-breakpoint-up(xl) {
     margin-top: 60px;
+    width: 721px;
   }
 
 }
