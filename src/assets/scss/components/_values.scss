@@ -24,8 +24,13 @@
     grid-column-gap: 24px;
     align-content: start;
 
-    &:not(:last-child) {}
-    margin-bottom: 30px;
+    &:not(:last-child) {
+      margin-bottom: 30px;
+
+      @include media-breakpoint-up(md) {
+        margin-bottom: 0;
+      }
+    }
   }
 
   &__item svg {
