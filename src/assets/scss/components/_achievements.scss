@@ -12,15 +12,21 @@
     position: relative;
     padding: 20px 20px 25px 35px;
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: 310px 330px;
     grid-column-gap: 55px;
     align-items: center;
     grid-column: 1 / -1;
 
-    @include media-breakpoint-up(xl) {
+    @include media-breakpoint-up(lg) {
       @include container();
 
-      grid-template-columns: 495px 1fr;
+      padding-top: 25px;
+      padding-bottom: 25px;
+      grid-template-columns: 420px minmax(min-content, 530px);
+    }
+
+    @include media-breakpoint-up(xl) {
+      grid-template-columns: 420px 1fr;
     }
   }
 
@@ -34,10 +40,11 @@
     align-content: center;
     background-repeat: no-repeat;
 
-    @include media-breakpoint-up(xl) {
+    @include media-breakpoint-up(lg) {
+      padding: 0;
       grid-template-columns: auto 1fr;
       grid-column-gap: 20px;
-      //background-position-y: 50%;
+      background-position-y: 50%;
     }
 
     &::before {
@@ -53,17 +60,27 @@
     background-size: 86px 94px;
     background-position: calc(100% - 25px) 20px;
 
-    @include media-breakpoint-up(xl) {
+    @include media-breakpoint-up(lg) {
+      background-size: unset;
       background-position-x: 20%;
+      background-position-y: 50%;
     }
   }
 
   &__item--parcels {
     background-image: url("parcels");
     background-size: 77px 77px;
-    background-position: calc(100% - 20px) calc(100% - 3px);
+    background-position: calc(100% - 5px) calc(100% - 3px);
+
+    @include media-breakpoint-up(lg) {
+      grid-template-columns: 1fr;
+      background-position-y: 50%;
+      background-position-x: calc(100% - 30px);
+      background-size: unset;
+    }
 
     @include media-breakpoint-up(xl) {
+      grid-template-columns: auto 1fr;
       background-position-x: 46%;
     }
   }
