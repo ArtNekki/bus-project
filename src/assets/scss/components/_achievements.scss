@@ -28,7 +28,8 @@
     padding: 10px 0;
     min-height: 165px;
     display: grid;
-    grid-column-gap: 1fr;
+    grid-template-columns: 1fr;
+    grid-row-gap: 7px;
     align-items: start;
     align-content: center;
     background-repeat: no-repeat;
@@ -60,7 +61,7 @@
   &__item--parcels {
     background-image: url("parcels");
     background-size: 77px 77px;
-    background-position: calc(100% - 20px) 100%;
+    background-position: calc(100% - 20px) calc(100% - 3px);
 
     @include media-breakpoint-up(xl) {
       background-position-x: 46%;
