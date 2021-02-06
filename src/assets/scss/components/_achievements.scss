@@ -1,39 +1,43 @@
 .achievements {
+  position: relative;
   margin-top: 40px;
+  display: none;
+  background-color: $primary-color;
 
-  &__top {
-    position: relative;
-    display: none;
-    background-color: $primary-color;
-
-    @include media-breakpoint-up(md) {
-      display: block;
-    }
+  @include media-breakpoint-up(md) {
+    display: block;
   }
 
   &__container {
-    @include container();
+    position: relative;
+    padding: 20px 20px 25px 35px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-column-gap: 55px;
+    align-items: center;
+    grid-column: 1 / -1;
 
-    &--top {
-      position: relative;
-      padding-top: 23px;
-      padding-bottom: 23px;
-      display: grid;
+    @include media-breakpoint-up(xl) {
+      @include container();
+
       grid-template-columns: 495px 1fr;
-      align-items: center;
-      grid-column: 1 / -1;
     }
   }
 
-  &__info {
+  &__item {
+    padding: 10px 0;
     min-height: 165px;
     display: grid;
-    grid-template-columns: auto 1fr;
-    grid-column-gap: 20px;
+    grid-column-gap: 1fr;
     align-items: start;
     align-content: center;
     background-repeat: no-repeat;
-    background-position-y: 50%;
+
+    @include media-breakpoint-up(xl) {
+      grid-template-columns: auto 1fr;
+      grid-column-gap: 20px;
+      //background-position-y: 50%;
+    }
 
     &::before {
       content: attr(data-count);
@@ -43,36 +47,23 @@
     }
   }
 
-  //&__info--location {
-  //  width: 350px;
-  //  min-height: 130px;
-  //  grid-template-rows: auto 1fr;
-  //
-  //  &::before {
-  //    grid-row: 1 / -1;
-  //  }
-  //}
-
-  &__info--work {
+  &__item--work {
     background-image: url("work");
-    background-position-x: 20%;
-  }
-
-  &__info--parcels {
-    background-image: url("parcels");
-    background-position-x: 46%;
-  }
-
-  &__title {
-    margin-bottom: 10px;
-    font-family: $font-family--secondary;
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 24px;
+    background-size: 86px 94px;
+    background-position: calc(100% - 25px) 20px;
 
     @include media-breakpoint-up(xl) {
-      font-size: 22px;
-      line-height: 27px;
+      background-position-x: 20%;
+    }
+  }
+
+  &__item--parcels {
+    background-image: url("parcels");
+    background-size: 77px 77px;
+    background-position: calc(100% - 20px) 100%;
+
+    @include media-breakpoint-up(xl) {
+      background-position-x: 46%;
     }
   }
 
@@ -81,15 +72,5 @@
     font-family: $font-family--secondary;
     font-size: 24px;
     line-height: 32px;
-
-    .achievements__info--location & {
-      font-size: 16px;
-      line-height: 20.8px;
-
-      @include media-breakpoint-up(xl) {
-        font-size: 18px;
-        line-height: 23px;
-      }
-    }
   }
 }
