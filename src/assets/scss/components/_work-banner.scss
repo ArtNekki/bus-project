@@ -3,6 +3,15 @@
   margin-top: 35px;
   margin-bottom: 110px;
 
+  @include media-breakpoint-up(md) {
+    margin-top: 15px;
+    margin-bottom: 25px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    margin-top: 75px;
+  }
+
   &__container {
     @include container();
 
@@ -18,9 +27,13 @@
     max-width: 345px;
     //height: 170px;
     background-color: $white-color;
-    box-shadow: 0px 24px 54px rgba($black-color, 0.04);
+    box-shadow: 0px 24px 54px rgba($black-color, 0.1);
     border-radius: $border-radius;
     box-sizing: border-box;
+
+    @include media-breakpoint-up(md) {
+      bottom: -25px;
+    }
 
     @include media-breakpoint-up(lg) {
       padding: 40px 25px 35px 45px;

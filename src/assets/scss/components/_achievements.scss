@@ -6,8 +6,13 @@
   background-color: $primary-color;
 
   @include media-breakpoint-up(md) {
+    margin-top: 40px;
     display: block;
     order: unset;
+  }
+
+  @include media-breakpoint-up(xl) {
+    margin-top: 50px;
   }
 
   &__container {

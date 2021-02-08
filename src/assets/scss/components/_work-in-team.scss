@@ -3,7 +3,16 @@
   order: 2;
 
   @include media-breakpoint-up(md) {
+    margin-top: 20px;
     order: unset;
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin-top: 80px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    margin-top: 35px;
   }
 
   &__container {
@@ -13,12 +22,16 @@
   &__main {
     //padding-left: 100px;
 
-    @include media-breakpoint-up(xl) {
+    @include media-breakpoint-up(md) {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(2, auto);
+      grid-column-gap: 25px;
+      //grid-row-gap: 45px;
+    }
+
+    @include media-breakpoint-up(lg) {
       grid-column-gap: 45px;
-      grid-row-gap: 45px;
     }
   }
 
@@ -35,13 +48,13 @@
     font-size: 22px;
     line-height: 26.4px;
 
-    @include media-breakpoint-up(sm) {
+    @include media-breakpoint-up(lg) {
       font-size: 28px;
       line-height: 33.6px;
     }
 
     @include media-breakpoint-up(xl) {
-      margin: 0 0 18px 0;
+      margin: 45px 0 18px 0;
     }
   }
 
@@ -53,7 +66,16 @@
     border-top: 1px solid transparent;
     //margin-top: 45px;
     //padding-left: 45px;
-    max-width: 865px;
     box-sizing: border-box;
+
+    @include media-breakpoint-up(md) {
+      left: unset;
+      width: 100%;
+      max-width: 665px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      margin-top: 55px;
+    }
   }
 }

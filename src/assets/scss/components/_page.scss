@@ -239,6 +239,11 @@
       font-size: 22px;
       font-weight: 500;
       line-height: 26.4px;
+
+      @include media-breakpoint-up(lg) {
+        padding-right: 30px;
+        text-align: right;
+      }
     }
   }
 
