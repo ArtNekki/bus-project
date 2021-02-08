@@ -1,5 +1,6 @@
 .work-banner {
   //margin-top: 125px;
+  margin-top: 35px;
   margin-bottom: 110px;
 
   &__container {
@@ -14,18 +15,18 @@
     right: $container-padding-x;
     bottom: -108px;
     padding: 30px;
-    //width: 345px;
+    max-width: 345px;
     //height: 170px;
     background-color: $white-color;
     box-shadow: 0px 24px 54px rgba($black-color, 0.04);
     border-radius: $border-radius;
     box-sizing: border-box;
 
-    @include media-breakpoint-up(xl) {
+    @include media-breakpoint-up(lg) {
       padding: 40px 25px 35px 45px;
       left: 65px;
       bottom: -20px;
-      width: 405px;
+      max-width: 405px;
       height: 225px;
     }
   }
@@ -36,13 +37,10 @@
     font-size: 22px;
     line-height: 26.4px;
 
-    @include media-breakpoint-up(sm) {
+    @include media-breakpoint-up(lg) {
+      margin: 0 0 18px 0;
       font-size: 28px;
       line-height: 33.6px;
-    }
-
-    @include media-breakpoint-up(xl) {
-      margin: 0 0 18px 0;
     }
   }
 
