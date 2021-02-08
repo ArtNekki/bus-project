@@ -1,66 +1,99 @@
 .work-in-team {
-  margin-top: 125px;
+  //margin-top: 125px;
 
   &__container {
     @include container();
   }
 
-  &__header {
-    margin-bottom: 110px;
-    position: relative;
+  //&__header {
+  //  margin-bottom: 110px;
+  //  position: relative;
+  //  left: -$container-padding-x;
+  //  width: calc(100% + #{$container-padding-x} * 2);
+  //}
+  //
+  //&__header-box {
+  //  position: absolute;
+  //  left: $container-padding-x;
+  //  right: $container-padding-x;
+  //  bottom: -108px;
+  //  padding: 30px;
+  //  //width: 345px;
+  //  //height: 170px;
+  //  background-color: $white-color;
+  //  box-shadow: 0px 24px 54px rgba($black-color, 0.04);
+  //  border-radius: $border-radius;
+  //  box-sizing: border-box;
+  //
+  //  @include media-breakpoint-up(xl) {
+  //    padding: 40px 25px 35px 45px;
+  //    left: 65px;
+  //    bottom: -20px;
+  //    width: 405px;
+  //    height: 225px;
+  //  }
+  //}
+  //
+
+  //
+  //&__text {
+  //  margin: 0;
+  //  font-family: $font-family--secondary;
+  //  font-size: 18px;
+  //  line-height: 25.2px;
+  //
+  //  @include media-breakpoint-up(xl) {
+  //    margin: 25px 0 0 0;
+  //  }
+  //}
+
+  &__container {
+    @include container();
   }
 
-  &__header-box {
-    position: absolute;
-    left: 65px;
-    bottom: -20px;
-    padding: 40px 25px 35px 45px;
-    width: 405px;
-    height: 225px;
-    background-color: $white-color;
-    box-shadow: 0px 24px 54px rgba($black-color, 0.04);
-    border-radius: $border-radius;
-    box-sizing: border-box;
-  }
+  &__main {
+    //padding-left: 100px;
 
-  &__title {
-    margin: 0 0 18px 0;
-    font-family: $font-family;
-    font-size: 28px;
-    line-height: 1.2;
-  }
-
-  &__text {
-    margin: 25px 0 0 0;
-    font-family: $font-family--secondary;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 1.4;
-  }
-
-  &__body {
-    padding-left: 100px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, auto);
-    grid-column-gap: 45px;
-    grid-row-gap: 45px;
+    @include media-breakpoint-up(xl) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, auto);
+      grid-column-gap: 45px;
+      grid-row-gap: 45px;
+    }
   }
 
   &__list {
-
     &:first-child {
       grid-column: 1 / 2;
       grid-row: 1 / -1;
     }
   }
 
+  &__title {
+    margin: 30px 0 15px 0;
+    font-family: $font-family;
+    font-size: 22px;
+    line-height: 26.4px;
+
+    @include media-breakpoint-up(sm) {
+      font-size: 28px;
+      line-height: 33.6px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      margin: 0 0 18px 0;
+    }
+  }
+
   &__footer {
-    margin-top: 45px;
+    position: relative;
+    left: -$container-padding-x;
+    margin-top: 10px;
+    width: calc(100% + #{$container-padding-x} * 2);
     border-top: 1px solid transparent;
     //margin-top: 45px;
-    padding-left: 45px;
-    width: 100%;
+    //padding-left: 45px;
     max-width: 865px;
     box-sizing: border-box;
   }

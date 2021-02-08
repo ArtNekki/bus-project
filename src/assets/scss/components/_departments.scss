@@ -19,7 +19,7 @@
 
   &__col {
     position: relative;
-    //max-width: 450px;
+    max-width: 380px;
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
@@ -52,7 +52,7 @@
     }
 
     @include media-breakpoint-up(md) {
-      height: 385px;
+      height: 380px;
     }
 
     @include media-breakpoint-up(lg) {
@@ -91,14 +91,14 @@
   }
 
   &__col--tat {
-    height: 370px;
+    height: 360px;
 
     @include media-breakpoint-up(sm) {
       height: 300px;
     }
 
     @include media-breakpoint-up(md) {
-      height: 385px;
+      height: 380px;
     }
 
     @include media-breakpoint-up(lg) {
@@ -123,12 +123,17 @@
   }
 
   &__item {
+    margin-left: 25px;
     width: 350px;
     min-height: 130px;
     display: grid;
     grid-template-columns: auto 1fr;
     grid-template-rows: auto 1fr;
     grid-column-gap: 20px;
+
+    @include media-breakpoint-up(sm) {
+      margin-left: 0;
+    }
 
     &::before {
       content: attr(data-count);
