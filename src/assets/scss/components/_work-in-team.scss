@@ -7,11 +7,11 @@
     order: unset;
   }
 
-  @include media-breakpoint-up(lg) {
-    margin-top: 80px;
-  }
+  //@include media-breakpoint-up(lg) {
+  //  margin-top: 80px;
+  //}
 
-  @include media-breakpoint-up(xl) {
+  @include media-breakpoint-up(lg) {
     margin-top: 35px;
   }
 
@@ -49,12 +49,9 @@
     line-height: 26.4px;
 
     @include media-breakpoint-up(lg) {
+      margin: 45px 0 18px 0;
       font-size: 28px;
       line-height: 33.6px;
-    }
-
-    @include media-breakpoint-up(xl) {
-      margin: 45px 0 18px 0;
     }
   }
 
@@ -74,7 +71,7 @@
       max-width: 665px;
     }
 
-    @include media-breakpoint-up(xl) {
+    @include media-breakpoint-up(lg) {
       margin-top: 55px;
     }
   }
