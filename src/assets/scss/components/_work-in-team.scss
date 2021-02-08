@@ -1,15 +1,10 @@
 .work-in-team {
-  //margin-top: 125px;
   order: 2;
 
   @include media-breakpoint-up(md) {
     margin-top: 20px;
     order: unset;
   }
-
-  //@include media-breakpoint-up(lg) {
-  //  margin-top: 80px;
-  //}
 
   @include media-breakpoint-up(lg) {
     margin-top: 35px;
@@ -20,14 +15,11 @@
   }
 
   &__main {
-    //padding-left: 100px;
-
     @include media-breakpoint-up(md) {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(2, auto);
       grid-column-gap: 25px;
-      //grid-row-gap: 45px;
     }
 
     @include media-breakpoint-up(lg) {
@@ -61,8 +53,6 @@
     margin-top: 10px;
     width: calc(100% + #{$container-padding-x} * 2);
     border-top: 1px solid transparent;
-    //margin-top: 45px;
-    //padding-left: 45px;
     box-sizing: border-box;
 
     @include media-breakpoint-up(md) {
