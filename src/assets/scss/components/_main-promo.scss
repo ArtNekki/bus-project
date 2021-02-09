@@ -19,11 +19,12 @@
 
     @include media-breakpoint-up(lg) {
       padding-top: 70px;
+      padding-bottom: 65px;
       grid-column-gap: 0;
     }
 
-    @include media-breakpoint-up(lg) {
-      padding-bottom: 65px;
+    @include media-breakpoint-up(xl) {
+      grid-template-columns: 602px 1fr;
     }
   }
 
@@ -42,14 +43,14 @@
     }
 
     @include media-breakpoint-up(xl) {
-      font-size: 54px;
+      font-size: 57px;
     }
   }
 
   &__text {
     margin-top: 35px;
     font-size: 16px;
-    line-height: 1.2;
+    line-height: 26.4px;
     color: $black-color;
 
     @include media-breakpoint-only(sm) {
@@ -66,7 +67,8 @@
 
     @include media-breakpoint-up(xl) {
       margin-top: 32px;
-      font-size: 26px;
+      font-size: 27px;
+      line-height: 32.4px;
     }
   }
 

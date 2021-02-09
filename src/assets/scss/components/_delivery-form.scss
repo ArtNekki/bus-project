@@ -100,6 +100,10 @@
       order: 1;
     }
 
+    &--row-gap-sm {
+      grid-row-gap: 10px;
+    }
+
     &--row-gap-lg {
       grid-row-gap: 25px;
     }
@@ -129,6 +133,12 @@
   &__fieldset--2-col-sm {
     @include media-breakpoint-up(sm) {
       grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__fieldset--1-col-md {
+    @include media-breakpoint-up(md) {
+      grid-template-columns: 1fr;
     }
   }
 
@@ -627,22 +637,23 @@
   }
 
   &__title {
-    margin: 0;
+    margin: 0 0 25px 0;
+    font-family: $font-family;
     font-size: 24px;
     line-height: 28px;
   }
 
   &__label {
-    margin-bottom: 0.25em;
+    margin-bottom: 3px;
     display: block;
     font-family: $font-family--secondary;
     font-size: 14px;
-    line-height: 1.4;
+    line-height: 20px;
     color: $font-color;
 
     &--light {
-      //color: rgba($black-color, 0.4);
-      color: $gray-color--down-11;
+      color: rgba($black-color, 0.3);
+      //color: $gray-color--down-11;
     }
 
     &--full {

@@ -175,7 +175,8 @@
   margin-left: auto;
   padding-right: $container-padding-x;
   padding-left: $container-padding-x;
-  max-width: 1135px;
+  //max-width: 1135px;
+  max-width: 1170px;
 }
 
 @mixin menu-hover {
@@ -263,7 +264,8 @@
   font-size: 16px;
   line-height: 1.2;
   font-weight: 400;
-  color: darken($gray-color, 13%);
+  //color: darken($gray-color, 13%);
+  color: $black-color;
   background-color: $white-color;
   border: 1px solid $gray-light-color;
   border-radius: $border-radius;

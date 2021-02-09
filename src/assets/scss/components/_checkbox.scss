@@ -21,6 +21,7 @@
       content: '';
       grid-column: 1 / 2;
       grid-row: 1 / 2;
+      align-self: start;
       width: 20px;
       height: 20px;
       box-sizing: border-box;
@@ -40,11 +41,11 @@
     &::after {
       content: "";
       position: relative;
-      top: -1px;
+      top: 6px;
       grid-column: 1 / 2;
       grid-row: 1 / 2;
       justify-self: center;
-      align-self: center;
+      align-self: start;
       width: 9px;
       height: 4px;
       display: none;
@@ -62,7 +63,7 @@
     grid-column: 2 / 3;
     grid-row: 1 / 2;
     font-size: 16px;
-    line-height: 1;
+    line-height: 20px;
     cursor: pointer;
     //color: #988300;
 
