@@ -65,12 +65,10 @@ module.exports = function(options) {
                 <use xlink:href="${root}assets/img/symbol/sprite.svg#${imgName}">
             </svg>
         </div>
-         ${title ? `<p class="media__text">${title}</p>` : ''}
+         ${title ? `<h1 class="media__title">${title}</h1>` : ''}
          <div class="media__link">
           ${link ? `<a href="${link.href}" class="link link--lg link--blue">
-              <div class="link__text">
-                  <span>${link.text}</span>
-              </div>
+              <span class="link__text">${link.text}</span>
           </a>` : ''} 
         </div>  
     </article>`

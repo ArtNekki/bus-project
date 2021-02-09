@@ -26,10 +26,14 @@
     grid-column-gap: 15px;
     font-family: $font-family--secondary;
     font-size: 16px;
-    line-height: 1.3;
+    line-height: 22px;
 
     .list--numbers > & {
-      grid-column-gap: 30px;
+      grid-column-gap: $list-number--gap-sm;
+
+      @include media-breakpoint-up(md) {
+        grid-column-gap: $list-number--gap-md;
+      }
     }
 
     &::before {
@@ -47,7 +51,6 @@
       .list--letters > & {
         font-family: $font-family--secondary;
         font-size: 16px;
-        line-height: 1.2;
         color: $gray-color--down-11;
       }
     }
