@@ -37,6 +37,7 @@
   }
 
   &--cards {
+    margin-top: 20px;
     display: grid;
     grid-row-gap: 25px;
 
@@ -45,6 +46,7 @@
     }
 
     @include media-breakpoint-up(lg) {
+      margin-top: 35px;
       grid-template-columns: repeat(3, 1fr);
       grid-column-gap: 30px;
     }
