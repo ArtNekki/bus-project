@@ -8,28 +8,7 @@
   <h1 class="page__title">{{{title}}}</h1>
   {{> body}}
 </main>
-<div class="page-section page-section--inner page-section--theme-primary">
-  <div class="page-section__container">
-    <h2 class="page-section__title">Закажите звонок менеджера</h2>
-    <p class="page-section__text">Оставьте свой номер телефона и мы перезвоним вам в ближайшее время</p>
-    <form action="#" class="form form--no-margin" autocomplete="off">
-      <section class="form__section form__section--account form__section--no-margin">
-        <div class="form__fieldset form__fieldset--2-col-sm">
-          <div class="form__field">
-            <label for="tel" class="form__label">Номер телефона</label>
-            {{{ input type="tel" id="tel" name="tel" placeholder="+7 ( __ ) __ - __ - __" error="Не заполнено"}}}
-          </div>
-          <div class="form__field">
-            {{{ btn type="submit" text="Отправить заявку" mods="lg, black" }}}
-          </div>
-          <div class="form__field form__field--full">
-            {{{ checkbox id="subscribe" name="personal-data" label="Нажимая кнопку «Отправить», я даю свое согласие на обработку моих персональных данных" mods="sm"}}}
-          </div>
-        </div>
-      </section>
-    </form>
-  </div>
-</div>
+
 {{> page-footer}}
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDy38NKqY0dEc4P0rKJHvB5skmvNiFPNk0&&region=RUS&language=ru"></script>
 <script src="{{root}}assets/js/app.js"></script>

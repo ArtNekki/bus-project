@@ -30,10 +30,8 @@ module.exports = function(options) {
         <h1 class="card__title">${title}</h1>
         <p class="card__text">
             ${text}
-            <a href="${link}" class="link link--blue link--no-underline link--in-text">
-              <span class="link__text">
-                  <span>Читать далее</span>
-              </span>
+            <a href="${link}" class="link link--blue link--no-underline">
+              <span class="link__text">Читать далее</span>
             </a> 
         </p>
         

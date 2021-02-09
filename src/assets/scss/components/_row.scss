@@ -35,4 +35,22 @@
     //  }
     //}
   }
+
+  &--cards {
+    display: grid;
+    grid-row-gap: 25px;
+
+    @include media-breakpoint-up(md) {
+      grid-row-gap: 40px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-column-gap: 30px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      grid-column-gap: 50px;
+    }
+  }
 }

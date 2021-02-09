@@ -5,35 +5,28 @@
     border-top: 1px solid $gray-color;
   }
 
+  &--theme-primary {
+    margin-top: 85px;
+    padding-bottom: 30px;
+    border: 1px solid transparent;
+    background-color: $primary-color;
+  }
+
   &--article {
     //margin-top: 90px;
   }
 
-  &--portfolio {
-    display: grid;
-    grid-row-gap: 25px;
-
-    @include media-breakpoint-up(md) {
-      grid-row-gap: 40px;
-    }
-
-    @include media-breakpoint-up(lg) {
-      grid-template-columns: repeat(3, 1fr);
-      grid-column-gap: 30px;
-    }
-
-    @include media-breakpoint-up(xl) {
-      grid-column-gap: 50px;
-    }
-  }
-
-  &--inner {
-    margin-top: 70px;
-    padding-top: 75px;
-    padding-bottom: 75px;
-    border-top: 1px solid $gray-color;
-    //background-color: $primary-color;
-  }
+  //&--portfolio {
+  //
+  //}
+  //
+  //&--inner {
+  //  margin-top: 70px;
+  //  padding-top: 75px;
+  //  padding-bottom: 75px;
+  //  border-top: 1px solid $gray-color;
+  //  //background-color: $primary-color;
+  //}
 
   &__container {
     @include container();
