@@ -24,10 +24,13 @@
       {{{ textarea id="describe-task" name="describe-task" }}}
     </div>
     <div class="form__field form__field--full">
-      {{{ checkbox id="subscribe" name="personal-data" label="Нажимая кнопку «Отправить», я даю свое согласие на обработку моих персональных данных" mods="sm"}}}
+      {{{ checkbox id="subscribe" name="personal-data" label='Нажимая кнопку «Отправить», я даю свое согласие на
+      <a href="#" class="link link--blue">
+        <span class="link__text">обработку моих персональных данных</span>
+      </a>' mods="md"}}}
     </div>
   </div>
-  <div class="form__fieldset form__fieldset--3-col-md">
-    <button type="submit" class="form__submit">Отправить вопрос</button>
+  <div class="form__fieldset form__fieldset--3-col-md" style="margin-top: 30px;">
+    {{{ btn type="button" text="Отправить вопрос" mods="lg, w-full"}}}
   </div>
 </form>

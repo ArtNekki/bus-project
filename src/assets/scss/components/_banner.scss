@@ -101,6 +101,7 @@
     @include text-bg($white-color);
 
     padding-left: 0.45em;
+    z-index: 10;
 
     &::before {
       top: -0.175em;
