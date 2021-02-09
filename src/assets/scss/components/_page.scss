@@ -113,7 +113,14 @@
       grid-row-gap: 20px;
 
       @include media-breakpoint-up(md) {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, auto);
+        grid-column-gap: 20px;
+        justify-content: start;
+      }
+
+      @include media-breakpoint-up(lg) {
+        grid-column-gap: 30px;
+        grid-row-gap: 30px;
       }
     }
   }
