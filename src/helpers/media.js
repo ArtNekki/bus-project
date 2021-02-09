@@ -50,9 +50,7 @@ module.exports = function(options) {
          ${text ? `<p class="media__text">${text}</p>` : ''}
          <div class="media__link">
           ${link ? `<a href="${link.href}" class="link link--lg">
-              <div class="link__text">
-                  <span>${link.text}</span>
-              </div>
+              <span class="link__text">${link.text}</span>
           </a>` : ''} 
         </div>  
     </article>`

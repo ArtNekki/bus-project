@@ -231,6 +231,22 @@
     }
   }
 
+  &__subtitle {
+    margin: -10px 0 25px 0;
+    font-family: $font-family--secondary;
+    font-size: 16px;
+    line-height: 22px;
+
+    @include media-breakpoint-up(md) {
+      margin-top: -25px;
+      margin-bottom: 35px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 55px;
+    }
+  }
+
   &__text {
     margin: 20px 0 0 0;
     font-family: $font-family--secondary;
@@ -247,14 +263,14 @@
     }
   }
 
-  &__row {
-
-    @include media-breakpoint-up(lg) {
-      display: grid;
-      grid-template-columns: 1fr 300px;
-      grid-column-gap: 145px;
-    }
-  }
+  //&__row {
+  //
+  //  @include media-breakpoint-up(lg) {
+  //    display: grid;
+  //    grid-template-columns: 1fr 300px;
+  //    grid-column-gap: 145px;
+  //  }
+  //}
 }
 
 body {
