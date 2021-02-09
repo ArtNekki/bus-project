@@ -74,13 +74,23 @@
 
   &__text span {
     font-size: 17px;
-    line-height: 1.2;
+    line-height: 20.4px;
     font-weight: 700;
 
     @include text-bg();
 
     @include media-breakpoint-only(sm) {
       font-size: 23px;
+      line-height: 27px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      font-size: 23px;
+      line-height: 27px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      font-size: 27px;
     }
   }
 
