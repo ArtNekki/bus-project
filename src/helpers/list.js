@@ -26,15 +26,13 @@ module.exports = function(options) {
 
   function renderLinks(items) {
     return items.map((item) => {
-      return `<li class="list__item">
+      return `<li class="list__item" style="align-items: center">
               <svg class="icon" width="23.5" height="19">
                  <use xlink:href="${root}assets/img/symbol/sprite.svg#outer-link">
               </svg>
-               <a href="${item.href}" class="link" target="_blank">
-                 <div class="link__text">
-                    <span>${item.text}</span>
-                 </div>
-               </a>           
+              <a href="${item.href}" class="link link--outer" target="_blank">
+                 <span class="link__text">${item.text}</span>
+               </a>         
           </li>`
     }).join(``);
   }
