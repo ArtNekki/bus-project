@@ -81,4 +81,8 @@
       margin-top: 0;
     }
   }
+
+  p:only-child {
+    margin: 0;
+  }
 }
