@@ -197,6 +197,7 @@
       "select-to select-to"
       "switcher-to switcher-to"
       "details-to details-to";
+    align-items: start;
 
 
     @include media-breakpoint-only(md) {
@@ -337,6 +338,7 @@
     margin-bottom: 10px;
     grid-template-columns: 1fr minmax(80px, min-content);
     grid-column-gap: 20px;
+    justify-content: start;
 
     &:last-of-type {
       margin-bottom: 20px;
@@ -717,7 +719,7 @@
   }
 
   &__details {
-    margin: 40px 0 60px 0;
+    margin: 40px 0 0 0;
     font-family: $font-family--secondary;
     font-size: 15px;
     line-height: 1.4;

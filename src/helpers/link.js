@@ -50,9 +50,7 @@ module.exports = function(options) {
   function renderHelpLink(cssClass) {
     return `<a href='${href}' class='${cssClass}'>
             ${renderHelpIcon()}
-            <div class='link__text'>
-              <span>${text}</span>
-            </div>
+            <span class='link__text'>${text}</span>
           </a>`
   }
 

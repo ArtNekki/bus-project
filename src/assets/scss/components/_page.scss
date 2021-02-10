@@ -1,4 +1,5 @@
 .page {
+  $col-gap: 50px;
 
   @include mobile-open {
     overflow: hidden;
@@ -62,47 +63,56 @@
       }
     }
 
-    &--calc-rate {
+    &--calculator {
+
       @include media-breakpoint-up(lg) {
-        $col-gap: 50px;
         $sidebar-width: 400px;
 
-        display: grid;
-        grid-template-columns: 1fr 400px;
-        grid-column-gap: $col-gap;
-      }
-    }
-
-    &--col-2-xl {
-
-      @include media-breakpoint-up(xl) {
-        $col-gap: 50px;
-        $sidebar-width: 370px;
-
-        display: grid;
         grid-template-columns: calc(100% - (#{$col-gap} + #{$sidebar-width})) $sidebar-width;
-        grid-column-gap: $col-gap;
-        align-items: start;
       }
     }
+
+    //&--calc-rate {
+    //  @include media-breakpoint-up(lg) {
+    //    $col-gap: 50px;
+    //    $sidebar-width: 400px;
+    //
+    //    display: grid;
+    //    grid-template-columns: 1fr 400px;
+    //    grid-column-gap: $col-gap;
+    //  }
+    //}
+
+    //&--col-2-xl {
+    //
+    //  @include media-breakpoint-up(xl) {
+    //    $col-gap: 50px;
+    //    $sidebar-width: 370px;
+    //
+    //    display: grid;
+    //    grid-template-columns: calc(100% - (#{$col-gap} + #{$sidebar-width})) $sidebar-width;
+    //    grid-column-gap: $col-gap;
+    //    align-items: start;
+    //  }
+    //}
 
     //&--account-two-col {
     //
     //}
 
-    &--calc {
-      @include media-breakpoint-up(lg) {
-        display: grid;
-        grid-template-columns: auto 400px;
-        grid-column-gap: 35px;
-      }
-
-      @include media-breakpoint-up(xl) {
-        display: grid;
-        grid-template-columns: minmax(auto, 700px) minmax(auto, 400px);
-        grid-column-gap: 70px;
-      }
-    }
+    //&--calc {
+    //  @include media-breakpoint-up(lg) {
+    //    display: grid;
+    //    grid-template-columns: auto 400px;
+    //    grid-column-gap: 35px;
+    //  }
+    //
+    //  @include media-breakpoint-up(xl) {
+    //    display: grid;
+    //    grid-template-columns: minmax(auto, 700px) minmax(auto, 400px);
+    //    grid-column-gap: 70px;
+    //  }
+    //}
   }
 
   &__content {
