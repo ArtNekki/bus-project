@@ -115,11 +115,11 @@
     border-bottom: 1px dashed #948003;
     vertical-align: middle;
 
-    //.link--in-text & {
-    //  font-family: inherit;
-    //  font-size: inherit;
-    //  line-height: inherit;
-    //}
+    .link--in-text & {
+      font-family: inherit;
+      font-size: inherit;
+      line-height: inherit;
+    }
 
     .link--sm & {
       font-size: 12px;
