@@ -140,4 +140,8 @@
   svg + &__text {
     margin-left: 6px;
   }
+
+   &__text + svg {
+    margin-left: 6px;
+  }
 }

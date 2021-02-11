@@ -38,9 +38,7 @@ module.exports = function(options) {
 
   function renderLogoutLink(cssClass) {
     return `<a href='${href}' class='${cssClass}'>
-            <div class='link__text'>
-              <span>${text}</span>
-            </div>
+            <span class='link__text'>${text}</span>
             <svg width="27" height="27">
                 <use xlink:href="${root}assets/img/symbol/sprite.svg#user-logged-in"></use>
             </svg>

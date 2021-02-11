@@ -20,9 +20,7 @@ module.exports = function(options) {
     } else if (item.type === 'link') {
       value = `<span class="data-list__value">
         <a href="${item.href}" class="link link--blue link--no-underline">
-            <div class="link__text">
-                <span>${item.value}</span>
-            </div>
+            <span class="link__text">${item.value}</span>
         </a></span>`;
     } else if (item.type === 'bold') {
       value = `<b class="data-list__value">${item.value}</b>`;
@@ -30,9 +28,7 @@ module.exports = function(options) {
       value = `<div class="data-list__value">
         <span>${item.value}</span>
         <a href="${item.href}" class="link link--blue" style="position: relative; top: -4px; left: 5px;">
-            <div class="link__text">
-                <span>Изменить</span>
-            </div>
+            <span class="link__text">Изменить</span>
         </a> 
         </div>`;
     }
