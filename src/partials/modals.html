@@ -17,12 +17,12 @@
   <div class="modal__content">
     <button type="button" class="modal__close">&#160;</button>
     <h1 class="modal__title">Регистрация</h1>
-    <div data-pickup-tabs class="tabs tabs--two tabs--invert tabs--nav-sm tabs--no-space">
+    <div data-tabs class="tabs tabs--two tabs--invert tabs--nav-sm tabs--no-space">
       <ul class="tabs__nav">
-        <li>
+        <li class="tabs__item">
           <a data-tabby-default href="#physics">Для физ. лиц</a>
         </li>
-        <li>
+        <li class="tabs__item">
           <a href="#entity">Для юр. лиц</a>
         </li>
       </ul>
@@ -37,7 +37,7 @@
               <label for="email" class="form__label">Почта</label>
               {{{ input type="email" id="email" name="email" mods="clean" placeholder="example@mail.ru" error="Не заполнено"}}}
             </div>
-            <div class="form__field">
+            <div class="form__field" style="margin-bottom: 10px">
               <label for="tel" class="form__label">Телефон</label>
               {{{ input type="text" id="tel" name="tel" mods="clean" placeholder="+7 (__) __-__-__" error="Не заполнено"}}}
             </div>
@@ -52,7 +52,7 @@
               <label for="entity-email" class="form__label">Почта</label>
               {{{ input type="email" id="entity-email" name="entity-email" mods="clean" placeholder="example@mail.ru" error="Не заполнено"}}}
             </div>
-            <div class="form__field">
+            <div class="form__field" style="margin-bottom: 10px">
               <label for="entity-tel" class="form__label">Телефон</label>
               {{{ input type="text" id="entity-tel" name="entity-tel" mods="clean" placeholder="+7 (__) __-__-__" error="Не заполнено"}}}
             </div>
