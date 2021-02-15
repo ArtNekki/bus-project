@@ -82,7 +82,22 @@
     .input__field:focus ~ & {
       display: none;
     }
+  }
 
+  &__forgot {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 18px;
+    font-family: $font-family--secondary;
+    font-size: 12px;
+    line-height: 17px;
+    color: $gray-dark-color;
+    text-decoration: none;
+
+    @include hover {
+      opacity: 0.8;
+    }
   }
 }
 

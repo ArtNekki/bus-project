@@ -4,39 +4,36 @@
   left: 0;
   right: 0;
   bottom: 0;
-  //display: grid;
-  //justify-content: center;
-  //align-content: center;
+
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: rgba($black-color, 0.8);
+  z-index: 100;
 
   &__content {
     position: relative;
-    margin-top: 200px;
-    //margin-bottom: 200px;
+    //margin-top: 200px;
     margin-right: $container-padding-x;
     margin-left: $container-padding-x;
-    //padding: 70px 35px;
-    padding: 45px 55px;
-    //min-height: 350px;
-    //max-sdheight: 100vh;
+    padding: 45px 50px;
     width: 100%;
+    max-width: 370px;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
-    border-radius: $border-radius;
+    border-radius: 10px;
     background-color: $white-color;
+    text-align: center;
 
-    @include media-breakpoint-up(sm) {
-      max-width: 485px;
-    }
+    //@include media-breakpoint-up(sm) {
+    //  max-width: 485px;
+    //}
 
-    @include media-breakpoint-up(xl) {
-      //max-width: 435px;
-      max-width: 770px;
-    }
+    //@include media-breakpoint-up(xl) {
+    //  //max-width: 435px;
+    //  max-width: 770px;
+    //}
 
     .modal--theme-yellow & {
       background-color: $primary-color;
@@ -49,7 +46,7 @@
   }
 
   &__close {
-    @include close-button(25px, $gray-dark-color, darken($gray-dark-color, 8%));
+    @include close-button(25px, lighten($gray-dark-color, 5%), darken($gray-dark-color, 8%));
 
     position: absolute;
     top: 15px;
@@ -57,10 +54,10 @@
   }
 
   &__title {
-    margin: 0 0 0.15em 0;
+    margin: 0 0 20px 0;
     font-family: $font-family;
     font-size: 32px;
-    line-height: 1.2;
+    line-height: 38.4px;
     //text-align: center;
   }
 

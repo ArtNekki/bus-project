@@ -1,5 +1,5 @@
 <!--Thank's modal-->
-<article class="modal" style="display: none;">
+<article id="thanks" class="modal" style="display: none;">
   <div class="modal__content">
     <button type="button" class="modal__close">&#160;</button>
     <div class="modal__icon">
@@ -13,7 +13,7 @@
 </article>
 
 <!--Sign-in-->
-<article class="modal modal--theme-yellow" style="display: none;">
+<article id="sign-in" class="modal modal--theme-yellow" style="display: none;">
   <div class="modal__content">
     <button type="button" class="modal__close">&#160;</button>
     <h1 class="modal__title">Регистрация</h1>
@@ -65,11 +65,11 @@
 </article>
 
 <!--Log-in-->
-<article class="modal modal--theme-yellow" style="display: none;">
+<article id="login" class="modal modal--theme-yellow" style="display: none;">
   <div class="modal__content">
     <button type="button" class="modal__close">&#160;</button>
     <h1 class="modal__title">Авторизация</h1>
-    <form action="#" class="form" autocomplete="off">
+    <form action="#" class="form form--no-margin" autocomplete="off" style="margin-bottom: 25px;">
       <div class="form__fieldset">
         <div class="form__field">
           <label for="login" class="form__label">Логин</label>
@@ -81,14 +81,14 @@
         </div>
         {{{ checkbox id="agree" name="agree" label="Запомнить" mods="md, inverted"}}}
         {{{ btn type="submit" text="Авторизоваться" mods="lg, black" }}}
-        {{{ link href="#" text="Регистрация" mods="lg, no-underline, justify-center"}}}
       </div>
     </form>
+    {{{ link href="#" text="Регистрация" mods="lg, no-underline, justify-center"}}}
   </div>
 </article>
 
 <!--render report-->
-<article class="modal" style="display: none;">
+<article id="render-report" class="modal" style="display: none;">
   <div class="modal__content">
     <button type="button" class="modal__close">&#160;</button>
     <h1 class="modal__title">Сформировать отчет</h1>
@@ -105,7 +105,7 @@
 </article>
 
 <!--report rendered-->
-<article class="modal modal--content-justify-center" style="display: none;">
+<article id="report-done" class="modal modal--content-justify-center" style="display: none;">
   <div class="modal__content">
     <button type="button" class="modal__close">&#160;</button>
     <div class="modal__icon">
@@ -119,7 +119,7 @@
 </article>
 
 <!--render report-->
-<article class="modal"  style="display: none;">
+<article id="order" class="modal" style="display: none;">
   <div class="modal__content">
     <button type="button" class="modal__close">&#160;</button>
     <h1 class="modal__title">№	614933</h1>
@@ -167,7 +167,7 @@
 </article>
 
 <!-- undo order form -->
-<article class="modal modal--content-justify-center" style="display: none;">
+<article id="undo-order" class="modal modal--content-justify-center" style="display: none;">
   <div class="modal__content">
     <button type="button" class="modal__close">&#160;</button>
     <div class="modal__icon">
@@ -182,7 +182,7 @@
 </article>
 
 <!--report rendered-->
-<article class="modal modal--content-justify-center" style="display: none;">
+<article id="order-undo-done" class="modal modal--content-justify-center" style="display: none;">
   <div class="modal__content">
     <button type="button" class="modal__close">&#160;</button>
     <div class="modal__icon">
@@ -195,7 +195,7 @@
   </div>
 </article>
 
-<article class="modal" style="display: none;">
+<article id="cities" class="modal" style="display: none;">
   <div class="modal__content">
     <button type="button" class="modal__close">&#160;</button>
     <h1 class="modal__title">Населенные пункты получения</h1>

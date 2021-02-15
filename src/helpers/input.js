@@ -24,6 +24,10 @@ module.exports = function(options) {
     return `<span class="input__error">${error}</span>`
   }
 
+  function renderPasswordLink() {
+    return `<a href="#" class="input__forgot">Забыли пароль</a>`
+  }
+
   let input = null;
 
   if (unit) {
@@ -34,13 +38,14 @@ module.exports = function(options) {
             <span  class="input__edit" contenteditable>${placeholder || value || ""}</span>
             <span class="input__unit">${unit}</span>
           </div>
-          ${error ? renderError(error) : ""}
+          ${error ? renderError(error) : ''}
       </div>`
   } else {
     input = ` 
       <div class="${cssClass}">
         <input ${type ? `type="${type}"` : ``} ${id ? `id="${id}"` : ``} ${name ? `name="${name}"` : ``} ${value ? `value="${value}"` : ``} ${placeholder ? `placeholder="${placeholder}"` : ``}  class="input__field" />
         ${error ? renderError(error) : ""}
+        ${type == 'password' ? renderPasswordLink() : ''}
       </div>`
   }
 

@@ -24,6 +24,25 @@ import { createPopper } from '@popperjs/core';
 import {TweenLite} from "gsap";
 
 document.addEventListener('DOMContentLoaded', function () {
+  const modalHash = window.location.hash;
+
+  if (modalHash) {
+
+    const modal = document.querySelector(modalHash);
+
+    if (modal) {
+      modal.style.display="flex";
+
+      modal.addEventListener('click', function (e) {
+        const closeBtn = e.target.closest('.modal__close');
+
+        if (closeBtn) {
+          this.style.display = 'none';
+        }
+      });
+    }
+  }
+
 });
 
 let dropDown;
