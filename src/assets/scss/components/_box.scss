@@ -1,8 +1,12 @@
 .box {
   @include box();
   height: auto;
+  border: 2px solid transparent;
 
-
+  @include hover {
+    //border-color: $primary-color;
+    cursor: pointer;
+  }
 
   &--shopping-live svg {
     width: 135px;

@@ -16,14 +16,18 @@
   border: 1px solid transparent;
   border-radius: $border-radius;
   box-sizing: border-box;
-  transition: background-color 0.5s ease-in;
+  transition: background-color 0.15s ease-in;
   cursor: pointer;
 
 
   &:disabled {
-    background-color: $gray-light-color--up-5;
-    color: $gray-color--down-11;
-    cursor: not-allowed;
+    background-color: $gray-light-color--up-5 !important;
+    color: $gray-color--down-11 !important;
+    cursor: not-allowed !important;
+  }
+
+  @include hover {
+    background-color: #FFEC23;
   }
 
   @include focus {
@@ -39,6 +43,10 @@
 
   &--black {
     background-color: $black-color;
+
+    @include hover {
+      background-color: #333333;
+    }
   }
 
   &--white {
