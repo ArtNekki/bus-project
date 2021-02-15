@@ -30,15 +30,15 @@
         <form action="#" class="form form--no-margin" autocomplete="off">
           <div class="form__fieldset">
             <div class="form__field">
-              <label for="user-name" class="form__label">ФИО</label>
+              <label for="user-name" class="form__label form__label--light">ФИО</label>
               {{{ input type="text" id="user-name" name="user-name" mods="clean" placeholder="Петров Александр Максимович" error="Не заполнено"}}}
             </div>
             <div class="form__field">
-              <label for="email" class="form__label">Почта</label>
+              <label for="email" class="form__label form__label--light">Почта</label>
               {{{ input type="email" id="email" name="email" mods="clean" placeholder="example@mail.ru" error="Не заполнено"}}}
             </div>
             <div class="form__field" style="margin-bottom: 10px">
-              <label for="tel" class="form__label">Телефон</label>
+              <label for="tel" class="form__label form__label--light">Телефон</label>
               {{{ input type="text" id="tel" name="tel" mods="clean" placeholder="+7 (__) __-__-__" error="Не заполнено"}}}
             </div>
             {{{ btn type="submit" text="Зарегистрироваться" mods="lg, black" }}}
@@ -49,11 +49,11 @@
         <form action="#" class="form form--no-margin" autocomplete="off">
           <div class="form__fieldset">
             <div class="form__field">
-              <label for="entity-email" class="form__label">Почта</label>
+              <label for="entity-email" class="form__label form__label--light">Почта</label>
               {{{ input type="email" id="entity-email" name="entity-email" mods="clean" placeholder="example@mail.ru" error="Не заполнено"}}}
             </div>
             <div class="form__field" style="margin-bottom: 10px">
-              <label for="entity-tel" class="form__label">Телефон</label>
+              <label for="entity-tel" class="form__label form__label--light">Телефон</label>
               {{{ input type="text" id="entity-tel" name="entity-tel" mods="clean" placeholder="+7 (__) __-__-__" error="Не заполнено"}}}
             </div>
             {{{ btn type="submit" text="Зарегистрироваться" mods="lg, black" }}}
@@ -72,11 +72,11 @@
     <form action="#" class="form form--no-margin" autocomplete="off" style="margin-bottom: 25px;">
       <div class="form__fieldset">
         <div class="form__field">
-          <label for="login" class="form__label">Логин</label>
+          <label for="login" class="form__label form__label--light">Логин</label>
           {{{ input type="text" id="login" name="login" mods="clean" placeholder="Номер телефона" error="Не заполнено"}}}
         </div>
         <div class="form__field">
-          <label for="password" class="form__label">Пароль</label>
+          <label for="password" class="form__label form__label--light">Пароль</label>
           {{{ input type="password" id="password" name="password" mods="clean" value="********" error="Не заполнено"}}}
         </div>
         {{{ checkbox id="agree" name="agree" label="Запомнить" mods="md, inverted"}}}
@@ -92,7 +92,7 @@
   <div class="modal__content">
     <button type="button" class="modal__close">&#160;</button>
     <h1 class="modal__title">Сформировать отчет</h1>
-    <form action="#" class="form" autocomplete="off">
+    <form action="#" class="form form--no-margin" autocomplete="off">
       <div class="form__fieldset">
         <div class="form__field">
           <label for="sum" class="form__label">Введите сумму счета в рублях <sup>*</sup></label>
@@ -182,7 +182,7 @@
 </article>
 
 <!--report rendered-->
-<article id="order-undo-done" class="modal modal--content-justify-center" style="display: none;">
+<article id="order-undo-done" class="modal modal--content-justify-center modal--sm" style="display: none;">
   <div class="modal__content">
     <button type="button" class="modal__close">&#160;</button>
     <div class="modal__icon">
@@ -195,14 +195,14 @@
   </div>
 </article>
 
-<article id="cities" class="modal" style="display: none;">
+<article id="cities" class="modal modal--lg" style="display: none;">
   <div class="modal__content">
     <button type="button" class="modal__close">&#160;</button>
-    <h1 class="modal__title">Населенные пункты получения</h1>
-    <form action="#" class="form" autocomplete="off">
+    <h1 class="modal__title" style="text-align: left;">Населенные пункты получения</h1>
+    <form action="#" class="form form--no-margin" autocomplete="off">
       <div class="form__fieldset">
         <div class="form__field">
-          <label for="city-name" class="form__label">Или введите название города</label>
+          <label for="city-name" class="form__label form__label--light">Или введите название города</label>
           {{{ input type="text" id="city-name" name="city-name" placeholder="Например, Артем" error="Не заполнено"}}}
         </div>
       </div>
