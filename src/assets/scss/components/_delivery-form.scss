@@ -136,6 +136,12 @@
     }
   }
 
+  &__fieldset--2-col-md {
+    @include media-breakpoint-up(md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
   &__fieldset--1-col-md {
     @include media-breakpoint-up(md) {
       grid-template-columns: 1fr;

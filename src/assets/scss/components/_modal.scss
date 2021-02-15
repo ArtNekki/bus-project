@@ -26,7 +26,7 @@
     background-color: $white-color;
     text-align: center;
 
-    @include media-breakpoint-up(sm) {
+    @include media-breakpoint-up(md) {
       padding-right: 50px;
       padding-left: 50px;
     }
@@ -37,6 +37,11 @@
 
     .modal--lg & {
       max-width: 770px;
+
+      @include media-breakpoint-up(md) {
+        padding-right: 80px;
+        padding-left: 80px;
+      }
     }
 
     .modal--theme-yellow & {
@@ -64,10 +69,19 @@
     line-height: 32px;
     //text-align: center;
 
-    @include media-breakpoint-up(sm) {
+    @include media-breakpoint-up(md) {
       font-size: 32px;
       line-height: 38.4px;
     }
+  }
+
+  &__subtitle {
+    margin: -12px 0 23px 0;
+    font-family: $font-family--secondary;
+    font-size: 14px;
+    line-height: 20px;
+    color: $gray-dark-color;
+    text-align: left;
   }
 
   &__icon {

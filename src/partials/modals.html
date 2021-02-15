@@ -241,3 +241,32 @@
   </div>
 </article>
 
+<article id="call" class="modal modal--lg" style="display: none;">
+  <div class="modal__content">
+    <button type="button" class="modal__close">&#160;</button>
+    <h1 class="modal__title" style="text-align: left;">Заказать звонок специалиста</h1>
+    <p class="modal__subtitle">Наш оператор свяжется с вами в ближайшее время. <br class="br br--show-sm">Операторы работают с 08:00 до 20:00 по Владивостоку.</p>
+    <form action="#" class="form form--no-margin" autocomplete="off">
+      <div class="form__fieldset form__fieldset--2-col-sm">
+        <div class="form__field">
+          <label for="tel" class="form__label">Телефон <sup>*</sup></label>
+          {{{ input type="tel" id="tel" name="tel" placeholder="+7 (__) __-__-__" error="Не заполнено"}}}
+
+        </div>
+        <div class="form__field">
+          <label for="name" class="form__label">Имя</label>
+          {{{ input type="text" id="name" name="name" error="Не заполнено"}}}
+        </div>
+        <div class="form__field form__field--full" style="margin-bottom: 25px;">
+          {{{ checkbox id="subscribe" name="personal-data" label='Нажимая кнопку «Отправить», я даю свое согласие на
+          <a href="#" class="link link--blue link--in-text">
+            <span class="link__text">обработку моих персональных данных</span>
+          </a>' mods="sm"}}}
+        </div>
+        {{{ btn type="button" text="Заказать звонок" mods="lg, w-full"}}}
+      </div>
+    </form>
+  </div>
+</article>
+
+
