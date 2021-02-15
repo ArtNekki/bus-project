@@ -133,7 +133,7 @@
           </a>
         </li>
         <li class="main-nav__item">
-          <a href="/freight-rate-primorye.html" class="main-nav__link">
+          <a href="/calc-rate-primorye.html" class="main-nav__link">
             Расчет тарифа по Приморью
           </a>
         </li>
@@ -359,7 +359,387 @@
   </div>
 </header>
 
-<h1>Тарифы на перевозку из Республики Татарстан</h1>
+<div class="page__container">
+  <h1 class="page__title">Тарифы на перевозку по Приморскому краю</h1>
+  <p class="page__subtitle">Для получения тарифов, выберите регион и город, из которого планируется отправление.</p>
+</div>
+
+<div class="page__container page__container--col-2-xl">
+  <div class="rates-box">
+    <h2 class="rates-box__heading">Регион:</h2>
+    <div class="rates-box__col">
+      
+      <div class="radio">
+        <input type="radio" id="prim" name="regions" class="radio__input" checked>
+        <div class="radio__body">
+            <label for="prim" class="radio__label">Приморский край</label>
+            
+            
+        </div>
+      </div>
+      
+      <div class="radio">
+        <input type="radio" id="tat" name="regions" class="radio__input" >
+        <div class="radio__body">
+            <label for="tat" class="radio__label">Республика Татарстан</label>
+            
+            
+        </div>
+      </div>
+    </div>
+    <h2 class="rates-box__heading">Город:</h2>
+    <div class="rates-box__col rates-box__col--cities">
+      
+      <div class="radio">
+        <input type="radio"  name="cities" class="radio__input" checked>
+        <div class="radio__body">
+            <label  class="radio__label">Владивосток</label>
+            
+            
+        </div>
+      </div>
+      
+      <div class="radio">
+        <input type="radio"  name="cities" class="radio__input" >
+        <div class="radio__body">
+            <label  class="radio__label">Уссурийск</label>
+            
+            
+        </div>
+      </div>
+      
+      <div class="radio">
+        <input type="radio"  name="cities" class="radio__input" >
+        <div class="radio__body">
+            <label  class="radio__label">Артем</label>
+            
+            
+        </div>
+      </div>
+      
+      <div class="radio">
+        <input type="radio"  name="cities" class="radio__input" >
+        <div class="radio__body">
+            <label  class="radio__label">Находка</label>
+            
+            
+        </div>
+      </div>
+      
+      <div class="radio">
+        <input type="radio"  name="cities" class="radio__input" >
+        <div class="radio__body">
+            <label  class="radio__label">Дальнегорск</label>
+            
+            
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="page__container page__container--col-2">
+  <div class="page__content">
+    <article class="info-box">
+            <h1 class="info-box__title">Зона 1</h1>
+            <div class="info-box__text">Артем, Арсеньев, Анучино, Уссурийск, Михайловка, Новошахтинск, Спасск, Сибирцево, Черниговка,
+    Большой Камень, Шкотово, Находка, Фокино, Душкино, Ливадия, Южно-Морской, Партизанск, Казанка, Хороль, Ярославский, Камень-Рыболов,
+    Славянка, Андреевка, Зарубино.</div>
+        </article>
+    <article class="info-box">
+            <h1 class="info-box__title">Зона 2</h1>
+            <div class="info-box__text">Пограничный, Галенки, Липовцы, Сергеевка (Пограничного р-на), Покровка, Кавалерово, Дальнегорск,
+    Лесозаводск, Кировский, Шмаковка (Горные Ключи), Преображение, Лазо, Сергеевка (Партизанского р-на), Валентин, Дальнереченск, Лучегорск,
+    Чугуевка, Каменка (Чугуевского р-на), Краскино, Посьет, Хасан, Новопокровка, Рощино, Вострецово, Восток.</div>
+        </article>
+    <article class="info-box">
+            <h1 class="info-box__title">Зона 3</h1>
+            <div class="info-box__text">Терней, Пластун, Каменка (Дальнегорского р-на (тернейская), Ольга. Хабаровск</div>
+        </article>
+
+    <div class="cargo-info">
+      <article class="cargo-info__item" data-count="1">
+        <div class="cargo-info__body">
+          <h1 class="cargo-info__title">Документы</h1>
+          <div class="cargo-info__text">не более формата А4 до 1,5 см толщиной.</div>
+          <div class="table table--clean table--width-auto">
+              <div class="table__scroll">
+                <table class="table__data">
+                  <thead class="table__header">
+                    <tr>
+                        
+                        <th>
+                            <span>Зона 1</span>
+                            <button type="button" class="btn btn--default">
+                              <svg class="icon" width="18" height="18">
+                                <use xlink:href="assets/img/symbol/sprite.svg#help"></use>
+                              </svg>
+                            </button>
+                        </th>
+                        <th>
+                            <span>Зона 2</span>
+                            <button type="button" class="btn btn--default">
+                              <svg class="icon" width="18" height="18">
+                                <use xlink:href="assets/img/symbol/sprite.svg#help"></use>
+                              </svg>
+                            </button>
+                        </th>
+                        <th>
+                            <span>Зона 3</span>
+                            <button type="button" class="btn btn--default">
+                              <svg class="icon" width="18" height="18">
+                                <use xlink:href="assets/img/symbol/sprite.svg#help"></use>
+                              </svg>
+                            </button>
+                        </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                        <td>250 руб</td><td>300 руб</td><td>550 руб</td>    
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="table__scrollbar"></div>
+          </div>
+        </div>
+      </article>
+      <article class="cargo-info__item" data-count="2">
+        <div class="cargo-info__body">
+          <h1 class="cargo-info__title">Посылки</h1>
+          <p class="cargo-info__text">за 1 стандартное место габаритами не больше 30х30х70</p>
+          <div class="table table--clean table--width-auto">
+              <div class="table__scroll">
+                <table class="table__data">
+                  <thead class="table__header">
+                    <tr>
+                        
+                        <th>
+                            <span>Вес</span>
+                            <button type="button" class="btn btn--default">
+                              <svg class="icon" width="18" height="18">
+                                <use xlink:href="assets/img/symbol/sprite.svg#help"></use>
+                              </svg>
+                            </button>
+                        </th>
+                        <th>
+                            <span>Зона 1</span>
+                            <button type="button" class="btn btn--default">
+                              <svg class="icon" width="18" height="18">
+                                <use xlink:href="assets/img/symbol/sprite.svg#help"></use>
+                              </svg>
+                            </button>
+                        </th>
+                        <th>
+                            <span>Зона 2</span>
+                            <button type="button" class="btn btn--default">
+                              <svg class="icon" width="18" height="18">
+                                <use xlink:href="assets/img/symbol/sprite.svg#help"></use>
+                              </svg>
+                            </button>
+                        </th>
+                        <th>
+                            <span>Зона 3</span>
+                            <button type="button" class="btn btn--default">
+                              <svg class="icon" width="18" height="18">
+                                <use xlink:href="assets/img/symbol/sprite.svg#help"></use>
+                              </svg>
+                            </button>
+                        </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                        <td>0-20 кг.</td><td>350 руб</td><td>450 руб</td><td>550 руб</td>    
+                    </tr><tr>
+                        <td>20-40 кг.</td><td>450 руб</td><td>550 руб</td><td>650 руб</td>    
+                    </tr><tr>
+                        <td>40-60 кг.</td><td>550 руб</td><td>650 руб</td><td>750 руб</td>    
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="table__scrollbar"></div>
+          </div>
+        </div>
+      </article>
+      <article class="cargo-info__item" data-count="3">
+        <div class="cargo-info__body">
+          <h1 class="cargo-info__title">Запчасти автомобильные</h1>
+          <p class="cargo-info__text">за 1 стандартное место габаритами не больше 30х30х70</p>
+          <div class="table table--clean table--width-auto">
+              <div class="table__scroll">
+                <table class="table__data">
+                  <thead class="table__header">
+                    <tr>
+                        
+                        <th>
+                            <span>Вес</span>
+                            <button type="button" class="btn btn--default">
+                              <svg class="icon" width="18" height="18">
+                                <use xlink:href="assets/img/symbol/sprite.svg#help"></use>
+                              </svg>
+                            </button>
+                        </th>
+                        <th>
+                            <span>Зона 1</span>
+                            <button type="button" class="btn btn--default">
+                              <svg class="icon" width="18" height="18">
+                                <use xlink:href="assets/img/symbol/sprite.svg#help"></use>
+                              </svg>
+                            </button>
+                        </th>
+                        <th>
+                            <span>Зона 2</span>
+                            <button type="button" class="btn btn--default">
+                              <svg class="icon" width="18" height="18">
+                                <use xlink:href="assets/img/symbol/sprite.svg#help"></use>
+                              </svg>
+                            </button>
+                        </th>
+                        <th>
+                            <span>Зона 3</span>
+                            <button type="button" class="btn btn--default">
+                              <svg class="icon" width="18" height="18">
+                                <use xlink:href="assets/img/symbol/sprite.svg#help"></use>
+                              </svg>
+                            </button>
+                        </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                        <td>Коробка передач, автомат</td><td>1 550 руб</td><td>2 050 руб</td><td>2 550 руб</td>    
+                    </tr><tr>
+                        <td>Бампер, обвесы</td><td>950 руб</td><td>1 150 руб</td><td>1 750 руб</td>    
+                    </tr><tr>
+                        <td>Крыло</td><td>750 руб</td><td>850 руб</td><td>950 руб</td>    
+                    </tr><tr>
+                        <td>Капот</td><td>950 руб</td><td>1 550 руб</td><td>2 050 руб</td>    
+                    </tr><tr>
+                        <td>Стекло лобовое</td><td>1 550 руб</td><td>2 050 руб</td><td>2 550 руб</td>    
+                    </tr><tr>
+                        <td>Колеса 2 штуки</td><td>850 руб</td><td>1 250 руб</td><td>1 550 руб</td>    
+                    </tr><tr>
+                        <td>Карданный вал</td><td>850 руб</td><td>950 руб</td><td>1 050 руб</td>    
+                    </tr><tr>
+                        <td>Багажник</td><td>950 руб</td><td>1 550 руб</td><td>2 050 руб</td>    
+                    </tr><tr>
+                        <td>Рулевая рейка</td><td>550 руб</td><td>650 руб</td><td>750 руб</td>    
+                    </tr><tr>
+                        <td>Боковая дверь</td><td>850 руб</td><td>1 050 руб</td><td>1 550 руб</td>    
+                    </tr><tr>
+                        <td>Задняя дверь</td><td>950 руб</td><td>1 150 руб</td><td>1 650 руб</td>    
+                    </tr><tr>
+                        <td>Редуктор от 30 кг.</td><td>950 руб</td><td>1 150 руб</td><td>1 550 руб</td>    
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="table__scrollbar"></div>
+          </div>
+        </div>
+      </article>
+      <article class="cargo-info__item" data-count="4">
+        <div class="cargo-info__body">
+          <h1 class="cargo-info__title">Другое</h1>
+          <p class="cargo-info__text">за 1 стандартное место габаритами не больше 30х30х70</p>
+          <div class="table table--clean table--width-auto">
+              <div class="table__scroll">
+                <table class="table__data">
+                  <thead class="table__header">
+                    <tr>
+                        
+                        <th>
+                            <span>Тип груза</span>
+                            <button type="button" class="btn btn--default">
+                              <svg class="icon" width="18" height="18">
+                                <use xlink:href="assets/img/symbol/sprite.svg#help"></use>
+                              </svg>
+                            </button>
+                        </th>
+                        <th>
+                            <span>Зона 1</span>
+                            <button type="button" class="btn btn--default">
+                              <svg class="icon" width="18" height="18">
+                                <use xlink:href="assets/img/symbol/sprite.svg#help"></use>
+                              </svg>
+                            </button>
+                        </th>
+                        <th>
+                            <span>Зона 2</span>
+                            <button type="button" class="btn btn--default">
+                              <svg class="icon" width="18" height="18">
+                                <use xlink:href="assets/img/symbol/sprite.svg#help"></use>
+                              </svg>
+                            </button>
+                        </th>
+                        <th>
+                            <span>Зона 3</span>
+                            <button type="button" class="btn btn--default">
+                              <svg class="icon" width="18" height="18">
+                                <use xlink:href="assets/img/symbol/sprite.svg#help"></use>
+                              </svg>
+                            </button>
+                        </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                        <td>Велосипед</td><td>1 550 руб</td><td>2 050 руб</td><td>2 550 руб</td>    
+                    </tr><tr>
+                        <td>Коляска</td><td>950 руб</td><td>1 150 руб</td><td>1 750 руб</td>    
+                    </tr><tr>
+                        <td>Цветы</td><td>750 руб</td><td>850 руб</td><td>950 руб</td>    
+                    </tr><tr>
+                        <td>Телевизор</td><td>950 руб</td><td>1 550 руб</td><td>2 050 руб</td>    
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="table__scrollbar"></div>
+          </div>
+          <div class="cargo-info__note">
+            <small>*Максимальный вес груза 1 цельное место:</small>
+            <small>Ольга — до 50 кг.</small>
+            <small>Чугуевка — до 70 кг.</small>
+            <small>Терней, Пластун, Каменка — до 70 кг.</small>
+          </div>
+        </div>
+      </article>
+    </div>
+    <article class="media media--under-list media--theme-two">
+         <div class="media__img">
+        <svg width="36px" height="40px">
+            <use xlink:href="assets/img/symbol/sprite.svg#pdf">
+        </svg>
+    </div>   
+         <h1 class="media__title">Вы можете скачать файл «Правила приемки<br /> и отправки грузов» в формате PDF</h1>
+         
+         <div class="media__link">
+          <a href="#" class="link link--lg">
+              <span class="link__text">Скачать в PDF (80 кб)</span>
+          </a> 
+        </div>  
+    </article>
+  </div>
+  <aside class="page__sidebar">
+    <article class="media">
+        <div class="media__img">
+            <svg width="36px" height="41px">
+                <use xlink:href="assets/img/symbol/sprite.svg#pdf">
+            </svg>
+        </div>
+         <h1 class="media__title">Правила приемки и отправки грузов</h1>
+         <div class="media__link">
+          <a href="#" class="link link--lg link--blue">
+              <span class="link__text">Скачать в PDF (80 кб)</span>
+          </a> 
+        </div>  
+    </article>
+  </aside>
+</div>
 
 <footer class="page-footer">
   <div class="page-footer__container">
@@ -397,10 +777,10 @@
         </b>
         <ul class="page-footer__list">
           <li>
-            <a href="" class="page-footer__link">Грузоперевозки по Приморскому краю</a>
+            <a href="delivery-primorye.html" class="page-footer__link">Грузоперевозки по Приморскому краю</a>
           </li>
           <li>
-            <a href="" class="page-footer__link">Грузоперевозки в республике Татарстан</a>
+            <a href="delivery-tatarstan.html" class="page-footer__link">Грузоперевозки в республике Татарстан</a>
           </li>
           <li>
             <a href="/delivery-russia.html" class="page-footer__link">Грузоперевозки по России</a>

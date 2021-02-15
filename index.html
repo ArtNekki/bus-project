@@ -133,7 +133,7 @@
           </a>
         </li>
         <li class="main-nav__item">
-          <a href="/freight-rate-primorye.html" class="main-nav__link">
+          <a href="/calc-rate-primorye.html" class="main-nav__link">
             Расчет тарифа по Приморью
           </a>
         </li>
@@ -743,7 +743,7 @@
 </section>
 
 <!--Thank's modal-->
-<article class="modal" style="display: none;">
+<article id="thanks" class="modal" style="display: none;">
   <div class="modal__content">
     <button type="button" class="modal__close">&#160;</button>
     <div class="modal__icon">
@@ -761,16 +761,16 @@
 </article>
 
 <!--Sign-in-->
-<article class="modal modal--theme-yellow" style="display: none;">
+<article id="sign-in" class="modal modal--theme-yellow" style="display: none;">
   <div class="modal__content">
     <button type="button" class="modal__close">&#160;</button>
     <h1 class="modal__title">Регистрация</h1>
-    <div data-pickup-tabs class="tabs tabs--two tabs--invert tabs--nav-sm tabs--no-space">
+    <div data-tabs class="tabs tabs--two tabs--invert tabs--nav-sm tabs--no-space">
       <ul class="tabs__nav">
-        <li>
+        <li class="tabs__item">
           <a data-tabby-default href="#physics">Для физ. лиц</a>
         </li>
-        <li>
+        <li class="tabs__item">
           <a href="#entity">Для юр. лиц</a>
         </li>
       </ul>
@@ -778,27 +778,30 @@
         <form action="#" class="form form--no-margin" autocomplete="off">
           <div class="form__fieldset">
             <div class="form__field">
-              <label for="user-name" class="form__label">ФИО</label>
+              <label for="user-name" class="form__label form__label--light">ФИО</label>
                
       <div class="input input--clean">
         <input type="text" id="user-name" name="user-name"  placeholder="Петров Александр Максимович"  class="input__field" />
         <span class="input__error">Не заполнено</span>
+        
       </div>
             </div>
             <div class="form__field">
-              <label for="email" class="form__label">Почта</label>
+              <label for="email" class="form__label form__label--light">Почта</label>
                
       <div class="input input--clean">
         <input type="email" id="email" name="email"  placeholder="example@mail.ru"  class="input__field" />
         <span class="input__error">Не заполнено</span>
+        
       </div>
             </div>
-            <div class="form__field">
-              <label for="tel" class="form__label">Телефон</label>
+            <div class="form__field" style="margin-bottom: 10px">
+              <label for="tel" class="form__label form__label--light">Телефон</label>
                
       <div class="input input--clean">
         <input type="text" id="tel" name="tel"  placeholder="+7 (__) __-__-__"  class="input__field" />
         <span class="input__error">Не заполнено</span>
+        
       </div>
             </div>
             <button  type="submit" class="btn btn--lg btn--black"  >
@@ -811,19 +814,21 @@
         <form action="#" class="form form--no-margin" autocomplete="off">
           <div class="form__fieldset">
             <div class="form__field">
-              <label for="entity-email" class="form__label">Почта</label>
+              <label for="entity-email" class="form__label form__label--light">Почта</label>
                
       <div class="input input--clean">
         <input type="email" id="entity-email" name="entity-email"  placeholder="example@mail.ru"  class="input__field" />
         <span class="input__error">Не заполнено</span>
+        
       </div>
             </div>
-            <div class="form__field">
-              <label for="entity-tel" class="form__label">Телефон</label>
+            <div class="form__field" style="margin-bottom: 10px">
+              <label for="entity-tel" class="form__label form__label--light">Телефон</label>
                
       <div class="input input--clean">
         <input type="text" id="entity-tel" name="entity-tel"  placeholder="+7 (__) __-__-__"  class="input__field" />
         <span class="input__error">Не заполнено</span>
+        
       </div>
             </div>
             <button  type="submit" class="btn btn--lg btn--black"  >
@@ -837,26 +842,28 @@
 </article>
 
 <!--Log-in-->
-<article class="modal modal--theme-yellow" style="display: none;">
+<article id="login" class="modal modal--theme-yellow" style="display: none;">
   <div class="modal__content">
     <button type="button" class="modal__close">&#160;</button>
     <h1 class="modal__title">Авторизация</h1>
-    <form action="#" class="form" autocomplete="off">
+    <form action="#" class="form form--no-margin" autocomplete="off" style="margin-bottom: 25px;">
       <div class="form__fieldset">
         <div class="form__field">
-          <label for="login" class="form__label">Логин</label>
+          <label for="login" class="form__label form__label--light">Логин</label>
            
       <div class="input input--clean">
         <input type="text" id="login" name="login"  placeholder="Номер телефона"  class="input__field" />
         <span class="input__error">Не заполнено</span>
+        
       </div>
         </div>
         <div class="form__field">
-          <label for="password" class="form__label">Пароль</label>
+          <label for="password" class="form__label form__label--light">Пароль</label>
            
       <div class="input input--clean">
         <input type="password" id="password" name="password" value="********"   class="input__field" />
         <span class="input__error">Не заполнено</span>
+        <a href="#" class="input__forgot">Забыли пароль</a>
       </div>
         </div>
         
@@ -871,22 +878,22 @@
         <button  type="submit" class="btn btn--lg btn--black"  >
       <span class="btn__text">Авторизоваться</span>
     </button>
-        <a href='#' class='link link--lg link--no-underline link--justify-center'>
+      </div>
+    </form>
+    <a href='#' class='link link--lg link--no-underline link--justify-center'>
             <span class='link__text'>
               Регистрация
             </span>
           </a>
-      </div>
-    </form>
   </div>
 </article>
 
 <!--render report-->
-<article class="modal" style="display: none;">
+<article id="render-report" class="modal" style="display: none;">
   <div class="modal__content">
     <button type="button" class="modal__close">&#160;</button>
     <h1 class="modal__title">Сформировать отчет</h1>
-    <form action="#" class="form" autocomplete="off">
+    <form action="#" class="form form--no-margin" autocomplete="off">
       <div class="form__fieldset">
         <div class="form__field">
           <label for="sum" class="form__label">Введите сумму счета в рублях <sup>*</sup></label>
@@ -894,6 +901,7 @@
       <div class="input">
         <input type="text" id="sum" name="sum" value="15 000 Р"   class="input__field" />
         <span class="input__error">Не заполнено</span>
+        
       </div>
         </div>
         <button  type="submit" class="btn btn--lg"  >
@@ -905,7 +913,7 @@
 </article>
 
 <!--report rendered-->
-<article class="modal modal--content-justify-center" style="display: none;">
+<article id="report-done" class="modal modal--content-justify-center" style="display: none;">
   <div class="modal__content">
     <button type="button" class="modal__close">&#160;</button>
     <div class="modal__icon">
@@ -923,7 +931,7 @@
 </article>
 
 <!--render report-->
-<article class="modal"  style="display: none;">
+<article id="order" class="modal" style="display: none;">
   <div class="modal__content">
     <button type="button" class="modal__close">&#160;</button>
     <h1 class="modal__title">№	614933</h1>
@@ -973,7 +981,7 @@
 </article>
 
 <!-- undo order form -->
-<article class="modal modal--content-justify-center" style="display: none;">
+<article id="undo-order" class="modal modal--content-justify-center" style="display: none;">
   <div class="modal__content">
     <button type="button" class="modal__close">&#160;</button>
     <div class="modal__icon">
@@ -994,7 +1002,7 @@
 </article>
 
 <!--report rendered-->
-<article class="modal modal--content-justify-center" style="display: none;">
+<article id="order-undo-done" class="modal modal--content-justify-center modal--sm" style="display: none;">
   <div class="modal__content">
     <button type="button" class="modal__close">&#160;</button>
     <div class="modal__icon">
@@ -1011,18 +1019,19 @@
   </div>
 </article>
 
-<article class="modal" style="display: none;">
+<article id="cities" class="modal modal--lg" style="display: none;">
   <div class="modal__content">
     <button type="button" class="modal__close">&#160;</button>
-    <h1 class="modal__title">Населенные пункты получения</h1>
-    <form action="#" class="form" autocomplete="off">
+    <h1 class="modal__title" style="text-align: left;">Населенные пункты получения</h1>
+    <form action="#" class="form form--no-margin" autocomplete="off">
       <div class="form__fieldset">
         <div class="form__field">
-          <label for="city-name" class="form__label">Или введите название города</label>
+          <label for="city-name" class="form__label form__label--light">Или введите название города</label>
            
       <div class="input">
         <input type="text" id="city-name" name="city-name"  placeholder="Например, Артем"  class="input__field" />
         <span class="input__error">Не заполнено</span>
+        
       </div>
         </div>
       </div>
@@ -1222,6 +1231,55 @@
   </div>
 </article>
 
+<article id="call" class="modal modal--lg" style="display: none;">
+  <div class="modal__content">
+    <button type="button" class="modal__close">&#160;</button>
+    <h1 class="modal__title" style="text-align: left;">Заказать звонок специалиста</h1>
+    <p class="modal__subtitle">Наш оператор свяжется с вами в ближайшее время. <br class="br br--show-sm">Операторы работают с 08:00 до 20:00 по Владивостоку.</p>
+    <form action="#" class="form form--no-margin" autocomplete="off">
+      <div class="form__fieldset form__fieldset--2-col-sm">
+        <div class="form__field">
+          <label for="tel" class="form__label">Телефон <sup>*</sup></label>
+           
+      <div class="input">
+        <input type="tel" id="tel" name="tel"  placeholder="+7 (__) __-__-__"  class="input__field" />
+        <span class="input__error">Не заполнено</span>
+        
+      </div>
+
+        </div>
+        <div class="form__field">
+          <label for="name" class="form__label">Имя</label>
+           
+      <div class="input">
+        <input type="text" id="name" name="name"    class="input__field" />
+        <span class="input__error">Не заполнено</span>
+        
+      </div>
+        </div>
+        <div class="form__field form__field--full" style="margin-bottom: 25px;">
+          
+      <div class="checkbox checkbox--sm">
+        <input type="checkbox" id="subscribe" name="personal-data" class="checkbox__input" >
+        <div class="checkbox__body">
+            <label for="subscribe" class="checkbox__label">Нажимая кнопку «Отправить», я даю свое согласие на
+          <a href="#" class="link link--blue link--in-text">
+            <span class="link__text">обработку моих персональных данных</span>
+          </a></label>
+            
+            
+        </div>
+      </div>
+        </div>
+        <button  type="button" class="btn btn--lg btn--w-full"  >
+      <span class="btn__text">Заказать звонок</span>
+    </button>
+      </div>
+    </form>
+  </div>
+</article>
+
+
 
 <footer class="page-footer">
   <div class="page-footer__container">
@@ -1259,10 +1317,10 @@
         </b>
         <ul class="page-footer__list">
           <li>
-            <a href="" class="page-footer__link">Грузоперевозки по Приморскому краю</a>
+            <a href="delivery-primorye.html" class="page-footer__link">Грузоперевозки по Приморскому краю</a>
           </li>
           <li>
-            <a href="" class="page-footer__link">Грузоперевозки в республике Татарстан</a>
+            <a href="delivery-tatarstan.html" class="page-footer__link">Грузоперевозки в республике Татарстан</a>
           </li>
           <li>
             <a href="/delivery-russia.html" class="page-footer__link">Грузоперевозки по России</a>

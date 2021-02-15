@@ -21393,7 +21393,24 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-document.addEventListener('DOMContentLoaded', function () {});
+document.addEventListener('DOMContentLoaded', function () {
+  var modalHash = window.location.hash;
+
+  if (modalHash) {
+    var modal = document.querySelector(modalHash);
+
+    if (modal) {
+      modal.style.display = "flex";
+      modal.addEventListener('click', function (e) {
+        var closeBtn = e.target.closest('.modal__close');
+
+        if (closeBtn) {
+          this.style.display = 'none';
+        }
+      });
+    }
+  }
+});
 var dropDown; // document.addEventListener('mousemove', function(e) {
 //   const navtoggle = e.target.closest('.main-nav__link');
 //
