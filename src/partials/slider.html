@@ -3,22 +3,16 @@
       {{#each slider-images}}
         <div class="slider-img swiper-slide" data-src="{{root}}assets/img/content/{{ name }}.jpg">
           <div class="slider-img-overlay">
-              <svg width="30" height="30">
-                <use xlink:href="{{root}}assets/img/symbol/sprite.svg#eye"></use>
-              </svg>
+            {{{ icon name="eye" width="30" height="30" }}}
           </div>
-          <img width="190" height="117" src="{{root}}assets/img/content/{{ name }}.jpg" alt="{{ label }}">   
+          <img width="190" height="117" src="{{root}}assets/img/content/{{ name }}.jpg" alt="{{ label }}">
         </div>
       {{/each}}
   </div>
   <button type="button" class="slider-btn slider-btn--next swiper-button-next">
-      <svg width="20" height="19">
-        <use xlink:href="{{root}}assets/img/symbol/sprite.svg#arrow"></use>
-      </svg>
+    {{{ icon name="arrow" width="20" height="19" }}}
   </button>
   <button type="button" class="slider-btn slider-btn--prev swiper-button-prev">
-      <svg width="20" height="19">
-        <use xlink:href="{{root}}assets/img/symbol/sprite.svg#arrow"></use>
-      </svg>
+    {{{ icon name="arrow" width="20" height="19" }}}
   </button>
 </div>
