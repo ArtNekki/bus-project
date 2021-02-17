@@ -429,3 +429,15 @@
     background-image: url($images-root + $name + "@3x." + $ext);
   }
 }
+
+@mixin clear-link-outline {
+  outline: 0;
+
+  &:focus,
+  &:active,
+  &:hover,
+  &:link,
+  &:visited {
+    outline: 0;
+  }
+}
